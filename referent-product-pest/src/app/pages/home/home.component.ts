@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -12,16 +12,18 @@ import { MatCardModule } from '@angular/material/card';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { Product } from '../../models/product.model';
+import { ProductService } from '../../services/product.service';
 
 
 
-interface Product {
-  id: number;
-  name: string;
-  activeIngredients: string;
-  applicationTreatment: string;
-  pestsControlled: string[];
-}
+// interface Product {
+//   id: number;
+//   name: string;
+//   activeIngredients: string;
+//   applicationTreatment: string;
+//   pestsControlled: string[];
+// }
 
 
 @Component({
@@ -56,32 +58,49 @@ export class HomeComponent implements OnInit {
     private http: HttpClient,
     private router: Router,
     private authService: AuthService,
-    private breakpointObserver: BreakpointObserver) { }
+    private breakpointObserver: BreakpointObserver,
+    private productService : ProductService) { }
 
   ngOnInit(): void {
-
     this.breakpointObserver
       .observe([Breakpoints.Handset])
       .subscribe(result => {
         this.isWideScreen = !result.matches;
       });
 
-    this.http.get<Product[]>(this.configUrl).subscribe({
-      next: (products) => {
-        this.allProducts = products;
-        this.filteredProducts = products;
+      const prolist = this.productService.products(); 
+      this.allProducts = prolist;
+      this.filteredProducts = prolist;
+        if(prolist != undefined && prolist != null && prolist.length > 0){
+          this.getUniquePests(this.allProducts);
+        }
 
-        const pestSet = new Set<string>();
+    // this.http.get<Product[]>(this.configUrl).subscribe({
+    //   next: (products) => {
+    //     this.allProducts = products;
+    //     this.filteredProducts = products;
+
+    //     const pestSet = new Set<string>();
+    //     for (const product of products) {
+    //       product.pestsControlled.forEach(pest => pestSet.add(pest));
+    //     }
+    //     this.uniquePests = Array.from(pestSet);
+    //   },
+    //   error: () => {
+    //     console.error('Error cargando productos.json');
+    //   },
+    // });
+  }
+
+
+getUniquePests(products : Product[]){
+      const pestSet = new Set<string>();
         for (const product of products) {
           product.pestsControlled.forEach(pest => pestSet.add(pest));
         }
         this.uniquePests = Array.from(pestSet);
-      },
-      error: () => {
-        console.error('Error cargando productos.json');
-      },
-    });
-  }
+}
+
 
   logout(): void {
     this.authService.logout();

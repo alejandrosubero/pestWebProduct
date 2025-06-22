@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { slideInAnimation } from './route-animations';
+import { ProductService } from './services/product.service';
 
 
 @Component({
@@ -15,8 +16,13 @@ import { slideInAnimation } from './route-animations';
 export class AppComponent {
   title = 'referent-product-pest';
 
+  constructor() { }
+
+
   getAnimationState(outlet: RouterOutlet) {
-  return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
+    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
+  }
 }
 
-}
+
+//ng build --configuration production

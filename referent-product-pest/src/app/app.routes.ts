@@ -12,8 +12,8 @@ export const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'home', component: HomeComponent, data: { animation: 'HomePage' }, canActivate: [authGuard] },
- { path: 'product/:id', component: ProductDetailComponent, canActivate: [authGuard] },
- { path: 'favorites', component: FavoritesComponent, data: { animation: 'FavoritesPage' }, canActivate: [authGuard] },
+  { path: 'product/:id', component: ProductDetailComponent, canActivate: [authGuard] },
+  { path: 'favorites', component: FavoritesComponent, data: { animation: 'FavoritesPage' }, canActivate: [authGuard] },
   { path: '**', redirectTo: '/login' }
 
 ];
@@ -22,4 +22,4 @@ export const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

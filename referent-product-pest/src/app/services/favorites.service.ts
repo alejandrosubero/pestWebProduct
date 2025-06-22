@@ -25,6 +25,10 @@ export class FavoritesService {
   }
 
   isFavorite(productId: number): boolean {
-    return this.getFavorites().some(p => p.id === productId);
+    let response: boolean = false;
+    if (productId != undefined && productId != null){
+          response = this.getFavorites().some(p => p.id === productId);
+    }
+    return response;
   }
 }

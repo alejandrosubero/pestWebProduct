@@ -1,21 +1,27 @@
 
-import { Injectable } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  private readonly AUTH_KEY = 'isAuthenticated';
 
-  login(): void {
-    localStorage.setItem(this.AUTH_KEY, 'true');
+private loggedIn = signal<boolean>(false);
+
+  login() {
+    this.loggedIn.set(true);
   }
 
-  logout(): void {
-    localStorage.removeItem(this.AUTH_KEY);
+  logout() {
+    this.loggedIn.set(false);
   }
 
   isAuthenticated(): boolean {
-    return localStorage.getItem(this.AUTH_KEY) === 'true';
+    return this.loggedIn();
   }
+
 }
+
+
+
+

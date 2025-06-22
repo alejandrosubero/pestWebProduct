@@ -13,7 +13,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FavoritesService } from '../../services/favorites.service';
-
+import { ProductService } from '../../services/product.service';
+import { Product } from '../../models/product.model';
 
 
 @Component({
@@ -40,22 +41,25 @@ isFav = false;
     private route: ActivatedRoute,
     private router: Router,
     private http: HttpClient,
-    private favService: FavoritesService
+    private favService: FavoritesService,
+    private productService : ProductService
   ) {}
 
     private configUrl: string = 'assets/config/products.json';
 
   ngOnInit(): void {
-    this.isFav = this.favService.isFavorite(this.product.id);
-
     const id = Number(this.route.snapshot.paramMap.get('id'));
-
-    this.http.get<any[]>(this.configUrl).subscribe(data => {
-      this.product = data.find(p => p.id === id);
-      if (!this.product) {
-        this.router.navigate(['/home']);
-      }
-    });
+    const prolist = this.productService.products(); 
+     if(prolist != undefined && prolist != null && prolist.length > 0){
+      this.checkProduct(prolist, id);
+     }
+    // this.http.get<any[]>(this.configUrl).subscribe(data => {
+    //   this.product = data.find(p => p.id === id);
+    //   if (!this.product) {
+    //     this.router.navigate(['/home']);
+    //   }
+    // });
+     this.isFav = this.favService.isFavorite(this.product.id);
   }
 
   back(): void {
@@ -70,6 +74,14 @@ toggleFavorite(): void {
   }
   this.isFav = !this.isFav;
 }
+
+checkProduct(prolist : Product[], id: number){
+   this.product = prolist.find(p => p.id === id);
+    if (!this.product) {
+        this.router.navigate(['/home']);
+      }
+}
+
 
 }
 

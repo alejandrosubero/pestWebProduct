@@ -11,6 +11,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { ProductService } from '../../services/product.service';
 
 
 @Component({
@@ -42,7 +43,10 @@ export class LoginComponent implements OnInit {
   constructor(
     private http: HttpClient,
     private router: Router,
-    private authService: AuthService) {}
+    private authService: AuthService,
+   private productService: ProductService) {}
+
+  
 
   ngOnInit(): void {
     this.http.get<any>(this.configUrl).subscribe({
@@ -64,6 +68,7 @@ export class LoginComponent implements OnInit {
     this.username === this.storedUser &&
     this.password === this.storedPassword
   ) {
+    this.productService.loadProducts();
     this.authService.login(); // Guardar estado
     this.router.navigate(['/home']); // Redirigir
   } else {
