@@ -1,0 +1,54 @@
+
+
+<mat-sidenav-container class="container">
+  <mat-sidenav #drawer mode="side" class="sidenav" [opened]="isWideScreen">
+  <mat-nav-list>
+    <mat-list-item *ngFor="let pest of uniquePests" (click)="seleccionarPest(pest)">
+      {{ pest }}
+    </mat-list-item>
+  </mat-nav-list>
+</mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      
+      @if (!isWideScreen){
+      <button mat-icon-button (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      }
+    
+      <span>Pest products</span>
+      <span class="spacer"></span>
+      <button mat-button (click)="goFavorites()">Favorites</button>
+      <button mat-button (click)="logout()">Log Out</button>
+    </mat-toolbar>
+
+    <div class="content">
+      <mat-form-field appearance="fill" class="search-box">
+        <mat-label>Search for product or pest</mat-label>
+        <input
+          matInput
+          [(ngModel)]="searchTerm"
+          (input)="buscarCoincidencias()"
+        />
+      </mat-form-field>
+      <div class="results">
+
+          @for (product of filteredProducts; track product.name) {
+        <mat-card (click)="goToDetail(product.id)" class="clickable-card">
+          <mat-card-title>{{ product.name }}</mat-card-title>
+          <mat-card-content>
+            <p><strong>Active Ingredient:</strong> {{ product.activeIngredients }}</p>
+            <p><strong>Application/Treatment:</strong> {{ product.applicationTreatment }}</p>
+            <p><strong>Pests Controlled:</strong> {{ product.pestsControlled.join(', ') }}</p>
+          </mat-card-content>
+        </mat-card>
+      }
+      </div>
+
+    </div>
+
+    <footer class="footer">Version: {{ version }}</footer>
+  </mat-sidenav-content>
+</mat-sidenav-container>

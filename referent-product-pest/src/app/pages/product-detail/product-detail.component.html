@@ -1,0 +1,26 @@
+<mat-card>
+    @if(product){
+    <mat-card-title>{{ product.name }}</mat-card-title>
+    <mat-card-subtitle>
+        Ingredientes activos: {{ product.activeIngredients }}
+    </mat-card-subtitle>
+
+    <mat-card-content>
+        <p><strong>Modo de aplicación:</strong></p>
+        <p>{{ product.applicationTreatment }}</p>
+
+        <p><strong>Plagas controladas:</strong></p>
+        <ul>
+            @for (pest of product.pestsControlled; track pest) {
+            <li>{{ pest }}</li>
+            }
+        </ul>
+    </mat-card-content>
+
+    <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="back()">Volver</button>
+        <button mat-button color="accent" (click)="toggleFavorite()"> {{ isFav ? 'Remove from favorites' : 'Add to favorites' }}</button>    
+    </mat-card-actions>
+
+    }
+</mat-card>

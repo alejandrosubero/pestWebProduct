@@ -1,0 +1,25 @@
+  <mat-toolbar color="primary" style="width: 100%;">
+        <mat-icon (click)="goHome()">home</mat-icon>
+      <button mat-button (click)="goHome()">Home</button>
+    </mat-toolbar>
+    
+<div class="favorites-container">
+  <h2>Favorite Products</h2>
+
+  <div *ngIf="favorites.length === 0" class="empty">
+    <p>No favorites saved yet. Add products to favorites to see them here.</p>
+  </div>
+
+  <mat-card
+    *ngFor="let product of favorites"
+    class="clickable-card"
+    (click)="goToDetail(product.id)"
+  >
+    <mat-card-title>{{ product.name }}</mat-card-title>
+    <mat-card-content>
+      <p>{{ product.activeIngredients }}</p>
+      <p><strong>Pests:</strong> {{ product.pestsControlled.join(', ') }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>
+
