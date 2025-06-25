@@ -2447,5 +2447,43 @@
       "and Wasps."
     ],
     "id": 75
+  },
+  [
+  {
+    "name": "WISDOM LAWN GRANULAR INSECTICIDE",
+    "activeIngredients": "Bifenthrin 0.2% (Cis isomers 97% minimum, trans isomers 3% maximum), OTHER INGREDIENTS 99.8%",
+    "applicationTreatment": "Granular insecticide for outdoor use only on lawns, landscaped areas, and perimeters around various structures. Lawn Application (Broadcast): Use appropriate equipment for even coverage. Residential: Max 0.2 lb. a.i./acre/application. Non-residential: Up to 0.4 lb. a.i./acre. Max annual: 0.4 lb. a.i. (200 lbs. product) per acre. Application rates vary from 0.1 to 0.4 lb. a.i./A. Immediate watering required for some pests. Perimeter: Apply as 7 ft wide band treatment. Fire Ant Mound: Apply 1/2 cup per mound and drench with 1–2 gallons water. Industrial sites: 2.3–4.6 lbs. per 1000 sq. ft. Pad Mounted Electrical Sites: 1–1.5 Tbsp per 4 sq. ft.",
+    "pestsControlled": [
+      "Ants (including Imported Fire Ants)",
+      "Mole Crickets (Adult, Nymph)",
+      "Armyworms",
+      "Cutworms",
+      "Sod Webworm",
+      "Annual Bluegrass Weevil (Hyperodes) adults",
+      "Billbugs (Adult)",
+      "Black Turfgrass Ataenius (Adult)",
+      "Leafhoppers",
+      "Mealybugs",
+      "European Crane Fly",
+      "Centipedes",
+      "Chinch Bugs",
+      "Fleas (Larvae, Adults)",
+      "Millipedes",
+      "Ticks (Deer Ticks, American dog ticks)",
+      "Pillbugs",
+      "Sowbugs"
+    ],
+    "id": 76
+  },
+  {
+    "name": "Wisdom TC Flowable",
+    "activeIngredients": "Bifenthrin (amount not specified, used at 0.1 lb. a.i./A)",
+    "applicationTreatment": "Flowable formulation for mound drenches. Dilute 1 tsp per gallon of water and apply 1–2 gallons per mound. Spray rig example: 0.1 lb. a.i./A (20 oz) in 2.5 gallons per 1000 sq. ft.",
+    "pestsControlled": [
+      "Imported Fire Ants (existing colonies in mounds)"
+    ],
+    "id": 77
   }
+]
+
 ]
