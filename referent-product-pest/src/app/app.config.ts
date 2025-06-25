@@ -5,6 +5,18 @@ import { routes } from './app.routes';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { provideHttpClient } from '@angular/common/http';
 
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+
+
+// export const appConfig: ApplicationConfig = {
+//   providers: [provideRouter(routes, withHashLocation()), provideAnimationsAsync(), provideHttpClient()]
+// };
+
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes), provideAnimationsAsync(), provideHttpClient()]
+  providers: [
+    provideRouter(routes),
+    provideAnimationsAsync(),
+    provideHttpClient(),
+    { provide: LocationStrategy, useClass: HashLocationStrategy } 
+  ]
 };
