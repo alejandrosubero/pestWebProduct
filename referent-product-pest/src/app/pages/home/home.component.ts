@@ -14,6 +14,7 @@ import { MatListModule } from '@angular/material/list';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Product } from '../../models/product.model';
 import { ProductService } from '../../services/product.service';
+import { PestData } from '../../models/pestdata.model';
 
 
 
@@ -53,6 +54,7 @@ export class HomeComponent implements OnInit {
   private configUrl: string = 'assets/config/products.json';
   errorMessage: string = '';
   isWideScreen = true;
+  pestName: string = '';
 
   constructor(
     private http: HttpClient,
@@ -156,6 +158,40 @@ getUniquePests(products : Product[]){
   }
 
 
+  getPestName(phrase: string): string {
+    const normalize = (text: string): string =>
+      text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+
+    const searchTerm = normalize(phrase);
+
+    for (const product of this.filteredProducts) {
+      for (const pest of product.pestsControlled) {
+        if (normalize(pest).includes(searchTerm)) {
+          return pest;
+        }
+      }
+    }
+    return '';
+}
+
+
+getPestToGo(phrase: string, id: number): string {
+  const product = this.filteredProducts.find(p => p.id === id);
+
+  if (!product) return '';
+  const normalize = (text: string): string =>
+    text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+
+  const searchTerm = normalize(phrase);
+
+  for (const pest of product.pestsControlled) {
+    if (normalize(pest).includes(searchTerm)) {
+      return pest;
+    }
+  }
+  return '';
+}
+
 
   buscarCoincidencias(): void {
     const rawInput = this.searchTerm.trim().toLowerCase();
@@ -167,8 +203,15 @@ getUniquePests(products : Product[]){
       const name = normalize(product.name);
       const treatment = normalize(product.applicationTreatment);
       const pests = normalize(product.pestsControlled.join(' '));
+ 
       return `${name} ${treatment} ${pests}`;
     };
+
+  const getTextFieldsProduct = (product: any): string => {
+      const name = normalize(product.name);
+      return `${name}`;
+    };
+
 
     //  Utilidad para crear una expresión de coincidencia exacta por palabra/frase
     const createExactMatchRegex = (phrase: string): RegExp => {
@@ -176,9 +219,28 @@ getUniquePests(products : Product[]){
       return new RegExp(`\\b${escaped}\\b`, 'i'); // \b => límite de palabra
     };
 
-    //  Caso: búsqueda con "-"
-    if (rawInput.includes('-')) {
+    if (rawInput.includes('&')) {
+      const searchTerm = normalize(rawInput.split('&')[1]?.trim() || '');
+      if (searchTerm.length >= 2) {
+        this.filteredProducts = this.allProducts.filter(product => {
+          const fields = getTextFieldsProduct(product);
+          return fields.includes(searchTerm);
+        });
+      } else {
+        this.filteredProducts = []; // Si tiene menos de 2 letras, no se muestra nada
+      }
+
+  // 🔍 Caso: búsqueda con "-"
+  } else if (rawInput.includes('-')) {
+
+      let leftRawi = '';
+      let rightRawi = '';
+      
       const [leftRaw, rightRaw] = rawInput.split('-').map(s => normalize(s.trim()));
+      
+      leftRawi = leftRaw;
+      rightRawi = rightRaw;
+
       const leftRegex = createExactMatchRegex(leftRaw);
       const rightRegex = createExactMatchRegex(rightRaw);
 
@@ -186,6 +248,12 @@ getUniquePests(products : Product[]){
         const fields = getTextFields(product);
         return leftRegex.test(fields) && rightRegex.test(fields);
       });
+
+      this.pestName = this.getPestName(rightRawi);
+      if (this.pestName === '') {
+        this.pestName = this.getPestName(leftRawi);
+      }
+
 
     } else {
       //  Caso: búsqueda simple (una frase completa, OR)
@@ -197,21 +265,29 @@ getUniquePests(products : Product[]){
         const fields = getTextFields(product);
         return regex.test(fields);
       });
+      this.pestName = this.getPestName(rawInput);
     }
   }
 
 
-seleccionarPest(pest: string): void {
-  this.searchTerm = pest;
-  this.buscarCoincidencias();
-}
+  seleccionarPest(pest: string): void {
+    this.searchTerm = pest;
+    this.buscarCoincidencias();
+    this.pestName = pest;
+  }
 
-goToDetail(id: number): void {
-  this.router.navigate(['/product', id]);
-}
+  goToDetail(id: number): void {
+    let name = this.getPestToGo(this.pestName, id)
+    const pestData: PestData = {
+      id: id,
+      name: name
+    };
+    this.router.navigate(['/product', id], {
+      state: { data: pestData }
+    });
+  }
 
-
-goFavorites(): void {
-  this.router.navigate(['/favorites']);
-}
+  goFavorites(): void {
+    this.router.navigate(['/favorites']);
+  }
 }

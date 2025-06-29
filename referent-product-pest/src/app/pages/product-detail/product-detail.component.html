@@ -2,23 +2,25 @@
     @if(product){
     <mat-card-title>{{ product.name }}</mat-card-title>
     <mat-card-subtitle>
-        Ingredientes activos: {{ product.activeIngredients }}
+        Active Ingredient: {{ product.activeIngredients }}
     </mat-card-subtitle>
 
     <mat-card-content>
-        <p><strong>Modo de aplicación:</strong></p>
+        <p><strong>Application/Treatment:</strong></p>
         <p>{{ product.applicationTreatment }}</p>
 
-        <p><strong>Plagas controladas:</strong></p>
+        <p><strong>Pests Controlled:</strong></p>
         <ul>
             @for (pest of product.pestsControlled; track pest) {
-            <li>{{ pest }}</li>
+            <li [ngClass]="{ 'highlight': pest.toLowerCase() === pestData.name.toLowerCase() }">
+                {{ pest }}
+            </li>
             }
         </ul>
     </mat-card-content>
 
     <mat-card-actions>
-        <button mat-raised-button color="primary" (click)="back()">Volver</button>
+        <button mat-raised-button color="primary" (click)="back()">Back</button>
         <button mat-button color="accent" (click)="toggleFavorite()"> {{ isFav ? 'Remove from favorites' : 'Add to favorites' }}</button>    
     </mat-card-actions>
 

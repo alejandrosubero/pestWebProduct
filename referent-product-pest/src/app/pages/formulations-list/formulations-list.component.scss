@@ -1,0 +1,19 @@
+.formulations {
+  padding: 1rem;
+}
+
+.add-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.clickable-card {
+   padding: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.clickable-card:hover {
+  transform: scale(1.02);
+}

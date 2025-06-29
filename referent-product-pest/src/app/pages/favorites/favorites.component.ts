@@ -35,7 +35,7 @@ import { FavoritesService } from '../../services/favorites.service';
 export class FavoritesComponent implements OnInit {
   favorites: any[] = [];
 
-  constructor(private favService: FavoritesService, private router: Router) {}
+  constructor(private favService: FavoritesService, private router: Router) { }
 
   ngOnInit(): void {
     this.favorites = this.favService.getFavorites();
@@ -46,6 +46,10 @@ export class FavoritesComponent implements OnInit {
   }
 
   goHome(): void {
-  this.router.navigate(['/home']);
-}
+    this.router.navigate(['/home']);
+  }
+
+  goFormulation(): void {
+    this.router.navigate(['/formulations']);
+  }
 }

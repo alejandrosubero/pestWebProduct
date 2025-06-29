@@ -1,24 +1,4 @@
-<!-- <div class="login-container">
-  <h2>Iniciar Sesión</h2>
-  <form (ngSubmit)="login()" #loginForm="ngForm">
-    <input
-      type="text"
-      placeholder="Usuario"
-      name="user"
-      [(ngModel)]="username"
-      required
-    />
-    <input
-      type="password"
-      placeholder="Contraseña"
-      name="password"
-      [(ngModel)]="password"
-      required
-    />
-    <button type="submit">Ingresar</button>
-    <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
-  </form>
-</div> -->
+
 
 <mat-card class="login-card">
   <h2>Login</h2>
@@ -32,6 +12,6 @@
     <input matInput [(ngModel)]="password" type="password" />
   </mat-form-field>
 
-  <button mat-raised-button color="primary" (click)="login()">Ingresar</button>
+  <button mat-raised-button color="primary" (click)="login()">Login</button>
   <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
 </mat-card>

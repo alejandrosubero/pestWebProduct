@@ -1,0 +1,15 @@
+<div class="formulation-form">
+  <h2>Add Formulation</h2>
+  <mat-form-field appearance="fill">
+    <mat-label>Title</mat-label>
+    <input matInput [(ngModel)]="title" />
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Formulation</mat-label>
+    <textarea matInput rows="6" [(ngModel)]="content"></textarea>
+  </mat-form-field>
+  <div class="actions">
+    <button mat-raised-button color="primary" (click)="save()">Save</button>
+    <button mat-button (click)="cancel()">Cancel</button>
+  </div>
+</div>
