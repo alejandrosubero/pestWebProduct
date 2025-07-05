@@ -16,6 +16,7 @@ import { FavoritesService } from '../../services/favorites.service';
 import { ProductService } from '../../services/product.service';
 import { Product } from '../../models/product.model';
 import { PestData } from '../../models/pestdata.model';
+import { NavegateService } from '../../services/navegate.service';
 
 
 @Component({
@@ -42,14 +43,15 @@ export class ProductDetailComponent implements OnInit {
   pestData: PestData = { id: 0, name: '' };
   id:number = 0;
   private configUrl: string = 'assets/config/products.json';
-
+  private nameToNavegate ='';
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
     private http: HttpClient,
     private favService: FavoritesService,
-    private productService: ProductService
+    private productService: ProductService,
+    private navegateService: NavegateService
   ) { 
     this.getData();
   }
@@ -64,6 +66,7 @@ export class ProductDetailComponent implements OnInit {
       console.warn('No pestData passed, fetching by ID or redirecting...');
     }else{
       this.id = this.pestData.id;
+      this.nameToNavegate = this.pestData.name != undefined && this.pestData.name != null? this.pestData.name : '';
     }
   }
 
@@ -72,19 +75,24 @@ export class ProductDetailComponent implements OnInit {
     if (prolist != undefined && prolist != null && prolist.length > 0) {
       this.checkProduct(prolist, this.id);
     }
-    this.isFav = this.favService.isFavorite(this.product.id);
+
   }
 
   checkProduct(prolist: Product[], id: number) {
     this.product = prolist.find(p => p.id === id);
-
     if (!this.product) {
       this.router.navigate(['/home']);
+    }else{
+    this.isFav = this.favService.isFavorite(this.id);
     }
   }
 
   back(): void {
-    this.router.navigate(['/home']);
+    if(this.nameToNavegate === 'favorites'){
+     this.goFavorites();
+    }else {
+      this.router.navigate(['/home']);
+    }
   }
 
   toggleFavorite(): void {
@@ -94,6 +102,19 @@ export class ProductDetailComponent implements OnInit {
       this.favService.addToFavorites(this.product);
     }
     this.isFav = !this.isFav;
+  }
+
+  goFavorites(): void {
+    this.navegateService.goFavorites('favorites', 1);
+
+    // let id =1;
+    // const pestData: PestData = {
+    //   id: id,
+    //   name: 'favorites'
+    // };
+    // this.router.navigate(['/favorites', id], {
+    //   state: { data: pestData }
+    // });
   }
 
 }

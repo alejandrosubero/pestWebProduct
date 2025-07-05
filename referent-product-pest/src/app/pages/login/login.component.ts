@@ -55,8 +55,8 @@ export class LoginComponent implements OnInit {
         this.storedPassword = data.password;
       },
       error: (error) => {
-        console.error('Error al cargar config.json', error);
-        this.errorMessage = 'Error interno, contacte soporte';
+        console.error('Error loading config.json', error);
+        this.errorMessage = 'Internal error, contact support';
       },
     });
   }
@@ -70,9 +70,9 @@ export class LoginComponent implements OnInit {
   ) {
     this.productService.loadProducts();
     this.authService.login(); // Guardar estado
-    this.router.navigate(['/home']); // Redirigir
+    this.router.navigate(['/home']);
   } else {
-    this.errorMessage = 'Usuario o contraseña incorrectos';
+    this.errorMessage = 'Incorrect username or password';
   }
 }
 

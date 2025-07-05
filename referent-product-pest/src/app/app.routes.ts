@@ -17,11 +17,12 @@ export const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'home', component: HomeComponent, data: { animation: 'HomePage' }, canActivate: [authGuard] },
   { path: 'product/:id', component: ProductDetailComponent, canActivate: [authGuard] },
-  { path: 'favorites', component: FavoritesComponent, data: { animation: 'FavoritesPage' }, canActivate: [authGuard] },
-  {path: 'formulations', component: FormulationsListComponent },
-  { path: 'formulation/add', component: FormulationAddComponent },
-  { path: 'formulation/:id', component: FormulationDetailComponent },
-  { path: 'formulation/edit/:id', component: FormulationEditComponent },
+  { path: 'favorites/:id', component: FavoritesComponent, data: { animation: 'FavoritesPage' }, canActivate: [authGuard] },
+  { path: 'formulations', component: FormulationsListComponent, data: { animation: 'FormulationPage' }, canActivate: [authGuard] },
+  { path: 'formulation/add', component: FormulationAddComponent, data: { animation: 'FormulationPage' }, canActivate: [authGuard] },
+  { path: 'formulation/:id', component: FormulationDetailComponent, data: { animation: 'FormulationPage' }, canActivate: [authGuard] },
+  { path: 'formulation/edit/:id', component: FormulationEditComponent, data: { animation: 'FormulationPage' }, canActivate: [authGuard] },
+
   { path: '**', redirectTo: '/login' }
 
 ];

@@ -1,25 +1,4 @@
 
-<!-- <mat-toolbar color="primary" style="width: 100%;">
-  <button mat-icon-button (click)="goBack()" aria-label="Back">
-    <mat-icon>arrow_back</mat-icon>
-  </button>
-  <span>Formulation</span>
-</mat-toolbar>
-
-
-<div class="detail" *ngIf="formulation">
-  <h2>{{ formulation.title }}</h2>
-  <p>{{ formulation.content }}</p>
-  <div class="actions">
-    <button mat-stroked-button (click)="edit()">Edit</button>
-    <button mat-icon-button color="warn" (click)="confirmDelete()">
-      <mat-icon>delete</mat-icon>
-    </button>
-  </div>
-</div> -->
-
-
-<!-- 📄 formulation-detail.component.html -->
 <mat-toolbar color="primary">
   <button mat-icon-button (click)="goBack()" aria-label="Back">
     <mat-icon>arrow_back</mat-icon>
@@ -30,27 +9,25 @@
 <mat-card class="formulation-card">
   <h2 class="title">{{ formulation?.title }}</h2>
 
-    <mat-form-field appearance="fill" class="full-width" floatLabel="auto" disabled>
+  <mat-form-field appearance="fill" class="full-width" floatLabel="auto">
     <mat-label>Formulation</mat-label>
-    <textarea matInput rows="6" [value]="formulation?.content" disabled></textarea>
+    <textarea matInput rows="6" [value]="formulation?.content" disabled class="custom-textarea"></textarea>
   </mat-form-field>
-
-  <div class="button-group">
-      <button mat-raised-button color="primary" type="button" (click)="edit()">
-        <mat-icon>edit</mat-icon>&nbsp;Edit
-      </button>
-      <button mat-raised-button color="warn" type="button" (click)="confirmDelete()">
-        <mat-icon>cancel</mat-icon>&nbsp;Delete
-      </button>
-    </div>
-
 </mat-card>
-<!-- Delete confirmation dialog -->
-<ng-template #confirmDialog>
-  <h2 mat-dialog-title>Delete Formulation</h2>
-  <mat-dialog-content>Are you sure you want to delete this formulation?</mat-dialog-content>
-  <mat-dialog-actions align="end">
-    <button mat-button mat-dialog-close>Cancel</button>
-    <button mat-button color="warn" (click)="delete()">Delete</button>
-  </mat-dialog-actions>
-</ng-template>
+
+
+<div class="fab-container">
+  <button mat-fab color="primary" (click)="toggleFab()" aria-label="Menu">
+    <mat-icon>{{ isFabOpen ? 'close' : 'menu' }}</mat-icon>
+  </button>
+
+  @if (isFabOpen) {
+    <button mat-mini-fab class="fab-action green-fab" (click)="edit()" aria-label="Edit">
+      <mat-icon>edit</mat-icon>
+    </button>
+
+    <button mat-mini-fab color="warn" class="fab-action" (click)="confirmDelete()" aria-label="Delete">
+      <mat-icon>cancel</mat-icon>
+    </button>
+  }
+</div>

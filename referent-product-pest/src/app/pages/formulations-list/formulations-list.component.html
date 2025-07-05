@@ -1,19 +1,12 @@
 
-  <mat-toolbar color="primary" style="width: 100%;">
-        <mat-icon (click)="goHome()">home</mat-icon>
-      <button mat-button (click)="goHome()">Home</button>
-  </mat-toolbar>
 
 <div class="formulations">
-  <h2>Saved Formulations</h2>
- 
       @for (f of formulations; track f.title ) {
         <mat-card (click)="goToDetail(f.id)" class="clickable-card">
           <mat-card-title>{{ f.title }}</mat-card-title>
-          <mat-card-content>
-         
-          </mat-card-content>
+          <!-- <mat-card-content></mat-card-content> -->
         </mat-card>
+        <br>
       }
   
   <button mat-fab color="primary" class="add-btn" (click)="addNew()">

@@ -1,26 +1,62 @@
-  <mat-toolbar color="primary" style="width: 100%;">
-        <mat-icon (click)="goHome()">home</mat-icon>
-      <button mat-button (click)="goHome()">Home</button>
-      <button mat-button (click)="goFormulation()">Formulation</button>
-    </mat-toolbar>
+
+<mat-toolbar color="primary" class="main-toolbar">
+  <button mat-icon-button (click)="goHome()" aria-label="Back">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+  <h2 class="mat-headline section-title">{{ title }}</h2>
+</mat-toolbar>
+
+
+<nav class="step-nav">
+
+  <button mat-button (click)="setStep('favorites')" [ngClass]="{ active: currentStep === 'favorites' }">
+    <mat-icon>star</mat-icon>
+    <span class="step-label">Favorites</span>
+  </button>
+
+  <button mat-button (click)="setStep('formulations')" [ngClass]="{ active: currentStep === 'formulations' }">
+    <mat-icon>science</mat-icon>
+    <span class="step-label">Formulations</span>
+  </button>
+
+  <button mat-button (click)="setStep('storage')"  [ngClass]="{ active: currentStep === 'storage' }">
+    <mat-icon>inventory_2</mat-icon>
+    <span class="step-label">Storage</span>
+  </button>
+
+
+</nav>
+
+<!-- Contenido dinámico -->
+<main class="section-container">
+  <ng-container [ngSwitch]="currentStep">
+    <section *ngSwitchCase="'favorites'">
+
     
-<div class="favorites-container">
-  <h2>Favorite Products</h2>
+      @if (favorites.length === 0) {
+        <div class="empty"> 
+          <p>No favorites saved yet. Add products to favorites to see them here.</p>
+        </div>
+      }
+    
+      @for (product of favorites; track product.name) {
+        <mat-card (click)="goToDetail(product.id)" class="clickable-card">
+          <mat-card-title>{{ product.name }}</mat-card-title>
+          <mat-card-content>
+            <p><strong>Active Ingredient:</strong> {{ product.activeIngredients }}</p>
+          </mat-card-content>
+        </mat-card>
+      }
+ 
+     
+    </section>
 
-  <div *ngIf="favorites.length === 0" class="empty">
-    <p>No favorites saved yet. Add products to favorites to see them here.</p>
-  </div>
+    <section *ngSwitchCase="'formulations'">
+      <app-formulations-list></app-formulations-list>
+    </section>
 
-  <mat-card
-    *ngFor="let product of favorites"
-    class="clickable-card"
-    (click)="goToDetail(product.id)"
-  >
-    <mat-card-title>{{ product.name }}</mat-card-title>
-    <mat-card-content>
-      <p>{{ product.activeIngredients }}</p>
-      <p><strong>Pests:</strong> {{ product.pestsControlled.join(', ') }}</p>
-    </mat-card-content>
-  </mat-card>
-</div>
-
+    <section *ngSwitchCase="'storage'">
+      <p>Storage section coming soon.</p>
+    </section>
+  </ng-container>
+</main>

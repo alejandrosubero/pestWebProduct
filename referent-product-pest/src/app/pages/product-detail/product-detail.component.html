@@ -1,3 +1,29 @@
+
+
+
+
+<mat-toolbar color="primary" class="toolbar">
+  <!-- Botón de retroceso alineado a la izquierda -->
+  <button mat-icon-button (click)="back()" aria-label="Back">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+
+  <span class="spacer"></span>
+
+  <button
+    mat-button
+    class="fav-button"
+    [ngClass]="{ 'add': !isFav, 'remove': isFav }"
+    (click)="toggleFavorite()"
+  >
+    {{ isFav ? 'Remove from favorites' : 'Add to favorites' }}
+  </button>
+</mat-toolbar>
+
+
+
+
+
 <mat-card>
     @if(product){
     <mat-card-title>{{ product.name }}</mat-card-title>
@@ -18,11 +44,5 @@
             }
         </ul>
     </mat-card-content>
-
-    <mat-card-actions>
-        <button mat-raised-button color="primary" (click)="back()">Back</button>
-        <button mat-button color="accent" (click)="toggleFavorite()"> {{ isFav ? 'Remove from favorites' : 'Add to favorites' }}</button>    
-    </mat-card-actions>
-
     }
 </mat-card>

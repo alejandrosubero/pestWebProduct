@@ -20,7 +20,12 @@
     
       <span>Pest products</span>
       <span class="spacer"></span>
-      <button mat-button (click)="goFavorites()">Favorites</button>
+
+
+<button mat-icon-button matTooltip="Favorites" aria-label="Favorites" (click)="goFavorites()">
+  <mat-icon>{{ isFavoriteView ? 'star' : 'star_border' }}</mat-icon>
+</button>
+
       <button mat-button (click)="logout()">Log Out</button>
     </mat-toolbar>
 
@@ -40,8 +45,6 @@
           <mat-card-title>{{ product.name }}</mat-card-title>
           <mat-card-content>
             <p><strong>Active Ingredient:</strong> {{ product.activeIngredients }}</p>
-            <!-- <p><strong>Application/Treatment:</strong> {{ product.applicationTreatment }}</p> -->
-            <!-- <p><strong>Pests Controlled:</strong> {{ product.pestsControlled.join(', ') }}</p> -->
           </mat-card-content>
         </mat-card>
       }
