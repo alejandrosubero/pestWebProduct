@@ -19,6 +19,7 @@ import { ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { FavoritesService } from '../../services/favorites.service';
 import { NavegateService } from '../../services/navegate.service';
+import { ProductStoreService } from '../../services/product-store.service';
 
 
 @Component({
@@ -53,6 +54,7 @@ export class HomeComponent implements OnInit {
   pestName: string = '';
   public isFavoriteView: boolean = false;
   private favorites: any[] = [];
+  private productStoreService = inject(ProductStoreService);
 
   constructor(
     private http: HttpClient,
@@ -78,6 +80,7 @@ export class HomeComponent implements OnInit {
         }
 
     this.checkFavorites();
+    this.productStoreService.loadAll();
   }
 
 

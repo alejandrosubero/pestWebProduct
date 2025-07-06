@@ -1,0 +1,134 @@
+<!-- <mat-toolbar color="primary">
+      <button mat-icon-button (click)="goBack()">
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+      <span>Detalle</span>
+    </mat-toolbar>
+
+    <div class="detail-container" *ngIf="product">
+      <h2>{{ product.name }}</h2>
+      <p><strong>Tipo:</strong> {{ product.type }}</p>
+      <p><strong>Estado:</strong> {{ product.package.status }}</p>
+      <p><strong>Ubicación:</strong> {{ product.package.location.locationArea }}</p>
+    </div>
+
+    <div class="fab-container">
+        <button mat-fab color="primary"  (click)="toggleFab()" aria-label="Menu">
+            <mat-icon>{{ isFabOpen ? 'close' : 'menu' }}</mat-icon>
+        </button>
+        @if (isFabOpen) {
+            <button mat-fab class="green-fab" (click)="onEdit()">
+                <mat-icon>edit</mat-icon>
+            </button>
+            <button mat-fab color="warn" (click)="onDelete()">
+                <mat-icon>delete</mat-icon>
+            </button>
+        }
+    </div> -->
+
+    <div class="product-detail-page">
+
+  <header class="ios-navbar" color="primary" >
+    <button class="back-button" (click)="goBack()">
+      <mat-icon>chevron_left</mat-icon>
+      <span>Back</span>
+    </button>
+    <h1 class="nav-title">Product Details</h1>
+    <div class="nav-right-placeholder"></div> </header>
+
+   
+
+
+  <main class="content-area" *ngIf="product">
+    <section class="product-header-card">
+      <div class="product-icon-placeholder">
+        <mat-icon class="product-main-icon" [ngClass]="{'liquid-icon': product.type === 'Liquid', 'solid-icon': product.type === 'Granular' || product.type === 'Dust' || product.type === 'Solid', 'gel-icon': product.type === 'Gel', 'aerosol-icon': product.type === 'Aerosol'}">
+          {{ getProductIcon(product.type) }}
+        </mat-icon>
+      </div>
+      <h2 class="product-name">{{ product.name }}</h2>
+      <p class="product-description">{{ product.description || 'No description provided.' }}</p>
+    </section>
+
+    <section class="info-card">
+      <h3>General Info</h3>
+      <div class="info-row">
+        <span class="info-label">Type:</span>
+        <span class="info-value">{{ product.type }}</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Status:</span>
+        <span class="info-value status-chip" [ngClass]="'status-' + product.package.status.toLowerCase()">
+          {{ product.package.status }}
+        </span>
+      </div>
+      <div class="info-row" *ngIf="product.safetyDataSheetUrl">
+        <span class="info-label">SDS:</span>
+        <a [href]="product.safetyDataSheetUrl" target="_blank" class="info-value action-link">View SDS</a>
+      </div>
+    </section>
+
+    <section class="info-card">
+      <h3>Package & Location</h3>
+      <div class="info-row">
+        <span class="info-label">Initial Quantity:</span>
+        <span class="info-value">{{ product.package.initialQuantity }} {{ product.package.unitOfMeasure }}</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Current Quantity:</span>
+        <span class="info-value">{{ product.package.currentQuantity }} {{ product.package.unitOfMeasure }}</span>
+      </div>
+      <div class="info-row" *ngIf="product.package.batchNumber">
+        <span class="info-label">Batch No.:</span>
+        <span class="info-value">{{ product.package.batchNumber }}</span>
+      </div>
+      <div class="info-row" *ngIf="product.package.openedDate">
+        <span class="info-label">Opened:</span>
+        <span class="info-value">{{ product.package.openedDate | date:'shortDate' }}</span>
+      </div>
+      <div class="info-row" *ngIf="product.package.expirationDate">
+        <span class="info-label">Expires:</span>
+        <span class="info-value">{{ product.package.expirationDate | date:'shortDate' }}</span>
+      </div>
+      <div class="info-row location-row">
+        <span class="info-label">Location:</span>
+        <div class="info-value location-details">
+          <span>{{ product.package.location.locationName }}</span>
+          <small class="location-sub-detail">{{ product.package.location.locationArea }} - {{ product.package.location.locationSeccion }}</small>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- <div class="fab-menu-container">
+    <button mat-fab class="main-fab" color="primary" (click)="toggleFab()" aria-label="Actions menu">
+      <mat-icon>{{ isFabOpen ? 'close' : 'more_vert' }}</mat-icon> </button>
+
+    @if (isFabOpen) {
+      <div class="fab-actions">
+        <button mat-mini-fab class="green" (click)="onEdit()" aria-label="Edit product">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-mini-fab color="warn" (click)="onDelete()" aria-label="Delete product">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+    }
+  </div> -->
+
+ <div class="fab-container">
+        <button mat-fab color="primary"  (click)="toggleFab()" aria-label="Menu">
+            <mat-icon>{{ isFabOpen ? 'close' : 'menu' }}</mat-icon>
+        </button>
+        @if (isFabOpen) {
+            <button mat-fab class="green-fab" (click)="onEdit()">
+                <mat-icon>edit</mat-icon>
+            </button>
+            <button mat-fab color="warn" (click)="onDelete()">
+                <mat-icon>delete</mat-icon>
+            </button>
+        }
+    </div>
+
+</div>
+

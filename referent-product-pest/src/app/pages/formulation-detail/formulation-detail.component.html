@@ -16,18 +16,17 @@
 </mat-card>
 
 
-<div class="fab-container">
-  <button mat-fab color="primary" (click)="toggleFab()" aria-label="Menu">
-    <mat-icon>{{ isFabOpen ? 'close' : 'menu' }}</mat-icon>
-  </button>
 
-  @if (isFabOpen) {
-    <button mat-mini-fab class="fab-action green-fab" (click)="edit()" aria-label="Edit">
-      <mat-icon>edit</mat-icon>
-    </button>
-
-    <button mat-mini-fab color="warn" class="fab-action" (click)="confirmDelete()" aria-label="Delete">
-      <mat-icon>cancel</mat-icon>
-    </button>
-  }
-</div>
+  <div class="fab-container">
+        <button mat-fab color="primary" (click)="toggleFab()" aria-label="Menu">
+            <mat-icon>{{ isFabOpen ? 'close' : 'menu' }}</mat-icon>
+        </button>
+        @if (isFabOpen) {
+            <button mat-fab class="green-fab" (click)="edit()">
+                <mat-icon>edit</mat-icon>
+            </button>
+            <button mat-fab color="warn" (click)="confirmDelete()">
+                <mat-icon>delete</mat-icon>
+            </button>
+        }
+    </div>

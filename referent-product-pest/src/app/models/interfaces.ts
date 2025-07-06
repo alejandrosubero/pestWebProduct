@@ -11,7 +11,7 @@ export interface IProduct {
 
 export interface IPackage {
   id?: string;
-  productId: string;
+  productId: string | undefined;
   locationId: string;
   initialQuantity: number;
   currentQuantity: number;
@@ -54,5 +54,47 @@ export interface Product {
   pestsControlled: string[];
 }
 
-export type PackageStatus = 'In Stock' | 'In Use' | 'Empty';
-export type ProductType = 'Liquid' | 'Solid' | 'Gel' | 'Dust';
+
+export interface Notification {
+  message: string;
+  type: 'warning' | 'info';
+}
+
+
+export interface PackageSummary {
+  inUse: number;
+  inStock: number;
+  empty: number;
+}
+
+
+export type PackageStatus = 'In Stock' | 'In Use' | 'Empty' | 'Almost Empty';
+
+export type AreaUnit = 'Acre' | 'Square Foot' | 'Linear Foot' | 'Cubic Foot';
+
+export type ConcentrationUnit = 'Percent' | 'Parts Per Million';
+
+export type RateUnit = 'Gallons Per Acre' | 'Pounds Per Acre';
+
+export type ProductType = 'Liquid' | 'Granular' | 'Dust' | 'Gel' | 'Bait' | 'Aerosol' | 'Solid';
+
+// Aerosol/Liquid/Gel
+export type LiquidUnit = 'Gallon' | 'Quart' | 'Pint' | 'Fluid Ounce' | 'Milliliter' | 'Tablespoon' | 'Teaspoon' | 'fl oz';
+
+// Granular/Dust/Gel/Solid
+export type DryUnit = 'Pound' | 'Ounce' | 'Gram';
+
+// Bait/Solid/others (assuming 'others' implies general countable items)
+export type CountUnit = 'Count' | 'Trap' | 'Bait Station' | 'Unit';
+
+
+
+
+
+
+
+
+
+
+
+

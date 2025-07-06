@@ -1,0 +1,373 @@
+// .detail-container {
+//   padding: 1rem;
+// }
+
+// .fab-menu {
+//   position: fixed;
+//   bottom: 1rem;
+//   right: 1rem;
+//   display: flex;
+//   flex-direction: column;
+//   gap: 1rem;
+// }
+
+
+
+
+
+@use '@angular/material' as mat;
+
+// Define your color palette (using Material's built-in themes)
+$custom-primary: mat.define-palette(mat.$blue-palette, 700, 500, 900);
+$custom-accent: mat.define-palette(mat.$green-palette, A400, A200, A700);
+$custom-warn: mat.define-palette(mat.$red-palette, 500);
+
+// Create a theme (you can make a full theme or just use parts)
+$custom-theme: mat.define-light-theme((
+  color: (
+    primary: $custom-primary,
+    accent: $custom-accent,
+    warn: $custom-warn,
+  )
+));
+
+// Include theme styles
+@include mat.all-component-themes($custom-theme);
+
+// --- Base Styles ---
+.product-detail-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; // Take full viewport height
+  overflow-y: auto; // Enable scrolling for content
+  background-color: #f2f2f7; // iOS background color
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+// --- iOS Style Navigation Bar ---
+.ios-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; // Distribute items
+  padding: 10px 15px;
+  background-color: #3931d8; // Light background
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08); // Subtle bottom shadow
+  height: 56px; // Standard height
+  flex-shrink: 0; // Don't shrink when content scrolls
+
+  .back-button {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    // color: mat.get-color-from-palette($custom-primary, 500); // iOS blue link color
+    color: white; 
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 5px 0; // Adjust padding for touch target
+    mat-icon {
+      font-size: 24px;
+      margin-right: -4px; // Adjust icon spacing
+    }
+    span {
+      line-height: 1; // Align text vertically
+    }
+  }
+
+  .nav-title {
+    font-size: 17px;
+    font-weight: 600;
+    // color: #333;
+    color: white;
+    flex-grow: 1; // Allow title to take available space
+    text-align: center;
+    margin: 0;
+    // Add some padding on smaller screens if necessary to prevent overlap
+    @media (max-width: 400px) {
+      padding: 0 5px; // Smaller screens
+    }
+  }
+
+  .nav-right-placeholder {
+    // Occupy space equal to the back button for centered title
+    width: 70px; // Approximate width of back button
+  }
+}
+
+// --- Main Content Area ---
+.content-area {
+  flex-grow: 1; // Takes up remaining space
+  padding: 15px; // General padding for content cards
+  overflow-y: auto; // Allow content within main to scroll
+  -webkit-overflow-scrolling: touch; // Smooth scrolling for iOS
+}
+
+// --- Card Styles (iOS-like sections) ---
+.info-card, .product-header-card {
+  background-color: #ffffff;
+  border-radius: 10px; // Rounded corners
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08); // Subtle shadow
+  margin-bottom: 20px; // Space between cards
+  padding: 15px; // Inner padding
+  color: #333; // Default text color
+
+  h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #8e8e93; // iOS section header color
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+}
+
+.product-header-card {
+  text-align: center;
+  padding: 20px 15px;
+  margin-top: 5px; // Slightly less margin from top nav
+
+  .product-icon-placeholder {
+    width: 80px;
+    height: 80px;
+    background-color: #e0e0e0; // Placeholder background
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px auto; // Center it
+
+    .product-main-icon {
+      font-size: 48px;
+      color: #666;
+
+      // Type-specific icon colors (optional, but nice touch)
+      &.liquid-icon { color: mat.get-color-from-palette(mat.$blue-palette, 500); }
+      &.solid-icon { color: mat.get-color-from-palette(mat.$deep-orange-palette, 500); }
+      &.gel-icon { color: mat.get-color-from-palette(mat.$purple-palette, 500); }
+      &.aerosol-icon { color: mat.get-color-from-palette(mat.$grey-palette, 700); }
+    }
+  }
+
+  .product-name {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #222;
+  }
+
+  .product-description {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.4;
+    margin-top: 0;
+    max-height: 4.2em; /* Limit height to approx 3 lines */
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+// --- Info Rows ---
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #eeeeee; // Subtle separator
+  font-size: 16px;
+
+  &:last-child {
+    border-bottom: none; // No border on the last item
+  }
+
+  .info-label {
+    color: #666;
+    font-weight: 500;
+    flex-shrink: 0; // Prevent shrinking
+    margin-right: 15px; // Space from value
+  }
+
+  .info-value {
+    color: #333;
+    text-align: right;
+    flex-grow: 1; // Allows value to take up space
+
+    &.status-chip {
+      padding: 4px 8px;
+      border-radius: 15px;
+      font-size: 14px;
+      font-weight: 600;
+      &.status-active { background-color: #e6ffe6; color: #33a033; } // Light green
+      &.status-inactive { background-color: #ffe6e6; color: #d63333; } // Light red
+      &.status-lowstock { background-color: #fffacd; color: #ccaa00; } // Light yellow
+      &.status-expired { background-color: #ffe0b2; color: #ff6f00; } // Light orange
+      &.status-unknown { background-color: #e0e0e0; color: #555; } // Grey
+      // Add more as needed
+    }
+
+    &.action-link {
+      color: mat.get-color-from-palette($custom-primary, 500);
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &.location-row {
+    flex-direction: column; // Stack label and details
+    .info-value {
+      text-align: left;
+      margin-top: 5px; // Space below label
+    }
+    .location-details {
+      span {
+        display: block; // Main location name
+        font-weight: 600;
+        color: #222;
+      }
+      small.location-sub-detail {
+        display: block; // Area and section
+        font-size: 13px;
+        color: #888;
+        margin-top: 2px;
+      }
+    }
+  }
+}
+
+// --- Floating Action Button (FAB) Menu ---
+.fab-menu-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000; // Ensure it's on top
+  display: flex;
+  flex-direction: column-reverse; // Stack from bottom up
+  align-items: center;
+
+  .main-fab {
+    // Mat FAB default styling is already good
+    box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12); // Re-apply shadow if needed
+  }
+
+  .fab-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px; // Space between main FAB and action FABs
+
+    button {
+      margin-bottom: 10px; // Space between action FABs
+      // mat-mini-fab is typically already smaller
+    }
+  }
+}
+
+// --- Responsive Adjustments for iPhone 13 Mini (and similar small screens) ---
+@media (max-width: 375px) { // iPhone 13 Mini width is 375px
+  .product-detail-page {
+    padding-bottom: 80px; // Ensure content doesn't get hidden behind FAB
+  }
+
+  .ios-navbar {
+    padding: 8px 12px;
+    height: 50px;
+    .back-button {
+      font-size: 16px;
+      mat-icon { font-size: 22px; }
+    }
+    .nav-title {
+      font-size: 16px;
+    }
+  }
+
+  .content-area {
+    padding: 10px;
+  }
+
+  .info-card, .product-header-card {
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 12px;
+
+    h3 {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .product-header-card {
+    padding: 15px 10px;
+    .product-icon-placeholder {
+      width: 70px;
+      height: 70px;
+      .product-main-icon { font-size: 40px; }
+    }
+    .product-name { font-size: 20px; }
+    .product-description { font-size: 14px; }
+  }
+
+  .info-row {
+    padding: 10px 0;
+    font-size: 15px;
+  }
+
+  .fab-menu-container {
+    bottom: 15px;
+    right: 15px;
+  }
+}
+
+.product-main-icon {
+  font-size: 48px; // This is a good size for prominence
+  color: #666;
+
+  // Type-specific icon colors
+  &.liquid-icon { color: mat.get-color-from-palette(mat.$blue-palette, 500); }
+  &.solid-icon { color: mat.get-color-from-palette(mat.$deep-orange-palette, 500); }
+  // ... and so on
+}
+
+.green-fab {
+  background-color: #217724 !important; 
+  color: white;
+
+  &:hover {
+    background-color: #43a047 !important; 
+  }
+}
+
+.fab-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  z-index: 100;
+
+  button {
+    margin-top: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .fab-action {
+    opacity: 1;
+    transform: translateY(0);
+    animation: slide-up 0.3s ease forwards;
+  }
+
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

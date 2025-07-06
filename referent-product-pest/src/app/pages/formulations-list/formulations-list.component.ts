@@ -50,6 +50,8 @@ export class FormulationsListComponent {
     this.db.getAllFormulations().then(data => {
       this.formulations = data;
     });
+
+
   }
 
  goToDetail(id: number): void {

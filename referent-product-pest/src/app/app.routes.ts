@@ -11,6 +11,10 @@ import { FormulationsListComponent } from './pages/formulations-list/formulation
 import { FormulationAddComponent } from './pages/formulation-add/formulation-add.component';
 import { FormulationDetailComponent } from './pages/formulation-detail/formulation-detail.component';
 import { FormulationEditComponent } from './pages/formulation-edit/formulation-edit.component';
+import { ProductListComponent } from './pages/storage/product-list/product-list.component';
+import { AddProductComponent } from './pages/storage/add-product/add-product.component';
+import { EditProductComponent } from './pages/storage/edit-product/edit-product.component';
+import { StorageProductDetailComponent } from './pages/storage/storage-product-detail/storage-product-detail.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -22,7 +26,10 @@ export const routes: Routes = [
   { path: 'formulation/add', component: FormulationAddComponent, data: { animation: 'FormulationPage' }, canActivate: [authGuard] },
   { path: 'formulation/:id', component: FormulationDetailComponent, data: { animation: 'FormulationPage' }, canActivate: [authGuard] },
   { path: 'formulation/edit/:id', component: FormulationEditComponent, data: { animation: 'FormulationPage' }, canActivate: [authGuard] },
-
+  { path: 'storage/products', component: ProductListComponent, data: { animation: 'StoragePage' }, canActivate: [authGuard] },
+  { path: 'storage/products/add', component: AddProductComponent, data: { animation: 'StoragePage' }, canActivate: [authGuard] },
+  { path: 'storage/products/detail/:id', component: StorageProductDetailComponent, data: { animation: 'StoragePage' }, canActivate: [authGuard] },
+  { path: 'storage/products/edit/:id', component: EditProductComponent, data: { animation: 'StoragePage' }, canActivate: [authGuard] },
   { path: '**', redirectTo: '/login' }
 
 ];

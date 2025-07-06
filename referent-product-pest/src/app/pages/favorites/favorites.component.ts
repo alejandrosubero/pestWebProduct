@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -14,6 +14,8 @@ import { FavoritesService } from '../../services/favorites.service';
 import { PestData } from '../../models/pestdata.model';
 import {FormulationsListComponent} from '../../pages/formulations-list/formulations-list.component'
 import { NavegateService } from '../../services/navegate.service';
+import { DBService } from '../../services/db.service';
+import { DashboardComponent } from "../storage/dashboard/dashboard.component";
 
 
 
@@ -30,7 +32,7 @@ import { NavegateService } from '../../services/navegate.service';
     MatCardModule,
     MatSidenavModule,
     FormulationsListComponent,
-    MatListModule,],
+    MatListModule, DashboardComponent],
   templateUrl: './favorites.component.html',
   styleUrl: './favorites.component.scss'
 })
@@ -41,7 +43,8 @@ export class FavoritesComponent implements OnInit {
   currentStep: 'favorites' | 'formulations' | 'storage' = 'favorites';
   private pestData: PestData = { id: 0, name: '' };
   private id:number = 0;
-
+ 
+   
   constructor(
     private favService: FavoritesService, 
     private router: Router,

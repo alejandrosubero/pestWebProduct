@@ -5,7 +5,7 @@ import { IProduct, IPackage, IUsageRecord, Formulation, Product, } from '../mode
 export class AppDB extends Dexie {
   products!: Table<IProduct, number>;
   packages!: Table<IPackage, string>;
-  usageRecords!: Table<IUsageRecord, string>;
+  usageRecords!: Table<IUsageRecord, number>;
   formulations!: Table<Formulation, number>;
   legacyProducts!: Table<Product, number>;
 
