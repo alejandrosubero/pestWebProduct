@@ -7,22 +7,25 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators, FormsModule } from '@angular/forms';
 
-// import { ProductStoreService } from '../../../services/product-store.service';
-// import { NavegateService } from '../../../services/navegate.service';
-// import { CountUnit, DryUnit, LiquidUnit, PACKAGE_STATUS, PRODUCT_TYPES, ProductType } from '../../../models/const.model';
-// import { DefaultUnitServiceService } from '../../../services/default-unit-service.service';
-// import { Router } from '@angular/router';
-// import { PestData } from '../../../models/pestdata.model';
-
 import { MatSelectModule } from '@angular/material/select';
 import { AddProductComponent } from '../add-product/add-product.component';
 import { IProduct } from '../../../models/interfaces';
-
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 
 @Component({
   selector: 'app-edit-product',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatButtonModule, MatIconModule, MatSelectModule, MatToolbarModule],
+  imports: [
+    CommonModule, 
+    ReactiveFormsModule, 
+    MatFormFieldModule, 
+    MatAutocompleteModule,
+    MatInputModule, 
+    MatButtonModule, 
+    MatIconModule, 
+    MatSelectModule, 
+    MatToolbarModule,
+  ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './edit-product.component.html',
   styleUrl: './edit-product.component.scss'
@@ -33,6 +36,8 @@ export class EditProductComponent extends AddProductComponent implements OnInit 
 
 
   override ngOnInit() {
+   
+    this.setList();
     this.product = this.store.findById(this.id);
 
     if (this.product != undefined) {
@@ -49,8 +54,11 @@ export class EditProductComponent extends AddProductComponent implements OnInit 
         locationSeccion: this.product.package.location.locationSeccion
       });
     }
-
-      this.updateUnit();
+    this.updateUnit();
+    this.controlFN();
+    this.form.get('name')?.valueChanges.subscribe(value => {
+      this.nameValue = value;
+    });
 
   }
   
@@ -62,8 +70,7 @@ export class EditProductComponent extends AddProductComponent implements OnInit 
   }
 
   update() {
-
- const formValue = this.form.value;
+    const formValue = this.form.value;
     const productUpdate = {
       id: this.product?.id,
       name: formValue.name,
@@ -92,11 +99,4 @@ export class EditProductComponent extends AddProductComponent implements OnInit 
     }
   }
 
-  // override goBack() {
-  //   this.router.navigate(['/storage/products']);
-  // }
-
-   
-
-  
 }

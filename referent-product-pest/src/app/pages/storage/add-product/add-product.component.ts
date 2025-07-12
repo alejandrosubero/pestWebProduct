@@ -14,12 +14,27 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSelectModule } from '@angular/material/select';
 import { Router } from '@angular/router';
 import { PestData } from '../../../models/pestdata.model';
+import { ProductService } from '../../../services/product.service';
+import { Product } from '../../../models/product.model';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { map, Observable, startWith } from 'rxjs';
+
 
 
 @Component({
   selector: 'app-add-product',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatButtonModule, MatIconModule, MatSelectModule, MatToolbarModule],
+  imports: [
+    CommonModule, 
+    ReactiveFormsModule, 
+    MatFormFieldModule, 
+    MatAutocompleteModule,
+    MatInputModule, 
+    MatButtonModule, 
+    MatIconModule, 
+    MatSelectModule, 
+    MatToolbarModule,
+  ],
   templateUrl: './add-product.component.html',
   styleUrl: './add-product.component.scss'
 })
@@ -35,25 +50,35 @@ export class AddProductComponent {
   protected store = inject(ProductStoreService);
   protected navegateService = inject(NavegateService);
   protected unitService = inject(DefaultUnitServiceService);
+  protected productService = inject(ProductService);
 
   protected pestData: PestData = { id: 0, name: '' };
   protected id: number = 0;
   protected nameToNavegate = '';
-  
-  
+
+  protected allProducts: Product[] = [];
+  protected options: string[] = []; 
+  protected filteredOptions!: Observable<string[]>;
+  protected nameValue: string ='';
+
   constructor(public router: Router,) {
    this.setForm();
    this. getData();
+   
   }
-
+ 
 
   ngOnInit(): void {
+    this.setList();
     this.form.get('type')?.valueChanges.subscribe((type: string) => {
       this.updateUnits(type);
     });
     this.updateUnits(this.form.get('type')?.value);
+    this.controlFN();
+     this.form.get('name')?.valueChanges.subscribe(value => {
+        this.nameValue = value;
+    });
   }
-
 
 
   save() {
@@ -121,5 +146,52 @@ export class AddProductComponent {
       this.nameToNavegate = this.pestData.name
     }
   }
+
+getProductNames(products: Product[]): string[] {
+  return products.map(product => product.name);
+}
+
+setList(){
+  this.allProducts = this.productService.products(); 
+  if(this.allProducts != undefined && this.allProducts != null && this.allProducts.length > 0){
+       this.options = this.getProductNames(this.allProducts);
+  }
+}
+
+ 
+  controlFN(){
+  
+    if (!this.form) {
+      console.error('AutocompleteInputComponent: error FormGroup.');
+      return; 
+    }
+
+      const control = this.form.get("name");
+    if (!control) {
+      console.error(`AutocompleteInputComponent: error in '${"name"}' no find FormGroup.`);
+      return;
+    }
+
+    this.filteredOptions = control.valueChanges.pipe(
+      startWith(''),
+      map(value => this._filter(value || '')),
+    );
+  }
+
+  private _filter(value: string): string[] {
+    const filterValue = value.toLowerCase();
+    return this.options.filter(option => option.toLowerCase().includes(filterValue));
+  }
+
+ 
+  clearInput(): void {
+    this.form.get("name")?.setValue('');
+  }
+
+  checkValue(): boolean {
+    return this.nameValue === ''? false : true;
+  }
+
+
 
 }

@@ -8,9 +8,26 @@
 
 
 <form [formGroup]="form" (ngSubmit)="update()" class="form-wrapper">
-  <mat-form-field appearance="outline">
+ 
+ 
+  <!-- <mat-form-field appearance="outline">
     <mat-label>Name</mat-label>
     <input matInput formControlName="name" required />
+  </mat-form-field> -->
+
+
+ <mat-form-field appearance="outline">
+    <mat-label>Product Name</mat-label>
+    <input type="text" matInput [formControlName]="'name'" [formGroup]="form" [matAutocomplete]="auto">
+    <button *ngIf="checkValue()" matSuffix mat-icon-button aria-label="Clear" (click)="clearInput()">
+      <mat-icon>close</mat-icon>
+    </button>
+
+    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+        {{option}}
+      </mat-option>
+    </mat-autocomplete>
   </mat-form-field>
 
 
@@ -75,6 +92,6 @@
   </mat-form-field>
 
   <button mat-raised-button color="primary" type="submit" class="full-width">
-    Guardar
+   Save
   </button>
 </form>
