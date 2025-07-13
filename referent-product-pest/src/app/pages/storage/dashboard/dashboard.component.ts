@@ -46,9 +46,8 @@ export class DashboardComponent implements OnInit {
   }
  
   onRegisterUsage(): void {
-    console.log('Navigate to Register Usage screen');
-    // Implement Angular Router navigation here:
-    // this.router.navigate(['/usage/new']);
+    // console.log('Navigate to Register Usage screen');
+    this.router.navigate(['/storage/products/register/use']);
   }
 
 

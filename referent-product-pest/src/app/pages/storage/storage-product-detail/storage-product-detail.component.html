@@ -1,48 +1,20 @@
-<!-- <mat-toolbar color="primary">
-      <button mat-icon-button (click)="goBack()">
-        <mat-icon>arrow_back</mat-icon>
-      </button>
-      <span>Detalle</span>
-    </mat-toolbar>
+<div class="product-detail-page">
 
-    <div class="detail-container" *ngIf="product">
-      <h2>{{ product.name }}</h2>
-      <p><strong>Tipo:</strong> {{ product.type }}</p>
-      <p><strong>Estado:</strong> {{ product.package.status }}</p>
-      <p><strong>Ubicación:</strong> {{ product.package.location.locationArea }}</p>
-    </div>
-
-    <div class="fab-container">
-        <button mat-fab color="primary"  (click)="toggleFab()" aria-label="Menu">
-            <mat-icon>{{ isFabOpen ? 'close' : 'menu' }}</mat-icon>
-        </button>
-        @if (isFabOpen) {
-            <button mat-fab class="green-fab" (click)="onEdit()">
-                <mat-icon>edit</mat-icon>
-            </button>
-            <button mat-fab color="warn" (click)="onDelete()">
-                <mat-icon>delete</mat-icon>
-            </button>
-        }
-    </div> -->
-
-    <div class="product-detail-page">
-
-  <header class="ios-navbar" color="primary" >
+  <header class="ios-navbar mobile-toolbar" color="primary">
     <button class="back-button" (click)="goBack()">
       <mat-icon>chevron_left</mat-icon>
       <span>Back</span>
     </button>
     <h1 class="nav-title">Product Details</h1>
-    <div class="nav-right-placeholder"></div> </header>
-
-   
+    <div class="nav-right-placeholder"></div>
+  </header>
 
 
   <main class="content-area" *ngIf="product">
     <section class="product-header-card">
       <div class="product-icon-placeholder">
-        <mat-icon class="product-main-icon" [ngClass]="{'liquid-icon': product.type === 'Liquid', 'solid-icon': product.type === 'Granular' || product.type === 'Dust' || product.type === 'Solid', 'gel-icon': product.type === 'Gel', 'aerosol-icon': product.type === 'Aerosol'}">
+        <mat-icon class="product-main-icon"
+          [ngClass]="{'liquid-icon': product.type === 'Liquid', 'solid-icon': product.type === 'Granular' || product.type === 'Dust' || product.type === 'Solid', 'gel-icon': product.type === 'Gel', 'aerosol-icon': product.type === 'Aerosol'}">
           {{ getProductIcon(product.type) }}
         </mat-icon>
       </div>
@@ -94,7 +66,8 @@
         <span class="info-label">Location:</span>
         <div class="info-value location-details">
           <span>{{ product.package.location.locationName }}</span>
-          <small class="location-sub-detail">{{ product.package.location.locationArea }} - {{ product.package.location.locationSeccion }}</small>
+          <small class="location-sub-detail">{{ product.package.location.locationArea }} - {{
+            product.package.location.locationSeccion }}</small>
         </div>
       </div>
     </section>
@@ -116,19 +89,18 @@
     }
   </div> -->
 
- <div class="fab-container">
-        <button mat-fab color="primary"  (click)="toggleFab()" aria-label="Menu">
-            <mat-icon>{{ isFabOpen ? 'close' : 'menu' }}</mat-icon>
-        </button>
-        @if (isFabOpen) {
-            <button mat-fab class="green-fab" (click)="onEdit()">
-                <mat-icon>edit</mat-icon>
-            </button>
-            <button mat-fab color="warn" (click)="onDelete()">
-                <mat-icon>delete</mat-icon>
-            </button>
-        }
-    </div>
+  <div class="fab-container">
+    <button mat-fab color="primary" (click)="toggleFab()" aria-label="Menu">
+      <mat-icon>{{ isFabOpen ? 'close' : 'menu' }}</mat-icon>
+    </button>
+    @if (isFabOpen) {
+    <button mat-fab class="green-fab" (click)="onEdit()">
+      <mat-icon>edit</mat-icon>
+    </button>
+    <button mat-fab color="warn" (click)="onDelete()">
+      <mat-icon>delete</mat-icon>
+    </button>
+    }
+  </div>
 
 </div>
-

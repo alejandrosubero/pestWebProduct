@@ -8,7 +8,7 @@ import { from } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class ProductStoreService {
-
+ 
   public usageRecordStoreService = inject(UsageRecordStoreService);
   private readonly db = inject(DBService);
 
@@ -74,7 +74,6 @@ export class ProductStoreService {
   async update(product: IProduct): Promise<void> {
     await this.db.updateProduct(product);
     await this.loadAll();
-    console.log('produc',product);
   }
 
 
@@ -127,6 +126,8 @@ export class ProductStoreService {
     if (product.package.currentQuantity === 0) {
       product.package.status = 'Empty';
     }
+
+    product.package.status = 'In Use'
     
     await this.db.updateProduct(product);
     await this.loadAll();

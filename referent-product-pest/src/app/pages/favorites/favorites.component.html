@@ -1,5 +1,5 @@
 
-<mat-toolbar color="primary" class="main-toolbar">
+<mat-toolbar color="primary" class="main-toolbar mobile-toolbar">
   <button mat-icon-button (click)="goHome()" aria-label="Back">
     <mat-icon>arrow_back</mat-icon>
   </button>
@@ -7,7 +7,7 @@
 </mat-toolbar>
 
 
-<nav class="step-nav">
+<nav class="step-nav mobile-toolbar">
 
   <button mat-button (click)="setStep('favorites')" [ngClass]="{ active: currentStep === 'favorites' }">
     <mat-icon>star</mat-icon>

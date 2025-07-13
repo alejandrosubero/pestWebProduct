@@ -10,8 +10,8 @@
 </mat-sidenav>
 
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
-      
+    <mat-toolbar color="primary" class="mobile-toolbar">
+    
       @if (!isWideScreen){
       <button mat-icon-button (click)="drawer.toggle()">
         <mat-icon>menu</mat-icon>
@@ -20,13 +20,14 @@
     
       <span>Pest products</span>
       <span class="spacer"></span>
-
-
-<button mat-icon-button matTooltip="Favorites" aria-label="Favorites" (click)="goFavorites()">
-  <mat-icon>{{ isFavoriteView ? 'star' : 'star_border' }}</mat-icon>
-</button>
-
-      <button mat-button (click)="logout()">Log Out</button>
+    
+    
+      <button mat-icon-button matTooltip="Favorites" aria-label="Favorites" (click)="goFavorites()">
+        <mat-icon>{{ isFavoriteView ? 'star' : 'star_border' }}</mat-icon>
+      </button>
+    
+      <button mat-button (click)="logout()">
+        <mat-icon>exit_to_app</mat-icon></button>
     </mat-toolbar>
 
     <div class="content">

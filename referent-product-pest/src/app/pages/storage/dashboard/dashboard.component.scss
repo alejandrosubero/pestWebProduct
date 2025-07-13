@@ -7,6 +7,10 @@ $orange-palette: mat.define-palette(mat.$orange-palette);
 $green-palette: mat.define-palette(mat.$green-palette);
 $grey-palette: mat.define-palette(mat.$grey-palette);
 
+$my-app-primary: mat.define-palette(mat.$deep-purple-palette);
+$my-app-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+
 $theme: mat.define-light-theme((
   color: (
     primary: $primary-palette,
@@ -237,4 +241,75 @@ $theme: mat.define-light-theme((
       }
     }
   }
+}
+
+
+// .button-container {
+//   display: flex;
+//   justify-content: center; // Center the button
+//   padding-top: 20px;
+
+//   .save-button {
+//     width: 100%; // Make the button span full width like a keyboard key
+//     max-width: 320px; // Limit max width for good aesthetics on larger phones
+//     height: 56px; // Taller button for easy tapping
+//     font-size: 1.2em;
+//     font-weight: 600;
+//     border-radius: 8px; // Slightly rounded corners for a "key" look
+//     letter-spacing: 1px;
+//     text-transform: uppercase; // Make it look like a keyboard key
+
+//     // Key press animation
+//     transition: transform 0.1s ease-out, box-shadow 0.1s ease-out;
+//     box-shadow: 0 4px 0 0 mat.get-color-from-palette(mat.$pink-palette, A700); // "Key" shadow
+
+//     &:not([disabled]):active {
+//       transform: translateY(2px); // Press down effect
+//       box-shadow: 0 2px 0 0
+//         mat.get-color-from-palette(mat.$pink-palette, A700); // Reduced shadow when pressed
+//     }
+
+//     &[disabled] {
+//       opacity: 0.6;
+//       cursor: not-allowed;
+//       box-shadow: none; // No shadow when disabled
+//       transform: none; // No press effect when disabled
+//     }
+//   }
+// }
+
+.button-container {
+  display: flex;
+  justify-content: center; // Center the button
+  padding-top: 20px;
+
+.save-button {
+  width: 100%;
+  max-width: 320px;
+  height: 56px;
+  font-size: 1.2em;
+  font-weight: 600;
+  border-radius: 8px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  transition: transform 0.1s ease-out, box-shadow 0.1s ease-out;
+  // Use your primary color for the key shadow
+  box-shadow: 0 4px 0 0 mat.get-color-from-palette($my-app-primary, 700);
+
+  &:not([disabled]):active {
+    transform: translateY(2px);
+    // Use your primary color for the reduced shadow when pressed
+    box-shadow: 0 2px 0 0 mat.get-color-from-palette($my-app-primary, 700);
+  }
+
+  &[disabled] {
+    opacity: 0.6;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+  }
+}
+
+
 }

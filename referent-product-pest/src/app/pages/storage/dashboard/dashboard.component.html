@@ -22,10 +22,16 @@
     }
  
  <div class="quick-actions">
-    <button mat-flat-button color="accent" class="action-button primary-action" (click)="onRegisterUsage()">
+
+  <div class="button-container">
+        
+             <button mat-flat-button color="primary" class="save-button " (click)="onRegisterUsage()">
       <mat-icon>add_shopping_cart</mat-icon>
       Register Product Usage
     </button>
+        </div>
+
+   
 
     <div class="secondary-actions">
       <button mat-stroked-button class="action-button" (click)="onAddNewProduct()">

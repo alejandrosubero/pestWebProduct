@@ -1,7 +1,6 @@
-// src/app/services/usage-record-store.service.ts
 import { Injectable, signal } from '@angular/core';
 import { IUsageRecord } from '../models/interfaces';
-import { db } from '../db/app-db'; // Asegúrate de que db.usageRecords exista
+import { db } from '../db/app-db'; 
 
 @Injectable({ providedIn: 'root' })
 export class UsageRecordStoreService {
@@ -10,16 +9,15 @@ export class UsageRecordStoreService {
   readonly record = this._record;
 
   constructor() {
-    this.load(); // Cargar automáticamente al iniciar
+    this.load(); 
   }
 
-  // 🔄 Cargar el único registro (si existe)
   async load(): Promise<void> {
     const all = await db.usageRecords.toArray();
     this._record.set(all.length ? all[0] : null);
   }
 
-  // ➕ Crear solo si no existe uno
+
   async createIfNotExists(newRecord: IUsageRecord): Promise<void> {
     const count = await db.usageRecords.count();
     if (count === 0) {
