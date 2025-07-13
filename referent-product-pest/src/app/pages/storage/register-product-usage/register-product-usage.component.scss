@@ -1,0 +1,137 @@
+@use '@angular/material' as mat;
+
+// Define a custom color palette for a vibrant feel, if desired
+// or use your application's existing theme colors.
+// For iPhone, often a clean, bright aesthetic works well.
+$my-app-primary: mat.define-palette(mat.$indigo-palette);
+$my-app-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// Mixin for responsive sizing on iPhone 13 mini and similar devices
+@mixin iphone-13-mini-layout {
+  // iPhone 13 mini: 375px wide (logical pixels)
+  // You might want to target max-width 400px to cover slightly larger small phones too
+  @media (max-width: 400px) {
+    .form-container {
+      padding: 10px; // Slightly less padding for smaller screens
+    }
+
+    .mat-form-field {
+      margin-bottom: 12px; // Slightly smaller margins
+    }
+  }
+}
+
+:host {
+  display: block;
+  height: 100vh; // Occupy full viewport height
+  background-color: mat.get-color-from-palette(
+    mat.$grey-palette,
+    50
+  ); // Light background for beauty
+  overflow-y: auto; // Enable scrolling for long forms
+  -webkit-overflow-scrolling: touch; // Smooth scrolling on iOS
+}
+
+.mobile-toolbar {
+  height: 56px; // Standard mobile toolbar height
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+    0 1px 10px 0 rgba(0, 0, 0, 0.12); // Subtle shadow
+  z-index: 10; // Ensure it stays above content
+  .mat-icon {
+    font-size: 24px;
+    height: 24px;
+    width: 24px;
+  }
+}
+
+.form-container {
+  padding: 20px;
+  max-width: 600px; // Limit width on larger screens for readability
+  margin: 20px auto; // Center the form
+  background-color: white;
+  border-radius: 12px; // Rounded corners for a modern look
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); // Soft shadow
+}
+
+.full-width {
+  width: 100%;
+  margin-bottom: 16px; // Space between form fields
+}
+
+// Enhance Material form field appearance
+.mat-form-field {
+  .mat-form-field-wrapper {
+    padding-bottom: 0.5em; // Reduce default padding to be more compact
+  }
+  .mat-form-field-underline {
+    position: relative;
+    bottom: 0; // Align underline nicely
+  }
+}
+
+.button-container {
+  display: flex;
+  justify-content: center; // Center the button
+  padding-top: 20px;
+
+//   .save-button {
+//     width: 100%; // Make the button span full width like a keyboard key
+//     max-width: 320px; // Limit max width for good aesthetics on larger phones
+//     height: 56px; // Taller button for easy tapping
+//     font-size: 1.2em;
+//     font-weight: 600;
+//     border-radius: 8px; // Slightly rounded corners for a "key" look
+//     letter-spacing: 1px;
+//     text-transform: uppercase; // Make it look like a keyboard key
+
+//     // Key press animation
+//     transition: transform 0.1s ease-out, box-shadow 0.1s ease-out;
+//     box-shadow: 0 4px 0 0 mat.get-color-from-palette(mat.$pink-palette, A700); // "Key" shadow
+
+//     &:not([disabled]):active {
+//       transform: translateY(2px); // Press down effect
+//       box-shadow: 0 2px 0 0
+//         mat.get-color-from-palette(mat.$pink-palette, A700); // Reduced shadow when pressed
+//     }
+
+//     &[disabled] {
+//       opacity: 0.6;
+//       cursor: not-allowed;
+//       box-shadow: none; // No shadow when disabled
+//       transform: none; // No press effect when disabled
+//     }
+//   }
+
+.save-button {
+  width: 100%;
+  max-width: 320px;
+  height: 56px;
+  font-size: 1.2em;
+  font-weight: 600;
+  border-radius: 8px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  transition: transform 0.1s ease-out, box-shadow 0.1s ease-out;
+  // Use your primary color for the key shadow
+  box-shadow: 0 4px 0 0 mat.get-color-from-palette($my-app-primary, 700);
+
+  &:not([disabled]):active {
+    transform: translateY(2px);
+    // Use your primary color for the reduced shadow when pressed
+    box-shadow: 0 2px 0 0 mat.get-color-from-palette($my-app-primary, 700);
+  }
+
+  &[disabled] {
+    opacity: 0.6;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+  }
+}
+
+
+}
+
+// Apply iPhone 13 mini specific adjustments
+@include iphone-13-mini-layout();
