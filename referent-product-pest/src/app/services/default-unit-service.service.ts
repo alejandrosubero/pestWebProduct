@@ -13,7 +13,7 @@ getUnitsByProductType(productType: string): (LiquidUnit | DryUnit | CountUnit)[]
     switch (productType) {
       case 'Aerosol':
       case 'Liquid':
-        return ['Gallon', 'Quart', 'Pint', 'Fluid Ounce', 'Milliliter', 'Tablespoon', 'Teaspoon', 'fl oz'];
+        return ['Gallon', 'Quart', 'Pint','fl oz' ,'Fluid Ounce', 'Milliliter', 'Tablespoon', 'Teaspoon' ];
       case 'Granular':
       case 'Dust':
         return ['Pound', 'Ounce', 'Gram'];
