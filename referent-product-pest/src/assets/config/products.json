@@ -2608,5 +2608,48 @@
     "id": 76,
     "url1": "assets/prod/paul-labels-sds-2025-06-14/WisdomLawnGranular/label-WisdomLawnGranularLabel4-14-19.pdf",
     "url2": "assets/prod/paul-labels-sds-2025-06-14/WisdomLawnGranular/sds-WisdomLawnGranSDS9-27-22.pdf"
+  },
+  {
+    "id": 77,
+    "name": "InVade™ Bio Drain™",
+    "activeIngredients": "Premium, natural microbes; citrus oil; Nonpathogenic bacillus bacteria (>1 million cfu/gallon)",
+    "applicationTreatment": "Thickened gel formula. For drains: moisten with 1-2 gallons of warm water if unused; apply during low usage times, adjust amount per drain size. Repeat every other day for severe issues or weekly for maintenance. For soda fountain drains: apply ~1 oz weekly. For mopping: use 4 oz per yellow mop bucket. For surface cleaning (dumpsters, urinals, trash chutes): 4–8 oz per gallon, apply with sprayer. For foaming: 4–8 oz in a gallon + 2–4 oz foaming agent, apply with foamer. Also usable in power sprayers or hose-end sprayers at ½–2 oz per gallon. Spray/foam on areas with organic buildup and odors; do not rinse.",
+    "pestsControlled": [
+      "Drain Flies",
+      "Cockroaches",
+      "Organic debris",
+      "Odor",
+      "Organic waste",
+      "Sugary build-up",
+      "Bird droppings",
+      "Rodent droppings",
+      "Animal droppings"
+ 
+    ],
+    "url1":"assets/prod/paul-labels-sds-2025-06-14/InVadeBioDrain/label-InvadeBioDrainDyeFreeLabel1-1-22.pdf" ,
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/InVadeBioDrain/sds-InVadeBioDrainSDS1-6-25.pdf"
+  },
+  {
+    "id": 78,
+    "name": "InVade™ Bio Foam™",
+    "activeIngredients": "Citrus oil; foaming agent; natural microbes; soil-derived Bacillus spp. spores; Nonpathogenic bacillus bacteria (>1 million cfu/gallon); Proprietary Ingredients (1.35% w/w); 2-Butoxyethanol; Sodium Dodecyl Sulfate; Lauryl Alcohol",
+    "applicationTreatment": "Foaming concentrate (orange liquid). Dilute 1 oz/quart (4 oz/gallon). Apply via Foamer Simpson™ or other foamer (hand, power, hose-end). Use on surfaces, cracks, crevices, drains, and organic buildup areas in food and non-food zones. Key zones: under equipment, baseboards, drip trays, dishwashers, voids, dumpsters. Foam lasts hours—do not rinse. Use once or twice monthly. On food contact surfaces: let sit for hours, rinse, disinfect before use. Do not apply to lakes, streams, or ponds.",
+    "pestsControlled": [
+      "Drain Flies",
+      "Cockroaches",
+       "Organic debris",
+      "Odor",
+      "Organic waste",
+      "Fats",
+      "Oils",
+      "Grease (FOG)",
+      "Carbohydrates",
+      "Proteins",
+      "Cellulose",
+      "Urea",
+      "Phosphates"
+    ],
+    "url1":"assets/prod/paul-labels-sds-2025-06-14/InVadeBioFoam/label-InvadeBioFoamInstr1-1-20.pdf" ,
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/InVadeBioFoam/sds-InVadeBioFoamSDS1-6-25.pdf"
   }
 ]
