@@ -45,6 +45,17 @@ export class ProductDetailComponent implements OnInit {
   private configUrl: string = 'assets/config/products.json';
   private nameToNavegate ='';
 
+
+ oneProduct: Product  = {
+    id: 0,
+    name: '',
+    activeIngredients:'',
+    applicationTreatment:'',
+    pestsControlled: [],
+    url1: '',
+    url2: ''
+ }
+
   constructor(
     private route: ActivatedRoute,
     private router: Router,
@@ -75,11 +86,18 @@ export class ProductDetailComponent implements OnInit {
     if (prolist != undefined && prolist != null && prolist.length > 0) {
       this.checkProduct(prolist, this.id);
     }
-
   }
 
   checkProduct(prolist: Product[], id: number) {
-    this.product = prolist.find(p => p.id === id);
+
+    const found = prolist.find(p => p.id === id);
+    if (found) {
+       this.product = found;
+      this.oneProduct = found;
+    } else {
+      console.error('Producto no encontrado con id:', id);
+    }
+
     if (!this.product) {
       this.router.navigate(['/home']);
     }else{
@@ -106,15 +124,23 @@ export class ProductDetailComponent implements OnInit {
 
   goFavorites(): void {
     this.navegateService.goFavorites('favorites', 1);
+  }
 
-    // let id =1;
-    // const pestData: PestData = {
-    //   id: id,
-    //   name: 'favorites'
-    // };
-    // this.router.navigate(['/favorites', id], {
-    //   state: { data: pestData }
-    // });
+    viewPdf(): void {
+    window.open( this.oneProduct.url1, '_blank');
+  }
+
+
+  
+  downloadPdf(): void {
+    const pdfUrl = this.oneProduct.url1;
+    const pdfName = `${new Date()}.pdf`;
+    // Crea un enlace temporal.
+    const link = document.createElement('a');
+    link.href = pdfUrl;
+    link.download = pdfName;
+    link.click();
+    link.remove();
   }
 
 }

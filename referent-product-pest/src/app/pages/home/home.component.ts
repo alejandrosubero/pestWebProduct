@@ -47,7 +47,7 @@ export class HomeComponent implements OnInit {
   filteredProducts: Product[] = [];
   uniquePests: string[] = [];
   searchTerm: string = '';
-  version: string = 'v2.0.0';
+  version: string = 'v2.1.0';
   private configUrl: string = 'assets/config/products.json';
   errorMessage: string = '';
   isWideScreen = true;
@@ -88,6 +88,8 @@ export class HomeComponent implements OnInit {
     this.favorites = this.favService.getFavorites();
     if (this.favorites != undefined && this.favorites != null && this.favorites.length > 0) {
       this.isFavoriteView = true;
+       const pproducts: Product[] = this.favorites;
+        const pforname = pproducts.filter( x => x.name === "ZENPROX® EC");
     }
   }
 

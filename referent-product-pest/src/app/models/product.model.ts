@@ -5,5 +5,7 @@ export interface Product {
   activeIngredients: string;
   applicationTreatment: string;
   pestsControlled: string[];
+  url1: string,
+ url2: string
 }
 

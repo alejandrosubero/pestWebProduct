@@ -10,14 +10,33 @@
 
   <span class="spacer"></span>
 
-  <button
+  <!-- <button
     mat-button
     class="fav-button"
     [ngClass]="{ 'add': !isFav, 'remove': isFav }"
     (click)="toggleFavorite()"
   >
     {{ isFav ? 'Remove from favorites' : 'Add to favorites' }}
+  </button> -->
+
+  <button mat-icon-button (click)="viewPdf()" aria-label="View PDF">
+    <mat-icon>visibility</mat-icon>
   </button>
+
+<span class="spacer"></span>
+
+ <button mat-icon-button (click)="downloadPdf()" aria-label="Download Pdf">
+    <mat-icon>picture_as_pdf</mat-icon>
+  </button>
+
+  <span class="spacer"></span>
+
+  <button mat-icon-button matTooltip="Favorites" aria-label="Favorites" (click)="toggleFavorite()">
+    <mat-icon>{{ isFav ? 'star' : 'star_border' }}</mat-icon>
+  </button>
+
+
+
 </mat-toolbar>
 
 
