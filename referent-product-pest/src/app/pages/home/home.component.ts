@@ -20,6 +20,9 @@ import { MatSidenav } from '@angular/material/sidenav';
 import { FavoritesService } from '../../services/favorites.service';
 import { NavegateService } from '../../services/navegate.service';
 import { ProductStoreService } from '../../services/product-store.service';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { SearchInfoSheetComponent } from '../share/search-info-sheet/search-info-sheet.component';
+import { MatBottomSheet, MatBottomSheetModule } from '@angular/material/bottom-sheet';
 
 
 @Component({
@@ -34,6 +37,8 @@ import { ProductStoreService } from '../../services/product-store.service';
     MatIconModule,
     MatCardModule,
     MatSidenavModule,
+    MatTooltipModule,
+    MatBottomSheetModule,
     MatListModule,],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
@@ -47,7 +52,7 @@ export class HomeComponent implements OnInit {
   filteredProducts: Product[] = [];
   uniquePests: string[] = [];
   searchTerm: string = '';
-  version: string = 'v2.1.0';
+  version: string = 'v2.1.1';
   private configUrl: string = 'assets/config/products.json';
   errorMessage: string = '';
   isWideScreen = true;
@@ -63,7 +68,8 @@ export class HomeComponent implements OnInit {
     private breakpointObserver: BreakpointObserver,
     private productService: ProductService,
     private favService: FavoritesService,
-   private navegateService: NavegateService) { }
+   private navegateService: NavegateService,
+  private bottomSheet: MatBottomSheet) { }
 
   ngOnInit(): void {
     this.breakpointObserver
@@ -83,6 +89,9 @@ export class HomeComponent implements OnInit {
     this.productStoreService.loadAll();
   }
 
+  openSearchInfo(): void {
+    this.bottomSheet.open(SearchInfoSheetComponent);
+  }
 
   checkFavorites() {
     this.favorites = this.favService.getFavorites();
@@ -169,7 +178,21 @@ getPestToGo(phrase: string, id: number): string {
       return new RegExp(`\\b${escaped}\\b`, 'i'); // \b => límite de palabra
     };
 
-    if (rawInput.includes('&')) {
+
+
+  // Nuevo caso: búsqueda por ingrediente activo si empieza con "*"
+  if (rawInput.startsWith('*')) {
+    const searchTerm = normalize(rawInput.slice(1).trim());
+    if (searchTerm.length >= 2) {
+      this.filteredProducts = this.allProducts.filter(product => {
+        const ingredients = normalize(product.activeIngredients || '');
+        return ingredients.includes(searchTerm);
+      });
+    } else {
+      this.filteredProducts = [];
+    }
+
+  } else if (rawInput.includes('&')) {
       const searchTerm = normalize(rawInput.split('&')[1]?.trim() || '');
       if (searchTerm.length >= 2) {
         this.filteredProducts = this.allProducts.filter(product => {
