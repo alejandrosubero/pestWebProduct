@@ -18,6 +18,8 @@ import { Product } from '../../models/product.model';
 import { PestData } from '../../models/pestdata.model';
 import { NavegateService } from '../../services/navegate.service';
 
+import { MatIconRegistry } from '@angular/material/icon';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-product-detail',
@@ -62,8 +64,12 @@ export class ProductDetailComponent implements OnInit {
     private http: HttpClient,
     private favService: FavoritesService,
     private productService: ProductService,
-    private navegateService: NavegateService
+    private navegateService: NavegateService,
+    private matIconRegistry: MatIconRegistry,
+    private domSanitizer: DomSanitizer
   ) { 
+    this.matIconRegistry.addSvgIcon( 'sds', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/sds.svg') );
+    this.matIconRegistry.addSvgIcon( 'label', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/label.svg') );
     this.getData();
   }
 
@@ -130,7 +136,9 @@ export class ProductDetailComponent implements OnInit {
     window.open( this.oneProduct.url1, '_blank');
   }
 
-
+    viewSdS(): void {
+    window.open( this.oneProduct.url2, '_blank');
+  }
   
   downloadPdf(): void {
     const pdfUrl = this.oneProduct.url1;

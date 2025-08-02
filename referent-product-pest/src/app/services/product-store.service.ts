@@ -131,6 +131,7 @@ export class ProductStoreService {
     
     await this.db.updateProduct(product);
     await this.loadAll();
+    record.productName = product.name;
     await this.usageRecordStoreService.update(record);
 
   }

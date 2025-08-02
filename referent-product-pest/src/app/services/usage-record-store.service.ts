@@ -28,8 +28,26 @@ export class UsageRecordStoreService {
     }
   }
 
+   async update(updated: IUsageRecord): Promise<void> {
+    //Asignar usageDate si no se provee
+    if (!updated.usageDate) {
+      updated.usageDate = new Date().toISOString();
+    }
+    
+      const current = this._record();
+    // Si no hay ID definido
+    if (!updated.id) {
+      this.clear();
+      await db.usageRecords.add(updated);
+      await this.load();
+      return;
+    }
+    //Actualizar o reemplazar el registro existente
+    await db.usageRecords.put(updated);
+    await this.load();
+  }
 
-  async update(updated: IUsageRecord): Promise<void> {
+  async update1(updated: IUsageRecord): Promise<void> {
     //Asignar usageDate si no se provee
     if (!updated.usageDate) {
       updated.usageDate = new Date().toISOString();
