@@ -51,6 +51,7 @@ export class TechnicalNotesListComponent {
   filteredProducts: TechnicalProduct[] = [];
   allProducts: TechnicalProduct[] = [];
   searchTerm: string = '';
+  title: string = 'Technical Notes'
 
  constructor(
     private technicalProductService: TechnicalProductService,
@@ -64,11 +65,14 @@ export class TechnicalNotesListComponent {
     const products = this.technicalProductService.getAllTechnicalProducts();
     if(products){
       this.allProducts = products;
+      if(this.allProducts){
+        this.filteredProducts = this.allProducts;
+      }
     }
     console.log(products);
   }
 
-buscarCoincidencias(): void {
+buscarCoincidencias2(): void {
   const rawInput = this.searchTerm.trim().toLowerCase();
 
   const normalize = (text: string): string =>
@@ -105,6 +109,45 @@ buscarCoincidencias(): void {
       regex.test(getRelevantFields(product))
     );
   }
+}
+
+buscarCoincidencias(): void {
+  const rawInput = this.searchTerm.trim().toLowerCase();
+  
+  // Normaliza el texto quitando acentos y convirtiendo a minúsculas
+  const normalize = (text: string): string =>
+    text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+
+  // Obtiene una cadena de texto de todos los campos relevantes para la búsqueda
+  const getSearchableText = (product: TechnicalProduct): string => {
+    const title = normalize(product.title);
+    const activeIngredients = normalize(product.activeIngredients);
+    const spectrumOfControl = normalize(product.spectrumOfControl);
+    
+    return `${title} ${activeIngredients} ${spectrumOfControl}`;
+  };
+
+  // Si no hay texto o es muy corto, limpia los resultados
+  if (rawInput.length < 2) {
+    this.filteredProducts = [];
+    return;
+  }
+  
+  // Normaliza el término de búsqueda
+  const normalizedSearchTerm = normalize(rawInput);
+  
+  // Lógica de búsqueda principal
+  this.filteredProducts = this.allProducts.filter(product => {
+    const searchableText = getSearchableText(product);
+    
+    // Si el término de búsqueda comienza con '*', busca por ingrediente activo
+    if (normalizedSearchTerm.startsWith('*')) {
+      const ingredientTerm = normalizedSearchTerm.slice(1).trim();
+      return normalize(product.activeIngredients).includes(ingredientTerm);
+    } 
+  
+    return searchableText.includes(normalizedSearchTerm);
+  });
 }
 
  back(): void {

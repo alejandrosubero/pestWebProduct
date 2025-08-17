@@ -14,7 +14,7 @@ export class TechnicalProductService {
   // Computed que expone los productos
   public readonly technicalProducts = computed(() => this.productsSignal());
 
-  private configUrl: string = '/assets/config/technicalAnalysis.json';
+  private configUrl: string = '/assets/config/technicalAnalysis1.json';
 
   constructor(private http: HttpClient) {
     this.loadProducts();

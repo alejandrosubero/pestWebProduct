@@ -42,6 +42,7 @@ button {
   flex: 1 1 auto;
 }
 
+
 /* Estilo común para el botón */
 .fav-button {
   background: transparent !important;
@@ -57,4 +58,26 @@ button {
 /* Texto rojo para "Remove from favorites" */
 .fav-button.remove {
   color: white;
+}
+
+
+.caja{
+margin-bottom: 8px;
+padding: 5px;
+border-radius: 0px;
+background: linear-gradient(225deg, #ebe9e9, #fbfbfb);
+box-shadow:  -9px 9px 16px #f8eeee,
+             9px -9px 16px #ffffff;
+}
+.caja_1{
+margin-bottom: 8px;
+padding: 5px;
+border-radius: 0px;
+background: linear-gradient(225deg, #d4d4d4, #fbfbfb);
+box-shadow:  -9px 10px 17px #e1dddd,
+             9px -10px 17px #ffffff;
+}
+
+.sep{
+  margin-top: 8px;
 }

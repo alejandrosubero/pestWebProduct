@@ -12,6 +12,9 @@ import { MatCardModule } from '@angular/material/card';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 
+// Importa MatExpansionModule
+import { MatExpansionModule } from '@angular/material/expansion'; 
+
 import { AuthService } from '../../services/auth.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FavoritesService } from '../../services/favorites.service';
@@ -37,6 +40,7 @@ import { DomSanitizer } from '@angular/platform-browser';
     MatCardModule,
     MatSidenavModule,
     MatListModule,
+    MatExpansionModule,
   ],
   templateUrl: './technical-notes.component.html',
   styleUrl: './technical-notes.component.scss'
@@ -121,16 +125,10 @@ export class TechnicalNotesComponent implements OnInit {
 
 
  back(): void {
-    if(this.nameToNavegate === 'favorites'){
-     this.goFavorites();
-    }else {
-      this.router.navigate(['/home']);
-    }
+    const routeBase = "technical/notes";
+    this.router.navigate([routeBase]);
   }
 
-    goFavorites(): void {
-    this.navegateService.goFavorites('favorites', 1);
-  }
 
    downloadPdf(): void {
     const pdfUrl = this.technicalProduct.url1;
