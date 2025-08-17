@@ -13,7 +13,7 @@ export class ProductService {
 
   private readonly productsSignal = signal<Product[]>([]);
   public readonly products = computed(() => this.productsSignal());
-  private configUrl: string = '/assets/config/products.json';
+  private configUrl: string = 'assets/config/products.json';
 
   constructor(private http: HttpClient) {
     this.loadProducts();
