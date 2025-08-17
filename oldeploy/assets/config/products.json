@@ -37,7 +37,9 @@
       "Ticks",
       "Wasps."
     ],
-    "id": 1
+    "id": 1,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/ZenproxEC/label-ZenproxECLabel4-1-16.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/ZenproxEC/sds-ZenproxECSDS12-8-17.pdf"
   },
   {
     "name": "XLure RTU Combo 4 (Product Code: QM-INDYCOMBO4)",
@@ -63,7 +65,9 @@
       "and Trogoderma species (Khapra beetle",
       "Warehouse beetle)."
     ],
-    "id": 2
+    "id": 2,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/XLure RTU Combo4 Diamond Traps/label-XLureRTUCombo4Label5-28-13.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/XLure RTU Combo4 Diamond Traps/sds-XlureRTUCombo4DiamondSDS8-28-20.pdf"
   },
   {
     "name": "WISDOM LAWN GRANULAR INSECTICIDE",
@@ -91,7 +95,9 @@
       "Pillbugs",
       "and Sowbugs."
     ],
-    "id": 3
+    "id": 3,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/WisdomLawnGranular/label-WisdomLawnGranularLabel4-14-19.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/WisdomLawnGranular/sds-WisdomLawnGranSDS9-27-22.pdf"
   },
   {
     "name": "VENDETTA® Plus Cockroach Gel Bait",
@@ -109,7 +115,9 @@
       "deformed insects (twisted wings)",
       "and death."
     ],
-    "id": 4
+    "id": 4,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/VendettaPlusCockroachGelBait/label-VendettaPlusLabel4-1-22.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/VendettaPlusCockroachGelBait/sds-VendettaPlusGelBaitSDS11-30-20.pdf"
   },
   {
     "name": "Topchoice® Insecticide",
@@ -124,7 +132,9 @@
       "Rhipicephalus sp.",
       "Ixodes spp.) (approximately 1 month)."
     ],
-    "id": 5
+    "id": 5,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/TopChoice-Bayer/label-TopChoiceLabel3-20-18AV2.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/TopChoice-Bayer/sds-TopchoiceSDS4-11-19.pdf"
   },
   {
     "name": "Turf Mark® Spray Indicator (Blue)",
@@ -134,7 +144,9 @@
       "No pests are controlled by this product",
       "as it is a spray indicator."
     ],
-    "id": 6
+    "id": 6,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/TurfMarkBlueSprayIndicatorBlue/label-TurfMarkBlueLabel8-1-16.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/TurfMarkBlueSprayIndicatorBlue/sds-TurfmarkSDS6-5-23.pdf"
   },
   {
     "name": "Turf Mark® Green Spray Indicator",
@@ -144,7 +156,9 @@
       "No pests are controlled by this product",
       "as it is a spray indicator."
     ],
-    "id": 7
+    "id": 7,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/TurfMarkGreenSprayIndicatorDiscontinued/label-TurfMarkGreenLabel8-1-16.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/TurfMarkGreenSprayIndicatorDiscontinued/sds-TurfMarkGreenSDS5-31-22.pdf"
   },
   {
     "name": "Terad3® Blox",
@@ -163,7 +177,9 @@
       "Bushy-tailed woodrat",
       "and Mexican woodrat in California)."
     ],
-    "id": 8
+    "id": 8,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/Terad3BLOX/label-Terad3BloxLabel4-30-24.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/Terad3BLOX/sds-Terad3BloxSDS1-25-24.pdf"
   },
   {
     "name": "Termidor® H•E High-Efficiency Termiticide",
@@ -181,7 +197,9 @@
       "Nasutitermes",
       "and Zootermopsis)."
     ],
-    "id": 9
+    "id": 9,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/TermidorHE/label-TermidorHELabel4-1-21.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/TermidorHE/sds-TermidorHESDS7-18-23.pdf"
   },
   {
     "name": "Termidor® SC Termiticide/Insecticide",
@@ -228,12 +246,14 @@
       "paper wasps",
       "and yellow jackets."
     ],
-    "id": 10
+    "id": 10,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/TermidorSC/label-TermidorSCLabel4-1-24.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/TermidorSC/sds-TermidorSCSDS4-3-23.pdf"
   },
   {
     "name": "TIM-BOR® Professional",
     "activeIngredients": "Disodium Octaborate Tetrahydrate 98%.",
-    "applicationTreatment": "Water soluble, inorganic borate salt. It can be applied as a liquid solution, powder, or foam.            Liquid Solution:                10% liquid solution: Prepared by adding 1.0 pound of product per gallon of water. Requires two applications for remedial and preventative control.                15% liquid solution: Prepared by adding 1.5 lbs of product per gallon of water. One application may be used.                Rate: Applied by brush or spray at 5 gallons of liquid solution per 1000 square feet of wood surface area. Can also be injected under pressure into sound wood or insect galleries until runoff is observed.            Powder: Injected directly into galleries or dusted generously on wood surfaces. It can also be injected or dusted into wall voids (e.g., between studs, block voids, box sills, eaves, attics, soffits) at a rate of 0.5 ounce (12-14 grams) per square foot.            Foam: Prepared from a 15% liquid solution with an added surfactant-foaming agent (typically 1-2 ounces per gallon, yielding an expansion ratio of approximately 20 to 1). Injected into wall voids to contact wood surfaces or into insect galleries until runoff is observed, aiming for a \"dry\" consistency to adhere to wood and minimize runoff.",
+    "applicationTreatment": "Water soluble, inorganic borate salt. It can be applied as a liquid solution, powder, or foam.            Liquid Solution:                10% liquid solution: Prepared by adding 1.0 pound of product per gallon of water. Requires two applications for remedial and preventative control.                15% liquid solution: Prepared by adding 1.5 lbs of product per gallon of water. One application may be used.                Rate: Applied by brush or spray at 5 gallons of liquid solution per 1000 square feet of wood surface area. Can also be injected under pressure into sound wood or insect galleries until runoff is observed.            Powder: Injected directly into galleries or dusted generously on wood surfaces. It can also be injected or dusted into wall voids (e.g., between studs, block voids, box sills, eaves, attics, soffits) at a rate of 0.5 ounce (12-14 grams) per square foot.            Foam: Prepared from a 15% liquid solution with an added surfactant-foaming agent (typically 1-2 ounces per gallon, yielding an expansion ratio of approximately 20 to 1). Injected into wall voids to contact wood surfaces or into insect galleries until runoff is observed, aiming for a dry consistency to adhere to wood and minimize runoff.",
     "pestsControlled": [
       "Wood-destroying organisms",
       "including: Subterranean Termites (Reticulitermes",
@@ -254,7 +274,9 @@
       "Poria)",
       "and wet rots."
     ],
-    "id": 11
+    "id": 11,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/TimborProfessional/label-Tim-borLabel05-31-19.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/TimborProfessional/sds-Tim-BorSDS10-19-22.pdf"
   },
   {
     "name": "Recruit® HD Termite Bait",
@@ -265,19 +287,23 @@
       "including Coptotermes",
       "Reticulitermes and Heterotermes spp."
     ],
-    "id": 12
+    "id": 12,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/RecruitHD/label-RecruitHDBaitLabel9-23-11.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/RecruitHD/sds-RecruitHDSDS3-19-18.pdf"
   },
   {
     "name": "Recruit® IV AG Termite Bait",
     "activeIngredients": "Noviflumuron 0.5%.",
-    "applicationTreatment": "Above-ground station and delivery system for the Sentricon® System. Used alone, stations must be inspected at least quarterly. Can be used as a spot treatment without a specified inspection interval if used in conjunction with the in-ground Sentricon® System. Bait matrix is moistened with water or a sugar-containing sports performance drink before use. Flexible station with hard or flexible cover is affixed over visible termite activity (mud tubes, feeding damage, emergence holes) or drilled holes (approximately 3/8-inch diameter). Supplemental stations can be \"stacked\" (up to two stations) if 1/3 to 1/2 of the bait matrix has been consumed and active feeding continues. Stations are removed when feeding stops.",
+    "applicationTreatment": "Above-ground station and delivery system for the Sentricon® System. Used alone, stations must be inspected at least quarterly. Can be used as a spot treatment without a specified inspection interval if used in conjunction with the in-ground Sentricon® System. Bait matrix is moistened with water or a sugar-containing sports performance drink before use. Flexible station with hard or flexible cover is affixed over visible termite activity (mud tubes, feeding damage, emergence holes) or drilled holes (approximately 3/8-inch diameter). Supplemental stations can be stacked (up to two stations) if 1/3 to 1/2 of the bait matrix has been consumed and active feeding continues. Stations are removed when feeding stops.",
     "pestsControlled": [
       "Structurally damaging species of subterranean termites",
       "including Coptotermes",
       "Reticulitermes",
       "and Heterotermes spp."
     ],
-    "id": 13
+    "id": 13,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/RecruitIVAG/label-RecruitIVAGLabel10-1-14.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/RecruitIVAG/sds-RecruitIVAGSDS5-15-15.pdf"
   },
   {
     "name": "Shockwave® Flushing, Killing & Residual Aerosol",
@@ -322,7 +348,9 @@
       "Pharaoh ants",
       "Black flies."
     ],
-    "id": 14
+    "id": 14,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/Shockwave1/label-Shockwave1Label4-1-20.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/Shockwave1/sds-Shockwave1SDS12-6-18.pdf"
   },
   {
     "name": "Shockwave® Fogging Concentrate",
@@ -406,12 +434,14 @@
       "Yellow Mealworms",
       "Yellowjackets."
     ],
-    "id": 15
+    "id": 15,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/ShockwaveFoggingConcentrate/label-ShockwaveLabel8-1-20.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/ShockwaveFoggingConcentrate/sds-ShockwaveSDS4-13-20.pdf"
   },
   {
     "name": "STRYKER® Insecticide Concentrate",
     "activeIngredients": "Pyrethrins 6%, Piperonyl butoxide 60%. (Contains 0.5 lbs/gal of Pyrethrin, 5 lbs/gal of Piperonyl Butoxide).",
-    "applicationTreatment": "Concentrate. Applied through mechanical, aerosol or ULV generators, thermal fogging equipment, conventional fogging or spraying equipment, and chemigation. Can also be applied as a surface, spot, or crack and crevice treatment.            Dilution Rates (General): Vary from 0.25 fl oz to 4.25 fl oz per gallon for various applications, or 2-16 fl oz per acre for plants.            Specific Rates:                Greenhouse Plants: 12-24 fl oz per 100 gallons water, or 1-2 tsp per gallon water.                Tank Mixing (with companion insecticide): 1-4 fl oz per 100 gallons water; 0.5-4.25 fl oz per finished gallon; 1.0-2.125 fl oz for outdoor perimeter.                Hydroponics (Water System): 64.6 ml per 1,000 gallons water.                Harvested Fruits/Vegetables: 1 part concentrate to 1,200 parts water (1 pint per 150 gallons water).                Stored Nuts: 1.5 oz per gallon water, applied at 4 gallons per 1,000 sq ft (first two applications), then 2 gallons per 1,000 sq ft.                Fire Ants (Foraging): 1 part to 59 parts water.                Perimeter Treatments (Outdoor): 2.125-4.25 fl oz per gallon water, applied at 1 gallon per 750 sq ft.                Brown Dog Ticks (Outdoor): 4.25 fl oz per gallon water, applied at 3 gallons per acre with mist blower.                Fleas (Outdoor): 4.25 fl oz per gallon water, applied at 1 gallon per 750 sq ft.                Turf and Grass: 0.25-0.5 fl oz per 1,000 sq ft in 2.5-5.0 gallons water, up to 12.0-24.0 fl oz per acre in 110.0-220.0 gallons water.                Indoor Crawling/Flying Insects (Space Spray): 1 part concentrate with 11 parts water or oil (10.67 oz per gallon), applied at 1 oz per 1,000 cubic feet.                Termite Swarmers, Carpet Beetles, Flea/Tick (Indoor Buildings): 2.125-4.25 fl oz per gallon water, applied at 1 gallon per 750 sq ft.                Bed Bugs, Webbing Clothes Moths: 2.125 fl oz per gallon water, applied as spot/crack & crevice/surface treatment.                Canneries (Space/Surface Spray): 1 part concentrate to 29 parts water up to 1 part to 11 parts water, applied at 1 gallon per 750 sq ft (surface) or 1 fl oz per 1,000 cu ft (space).                Food/Nonfood Areas (Space/Surface Spray): 1 part concentrate to 29 parts water up to 1 part to 11 parts water, applied at 1/2-1 oz per 1,000 cubic feet (space) or 1 gallon per 750 sq ft (surface). Undiluted ULV for voids at 0.33 fl oz per 1,000 cu ft.                Storage Sites/Pantry Pests/Stored Grain: Dilutions from 1 part to 11 parts water to 1 part to 59 parts water, with varying application rates per square footage or cubic footage depending on specific use.                Sweet Potatoes in Storage (Space Fog): 1 part to 19 parts water (6.4 fl oz per gallon), applied at 1 gallon spray solution per 100,000 cubic feet.                Livestock/Poultry Spray: 1-3 fl oz concentrate per gallon water for various flies; 1 quart concentrate to 75 gallons water for lice; 2-3 oz concentrate per gallon water for poultry lice/bed bugs/mites; 1-2 fl oz concentrate per 4 gallons water for sheep \"tick\"/ked; 2 fl oz concentrate per gallon water for fleas/ticks on livestock.                Barns/Dairies/Milking Parlors/Poultry Houses (Flying Insects): 2 fl oz concentrate per gallon water, applied as fog/fine mist (approx. 2 fl oz per 1,000 cubic feet).                Outdoor Residential Misting Systems: Calibrated to apply no more than 0.0148 fl oz of product per 1,000 cubic feet per day.",
+    "applicationTreatment": "Concentrate. Applied through mechanical, aerosol or ULV generators, thermal fogging equipment, conventional fogging or spraying equipment, and chemigation. Can also be applied as a surface, spot, or crack and crevice treatment.            Dilution Rates (General): Vary from 0.25 fl oz to 4.25 fl oz per gallon for various applications, or 2-16 fl oz per acre for plants.            Specific Rates:                Greenhouse Plants: 12-24 fl oz per 100 gallons water, or 1-2 tsp per gallon water.                Tank Mixing (with companion insecticide): 1-4 fl oz per 100 gallons water; 0.5-4.25 fl oz per finished gallon; 1.0-2.125 fl oz for outdoor perimeter.                Hydroponics (Water System): 64.6 ml per 1,000 gallons water.                Harvested Fruits/Vegetables: 1 part concentrate to 1,200 parts water (1 pint per 150 gallons water).                Stored Nuts: 1.5 oz per gallon water, applied at 4 gallons per 1,000 sq ft (first two applications), then 2 gallons per 1,000 sq ft.                Fire Ants (Foraging): 1 part to 59 parts water.                Perimeter Treatments (Outdoor): 2.125-4.25 fl oz per gallon water, applied at 1 gallon per 750 sq ft.                Brown Dog Ticks (Outdoor): 4.25 fl oz per gallon water, applied at 3 gallons per acre with mist blower.                Fleas (Outdoor): 4.25 fl oz per gallon water, applied at 1 gallon per 750 sq ft.                Turf and Grass: 0.25-0.5 fl oz per 1,000 sq ft in 2.5-5.0 gallons water, up to 12.0-24.0 fl oz per acre in 110.0-220.0 gallons water.                Indoor Crawling/Flying Insects (Space Spray): 1 part concentrate with 11 parts water or oil (10.67 oz per gallon), applied at 1 oz per 1,000 cubic feet.                Termite Swarmers, Carpet Beetles, Flea/Tick (Indoor Buildings): 2.125-4.25 fl oz per gallon water, applied at 1 gallon per 750 sq ft.                Bed Bugs, Webbing Clothes Moths: 2.125 fl oz per gallon water, applied as spot/crack & crevice/surface treatment.                Canneries (Space/Surface Spray): 1 part concentrate to 29 parts water up to 1 part to 11 parts water, applied at 1 gallon per 750 sq ft (surface) or 1 fl oz per 1,000 cu ft (space).                Food/Nonfood Areas (Space/Surface Spray): 1 part concentrate to 29 parts water up to 1 part to 11 parts water, applied at 1/2-1 oz per 1,000 cubic feet (space) or 1 gallon per 750 sq ft (surface). Undiluted ULV for voids at 0.33 fl oz per 1,000 cu ft.                Storage Sites/Pantry Pests/Stored Grain: Dilutions from 1 part to 11 parts water to 1 part to 59 parts water, with varying application rates per square footage or cubic footage depending on specific use.                Sweet Potatoes in Storage (Space Fog): 1 part to 19 parts water (6.4 fl oz per gallon), applied at 1 gallon spray solution per 100,000 cubic feet.                Livestock/Poultry Spray: 1-3 fl oz concentrate per gallon water for various flies; 1 quart concentrate to 75 gallons water for lice; 2-3 oz concentrate per gallon water for poultry lice/bed bugs/mites; 1-2 fl oz concentrate per 4 gallons water for sheep tick ked; 2 fl oz concentrate per gallon water for fleas/ticks on livestock.                Barns/Dairies/Milking Parlors/Poultry Houses (Flying Insects): 2 fl oz concentrate per gallon water, applied as fog/fine mist (approx. 2 fl oz per 1,000 cubic feet).                Outdoor Residential Misting Systems: Calibrated to apply no more than 0.0148 fl oz of product per 1,000 cubic feet per day.",
     "pestsControlled": [
       "Ants",
       "Aphids",
@@ -545,7 +575,9 @@
       "Varied carpet beetles",
       "Webbing clothes moths."
     ],
-    "id": 16
+    "id": 16,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/Stryker/label-StrykerLabel12-20-17.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/Stryker/sds-StrykerSDS7-11-23.pdf"
   },
   {
     "name": "STRYKER® WASP AND HORNET KILLER",
@@ -558,7 +590,9 @@
       "Yellowjackets",
       "Spiders (including Black Widow and Brown Recluse)."
     ],
-    "id": 17
+    "id": 17,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/StrykerWaspHornetKiller/label-StrykerLabel4-23-24.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/StrykerWaspHornetKiller/sds-StrykerWaspSDS4-13-16.pdf"
   },
   {
     "name": "SureKill® Advanced Insecticide Products Total Release Aerosol",
@@ -579,7 +613,9 @@
       "Spiders",
       "Ticks. (Does not control bed bugs)."
     ],
-    "id": 18
+    "id": 18,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/SureKillTotalReleaseAerosol/label-SurekillTotalReleaseLabel10-1-21.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/SureKillTotalReleaseAerosol/sds-SureKillAIPTRAerosolSDS1-22-20.pdf"
   },
   {
     "name": "Suspend® PolyZone",
@@ -654,7 +690,9 @@
       "Carpenter ants",
       "Carpenter bees."
     ],
-    "id": 19
+    "id": 19,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/SuspendPolyzone-Bayer/label-SuspendPolyLabel9-20-16AV4.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/SuspendPolyzone-Bayer/sds-SuspendPolySDS5-20-20.pdf"
   },
   {
     "name": "TEKKO® PRO Insect Growth Regulator Concentrate",
@@ -687,7 +725,9 @@
       "Midges",
       "Nuisance flies (Dipterous or Hymenopterous)."
     ],
-    "id": 20
+    "id": 20,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/TekkoProInsectGrowthRegulatorConcentrate/label-TekkoProLabel11-22-17.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/TekkoProInsectGrowthRegulatorConcentrate/sds-TekkoProSDS9-14-17.pdf"
   },
   {
     "name": "Temprid® FX Insecticide",
@@ -756,7 +796,9 @@
       "Carpenter ants",
       "Carpenter bees."
     ],
-    "id": 21
+    "id": 21,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/TempridFXInsecticide-Bayer/label-TempridFXLabel5-24-22AV1.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/TempridFXInsecticide-Bayer/sds-TempridFXSDS3-20-14.pdf"
   },
   {
     "name": "Optigard Ant Gel Bait",
@@ -768,7 +810,9 @@
       "harvester",
       "and Pharaoh ants."
     ],
-    "id": 22
+    "id": 22,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/OptigardAntGelBait/label-OptigardAntGelLabel9-1-10.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/OptigardAntGelBait/sds-OptigardAntGelBaitSDS3-1-24.pdf"
   },
   {
     "name": "Optigard Cockroach Gel Bait",
@@ -784,7 +828,9 @@
       "smoky brown",
       "and brown cockroaches."
     ],
-    "id": 23
+    "id": 23,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/OptigardCockroachGelBait/label-OptigardCockroachGelLabel2-1-19.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/OptigardCockroachGelBait/sds-OptigardCockroachGelSDS1-30-20.pdf"
   },
   {
     "name": "Optigard Flex Liquid",
@@ -816,7 +862,9 @@
       "whiteflies",
       "and mealybugs (on landscape ornamentals)."
     ],
-    "id": 24
+    "id": 24,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/OptigardFlexLiquid/label-OptigardFlexLabel2-1-16.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/OptigardFlexLiquid/sds-OptigardFlexSDS8-31-23.pdf"
   },
   {
     "name": "Orthene PCO Pellets",
@@ -836,7 +884,9 @@
       "Indian Meal Moth",
       "and Trogoderma). Wasps (Outdoor). Fire ants and Harvester ants (in mounds)."
     ],
-    "id": 25
+    "id": 25,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/OrthenePCOPellets/label-OrthenePCOPelletsLabel3-6-15.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/OrthenePCOPellets/sds-OrthenePCOPelletsSDS7-7-21.pdf"
   },
   {
     "name": "PT Alpine Pressurized Insecticide",
@@ -875,7 +925,9 @@
       "Springtails",
       "and Trogoderma."
     ],
-    "id": 26
+    "id": 26,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/PTAlpinePressurizedInsecticide/label-PTAlpinePressurizedInsecticideLabel4-1-13.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/PTAlpinePressurizedInsecticide/sds-PTAlpinePressurizedInsecticideSDS11-19-18.pdf"
   },
   {
     "name": "PT Clear Zone III Metered Pyrethrin Spray",
@@ -887,7 +939,9 @@
       "Mosquitoes",
       "and Small Flying Moths."
     ],
-    "id": 27
+    "id": 27,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/PTClearZoneMeteredPyrethrinSprayIII/label-PTClearZoneIIILabel4-1-14.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/PTClearZoneMeteredPyrethrinSprayIII/sds-PTClearZoneIIISDS12-1-16.pdf"
   },
   {
     "name": "PT P.I. Pressurized Insecticide",
@@ -933,7 +987,9 @@
       "Ticks",
       "and Wasps."
     ],
-    "id": 28
+    "id": 28,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/PTAlpinePressurizedInsecticide/label-PTAlpinePressurizedInsecticideLabel4-1-13.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/PTAlpinePressurizedInsecticide/sds-PTAlpinePressurizedInsecticideSDS11-19-18.pdf"
   },
   {
     "name": "PT Wasp-Freeze II",
@@ -946,7 +1002,9 @@
       "Spiders",
       "and Wasps."
     ],
-    "id": 29
+    "id": 29,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/PTWaspFreezeII/label-PTWasp-FreezeIILabel5-1-18.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/PTWaspFreezeII/sds-PTWaspFreezeIISDS10-18-23.pdf"
   },
   {
     "name": "Precor® 2625 Premise Spray",
@@ -974,7 +1032,9 @@
       "Mole Crickets",
       "Pillbugs. Wasps and Yellow Jackets."
     ],
-    "id": 30
+    "id": 30,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/Precor2625PremiseSpray/label-Precor2625Label1-1-18.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/Precor2625PremiseSpray/sds-Precor2625SDS2-26-20.pdf"
   },
   {
     "name": "Precor® IGR Concentrate",
@@ -984,7 +1044,9 @@
       "Fleas (immature life stages",
       "preventing adult flea emergence)."
     ],
-    "id": 31
+    "id": 31,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/PrecorIGRConcentrate/label-PrecorIGRLabel10-1-17.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/PrecorIGRConcentrate/sds-PrecorIGRConcSDS11-5-21.pdf"
   },
   {
     "name": "PREMISE FOAM®",
@@ -1003,7 +1065,9 @@
       "wharf borers",
       "or ambrosia/bark beetles). Carpenter bees. Ants."
     ],
-    "id": 32
+    "id": 32,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/PremiseFoam-Bayer/label-PremiseFoamLabel1-23-14AV2.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/PremiseFoam-Bayer/sds-PremiseFoamSDS5-18-21.pdf"
   },
   {
     "name": "Premise® Pre-Construction INSECTICIDE",
@@ -1021,7 +1085,9 @@
       "pharaoh",
       "or harvester ants)."
     ],
-    "id": 33
+    "id": 33,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/PremisePre-Construction-Bayer/label-PremisePre-ConstrLabel6-18-19AV1.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/PremisePre-Construction-Bayer/sds-PremisePre-ConstrSDS2-27-18.pdf"
   },
   {
     "name": "Pyrethrin Fogger",
@@ -1038,7 +1104,9 @@
       "Crickets",
       "and Silverfish."
     ],
-    "id": 34
+    "id": 34,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/PyrethrinFogger/label-PyrethrinFoggerLabel5-15-15.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/PyrethrinFogger/sds-PyrethrinFoggerSDS12-14-23.pdf"
   },
   {
     "name": "Recruit AG FlexPack termite bait",
@@ -1050,7 +1118,9 @@
       "Reticulitermes",
       "and Heterotermes spp.."
     ],
-    "id": 35
+    "id": 35,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/RecruitAGFlexPack/label-RecruitAGFlexpackLabel10-11-23.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/RecruitAGFlexPack/sds-RecruitAGFlexpackSDS5-13-22.pdf"
   },
   {
     "name": "MAXFORCE® FC MAGNUM ROACH KILLER BAIT GEL",
@@ -1076,7 +1146,9 @@
       "spider beetle",
       "and warehouse beetle."
     ],
-    "id": 36
+    "id": 36,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/MaxforceFCMagnumRoachKillerBaitGel-Bayer/label-MaxforceFCMagRoachGelLabel5-21-20AV1.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/MaxforceFCMagnumRoachKillerBaitGel-Bayer/sds-MaxforceFCMagRoachGelSDS10-1-20.PDF"
   },
   {
     "name": "MAXFORCE® FC SELECT ROACH KILLER BAIT GEL",
@@ -1089,7 +1161,9 @@
       "Brown",
       "and Smokey Brown cockroaches."
     ],
-    "id": 37
+    "id": 37,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/MaxforceFCSelectRoachKillerBaitGel-Bayer/label-MaxforceFCSelectRoachGelLabel4-24-20.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/MaxforceFCSelectRoachKillerBaitGel-Bayer/sds-MaxforceFCSelectRoachGelSDS7-16-21.PDF"
   },
   {
     "name": "Maxforce® Fleet™ Ant Killer Bait Gel",
@@ -1109,7 +1183,9 @@
       "Cornfield",
       "and Field ants."
     ],
-    "id": 38
+    "id": 38,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/MaxforceFleet-Bayer/label-MaxforceFleetLabel1-12-17AV3.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/MaxforceFleet-Bayer/sds-MaxforceFleetSDS12-10-21.PDF"
   },
   {
     "name": "MAXFORCE® FLY SPOT BAIT",
@@ -1118,7 +1194,9 @@
     "pestsControlled": [
       "House Flies and Fruit Flies. Applications can also aid in the suppression of psychodid and phorid flies."
     ],
-    "id": 39
+    "id": 39,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/MaxforceFlySpotBait-Bayer/label-MaxforceFlySpotLabel12-20-18AV1.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/MaxforceFlySpotBait-Bayer/sds-MaxforceFlySpotSDS4-28-20.pdf"
   },
   {
     "name": "MAXFORCE® GRANULAR FLY BAIT",
@@ -1128,7 +1206,9 @@
       "Flies",
       "including flies resistant to organophosphates and carbamates."
     ],
-    "id": 40
+    "id": 40,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/MaxforceGranularFlyBait-Bayer/label-MaxforceGranFlyBaitLabel1-17-20AV1.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/MaxforceGranularFlyBait-Bayer/sds-MaxforceGranFlyBaitSDS6-15-16.pdf"
   },
   {
     "name": "Maxforce® Impact® Roach Gel Bait",
@@ -1137,7 +1217,9 @@
     "pestsControlled": [
       "Cockroaches."
     ],
-    "id": 41
+    "id": 41,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/MaxforceImpactRoachGelBait/label-MaxforceImpactLabel4-16-19AV1.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/MaxforceImpactRoachGelBait/sds-MaxforceImpactSDS11-18-20.PDF"
   },
   {
     "name": "Maxforce® Quantum Ant Bait",
@@ -1161,7 +1243,9 @@
       "Thief ants",
       "and White-Footed ants."
     ],
-    "id": 42
+    "id": 42,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/MaxforceQuantumAntBait-Bayer/label-MaxforceQuantumLabel1-7-20AV1.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/MaxforceQuantumAntBait-Bayer/sds-MaxforceQuantumSDS10-8-15.pdf"
   },
   {
     "name": "MUSCA-CIDE™ FLY BAIT SPRAY",
@@ -1170,7 +1254,9 @@
     "pestsControlled": [
       "House Flies."
     ],
-    "id": 43
+    "id": 43,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/Musca-CideFlyBaitSpray/label-Musca-cideLabel3-27-23.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/Musca-CideFlyBaitSpray/sds-MuscaCideSDS08-25-20.pdf"
   },
   {
     "name": "Nibor-D",
@@ -1225,7 +1311,9 @@
       "brown rot (i.e.",
       "Poria) and wet rots."
     ],
-    "id": 44
+    "id": 44,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/Nibor-DInsecticide/label-NiborDLabel1-1-23.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/Nibor-DInsecticide/sds-Nibor-DSDS10-19-22.pdf"
   },
   {
     "name": "Onslaught® FastCap Spider & Scorpion Insecticide",
@@ -1412,7 +1500,9 @@
       "Western Bean Cutworms",
       "Whiteflies."
     ],
-    "id": 45
+    "id": 45,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/OnslaughtFastCapSpiderScorpionInsecticide/label-OnslaughtFastCapSpiderScorpionInsecticideLabel9-1-23.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/OnslaughtFastCapSpiderScorpionInsecticide/sds-OnslaughtFCSDS10-21-20.pdf"
   },
   {
     "name": "Onslaught® Microencapsulated Insecticide",
@@ -1621,7 +1711,9 @@
       "Western Bean Cutworms",
       "Whiteflies."
     ],
-    "id": 46
+    "id": 46,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/OnslaughtInsecticide/label-OnslaughtInsecticideLabel9-1-23.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/OnslaughtInsecticide/sds-OnslaughtInsecticideSDS8-31-20.pdf"
   },
   {
     "name": "Advance® 375A Granular Ant Bait",
@@ -1642,7 +1734,9 @@
       "Pharaoh",
       "and Thief Ants."
     ],
-    "id": 47
+    "id": 47,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/Advance375AGranularAntBait/label-Advance375ALabel5-1-17.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/Advance375AGranularAntBait/sds-Advance375ASDS3-21-23.pdf"
   },
   {
     "name": "Advion® Ant Gel",
@@ -1672,7 +1766,9 @@
       "but for complete outdoor nest control of these species",
       "additional treatments labeled for outdoor nest control are recommended)."
     ],
-    "id": 48
+    "id": 48,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/AdvionAntGel/label-AdvionAntGelLabel4-1-20.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/AdvionAntGel/sds-AdvionAntGelSDS4-4-23.pdf"
   },
   {
     "name": "Advion® Cockroach Gel Bait",
@@ -1688,7 +1784,9 @@
       "Oriental",
       "and Brown-Banded cockroaches."
     ],
-    "id": 49
+    "id": 49,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/AdvionCockroachGelBait/label-AdvionCRGelBaitLabel6-1-20.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/AdvionCockroachGelBait/sds-AdvionCockroachGelBaitSDS12-3-19.pdf"
   },
   {
     "name": "Advion® Evolution Cockroach Gel Bait",
@@ -1704,7 +1802,9 @@
       "Oriental",
       "and Brown-Banded cockroaches."
     ],
-    "id": 50
+    "id": 50,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/AdvionEvolutionCockroachGelBait/label-AdvionEvoLabel6-1-20.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/AdvionEvolutionCockroachGelBait/sds-AdvionEvolutionSDS4-5-17.pdf"
   },
   {
     "name": "Advion® Fire Ant Bait",
@@ -1718,7 +1818,9 @@
       "pavement ants",
       "and turfgrass ants in California)."
     ],
-    "id": 51
+    "id": 51,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/AdvionFireAntBait/label-AdvionFireAntLabel4-1-20.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/AdvionFireAntBait/sds-AdvionFireAntBaitSDS5-11-22.pdf"
   },
   {
     "name": "Advion® Insect Granular Bait",
@@ -1737,7 +1839,9 @@
       "Millipedes",
       "and Silverfish."
     ],
-    "id": 52
+    "id": 52,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/AdvionInsectGranularBait/label-AdvionInsectGranLabel12-1-19.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/AdvionInsectGranularBait/sds-AdvionInsectGranSDS1-24-20.pdf"
   },
   {
     "name": "Alpine® WSG",
@@ -1778,7 +1882,9 @@
       "and Warehouse Beetle)",
       "and Yellowjackets."
     ],
-    "id": 53
+    "id": 53,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/AlpineWSG/label-AlpineWSGLabel4-1-19.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/AlpineWSG/sds-AlpineWSGSDS5-20-25.pdf"
   },
   {
     "name": "Altosid® Pro-G Insect Growth Regulator",
@@ -1792,7 +1898,9 @@
       "by preventing them from becoming breeding",
       "biting adults."
     ],
-    "id": 54
+    "id": 54,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/AltosidPro-GInsectGrowthRegulator/label-AltosidProGLabel10-1-17.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/AltosidPro-GInsectGrowthRegulator/sds-AltosidProGSDS5-22-18.pdf"
   },
   {
     "name": "Bora-Care®",
@@ -1824,7 +1932,9 @@
       "Millipede",
       "and Cricket infestations that come into direct contact with treated areas."
     ],
-    "id": 55
+    "id": 55,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/Bora-Care/label-Bora-CareLabel7-1-21.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/Bora-Care/sds-Bora-CareSDS10-19-22.pdf"
   },
   {
     "name": "CB-80™ Insecticide",
@@ -1856,7 +1966,9 @@
       "Rice Weevils)",
       "Wasps."
     ],
-    "id": 56
+    "id": 56,
+    "url1": "assets/paul-labels-sds-2025-06-14/CB-8 Insecticide/label-CB-80Label8-1-16.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/CB-8 Insecticide/sds-CB80SDS1-29-21.PDF"
   },
   {
     "name": "CONTRAC® ALL-WEATHER BLOX™",
@@ -1875,7 +1987,9 @@
       "Southern plains woodrat",
       "and Mexican woodrat."
     ],
-    "id": 57
+    "id": 57,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/ContracAll-WeatherBlox/label-ContracAllWeatherBloxLabel4-1-24.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/ContracAll-WeatherBlox/sds-ContracAllWeatherBloxSDS1-10-24.pdf"
   },
   {
     "name": "Dekko® SILVERFISH PAK",
@@ -1884,7 +1998,9 @@
     "pestsControlled": [
       "Silverfish."
     ],
-    "id": 58
+    "id": 58,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/DekkoSilverfishPacks/label-DekkoSilverfishLabel2-14-11.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/DekkoSilverfishPacks/sds-DekkoSilverfishSDS3-7-16.pdf"
   },
   {
     "name": "DeltaDust® Insecticide",
@@ -1963,7 +2079,9 @@
       "Thrips",
       "Weevils)."
     ],
-    "id": 59
+    "id": 59,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/DeltaDustInsecticide-Bayer/label-DeltaDustLabel8-5-16AV2.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/DeltaDustInsecticide-Bayer/sds-DeltaDustSDS9-29-21.PDF"
   },
   {
     "name": "DELTAGARD® G Insecticide Granule",
@@ -2008,7 +2126,9 @@
       "Vegetable weevils",
       "and Mole crickets."
     ],
-    "id": 60
+    "id": 60,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/DeltaGardGGranules-Bayer/label-DeltaGardGLabel10-14-14AV1.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/DeltaGardGGranules-Bayer/sds-DeltaGardGSDS3-24-21.PDF"
   },
   {
     "name": "Demand® CS Insecticide",
@@ -2095,7 +2215,9 @@
       "Hyperodes weevils (adult)",
       "and Mole crickets (nymphs and young adults)."
     ],
-    "id": 61
+    "id": 61,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/DemandCSInsecticide/label-DemandCSLabel11-1-14cr17.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/DemandCSInsecticide/sds-Demand-CSSDS11-12-24.pdf"
   },
   {
     "name": "DominAnt® Liquid Ant Bait",
@@ -2115,7 +2237,9 @@
       "carpenter",
       "fire and harvester ants)."
     ],
-    "id": 62
+    "id": 62,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/DominantLiquidAntBait/label-DominantLabel6-1-20.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/DominantLiquidAntBait/sds-DominantSDS10-19-22.pdf"
   },
   {
     "name": "Drione® Insecticide",
@@ -2153,7 +2277,9 @@
       "Scorpions",
       "and Spiders."
     ],
-    "id": 63
+    "id": 63,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/DrioneInsecticide/label-DrioneLabel10-14-14AV2.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/DrioneInsecticide/sds-DrioneSDS12-11-14.pdf"
   },
   {
     "name": "EndZone™ Insecticide Sticker",
@@ -2169,10 +2295,12 @@
       "Fungus gnats",
       "and Vinegar (fruit) flies."
     ],
-    "id": 64
+    "id": 64,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/EndZoneInsecticideSticker/label-EndZoneLabel8-4-16.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/EndZoneInsecticideSticker/sds-EndZoneStickerSDS7-10-19.pdf"
   },
   {
-    "name": "√ExciteR™ Insecticide",
+    "name": "ExciteR™ Insecticide",
     "activeIngredients": "Pyrethrins 6%, Piperonyl Butoxide, Technical 60%.",
     "applicationTreatment": "Concentrate for indoor or outdoor application as a surface, space, area, or contact spray. It can be diluted with water or oil. Dilution rates range from 0.25 fluid ounces of ExciteR™ per gallon (0.0125% Pyrethrins, 0.125% Piperonyl Butoxide) to 4.25 fluid ounces per gallon (0.2% Pyrethrins, 2.0% Piperonyl Butoxide). General pest control as a surface spray is applied at 1 gallon per 750 square feet. For space sprays, it can be applied at 1 fluid ounce per 1,000 cubic feet of space with different dilution rates for crawling and flying insects (10.67 fl oz/gal) vs. flying insects only (2.67 fl oz/gal). For turf and grass, rates are 0.25 to 0.5 fluid ounces per 1,000 square feet (12.0 to 24.0 fluid ounces per acre).",
     "pestsControlled": [
@@ -2236,7 +2364,9 @@
       "Sod Webworms",
       "Wasps. It also controls fleas and ticks on dogs."
     ],
-    "id": 65
+    "id": 65,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/Exciter/label-ExciterLabelPCO1-1-17.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/Exciter/sds-ExciterSDS4-20-22.pdf"
   },
   {
     "name": "EXTINGUISH® PLUS",
@@ -2246,9 +2376,11 @@
       "Imported and native fire ants",
       "Harvester ants",
       "Big-headed ants",
-      "and Argentine ants. (Note: \"6-Months Long Lasting Ant Control\" excludes pharaoh and carpenter ants)."
+      "and Argentine ants. (Note: 6-Months Long Lasting Ant Control excludes pharaoh and carpenter ants)."
     ],
-    "id": 66
+    "id": 66,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/ExtinguishPlus/label-ExtinguishPlusFireAntControlLabel8-1-24.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/ExtinguishPlus/sds-ExtinguishPlusSDS4-8-21.pdf"
   },
   {
     "name": "Fastrac® ALL-WEATHER BLOX™",
@@ -2267,7 +2399,9 @@
       "Southern plains woodrat",
       "and Mexican woodrat."
     ],
-    "id": 67
+    "id": 67,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/FASTRACAll-WeatherBLOX/label-FastracAllWeatherBloxLabel4-16-24.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/FASTRACAll-WeatherBLOX/sds-FastracAllWeatherBloxSDS1-23-24.pdf"
   },
   {
     "name": "FINAL® ALL-WEATHER BLOX™",
@@ -2286,7 +2420,9 @@
       "Southern plains woodrat",
       "and Mexican woodrat."
     ],
-    "id": 68
+    "id": 68,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/FINALAll-WeatherBLOX/label-FinalAll-WeatherBloxLabel4-11-24.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/FINALAll-WeatherBLOX/sds-FinalAllWeatherBloxSDS1-18-24.pdf"
   },
   {
     "name": "Gentrol® Aerosol",
@@ -2309,7 +2445,9 @@
       "Fruit Flies",
       "and Bed Bugs."
     ],
-    "id": 69
+    "id": 69,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/GentrolAerosol/label-GentrolAeroLabel9-1-17.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/GentrolAerosol/sds-GentrolAeroSDS3-21-22.pdf"
   },
   {
     "name": "Gentrol® Complete Aerosol",
@@ -2345,7 +2483,9 @@
       "Sowbugs",
       "and Small flies."
     ],
-    "id": 70
+    "id": 70,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/GentrolCompleteAerosol/label-GentrolCompleteLabel7-1-17.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/GentrolCompleteAerosol/sds-GentrolCompleteAeroSDS3-30-22.pdf"
   },
   {
     "name": "GENTROL® IGR Concentrate",
@@ -2369,7 +2509,9 @@
       "and Dermestid beetles)",
       "and Fleas."
     ],
-    "id": 71
+    "id": 71,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/GentrolIGRConcentrate/label-GentrolIGRConcLabel10-1-17.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/GentrolIGRConcentrate/sds-GentrolIGRSDS3-19-21.pdf"
   },
   {
     "name": "GENTROL® POINT SOURCE® Roach Control Device",
@@ -2380,7 +2522,9 @@
       "confused flour",
       "and merchant beetles)."
     ],
-    "id": 72
+    "id": 72,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/GentrolPointSource/label-GentrolPointSourceLabel10-1-17.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/GentrolPointSource/sds-GentrolPointSourceSDS8-4-22.pdf"
   },
   {
     "name": "InTice™ Thiquid Ant Bait",
@@ -2396,7 +2540,9 @@
       "carpenter",
       "and harvester ants)."
     ],
-    "id": 73
+    "id": 73,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/InTiceThiquidAntBait/label-InticeThiquidLabel6-1-16.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/InTiceThiquidAntBait/sds-InTiceThiquidAntBaitSDS1-6-25.pdf"
   },
   {
     "name": "LIQUA-TOX® II",
@@ -2407,7 +2553,9 @@
       "Roof Rats",
       "and House Mice."
     ],
-    "id": 74
+    "id": 74,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/Liqua-ToxII/label-Liqua-ToxIILabel10-22-18.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/Liqua-ToxII/sds-Liqua-Tox-IISDS9-12-24.pdf"
   },
   {
     "name": "Zenprox® EC",
@@ -2446,9 +2594,10 @@
       "Ticks",
       "and Wasps."
     ],
-    "id": 75
+    "id": 75,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/ZenproxEC/label-ZenproxECLabel4-1-16.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/ZenproxEC/sds-ZenproxECSDS12-8-17.pdf"
   },
-  
   {
     "name": "Wisdom TC Flowable",
     "activeIngredients": "Bifenthrin (amount not specified, used at 0.1 lb. a.i./A)",
@@ -2456,7 +2605,51 @@
     "pestsControlled": [
       "Imported Fire Ants (existing colonies in mounds)"
     ],
-    "id": 76
+    "id": 76,
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/WisdomLawnGranular/label-WisdomLawnGranularLabel4-14-19.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/WisdomLawnGranular/sds-WisdomLawnGranSDS9-27-22.pdf"
+  },
+  {
+    "id": 77,
+    "name": "InVade™ Bio Drain™",
+    "activeIngredients": "Premium, natural microbes; citrus oil; Nonpathogenic bacillus bacteria (>1 million cfu/gallon)",
+    "applicationTreatment": "Thickened gel formula. For drains: moisten with 1-2 gallons of warm water if unused; apply during low usage times, adjust amount per drain size. Repeat every other day for severe issues or weekly for maintenance. For soda fountain drains: apply ~1 oz weekly. For mopping: use 4 oz per yellow mop bucket. For surface cleaning (dumpsters, urinals, trash chutes): 4–8 oz per gallon, apply with sprayer. For foaming: 4–8 oz in a gallon + 2–4 oz foaming agent, apply with foamer. Also usable in power sprayers or hose-end sprayers at ½–2 oz per gallon. Spray/foam on areas with organic buildup and odors; do not rinse.",
+    "pestsControlled": [
+      "Drain Flies",
+      "Cockroaches",
+      "Organic debris",
+      "Odor",
+      "Organic waste",
+      "Sugary build-up",
+      "Bird droppings",
+      "Rodent droppings",
+      "Animal droppings"
+ 
+    ],
+    "url1":"assets/prod/paul-labels-sds-2025-06-14/InVadeBioDrain/label-InvadeBioDrainDyeFreeLabel1-1-22.pdf" ,
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/InVadeBioDrain/sds-InVadeBioDrainSDS1-6-25.pdf"
+  },
+  {
+    "id": 78,
+    "name": "InVade™ Bio Foam™",
+    "activeIngredients": "Citrus oil; foaming agent; natural microbes; soil-derived Bacillus spp. spores; Nonpathogenic bacillus bacteria (>1 million cfu/gallon); Proprietary Ingredients (1.35% w/w); 2-Butoxyethanol; Sodium Dodecyl Sulfate; Lauryl Alcohol",
+    "applicationTreatment": "Foaming concentrate (orange liquid). Dilute 1 oz/quart (4 oz/gallon). Apply via Foamer Simpson™ or other foamer (hand, power, hose-end). Use on surfaces, cracks, crevices, drains, and organic buildup areas in food and non-food zones. Key zones: under equipment, baseboards, drip trays, dishwashers, voids, dumpsters. Foam lasts hours—do not rinse. Use once or twice monthly. On food contact surfaces: let sit for hours, rinse, disinfect before use. Do not apply to lakes, streams, or ponds.",
+    "pestsControlled": [
+      "Drain Flies",
+      "Cockroaches",
+       "Organic debris",
+      "Odor",
+      "Organic waste",
+      "Fats",
+      "Oils",
+      "Grease (FOG)",
+      "Carbohydrates",
+      "Proteins",
+      "Cellulose",
+      "Urea",
+      "Phosphates"
+    ],
+    "url1":"assets/prod/paul-labels-sds-2025-06-14/InVadeBioFoam/label-InvadeBioFoamInstr1-1-20.pdf" ,
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/InVadeBioFoam/sds-InVadeBioFoamSDS1-6-25.pdf"
   }
 ]
-
