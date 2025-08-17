@@ -7,7 +7,7 @@ import { CommonModule } from '@angular/common';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
-import { MatIconModule } from '@angular/material/icon';
+import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
@@ -23,6 +23,8 @@ import { ProductStoreService } from '../../services/product-store.service';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { SearchInfoSheetComponent } from '../share/search-info-sheet/search-info-sheet.component';
 import { MatBottomSheet, MatBottomSheetModule } from '@angular/material/bottom-sheet';
+import { TechnicalProductService } from '../../services/TechnicalProductService';
+import { DomSanitizer } from '@angular/platform-browser';
 
 
 @Component({
@@ -45,14 +47,14 @@ import { MatBottomSheet, MatBottomSheetModule } from '@angular/material/bottom-s
 })
 
 export class HomeComponent implements OnInit {
-  
+
   @ViewChild('drawer') drawer!: MatSidenav;
 
   allProducts: Product[] = [];
   filteredProducts: Product[] = [];
   uniquePests: string[] = [];
   searchTerm: string = '';
-  version: string = 'v2.2.0';
+  version: string = 'v3.0.0';
   private configUrl: string = 'assets/config/products.json';
   errorMessage: string = '';
   isWideScreen = true;
@@ -60,6 +62,7 @@ export class HomeComponent implements OnInit {
   public isFavoriteView: boolean = false;
   private favorites: any[] = [];
   private productStoreService = inject(ProductStoreService);
+  // private technicalProductService = inject(TechnicalProductService);
 
   constructor(
     private http: HttpClient,
@@ -68,8 +71,12 @@ export class HomeComponent implements OnInit {
     private breakpointObserver: BreakpointObserver,
     private productService: ProductService,
     private favService: FavoritesService,
-   private navegateService: NavegateService,
-  private bottomSheet: MatBottomSheet) { }
+    private navegateService: NavegateService,
+    private bottomSheet: MatBottomSheet,
+    private domSanitizer: DomSanitizer,
+    private matIconRegistry: MatIconRegistry,) {
+           this.matIconRegistry.addSvgIcon('tecnnical', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/tecnnical.svg'));
+     }
 
   ngOnInit(): void {
     this.breakpointObserver
@@ -78,15 +85,17 @@ export class HomeComponent implements OnInit {
         this.isWideScreen = !result.matches;
       });
 
-      const prolist = this.productService.products(); 
-      this.allProducts = prolist;
-      this.filteredProducts = prolist;
-        if(prolist != undefined && prolist != null && prolist.length > 0){
-          this.getUniquePests(this.allProducts);
-        }
+    const prolist = this.productService.products();
+    this.allProducts = prolist;
+    this.filteredProducts = prolist;
+    if (prolist != undefined && prolist != null && prolist.length > 0) {
+      this.getUniquePests(this.allProducts);
+    }
 
     this.checkFavorites();
     this.productStoreService.loadAll();
+    // this.technicalProductService.technicalProducts();
+    // const productsTechnical = this.technicalProductService.getAllTechnicalProducts();
   }
 
   openSearchInfo(): void {
@@ -97,8 +106,8 @@ export class HomeComponent implements OnInit {
     this.favorites = this.favService.getFavorites();
     if (this.favorites != undefined && this.favorites != null && this.favorites.length > 0) {
       this.isFavoriteView = true;
-       const pproducts: Product[] = this.favorites;
-        const pforname = pproducts.filter( x => x.name === "ZENPROX® EC");
+      const pproducts: Product[] = this.favorites;
+      const pforname = pproducts.filter(x => x.name === "ZENPROX® EC");
     }
   }
 
@@ -116,6 +125,10 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['/login']);
   }
 
+   goTecnnical(): void {
+     const routeBase = "technical/notes";
+    this.router.navigate([routeBase]);
+  }
 
 
   getPestName(phrase: string): string {
@@ -132,25 +145,25 @@ export class HomeComponent implements OnInit {
       }
     }
     return '';
-}
-
-
-getPestToGo(phrase: string, id: number): string {
-  const product = this.filteredProducts.find(p => p.id === id);
-
-  if (!product) return '';
-  const normalize = (text: string): string =>
-    text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
-
-  const searchTerm = normalize(phrase);
-
-  for (const pest of product.pestsControlled) {
-    if (normalize(pest).includes(searchTerm)) {
-      return pest;
-    }
   }
-  return '';
-}
+
+
+  getPestToGo(phrase: string, id: number): string {
+    const product = this.filteredProducts.find(p => p.id === id);
+
+    if (!product) return '';
+    const normalize = (text: string): string =>
+      text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+
+    const searchTerm = normalize(phrase);
+
+    for (const pest of product.pestsControlled) {
+      if (normalize(pest).includes(searchTerm)) {
+        return pest;
+      }
+    }
+    return '';
+  }
 
 
   buscarCoincidencias(): void {
@@ -178,21 +191,19 @@ getPestToGo(phrase: string, id: number): string {
       return new RegExp(`\\b${escaped}\\b`, 'i'); // \b => límite de palabra
     };
 
+    // Nuevo caso: búsqueda por ingrediente activo si empieza con "*"
+    if (rawInput.startsWith('*')) {
+      const searchTerm = normalize(rawInput.slice(1).trim());
+      if (searchTerm.length >= 2) {
+        this.filteredProducts = this.allProducts.filter(product => {
+          const ingredients = normalize(product.activeIngredients || '');
+          return ingredients.includes(searchTerm);
+        });
+      } else {
+        this.filteredProducts = [];
+      }
 
-
-  // Nuevo caso: búsqueda por ingrediente activo si empieza con "*"
-  if (rawInput.startsWith('*')) {
-    const searchTerm = normalize(rawInput.slice(1).trim());
-    if (searchTerm.length >= 2) {
-      this.filteredProducts = this.allProducts.filter(product => {
-        const ingredients = normalize(product.activeIngredients || '');
-        return ingredients.includes(searchTerm);
-      });
-    } else {
-      this.filteredProducts = [];
-    }
-
-  } else if (rawInput.includes('&')) {
+    } else if (rawInput.includes('&')) {
       const searchTerm = normalize(rawInput.split('&')[1]?.trim() || '');
       if (searchTerm.length >= 2) {
         this.filteredProducts = this.allProducts.filter(product => {
@@ -243,7 +254,7 @@ getPestToGo(phrase: string, id: number): string {
 
   seleccionarPest(pest: string): void {
     this.isWideScreen = false;
-       if (!this.isWideScreen) {
+    if (!this.isWideScreen) {
       this.drawer.close();
     }
 
@@ -254,11 +265,11 @@ getPestToGo(phrase: string, id: number): string {
 
   goToDetail(id: number): void {
     let name = this.getPestToGo(this.pestName, id)
-    this.navegateService.goToDetail('product',id, name);
+    this.navegateService.goToDetail('product', id, name);
   }
 
   goFavorites(): void {
-    this.navegateService.goFavorites('favorites',1);
+    this.navegateService.goFavorites('favorites', 1);
   }
 
 }

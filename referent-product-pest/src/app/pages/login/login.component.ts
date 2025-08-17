@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -12,6 +12,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { ProductService } from '../../services/product.service';
+import { TechnicalProductService } from '../../services/TechnicalProductService';
 
 
 @Component({
@@ -39,6 +40,7 @@ export class LoginComponent implements OnInit {
   private configUrl: string = 'assets/config/config.json';
   private storedUser: string = '';
   private storedPassword: string = '';
+  private technicalProductService = inject(TechnicalProductService);
 
   constructor(
     private http: HttpClient,
@@ -69,6 +71,7 @@ export class LoginComponent implements OnInit {
     this.password === this.storedPassword
   ) {
     this.productService.loadProducts();
+    this.technicalProductService.loadProducts();
     this.authService.login(); // Guardar estado
     this.router.navigate(['/home']);
   } else {

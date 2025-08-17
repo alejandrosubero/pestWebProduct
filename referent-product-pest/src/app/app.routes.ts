@@ -54,6 +54,17 @@ export const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'home', component: HomeComponent, data: { animation: 'HomePage' }, canActivate: [authGuard] },
   {
+    path: 'technical/notes',
+    loadComponent: () => import('./pages/technical-notes-list/technical-notes-list.component').then(c => c.TechnicalNotesListComponent),
+    data: { animation: 'technicalnotes' },
+    canActivate: [authGuard]
+  },
+  {
+    path: 'technical/notes/:id',
+    loadComponent: () => import('./pages/technical-notes/technical-notes.component').then(c => c.TechnicalNotesComponent),
+    canActivate: [authGuard]
+  },
+  {
     path: 'product/:id',
     loadComponent: () => import('./pages/product-detail/product-detail.component').then(c => c.ProductDetailComponent),
     canActivate: [authGuard]

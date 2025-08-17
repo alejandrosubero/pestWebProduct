@@ -1,0 +1,1023 @@
+[
+  {
+    "id":1,
+    "sourceFile": "label-TempridFXLabel5-24-22AV1.pdf",
+    "title": "Temprid FX",
+    "productOverview": "Dual-action residual insecticide combining beta-cyfluthrin and imidacloprid for broad-spectrum control of crawling and flying pests indoors and outdoors. Designed for professional use, it delivers both quick knockdown and long-lasting residual activity in a single formulation.",
+    "activeIngredients": "Beta-cyfluthrin 0.05% (synthetic pyrethroid insecticide), Imidacloprid 0.10% (neonicotinoid insecticide). Inert ingredients 99.85% including surfactants and stabilizers.",
+    "howItWorks": "Beta-cyfluthrin acts on voltage-gated sodium channels in insect nerve membranes, causing paralysis and death. Imidacloprid binds to nicotinic acetylcholine receptors, leading to overstimulation and death. The combination provides dual modes of action to improve efficacy and resistance management.",
+    "spectrumOfControl": "Controls a wide range of pests including ants, bed bugs, cockroaches, fleas, flies, silverfish, spiders, ticks, and wasps in both indoor and outdoor settings.",
+    "applicationRates": "General dilution: 0.27–0.54 fl oz per gallon of water depending on target pest and infestation level. Maximum: 0.11 lb active ingredient per acre per year outdoors.",
+    "applicationTips": "Apply as a spot, crack-and-crevice, or perimeter treatment. Use lower rates for maintenance and higher rates for heavy infestations. Avoid runoff into water systems. Agitate mixture during application to keep formulation evenly dispersed.",
+    "Advantages": "Two activeIngredients for broad pest spectrum and resistance management, long residual control, indoor/outdoor versatility, and compatibility with integrated pest management (IPM) programs.",
+    "safetyEnvironmentalNotes": "Toxic to fish, aquatic invertebrates, and pollinators; avoid contamination of water sources. Keep people and pets away from treated areas until sprays have dried. Wear protective clothing, gloves, and eye protection during mixing and application.",
+    "whyTheseComponentsAreUsed": "Beta-cyfluthrin provides rapid knockdown and strong residual activity against crawling insects. Imidacloprid targets insects resistant to pyrethroids and adds systemic and ingestion activity. Surfactants ensure even spreading, while stabilizers maintain product integrity during storage.",
+    "physicalChemicalProperties": "Formulation: suspension concentrate; color: off-white opaque liquid; low odor; stable under normal conditions; requires agitation when mixed with water; pH near neutral.",
+    "Deep": {
+      "Ingredients": [
+        {
+          "name": "Beta-cyfluthrin",
+          "percentage": "0.05%",
+          "type": "Synthetic pyrethroid insecticide (Type II)",
+          "mode_of_action": "Disrupts voltage-gated sodium channels in insect nerve cells, causing paralysis and death.",
+          "key_properties": [
+            "Fast knockdown",
+            "Residual activity on treated surfaces",
+            "Low volatility"
+          ],
+          "target_spectrum": "Broad — crawling and flying insects including ants, cockroaches, bed bugs, fleas, ticks, and wasps.",
+          "safety_notes": [
+            "Toxic to fish and aquatic invertebrates",
+            "Can cause skin tingling in humans",
+            "Cats are sensitive to concentrated forms"
+          ]
+        },
+        {
+          "name": "Imidacloprid",
+          "percentage": "0.10%",
+          "type": "Neonicotinoid insecticide",
+          "mode_of_action": "Binds to nicotinic acetylcholine receptors in insect nerves, causing overstimulation and paralysis.",
+          "key_properties": [
+            "Systemic potential in plants",
+            "Moderate kill rate for colony transfer",
+            "Selective for insect receptors"
+          ],
+          "target_spectrum": "Wide range — especially effective against sucking pests, some chewing pests, and certain resistant strains.",
+          "safety_notes": [
+            "Highly toxic to bees on direct contact",
+            "Toxic to aquatic invertebrates",
+            "Low acute toxicity to humans"
+          ]
+        }
+      ],
+      "combination_rationale": {
+        "resistance_management": "Two unrelated modes of action (pyrethroid + neonicotinoid) reduce the risk of pests developing resistance.",
+        "knockdown_and_residual": "Beta-cyfluthrin provides rapid kill for immediate relief; Imidacloprid offers longer residual and ingestion activity for hidden pests.",
+        "broader_coverage": "Pyrethroid handles active, mobile pests; Neonicotinoid controls pests less affected by pyrethroids, including some resistant strains."
+      }
+    },
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/TempridFXInsecticide-Bayer/label-TempridFXLabel5-24-22AV1.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/TempridFXInsecticide-Bayer/sds-TempridFXSDS3-20-14.pdf"
+    
+  },
+  {
+     "id":2,
+    "sourceFile": "label-SuspendPolyLabel9-20-16AV4.pdf",
+    "title": "Suspend PolyZone",
+    "productOverview": "A professional-use suspension concentrate insecticide containing deltamethrin with proprietary polymer encapsulation technology for extended residual performance indoors and outdoors. The polymer matrix shields the active ingredient from weathering and UV degradation, providing up to 90 days residual control even in outdoor conditions.",
+    "activeIngredients": "Deltamethrin 4.75% (synthetic pyrethroid insecticide). Inert ingredients 95.25% including polymer microcapsules, surfactants, dispersants, and stabilizers.",
+    "howItWorks": "Deltamethrin disrupts the normal function of voltage-gated sodium channels in insect nerve cells, causing paralysis and death. The polymer microcapsules adhere to treated surfaces and release deltamethrin slowly over time, protecting it from degradation by sunlight, moisture, and temperature fluctuations.",
+    "spectrumOfControl": "Controls over 50 pests including ants, bed bugs, cockroaches, fleas, flies, mosquitoes, wasps, spiders, scorpions, silverfish, millipedes, centipedes, and various stored product pests.",
+    "applicationRates": "Mix 0.25 fl oz per gallon of water for 0.01% AI (maintenance), 0.75 fl oz per gallon for 0.03% AI (moderate infestations), and 1.5 fl oz per gallon for 0.06% AI (heavy infestations). Apply as spot, crack-and-crevice, or perimeter treatments.",
+    "applicationTips": "Fill spray tank 1/3 to 1/2 full with water, add Suspend PolyZone, agitate, then fill remainder with water. Maintain agitation during application. Apply to areas where pests are active; avoid contact with blooming plants when pollinators are present.",
+    "Advantages": "Extended residual control with fewer applications, effective indoors and outdoors, resistant to wash-off, broad pest spectrum, adheres to porous and non-porous surfaces.",
+    "safetyEnvironmentalNotes": "Toxic to fish, aquatic invertebrates, and bees. Avoid contamination of water sources. Wear long-sleeved shirt, pants, gloves, and protective footwear. Keep people and pets away until spray dries.",
+    "whyTheseComponentsAreUsed": "Deltamethrin provides potent, broad-spectrum insect control. Polymer microcapsules protect the AI and extend release. Surfactants ensure proper dispersion, and stabilizers maintain shelf-life.",
+    "physicalChemicalProperties": "Form: liquid suspension concentrate; color: white/off-white opaque; odor: low; pH: slightly acidic to neutral; stable under normal conditions.",
+    "Deep": {
+      "Ingredients": [
+        {
+          "name": "Deltamethrin",
+          "percentage": "4.75%",
+          "type": "Synthetic pyrethroid insecticide",
+          "mode_of_action": "Disrupts voltage-gated sodium channels in insect nerve cells, leading to paralysis and death.",
+          "key_properties": [
+            "Extended residual activity due to polymer encapsulation",
+            "Stable under sunlight and weather conditions",
+            "Effective at low doses"
+          ],
+          "target_spectrum": "Controls over 50 pests including ants, bed bugs, cockroaches, fleas, flies, mosquitoes, spiders, scorpions, and stored product pests.",
+          "safety_notes": [
+            "Toxic to fish, aquatic invertebrates, and bees",
+            "Avoid contaminating water sources",
+            "Low mammalian toxicity but requires PPE during application"
+          ]
+        }
+      ],
+      "combination_rationale": null
+    },
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/SuspendPolyzone-Bayer/label-SuspendPolyLabel9-20-16AV4.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/SuspendPolyzone-Bayer/sds-SuspendPolySDS5-20-20.pdf"
+  },
+  {
+     "id":3,
+    "sourceFile": "label-DeltaGardGLabel10-14-14AV1.pdf",
+    "title": "DeltaGard G",
+    "productOverview": "Granular insecticide formulated with deltamethrin for outdoor use against a broad range of lawn, turf, and ornamental pests. Designed for even distribution over large areas with residual control lasting several weeks.",
+    "activeIngredients": "Deltamethrin 0.1% (synthetic pyrethroid insecticide). Inert ingredients 99.9% including clay granules and binders.",
+    "howItWorks": "Deltamethrin acts on voltage-gated sodium channels in insect nerve cells, leading to paralysis and death. Granular formulation allows for easy broadcast and penetration into turf, delivering contact and residual activity.",
+    "spectrumOfControl": "Controls ants, armyworms, billbugs, chinch bugs, crickets, cutworms, earwigs, fleas, Japanese beetles, ticks, and other listed turf pests.",
+    "applicationRates": "Typical broadcast rate: 2 to 4.6 lbs per 1,000 sq ft depending on pest. Do not exceed maximum seasonal application limits stated on the label.",
+    "applicationTips": "Apply using a properly calibrated spreader for even coverage. For best results, irrigate lightly after application to move granules into the soil profile.",
+    "Advantages": "Easy-to-apply granular form, broad spectrum control, long residual activity, minimal odor, suitable for large outdoor areas.",
+    "safetyEnvironmentalNotes": "Toxic to fish, aquatic invertebrates, and bees. Avoid applying directly to water or blooming plants. Keep children and pets off treated areas until granules have been watered in and surfaces are dry.",
+    "whyTheseComponentsAreUsed": "Deltamethrin provides potent control of turf and ornamental pests. Clay granules serve as carriers to distribute active ingredient evenly and allow slow release.",
+    "physicalChemicalProperties": "Form: dry granules; color: light brown; odor: minimal; stable under normal dry storage conditions.",
+    "Deep": {
+      "Ingredients": [
+        {
+          "name": "Deltamethrin",
+          "percentage": "0.1%",
+          "type": "Synthetic pyrethroid insecticide",
+          "mode_of_action": "Disrupts voltage-gated sodium channels in insect nerve cells, leading to paralysis and death.",
+          "key_properties": [
+            "Residual activity in turf and ornamental settings",
+            "Granular formulation for even distribution",
+            "Low odor and easy application"
+          ],
+          "target_spectrum": "Controls ants, armyworms, billbugs, chinch bugs, crickets, cutworms, earwigs, fleas, Japanese beetles, ticks, and other turf pests.",
+          "safety_notes": [
+            "Toxic to fish, aquatic invertebrates, and bees",
+            "Do not apply directly to water",
+            "Keep pets and children off treated areas until watered in and dry"
+          ]
+        }
+      ],
+      "combination_rationale": null
+    },
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/DeltaGardGGranules-Bayer/label-DeltaGardGLabel10-14-14AV1.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/DeltaGardGGranules-Bayer/sds-DeltaGardGSDS3-24-21.PDF"
+  },
+  {
+     "id":4,
+    "sourceFile": "label-ExtinguishPlusFireAntControlLabel8-1-24.pdf",
+    "title": "Extinguish Plus Fire Ant Bait",
+    "productOverview": "A dual-active granular bait combining hydramethylnon and (S)-methoprene for effective control of fire ants and other listed ants. Designed for broadcast or mound treatments, the bait works by both killing foraging workers and preventing the development of viable reproductive ants.",
+    "activeIngredients": "Hydramethylnon 0.365% (metabolic inhibitor insecticide), (S)-Methoprene 0.250% (insect growth regulator). Inert ingredients 99.385% including food attractants and corn grit carriers.",
+    "howItWorks": "Hydramethylnon disrupts energy production in insect cells, leading to lethargy, cessation of feeding, and death. (S)-Methoprene mimics juvenile hormone, preventing larvae from developing into reproductive adults, thereby halting colony growth.",
+    "spectrumOfControl": "Fire ants (Solenopsis spp.) including red imported fire ant, big-headed ants, and harvester ants.",
+    "applicationRates": "Broadcast: 1.5 lbs per acre. Individual mound treatment: 2 to 5 tablespoons per mound. Repeat as necessary according to label intervals.",
+    "applicationTips": "Apply when ants are actively foraging (typically in cooler morning or late afternoon hours). Avoid application to wet ground or when rain is expected within 24 hours.",
+    "Advantages": "Combines fast-acting metabolic inhibitor with long-term colony suppression from growth regulator. Highly attractive bait matrix promotes uptake by foraging ants.",
+    "safetyEnvironmentalNotes": "Avoid application to water or areas where surface runoff is likely. Toxic to aquatic invertebrates. Keep pets and children out of treated areas until bait is consumed or removed.",
+    "whyTheseComponentsAreUsed": "Hydramethylnon provides colony knockdown by killing worker ants. (S)-Methoprene disrupts the reproductive cycle to prevent rebound. Corn grit serves as an attractive food base and carrier for the actives.",
+    "physicalChemicalProperties": "Form: dry granular bait; color: light yellow to tan; odor: mild grain-like; store in a cool, dry place away from direct sunlight.",
+    "Deep": {
+      "Ingredients": [
+        {
+          "name": "Hydramethylnon",
+          "percentage": "0.365%",
+          "type": "Metabolic inhibitor insecticide",
+          "mode_of_action": "Disrupts mitochondrial energy production by inhibiting electron transport in the insect’s cells, leading to lethargy and death.",
+          "key_properties": [
+            "Slow-acting to allow transfer within ant colonies",
+            "Effective against all ant castes including queens",
+            "Granular bait formulation with food attractants"
+          ],
+          "target_spectrum": "Primarily imported and native fire ants, also harvester ants and other protein-feeding ants.",
+          "safety_notes": [
+            "Low acute toxicity to humans and pets when used as directed",
+            "Do not apply directly to water",
+            "Toxic to fish and aquatic invertebrates"
+          ]
+        },
+        {
+          "name": "S-methoprene",
+          "percentage": "0.25%",
+          "type": "Insect growth regulator (juvenile hormone analog)",
+          "mode_of_action": "Mimics insect juvenile hormone, preventing normal development into reproductive adults.",
+          "key_properties": [
+            "Prevents production of new worker ants",
+            "Works synergistically with metabolic inhibitors",
+            "Targets immature stages without immediate kill"
+          ],
+          "target_spectrum": "Fire ants and other ant species targeted by bait.",
+          "safety_notes": [
+            "Very low mammalian toxicity",
+            "Not harmful to birds",
+            "Avoid contamination of water sources"
+          ]
+        }
+      ],
+      "combination_rationale": {
+        "resistance_management": "Combines metabolic inhibitor and growth regulator to reduce resistance risk.",
+        "knockdown_and_residual": "Hydramethylnon kills existing colony members; S-methoprene prevents replacement by inhibiting maturation.",
+        "broader_coverage": "Targets both existing workers and developing brood for complete colony collapse."
+      }
+    },
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/ExtinguishPlus/label-ExtinguishPlusFireAntControlLabel8-1-24.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/ExtinguishPlus/sds-ExtinguishPlusSDS4-8-21.pdf"
+  },
+  {
+     "id":5,
+    "sourceFile": "label-Advance375ALabel5-1-17.pdf",
+    "title": "Advance 375A Select Ant Bait",
+    "productOverview": "A ready-to-use granular bait containing abamectin for control of a wide variety of ant species. Designed for use in and around buildings, lawns, and landscaped areas to control both sweet and protein-feeding ants.",
+    "activeIngredients": "Abamectin 0.011% (macrocyclic lactone insecticide derived from soil actinomycetes). Inert ingredients 99.989% including food attractants and corn grit carriers.",
+    "howItWorks": "Abamectin binds to glutamate-gated chloride channels in nerve and muscle cells, increasing chloride ion permeability, resulting in paralysis and death. Workers carry the bait back to the colony for shared feeding, leading to colony decline.",
+    "spectrumOfControl": "Controls many ant species including Argentine, carpenter, crazy, ghost, little black, odorous house, pavement, pharaoh, red imported fire, and thief ants.",
+    "applicationRates": "Broadcast: 1.5 lbs per acre. Perimeter treatment: 4 oz per 100 linear feet. Spot treatment: 1–4 oz per mound.",
+    "applicationTips": "Apply when ants are actively foraging. Avoid applying to wet surfaces. Do not water in after application. Reapply as needed per label intervals.",
+    "Advantages": "Highly attractive bait formulation, controls a broad range of ant species, effective indoors and outdoors, low use rate.",
+    "safetyEnvironmentalNotes": "Avoid contamination of water. Keep children and pets away until bait is consumed. Toxic to fish and aquatic invertebrates.",
+    "whyTheseComponentsAreUsed": "Abamectin provides slow-acting toxicity allowing transfer within the colony. Corn grit carrier serves as an attractive and palatable base.",
+    "physicalChemicalProperties": "Form: granular bait; color: light yellow; odor: mild; stable under normal dry storage.",
+    "Deep": {
+      "Ingredients": [
+        {
+          "name": "Abamectin B1",
+          "percentage": "0.011%",
+          "type": "Avermectin insecticide",
+          "mode_of_action": "Binds to glutamate-gated chloride channels in insect nerve and muscle cells, causing paralysis and death.",
+          "key_properties": [
+            "Slow-acting to enable bait transfer within colonies",
+            "Effective at extremely low doses",
+            "Protein/carbohydrate bait matrix attractive to ants"
+          ],
+          "target_spectrum": "Many ant species including carpenter ants, fire ants, and nuisance ants.",
+          "safety_notes": [
+            "Low mammalian toxicity",
+            "Toxic to fish and aquatic invertebrates",
+            "Avoid direct application to water"
+          ]
+        }
+      ],
+      "combination_rationale": null
+    },
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/Advance375AGranularAntBait/label-Advance375ALabel5-1-17.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/Advance375AGranularAntBait/sds-Advance375ASDS3-21-23.pdf"
+  },
+  {
+     "id":6,
+    "sourceFile": "label-AdvionAntGelLabel4-1-20.pdf",
+    "title": "Advion Ant Gel",
+    "productOverview": "A ready-to-use gel bait containing indoxacarb for control of a wide variety of ant species indoors and outdoors. The highly palatable formulation targets both sweet and protein-feeding ants.",
+    "activeIngredients": "Indoxacarb 0.05% (oxadiazine insecticide). Inert ingredients 99.95% including food attractants, humectants, and gelling agents.",
+    "howItWorks": "Indoxacarb blocks voltage-dependent sodium channels in insect nerve cells, resulting in paralysis and death. Workers feed on the gel and transfer it to other colony members through trophallaxis.",
+    "spectrumOfControl": "Argentine, carpenter, crazy, ghost, little black, odorous house, pavement, pharaoh, and other listed ants.",
+    "applicationRates": "Apply pea-sized spots (about 0.1 g) or 1–2 inch beads in areas where ants forage. Reapply as needed based on monitoring.",
+    "applicationTips": "Place bait near active foraging trails, nest entrances, or ant activity areas. Avoid placing on dusty, greasy, or wet surfaces.",
+    "Advantages": "Highly attractive formulation, non-repellent, transferable within the colony, low use rate.",
+    "safetyEnvironmentalNotes": "Avoid contamination of food and feed. Keep children and pets away from treated areas. Toxic to fish and aquatic invertebrates.",
+    "whyTheseComponentsAreUsed": "Indoxacarb provides delayed toxicity for effective transfer to nestmates. Food attractants ensure feeding by target ants. Humectants maintain moisture, gelling agents maintain form.",
+    "physicalChemicalProperties": "Form: viscous gel; color: translucent to opaque; odor: slight sweet; stable at room temperature.",
+    "Deep": {
+      "Ingredients": [
+        {
+          "name": "Indoxacarb",
+          "percentage": "0.05%",
+          "type": "Oxadiazine insecticide",
+          "mode_of_action": "Blocks voltage-gated sodium channels in insect nerves in a unique site, stopping nerve impulses and causing paralysis.",
+          "key_properties": [
+            "Non-repellent bait",
+            "Delayed mortality to allow transfer within colony",
+            "Effective against bait-averse ants"
+          ],
+          "target_spectrum": "Wide range of ants including Argentine ants, odorous house ants, and pavement ants.",
+          "safety_notes": [
+            "Low toxicity to humans and pets when used as directed",
+            "Avoid contamination of food and water",
+            "Toxic to aquatic invertebrates"
+          ]
+        }
+      ],
+      "combination_rationale": null
+    },
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/AdvionAntGel/label-AdvionAntGelLabel4-1-20.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/AdvionAntGel/sds-AdvionAntGelSDS4-4-23.pdf"
+  },
+  {
+     "id":7,
+    "sourceFile": "label-DekkoSilverfishLabel2-14-11.pdf",
+    "title": "Dekko Silverfish Paks",
+    "productOverview": "A ready-to-use boric acid bait for control of silverfish in residential, commercial, and industrial settings. Packaged in individual paks for placement in infested areas.",
+    "activeIngredients": "Boric Acid 20% (inorganic stomach poison). Inert ingredients 80% including cellulose and other bait matrix components.",
+    "howItWorks": "Boric acid is ingested by silverfish and disrupts metabolic processes in the gut, leading to death. The bait matrix encourages feeding.",
+    "spectrumOfControl": "Primarily silverfish; may also affect other crawling insects that consume the bait.",
+    "applicationRates": "Place 2–3 paks per average-sized room in areas of activity. Replace when consumed or contaminated.",
+    "applicationTips": "Place in closets, drawers, under appliances, and along baseboards. Avoid contamination with water.",
+    "Advantages": "Ready-to-use, discreet packaging, long shelf life, non-volatile active ingredient.",
+    "safetyEnvironmentalNotes": "Low toxicity to humans and pets when used as directed. Avoid ingestion by children or animals. Wash hands after handling.",
+    "whyTheseComponentsAreUsed": "Boric acid provides slow-acting ingestion toxicity. Cellulose bait base attracts silverfish.",
+    "physicalChemicalProperties": "Form: paper paks containing dry bait; color: off-white; odor: minimal; store in cool, dry place.",
+    "Deep": {
+      "Ingredients": [
+        {
+          "name": "Boric Acid",
+          "percentage": "20%",
+          "type": "Inorganic stomach poison",
+          "mode_of_action": "Disrupts metabolic processes in the insect gut after ingestion, leading to death.",
+          "key_properties": [
+            "Slow-acting, allowing multiple exposures",
+            "Low volatility and odorless",
+            "Long shelf life in dry conditions"
+          ],
+          "target_spectrum": "Silverfish primarily; also some other crawling insects that ingest bait.",
+          "safety_notes": [
+            "Low toxicity to humans and pets when used properly",
+            "Avoid ingestion by children and animals",
+            "Non-volatile and low environmental risk"
+          ]
+        }
+      ],
+      "combination_rationale": null
+    },
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/DekkoSilverfishPacks/label-DekkoSilverfishLabel2-14-11.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/DekkoSilverfishPacks/sds-DekkoSilverfishSDS3-7-16.pdf"
+  },
+  {
+     "id":8,
+    "sourceFile": "label-GentrolAeroLabel9-1-17.pdf",
+    "title": "Gentrol Aerosol",
+    "productOverview": "An insect growth regulator aerosol containing hydroprene for control of cockroaches, stored product pests, and other insects. Provides residual activity and prevents insect maturation.",
+    "activeIngredients": "Hydroprene 0.36% (juvenile hormone analog). Inert ingredients 99.64% including propellants and solvents.",
+    "howItWorks": "Hydroprene mimics juvenile hormone in insects, disrupting normal development and preventing larvae from reaching reproductive adulthood. Does not kill adult insects immediately but controls populations over time.",
+    "spectrumOfControl": "Cockroaches, bed bugs, stored product pests including flour beetles and moths, and other listed insects.",
+    "applicationRates": "Apply to areas where pests are present, including cracks, crevices, and other harborages. Follow label for specific square footage coverage per can.",
+    "applicationTips": "Shake well before use. Spray from 12–15 inches away. Apply to hidden areas and points of entry.",
+    "Advantages": "Interrupts pest life cycle, prevents reproduction, compatible with insecticide programs, low mammalian toxicity.",
+    "safetyEnvironmentalNotes": "Avoid inhalation. Use in well-ventilated areas. Keep away from open flame. Low toxicity to humans and pets when used as directed.",
+    "whyTheseComponentsAreUsed": "Hydroprene provides population control via growth regulation. Propellants and solvents deliver the active ingredient effectively as a spray.",
+    "physicalChemicalProperties": "Form: aerosol spray; color: clear to light yellow; odor: mild solvent; store at room temperature away from heat.",
+    "Deep": {
+      "Ingredients": [
+        {
+          "name": "Hydroprene",
+          "percentage": "0.36%",
+          "type": "Insect growth regulator (juvenile hormone analog)",
+          "mode_of_action": "Mimics juvenile hormone in insects, preventing maturation into reproductive adults.",
+          "key_properties": [
+            "Interrupts pest life cycle",
+            "Residual control without immediate knockdown",
+            "Low odor aerosol formulation"
+          ],
+          "target_spectrum": "Cockroaches, bed bugs, stored product pests, and other listed insects.",
+          "safety_notes": [
+            "Low toxicity to humans and pets",
+            "Avoid inhalation of spray mist",
+            "Do not apply directly to food"
+          ]
+        }
+      ],
+      "combination_rationale": null
+    },
+     "url1": "assets/prod/paul-labels-sds-2025-06-14/GentrolAerosol/label-GentrolAeroLabel9-1-17.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/GentrolAerosol/sds-GentrolAeroSDS3-21-22.pdf"
+  },
+  {
+     "id":9,
+    "sourceFile": "label-Shockwave1Label4-1-20.pdf",
+    "title": "Shockwave 1 Aerosol",
+    "productOverview": "A multi-active aerosol combining pyrethrins, piperonyl butoxide, and insect growth regulators for quick knockdown and residual control of a broad range of pests.",
+    "activeIngredients": "Pyrethrins 0.50%, Piperonyl butoxide 4.00% (synergist), MGK-264 1.00% (synergist), Novaluron 0.20% (insect growth regulator), other inert ingredients including propellants.",
+    "howItWorks": "Pyrethrins provide quick knockdown by affecting insect nerve cells. Piperonyl butoxide and MGK-264 inhibit detoxification enzymes in insects, enhancing pyrethrin activity. Novaluron inhibits chitin synthesis, preventing molting and reproduction.",
+    "spectrumOfControl": "Cockroaches, ants, fleas, flies, stored product pests, bed bugs, and other listed insects.",
+    "applicationRates": "Apply directly to insects or infested areas. Follow label for coverage limits and reapplication intervals.",
+    "applicationTips": "Shake well before use. Spray into cracks, crevices, and voids where pests harbor. Avoid over-application.",
+    "Advantages": "Fast knockdown plus long-term control, multiple modes of action, broad pest spectrum.",
+    "safetyEnvironmentalNotes": "Avoid inhalation. Keep away from flames. Toxic to fish and aquatic invertebrates. Keep pets and humans away until area is ventilated.",
+    "whyTheseComponentsAreUsed": "Pyrethrins for quick kill, PBO and MGK-264 to enhance efficacy, Novaluron for residual life cycle control.",
+    "physicalChemicalProperties": "Form: aerosol spray; color: varies; odor: mild solvent; store away from heat and open flame.",
+    "Deep": {
+      "Ingredients": [
+        {
+          "name": "Pyrethrins",
+          "percentage": "0.50%",
+          "type": "Natural pyrethrin insecticide",
+          "mode_of_action": "Affects insect nerve cell sodium channels causing rapid paralysis and death.",
+          "key_properties": [
+            "Fast knockdown",
+            "Broad spectrum of pests",
+            "Low residual"
+          ],
+          "target_spectrum": "Cockroaches, ants, flies, fleas, bed bugs, stored product pests, and more.",
+          "safety_notes": [
+            "Toxic to fish and aquatic invertebrates",
+            "Low mammalian toxicity",
+            "Avoid inhalation"
+          ]
+        },
+        {
+          "name": "Piperonyl butoxide",
+          "percentage": "4.00%",
+          "type": "Synergist",
+          "mode_of_action": "Inhibits insect detoxification enzymes to enhance pyrethrin efficacy.",
+          "key_properties": [
+            "Boosts pyrethrin potency",
+            "No insecticidal action alone",
+            "Increases kill rate"
+          ],
+          "target_spectrum": "Same as pyrethrins when combined.",
+          "safety_notes": [
+            "Low toxicity to humans",
+            "Avoid inhalation",
+            "Do not contaminate water"
+          ]
+        },
+        {
+          "name": "MGK-264",
+          "percentage": "1.00%",
+          "type": "Synergist",
+          "mode_of_action": "Inhibits metabolic enzymes to prolong insecticide activity.",
+          "key_properties": [
+            "Enhances pyrethrin effects",
+            "Low volatility",
+            "No standalone insecticidal effect"
+          ],
+          "target_spectrum": "Same as pyrethrins when combined.",
+          "safety_notes": [
+            "Low human toxicity",
+            "Avoid inhalation",
+            "Toxic to aquatic life"
+          ]
+        },
+        {
+          "name": "Novaluron",
+          "percentage": "0.20%",
+          "type": "Insect growth regulator (chitin synthesis inhibitor)",
+          "mode_of_action": "Prevents molting by inhibiting chitin production in insect exoskeletons.",
+          "key_properties": [
+            "Prevents reproduction",
+            "Long residual activity",
+            "Targets immature stages"
+          ],
+          "target_spectrum": "Various crawling and flying insects in immature stages.",
+          "safety_notes": [
+            "Low toxicity to mammals",
+            "Avoid contaminating water",
+            "Do not apply to food contact surfaces"
+          ]
+        }
+      ],
+      "combination_rationale": {
+        "resistance_management": "Multiple activeIngredients with different targets reduce resistance risk.",
+        "knockdown_and_residual": "Pyrethrins provide rapid kill; Novaluron offers long-term population suppression.",
+        "broader_coverage": "Covers both adult and immature stages across a wide pest range."
+      }
+    },
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/Shockwave1/label-Shockwave1Label4-1-20.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/Shockwave1/sds-Shockwave1SDS12-6-18.pdf"
+  },
+  {
+     "id":10,
+    "sourceFile": "label-VendettaPlusLabel4-1-22.pdf",
+    "title": "Vendetta Plus Cockroach Gel Bait",
+    "productOverview": "A ready-to-use gel bait for cockroach control containing abamectin and the insect growth regulator pyriproxyfen. Targets German cockroaches and other species.",
+    "activeIngredients": "Abamectin B1 0.05%, Pyriproxyfen 0.05%. Inert ingredients 99.9% including food attractants and gelling agents.",
+    "howItWorks": "Abamectin acts on nerve and muscle cells, causing paralysis and death over time, allowing transfer to other roaches. Pyriproxyfen disrupts reproduction by mimicking juvenile hormone.",
+    "spectrumOfControl": "German, American, and Oriental cockroaches.",
+    "applicationRates": "Apply 0.25–0.5 g spots or 2–4 inch beads per location, adjusting based on infestation severity.",
+    "applicationTips": "Apply to areas where roaches forage and harbor. Avoid contaminated or wet surfaces.",
+    "Advantages": "Two activeIngredients for adult and reproductive control, highly palatable bait matrix, long-lasting indoors.",
+    "safetyEnvironmentalNotes": "Avoid contamination of food. Keep away from children and pets. Low mammalian toxicity when used as directed.",
+    "whyTheseComponentsAreUsed": "Abamectin for delayed kill and transfer, Pyriproxyfen for population suppression, food attractants to promote feeding.",
+    "physicalChemicalProperties": "Form: gel; color: light brown; odor: mild; stable at room temperature.",
+    "Deep": {
+      "Ingredients": [
+        {
+          "name": "Abamectin B1",
+          "percentage": "0.05%",
+          "type": "Avermectin insecticide",
+          "mode_of_action": "Binds to glutamate-gated chloride channels in nerves, causing paralysis and death.",
+          "key_properties": [
+            "Slow-acting for secondary transfer",
+            "Highly palatable gel bait",
+            "Effective at low doses"
+          ],
+          "target_spectrum": "German, American, and Oriental cockroaches.",
+          "safety_notes": [
+            "Low mammalian toxicity",
+            "Toxic to fish and aquatic invertebrates",
+            "Avoid contamination of food"
+          ]
+        },
+        {
+          "name": "Pyriproxyfen",
+          "percentage": "0.05%",
+          "type": "Insect growth regulator (juvenile hormone analog)",
+          "mode_of_action": "Prevents development of nymphs into reproductive adults.",
+          "key_properties": [
+            "Population suppression",
+            "Works synergistically with adulticides",
+            "Long residual activity"
+          ],
+          "target_spectrum": "Cockroaches targeted by bait application.",
+          "safety_notes": [
+            "Low toxicity to humans and pets",
+            "Avoid contamination of water",
+            "Safe for most non-target species"
+          ]
+        }
+      ],
+      "combination_rationale": {
+        "resistance_management": "Adulticide plus growth regulator reduce risk of resistance.",
+        "knockdown_and_residual": "Abamectin provides slow kill for colony transfer; Pyriproxyfen prevents new generations.",
+        "broader_coverage": "Targets both adults and developing cockroaches for full control."
+      }
+    },
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/VendettaPlusCockroachGelBait/label-VendettaPlusLabel4-1-22.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/VendettaPlusCockroachGelBait/sds-VendettaPlusGelBaitSDS11-30-20.pdf"
+  },
+  {
+     "id":11,
+    "sourceFile": "label-DemandCSLabel11-1-14cr17.pdf",
+    "title": "Demand CS Insecticide",
+    "productOverview": "Demand CS is a professional-use microencapsulated insecticide formulated with lambda-cyhalothrin, a synthetic pyrethroid. It provides long-lasting residual control against a wide variety of pests in, on, and around structures. The capsule suspension (CS) formulation enhances durability on treated surfaces, making it effective indoors, outdoors, and in sensitive sites such as hospitals, schools, and food-handling establishments.",
+    "activeIngredients": "Lambda-cyhalothrin 9.7% (synthetic pyrethroid, capsule suspension microencapsulated). Inert ingredients 90.3%.",
+    "howItWorks": "Lambda-cyhalothrin, a type II synthetic pyrethroid, disrupts insect nervous systems by modifying the function of voltage-gated sodium channels, causing repetitive nerve impulses, paralysis, and eventual death. The microencapsulation technology provides controlled release, extending residual activity and improving adherence to treated surfaces.",
+    "spectrumOfControl": "Controls a wide range of crawling and flying pests including ants, bed bugs, cockroaches, fleas, flies, spiders, ticks, wasps, mosquitoes, centipedes, crickets, silverfish, carpenter bees, termites (above-ground only), beetles (carpet, cigarette, confused flour, red flour, rice weevils, saw-toothed grain), sowbugs, pillbugs, firebrats, earwigs, pantry pests, cluster flies, scorpions, and litter beetles in poultry/livestock housing.",
+    "applicationRates": "Dilution ranges from 0.015% to 0.06% active ingredient. For example, 0.2 fl oz (6 mL) per gallon of water for 0.015%, 0.4 fl oz (12 mL) per gallon for 0.03%, and 0.8 fl oz (24 mL) per gallon for 0.06%. Apply 1 gallon per 1,000 sq ft depending on pest and severity. Specific rates vary: maintenance cockroach treatments at 0.015%, cleanout treatments at 0.03%, severe infestations at 0.06%.",
+    "applicationTips": "Apply as residual sprays, crack-and-crevice, or spot treatments. Shake tank before and during use. Do not apply to impervious surfaces unless spot treatment. Avoid runoff into water systems. Outdoor use is limited to soil/vegetation around structures, building foundations, undersides of eaves, and other limited protected surfaces. Do not apply during rain or to saturated soils. Retreat indoors at 21-day intervals as needed.",
+    "Advantages": "Microencapsulation provides extended residual control, broad-spectrum activity, effectiveness indoors and outdoors, and reduced operator exposure compared to non-encapsulated formulations. Compatible with insect growth regulators and tank-mixable with other products.",
+    "safetyEnvironmentalNotes": "Harmful if absorbed through skin or inhaled. Avoid contact with skin, eyes, or clothing. Toxic to fish, aquatic invertebrates, and highly toxic to bees if exposed to treated surfaces. Do not apply to blooming crops or weeds if bees are present. Keep people and pets away until surfaces are dry. Avoid drift and runoff. Do not use on golf course turf.",
+    "whyTheseComponentsAreUsed": "Lambda-cyhalothrin provides fast knockdown and long residual activity against a wide pest spectrum. The capsule suspension formulation protects the active ingredient and ensures slow release, improving persistence and performance under varying environmental conditions. Inert ingredients act as stabilizers and carriers.",
+    "physicalChemicalProperties": "Form: capsule suspension concentrate. Color: off-white liquid. Odor: low. Stability: stable under normal storage conditions. Requires agitation when diluted. pH: near neutral.",
+    "Deep": {
+      "Ingredients": [
+        {
+          "name": "Lambda-cyhalothrin",
+          "percentage": "9.7%",
+          "type": "Synthetic pyrethroid insecticide (Type II, Group 3A)",
+          "mode_of_action": "Modifies gating of voltage-dependent sodium channels in nerve membranes, causing repetitive firing, paralysis, and death.",
+          "key_properties": [
+            "Microencapsulated for extended residual activity",
+            "Low volatility",
+            "Strong adherence to treated surfaces"
+          ],
+          "target_spectrum": "Wide range of structural and perimeter pests: ants, cockroaches, mosquitoes, bed bugs, fleas, ticks, spiders, beetles, flies, termites (above-ground).",
+          "safety_notes": [
+            "Toxic to aquatic organisms including fish and invertebrates",
+            "Highly toxic to bees if exposed during or after spraying",
+            "Harmful if absorbed through skin or inhaled"
+          ]
+        }
+      ],
+      "combination_rationale": null
+    },
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/DemandCSInsecticide/label-DemandCSLabel11-1-14cr17.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/DemandCSInsecticide/sds-Demand-CSSDS11-12-24.pdf"
+  },
+  {
+     "id":12,
+    "sourceFile": "label-ExciterLabelPCO1-1-17.pdf",
+    "title": "ExciteR",
+    "productOverview": "ExciteR is a synergized pyrethrin insecticide concentrate designed for quick knockdown and flushing of a wide range of crawling and flying insects. It is highly versatile and can be applied indoors or outdoors as a surface, space, area, contact, spot, or crack-and-crevice treatment. Its high content of pyrethrins combined with piperonyl butoxide enhances effectiveness against resistant pests.",
+    "activeIngredients": "Pyrethrins 6% (botanical insecticide, natural pyrethroid). Piperonyl Butoxide, Technical 60% (synergist inhibiting metabolic detoxification). Other ingredients 34% including petroleum distillates.",
+    "howItWorks": "Pyrethrins disrupt sodium channel function in insect nerves, causing rapid knockdown and paralysis. Piperonyl Butoxide inhibits cytochrome P450 enzymes in insects, preventing detoxification of pyrethrins, thereby synergizing and prolonging their effect. Together, they produce fast-acting control of exposed pests.",
+    "spectrumOfControl": "Controls exposed stages of ants, cockroaches, cadelles, cigarette beetles, flour beetles, rice weevils, mealworms, moths (almond, Angoumois, Indian meal, Mediterranean flour), stored product pests, flies, mosquitoes, fleas, ticks, bed bugs, carpet beetles, webbing clothes moths, and termites (swarmers).",
+    "applicationRates": "Typical dilution: 0.25 to 4.25 fl oz per gallon of water depending on target pest and infestation level. For crawling insects: up to 4.25 fl oz per gallon applied at 1 gallon per 750 sq ft. For fleas, bed bugs, and pantry pests: 2.125 to 4.25 fl oz per gallon. For carpet beetles: 4.25 fl oz per gallon. For space sprays: lower rates may be used.",
+    "applicationTips": "May be diluted with water or oil. Agitate mixtures during use. Apply with compressed air sprayers, power sprayers, ULV foggers, or thermal foggers (oil dilutions). Apply only when areas are vacated by unprotected persons. Cover food, utensils, and aquariums before treatment. Do not apply in rain or allow runoff. Remove pets and birds prior to application. Follow PPE requirements for applicators, including gloves and respirators in enclosed areas.",
+    "Advantages": "Fast knockdown of pests, synergized with PBO to overcome resistance, highly versatile formulation compatible with multiple application methods, labeled for use in food-handling establishments, livestock areas, transport vehicles, residential, commercial, and industrial facilities.",
+    "safetyEnvironmentalNotes": "Harmful if swallowed or in eyes, causes moderate eye irritation, prolonged skin exposure may cause allergic reactions. Contains petroleum distillates—vomiting after ingestion may cause aspiration pneumonia. Highly toxic to aquatic organisms and bees. Do not contaminate water. Do not use in aircraft cabins. PPE required: long-sleeve shirt, long pants, chemical-resistant gloves, and in some cases respirators.",
+    "whyTheseComponentsAreUsed": "Pyrethrins provide rapid knockdown of insects. Piperonyl Butoxide enhances effectiveness by inhibiting insect detoxification enzymes. Petroleum distillates act as carriers and solvents to maintain formulation stability and allow effective dispersion.",
+    "physicalChemicalProperties": "Form: liquid concentrate. Color: amber to brown. Odor: petroleum-like. Contains petroleum distillates. Flammable—do not use near open flame or heat.",
+    "Deep": {
+      "Ingredients": [
+        {
+          "name": "Pyrethrins",
+          "percentage": "6%",
+          "type": "Botanical pyrethroid insecticide",
+          "mode_of_action": "Binds to voltage-gated sodium channels, prolonging opening and causing hyperexcitation, paralysis, and death.",
+          "key_properties": [
+            "Fast knockdown",
+            "Low mammalian toxicity",
+            "Short environmental persistence"
+          ],
+          "target_spectrum": "Wide spectrum of crawling and flying pests including cockroaches, ants, flies, beetles, moths, mosquitoes, fleas, and bed bugs.",
+          "safety_notes": [
+            "Generally low toxicity to humans and pets at label rates",
+            "Highly toxic to fish and aquatic invertebrates",
+            "Highly toxic to bees upon direct exposure"
+          ]
+        },
+        {
+          "name": "Piperonyl Butoxide",
+          "percentage": "60%",
+          "type": "Insecticide synergist",
+          "mode_of_action": "Inhibits insect cytochrome P450 enzymes, preventing metabolic breakdown of pyrethrins and increasing their potency.",
+          "key_properties": [
+            "Synergizes pyrethrins",
+            "Not insecticidal alone",
+            "Increases persistence of knockdown"
+          ],
+          "target_spectrum": "Not directly insecticidal, but broadens efficacy of pyrethrins to resistant populations of many insect pests.",
+          "safety_notes": [
+            "Low acute toxicity to humans",
+            "Not intended as a stand-alone insecticide",
+            "Considered an inert synergist by EPA, but must be handled carefully"
+          ]
+        }
+      ],
+      "combination_rationale": {
+        "resistance_management": "Combining pyrethrins with PBO delays resistance development by suppressing detoxification enzymes.",
+        "knockdown_and_residual": "Pyrethrins provide immediate knockdown; PBO extends and enhances efficacy but does not add true residual.",
+        "broader_coverage": "Synergist PBO broadens pyrethrin coverage by overcoming insect resistance mechanisms."
+      }
+    },
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/Exciter/label-ExciterLabelPCO1-1-17.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/Exciter/sds-ExciterSDS4-20-22.pdf"
+  },
+  {
+     "id":13,
+    "sourceFile": "label-OptigardCockroachGelLabel2-1-19.pdf",
+    "title": "Optigard Cockroach Gel Bait",
+    "productOverview": "Optigard Cockroach Gel Bait is a professional-use insecticidal gel formulated with emamectin benzoate. It is intended for crack, crevice, and void treatments in residential, commercial, agricultural, and industrial areas. It targets major cockroach species including German, American, Oriental, brown-banded, smoky brown, and Australian cockroaches, delivering highly attractive bait combined with systemic-acting insecticide.",
+    "activeIngredients": "Emamectin benzoate 0.1% (avermectin type, Group 6 insecticide). Other ingredients 99.9%.",
+    "howItWorks": "Emamectin benzoate, a macrocyclic lactone derived from avermectins, binds to glutamate-gated chloride channels and enhances GABA activity in insect neurons, increasing chloride ion influx, causing paralysis and death. Ingestion of the gel bait delivers lethal doses through feeding.",
+    "spectrumOfControl": "Controls major cockroach species including German, American, Australian, Oriental, smoky brown, and brown-banded cockroaches in residential, food-handling, and institutional areas.",
+    "applicationRates": "Apply as spots (0.25–0.50 grams each, approx. 3–6 mm diameter) or beads (~0.25 g per 2-inch bead). Light infestations: 1–2 spots per square yard (9 sq ft). Heavy infestations: 2–4 spots per square yard.",
+    "applicationTips": "Apply into cracks, crevices, voids, and harborage areas. Place bait in locations near cockroach activity such as under sinks, behind appliances, cabinets, and around plumbing. Numerous smaller placements improve control. Inspect regularly and reapply as needed. Do not apply to areas accessible to children or pets. Avoid applying over repellent insecticides or sprayed areas.",
+    "Advantages": "Highly attractive bait matrix, low odor, systemic and ingestion-based mode of action, effective against resistant strains, versatile use in multiple environments, compatible with IPM programs.",
+    "safetyEnvironmentalNotes": "Causes moderate eye irritation. Avoid contact with eyes and clothing. Wash hands thoroughly after handling. Do not apply directly to water or areas where surface water is present. Do not use around electrical equipment. Keep out of reach of children.",
+    "whyTheseComponentsAreUsed": "Emamectin benzoate provides potent control through ingestion and contact activity on cockroaches. Inert gel formulation ensures palatability and stability. Attractants drive cockroach feeding for effective colony reduction.",
+    "physicalChemicalProperties": "Form: gel bait. Color: translucent to beige. Odor: low. Stable in syringe formulation. Packaged in 30 g syringes.",
+    "Deep": {
+      "Ingredients": [
+        {
+          "name": "Emamectin benzoate",
+          "percentage": "0.1%",
+          "type": "Avermectin insecticide (macrocyclic lactone, Group 6)",
+          "mode_of_action": "Stimulates glutamate-gated chloride channels and potentiates GABA action, leading to paralysis and death of insects upon ingestion.",
+          "key_properties": [
+            "Potent ingestion toxicity",
+            "Effective at very low concentrations",
+            "Stable gel formulation ensures palatability"
+          ],
+          "target_spectrum": "Cockroaches including German, American, Oriental, smoky brown, brown-banded, and Australian species.",
+          "safety_notes": [
+            "Causes moderate eye irritation",
+            "Avoid contamination of water bodies",
+            "Low volatility and low odor formulation"
+          ]
+        }
+      ],
+      "combination_rationale": null
+    },
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/OptigardAntGelBait/label-OptigardAntGelLabel9-1-10.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/OptigardAntGelBait/sds-OptigardAntGelBaitSDS3-1-24.pdf"
+  },
+  {
+     "id":14,
+    "sourceFile": "label-GentrolAeroLabel9-1-17.pdf",
+    "title": "Gentrol® Aerosol",
+    "productOverview": "Gentrol Aerosol is an insect growth regulator (IGR) aerosol formulation containing hydroprene. It is designed for crack and crevice or spot treatment applications in residential, commercial, and industrial areas. It is primarily used for long-term control of stored product pests, cockroaches, fleas, and other insects by disrupting their normal growth and development.",
+    "activeIngredients": "Hydroprene (2-[1-methyl-2-(4-phenoxyphenoxy)ethoxy]pyridine) 0.36% - Insect growth regulator. Other Ingredients: 99.64%.",
+    "howItWorks": "Hydroprene is an insect growth regulator (IGR) that mimics juvenile hormone activity in insects. It prevents larvae from maturing into reproductive adults, disrupts molting, and leads to population decline over time.",
+    "spectrumOfControl": "Cockroaches, bed bugs, stored product pests (confused flour beetles, red flour beetles, rice moths, Indian meal moths, tobacco moths), and fleas.",
+    "applicationRates": "Apply as a crack and crevice or spot treatment. Specific applicationRates depend on pest pressure but typically involve applying to breeding and harborage sites. Do not apply directly to food or food-contact surfaces.",
+    "applicationTips": "Use in conjunction with sanitation and other control measures. Apply to cracks, crevices, voids, and areas where pests harbor. Rotate use with adulticides for complete control. Do not apply when food is exposed.",
+    "Advantages": "Provides long-term residual control; breaks insect life cycles; prevents reinfestation; compatible with IPM programs; ready-to-use aerosol for convenience.",
+    "safetyEnvironmentalNotes": "Keep out of reach of children. Harmful if inhaled. Avoid contact with skin, eyes, or clothing. Do not apply directly to food or food preparation areas. Ventilate treated areas before reentry. Hydroprene has low mammalian toxicity but should be handled with care.",
+    "whyTheseComponentsAreUsed": "Hydroprene is used for its insect growth regulator properties, disrupting normal development and reproduction of pests. Other ingredients act as propellants and solvents to allow aerosol delivery.",
+    "physicalChemicalProperties": "Pressurized aerosol. Clear liquid spray. Flammable propellant. Store in a cool, dry area away from heat or open flame.",
+    "Deep": {
+      "Ingredients": [
+        {
+          "name": "Hydroprene",
+          "percentage": "0.36%",
+          "type": "Insect Growth Regulator (juvenile hormone analog)",
+          "mode_of_action": "Mimics juvenile hormone activity, disrupting insect development and preventing maturation into reproductive adults.",
+          "key_properties": ["Stable formulation in aerosol form", "Provides residual activity in treated areas"],
+          "target_spectrum": "Cockroaches, fleas, bed bugs, and stored product pests.",
+          "safety_notes": ["Low mammalian toxicity", "Avoid inhalation and contact with skin or eyes", "Do not apply to food or food-contact surfaces"]
+        }
+      ],
+      "combination_rationale": null
+    },
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/GentrolAerosol/label-GentrolAeroLabel9-1-17.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/GentrolAerosol/sds-GentrolAeroSDS3-21-22.pdf"
+  },
+  {
+     "id":15,
+    "sourceFile": "label-GentrolCompleteLabel7-1-17.pdf",
+    "title": "Gentrol® Complete Aerosol",
+    "productOverview": "Gentrol Complete Aerosol combines an insect growth regulator (hydroprene) with an adulticide (pyrethrins and piperonyl butoxide) to provide both immediate knockdown and long-term control of insect infestations.",
+    "activeIngredients": "Hydroprene 0.36%, Pyrethrins 0.13%, Piperonyl Butoxide 1.27%. Other Ingredients 98.24%.",
+    "howItWorks": "Pyrethrins provide quick knockdown and mortality through disruption of insect nervous system sodium channels. Piperonyl butoxide acts as a synergist, inhibiting detoxification enzymes and enhancing pyrethrin efficacy. Hydroprene provides long-term disruption of insect development and reproduction.",
+    "spectrumOfControl": "Cockroaches, ants, fleas, stored product pests, bed bugs, and other crawling insects.",
+    "applicationRates": "Apply as a crack, crevice, or spot treatment in infested areas. Do not apply directly to food. Application rate depends on infestation level and site conditions.",
+    "applicationTips": "Use in combination with sanitation. Apply to areas where insects hide or travel. Ventilate after application. Shake well before use.",
+    "Advantages": "Provides both immediate and residual control; breaks insect life cycle; convenient aerosol; synergized pyrethrins for stronger control.",
+    "safetyEnvironmentalNotes": "Keep out of reach of children. Harmful if swallowed or absorbed through skin. Avoid inhalation. Do not apply directly to food or food surfaces. Flammable.",
+    "whyTheseComponentsAreUsed": "Hydroprene for growth regulation, pyrethrins for quick knockdown, and PBO as a synergist to enhance pyrethrin activity.",
+    "physicalChemicalProperties": "Pressurized aerosol. Clear liquid spray with solvent odor. Flammable. Store away from heat or flame.",
+    "Deep": {
+      "Ingredients": [
+        {
+          "name": "Hydroprene",
+          "percentage": "0.36%",
+          "type": "Insect Growth Regulator (juvenile hormone analog)",
+          "mode_of_action": "Disrupts normal insect growth and development.",
+          "key_properties": ["Stable IGR", "Residual control"],
+          "target_spectrum": "Cockroaches, stored product pests, bed bugs, fleas.",
+          "safety_notes": ["Low mammalian toxicity", "Avoid contact with food", "Avoid inhalation"]
+        },
+        {
+          "name": "Pyrethrins",
+          "percentage": "0.13%",
+          "type": "Botanical insecticide (pyrethroid natural ester)",
+          "mode_of_action": "Disrupts sodium channel function in insect neurons, causing paralysis and death.",
+          "key_properties": ["Fast knockdown", "Broad spectrum activity"],
+          "target_spectrum": "Cockroaches, ants, bed bugs, fleas, stored product pests.",
+          "safety_notes": ["Can cause skin irritation", "Toxic to fish and aquatic life"]
+        },
+        {
+          "name": "Piperonyl Butoxide",
+          "percentage": "1.27%",
+          "type": "Synergist (methylenedioxyphenyl compound)",
+          "mode_of_action": "Inhibits mixed-function oxidases in insects, preventing detoxification of pyrethrins.",
+          "key_properties": ["Not an insecticide itself", "Enhances efficacy of pyrethrins"],
+          "target_spectrum": "Used only to synergize pyrethrins.",
+          "safety_notes": ["Low mammalian toxicity", "Avoid inhalation"]
+        }
+      ],
+      "combination_rationale": {
+        "resistance_management": "Combining pyrethrins with hydroprene reduces risk of resistance since one targets the nervous system and the other targets development.",
+        "knockdown_and_residual": "Pyrethrins provide immediate kill while hydroprene provides long-term residual population suppression.",
+        "broader_coverage": "Targets both adult and immature stages of pests for complete life-cycle control."
+      }
+    },
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/GentrolCompleteAerosol/label-GentrolCompleteLabel7-1-17.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/GentrolCompleteAerosol/sds-GentrolCompleteAeroSDS3-30-22.pdf"
+  },
+  {
+     "id":16,
+    "sourceFile": "label-InvadeBioDrainDyeFreeLabel1-1-22.pdf",
+    "title": "InVade™ Bio Drain (Dye Free)",
+    "productOverview": "InVade Bio Drain is a microbial drain cleaner formulated with premium, natural microbes and citrus oil in a thickened solution to coat the sides of drains. It eliminates organic debris, scum, and odors without harsh chemicals or fumes. Designed for use in drains, soda fountain drip trays, dumpsters, trash chutes, urinals, and other areas where organic matter accumulates.",
+    "activeIngredients": "Natural microbes (soil-derived Bacillus species) and citrus oil. Contains fragrance allergens: Limonene, Linalool.",
+    "howItWorks": "The Bacillus microbial spores germinate when exposed to organic matter, producing enzymes that digest fats, oils, grease (FOG), proteins, carbohydrates, and other organic waste. The citrus oil aids cleaning and provides a natural scent. The breakdown products are carbon dioxide and water.",
+    "spectrumOfControl": "Targets organic build-up, scum, and odors in drains, soda fountain lines, trash areas, urinals, kennels, dumpsters, and other surfaces with organic accumulation.",
+    "applicationRates": "Apply 4 oz per standard drain (4” drain size) every other day for one week, then weekly for maintenance. For soda fountain drip trays: ~1 oz weekly. For mopping: 4 oz per mop bucket. For surface cleaning: 4-8 oz per gallon of water. For foaming: 4-8 oz per gallon of water plus 2-4 oz foaming agent.",
+    "applicationTips": "Apply during low usage periods. Do not mix with bleach, disinfectants, or caustic cleaners. Do not rinse treated surfaces. Repeat applications as part of routine cleaning. Store between 35–95°F.",
+    "Advantages": "Natural, non-toxic microbial action; eliminates odors; safe for drains and septic systems; environmentally friendly; no harsh fumes; lemon-citrus scent.",
+    "safetyEnvironmentalNotes": "Keep out of reach of children. Avoid ingestion. If swallowed, drink water and seek medical attention. May cause irritation to eyes and skin; rinse with water if contact occurs. Do not apply to unsealed wood or direct food contact surfaces without rinsing.",
+    "whyTheseComponentsAreUsed": "Bacillus microbes are included for enzymatic digestion of organic matter. Citrus oil is included as a natural solvent and deodorizer. Surfactants thicken and enhance surface adherence.",
+    "physicalChemicalProperties": "Thickened liquid, lemon-citrus scent, dye-free, stable at storage temperatures 35–95°F.",
+    "Deep": {
+      "Ingredients": [
+        {
+          "name": "Bacillus spp. microbes",
+          "percentage": "Not specified",
+          "type": "Microbial bioremediation agent",
+          "mode_of_action": "Spores germinate to produce colonies that secrete enzymes to break down fats, proteins, carbohydrates, and other organic matter.",
+          "key_properties": ["Spore-forming", "Enzyme producing", "Resilient to environmental stress"],
+          "target_spectrum": "Organic waste, grease, and scum in drains and surfaces.",
+          "safety_notes": ["Safe for humans and pets when used as directed", "Avoid ingestion of concentrated product"]
+        },
+        {
+          "name": "Citrus oil (limonene, linalool)",
+          "percentage": "Not specified",
+          "type": "Natural solvent and deodorizer",
+          "mode_of_action": "Acts as a cleaning solvent and provides fragrance while aiding in breakdown of grease.",
+          "key_properties": ["Natural origin", "Pleasant citrus odor"],
+          "target_spectrum": "Odors and greasy organic build-up.",
+          "safety_notes": ["May cause mild irritation to skin and eyes"]
+        }
+      ],
+      "combination_rationale": null
+    },
+    "url1":"assets/prod/paul-labels-sds-2025-06-14/InVadeBioDrain/label-InvadeBioDrainDyeFreeLabel1-1-22.pdf" ,
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/InVadeBioDrain/sds-InVadeBioDrainSDS1-6-25.pdf"
+  },
+  {
+     "id":17,
+    "sourceFile": "label-InvadeBioFoamInstr1-1-20.pdf",
+    "title": "InVade™ Bio Foam",
+    "productOverview": "InVade Bio Foam is a foaming microbial cleaner containing natural Bacillus spores, citrus oil, and foaming agents. It is designed for application in cracks, crevices, drains, beverage lines, and under equipment to eliminate organic matter and odors.",
+    "activeIngredients": "Natural Bacillus microbial spores, citrus oil, foaming agents.",
+    "howItWorks": "When mixed with water and foamed, the Bacillus spores activate upon contact with organic matter, producing enzymes that digest fats, oils, grease, proteins, carbohydrates, and other debris. Foam expands and adheres to surfaces for extended contact, allowing microbes to colonize and degrade organic residues.",
+    "spectrumOfControl": "Organic matter, grease, and odors in drains, beverage lines, food service areas, dumpsters, kennels, and trash areas.",
+    "applicationRates": "Dilute at 1 oz per quart of water (4 oz per gallon). Apply foam into drains, cracks, voids, under and around equipment. Apply monthly or as needed. Foam persists for several hours before dissipating.",
+    "applicationTips": "Do not mix with bleach, disinfectants, or caustic cleaners. Apply in low-use periods for best effectiveness. Allow foam to dissipate naturally. Do not rinse surfaces. Avoid direct discharge to water bodies.",
+    "Advantages": "Extended contact via foam, microbial cleaning, natural and non-toxic, safe for septic systems, effective in food and non-food areas.",
+    "safetyEnvironmentalNotes": "Keep out of reach of children. May cause eye or skin irritation. If ingested, drink water and seek medical help. Store between 35–95°F. Do not freeze, though spores remain mostly viable after freezing.",
+    "whyTheseComponentsAreUsed": "Bacillus microbes digest organic matter. Citrus oil enhances cleaning and deodorization. Foaming agents allow expanded surface coverage.",
+    "physicalChemicalProperties": "Liquid concentrate, citrus scent, forms stable foam when mixed with water, contains dormant Bacillus spores, storage stable.",
+    "Deep": {
+      "Ingredients": [
+        {
+          "name": "Bacillus spp. spores",
+          "percentage": "Not specified",
+          "type": "Microbial bioremediation agent",
+          "mode_of_action": "Germinates into colonies that produce enzymes to digest organic waste.",
+          "key_properties": ["Foam adheres to surfaces", "Highly resilient spores", "Produce enzymes for organic matter breakdown"],
+          "target_spectrum": "Organic debris and grease in drains and surfaces.",
+          "safety_notes": ["Safe under labeled use", "Do not ingest concentrated product"]
+        },
+        {
+          "name": "Citrus oil",
+          "percentage": "Not specified",
+          "type": "Natural solvent/deodorizer",
+          "mode_of_action": "Acts as a cleaning solvent and fragrance component.",
+          "key_properties": ["Provides citrus odor", "Breaks down grease"],
+          "target_spectrum": "Odor-causing residues and greasy deposits.",
+          "safety_notes": ["May irritate skin and eyes"]
+        }
+      ],
+      "combination_rationale": null
+    },
+    "url1":"assets/prod/paul-labels-sds-2025-06-14/InVadeBioFoam/label-InvadeBioFoamInstr1-1-20.pdf" ,
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/InVadeBioFoam/sds-InVadeBioFoamSDS1-6-25.pdf"
+  },
+  {
+     "id":18,
+    "sourceFile": "label-OnslaughtInsecticideLabel9-1-23.pdf",
+    "title": "Onslaught® Microencapsulated Insecticide",
+    "productOverview": "Onslaught Microencapsulated Insecticide is a residual pyrethroid insecticide designed for broad-spectrum indoor and outdoor use. It provides long-lasting control of structural, livestock, turf, ornamental, and public health pests. The microencapsulation technology ensures controlled release and extended residual activity.",
+    "activeIngredients": "(S)-cyano (3-phenoxyphenyl) methyl-(S)-4-chloro-alpha-(1-methylethyl) benzeneacetate (Esfenvalerate) 6.40%. Other Ingredients 93.60%.",
+    "howItWorks": "Esfenvalerate is a synthetic pyrethroid that disrupts sodium channel function in insect nerve cells, causing hyperexcitation, paralysis, and death. The microencapsulation prolongs residual effectiveness and enhances safety.",
+    "spectrumOfControl": "Controls over 200 pests including ants, cockroaches, mosquitoes, bed bugs, ticks, fleas, flies, moths, beetles, aphids, mites, scales, spiders, scorpions, wasps, termites, and numerous stored product and plant pests.",
+    "applicationRates": "Mix 0.5 fl oz per gallon of water. Apply as surface, crack and crevice, spot, or void treatment. Repeat as necessary, but no more than once every 14 days.",
+    "applicationTips": "Shake well before mixing. Apply only to non-food-contact surfaces. Use with caution around aquatic habitats. Do not use as space spray or fogger. Ensure good coverage in pest harborages.",
+    "Advantages": "Provides long residual control up to 12 months on certain surfaces. Broad spectrum efficacy. Microencapsulation reduces odor, staining, and increases safety.",
+    "safetyEnvironmentalNotes": "Toxic to fish and aquatic organisms. Keep out of reach of children. Avoid contact with food. Harmful if inhaled or absorbed. Wear protective equipment. Do not contaminate water sources.",
+    "whyTheseComponentsAreUsed": "Esfenvalerate is chosen for its strong pyrethroid action and broad pest spectrum. Microencapsulation ensures residual release and safety. Petroleum distillates act as carriers.",
+    "physicalChemicalProperties": "Microencapsulated suspension concentrate. Off-white liquid. Stable under recommended storage.",
+    "Deep": {
+      "Ingredients": [
+        {
+          "name": "Esfenvalerate",
+          "percentage": "6.40%",
+          "type": "Synthetic pyrethroid (Type II)",
+          "mode_of_action": "Disrupts voltage-gated sodium channels in insect nerve membranes, causing paralysis.",
+          "key_properties": ["Microencapsulated formulation", "Long residual", "Broad spectrum activity"],
+          "target_spectrum": "Over 200 insect pests across structural, turf, livestock, and ornamental categories.",
+          "safety_notes": ["Highly toxic to fish", "Low mammalian toxicity", "Avoid contamination of food"]
+        }
+      ],
+      "combination_rationale": null
+    },
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/OnslaughtFastCapSpiderScorpionInsecticide/label-OnslaughtFastCapSpiderScorpionInsecticideLabel9-1-23.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/OnslaughtFastCapSpiderScorpionInsecticide/sds-OnslaughtFCSDS10-21-20.pdf"
+  },
+  {
+     "id":19,
+    "sourceFile": "label-Precor2625Label1-1-18.pdf",
+    "title": "Precor® 2625 Premise Spray",
+    "productOverview": "Precor 2625 is an aerosol insecticide combining multiple activeIngredients including etofenprox, tetramethrin, pyrethrins, piperonyl butoxide, and s-methoprene. It provides both immediate knockdown and long-term residual control against fleas, ticks, ants, bed bugs, and other listed pests. Suitable for use in homes, kennels, and commercial buildings.",
+    "activeIngredients": "Etofenprox 1.00%, Tetramethrin 0.25%, Pyrethrins 0.15%, Piperonyl Butoxide 1.50%, S-Methoprene 0.09%. Other Ingredients 97.01%.",
+    "howItWorks": "Pyrethrins and tetramethrin act on insect nervous systems causing rapid knockdown. Etofenprox provides longer residual pyrethroid activity. Piperonyl butoxide synergizes pyrethrins by inhibiting detoxification enzymes. S-Methoprene, a juvenile hormone analog, prevents immature insects from developing into reproductive adults.",
+    "spectrumOfControl": "Fleas, ticks, bed bugs, Argentine ants, Asian lady beetles, carpenter ants, cockroaches, crickets, fire ants, spiders, and other pests.",
+    "applicationRates": "Apply as surface or spot spray to infested areas including pet bedding, furniture, and cracks and crevices. Do not apply directly to pets. Do not exceed recommended use restrictions.",
+    "applicationTips": "Remove pets and cover aquariums before spraying. Allow sprays to dry before reentry. Do not apply in food preparation areas while food is exposed. Shake well before use.",
+    "Advantages": "Multiple modes of action for knockdown, residual, and growth regulation. Effective on fleas in all life stages. Convenient aerosol delivery.",
+    "safetyEnvironmentalNotes": "Contains petroleum distillates. Harmful if swallowed. Toxic to aquatic life and bees. Avoid drift to water. Keep out of reach of children. Wear protective clothing during application.",
+    "whyTheseComponentsAreUsed": "Etofenprox provides residual control. Tetramethrin provides rapid knockdown. Pyrethrins offer broad-spectrum quick kill. Piperonyl butoxide enhances pyrethrin efficacy. S-Methoprene breaks insect life cycles.",
+    "physicalChemicalProperties": "Pressurized aerosol. Flammable. Store in cool, dry place away from heat or flame.",
+    "Deep": {
+      "Ingredients": [
+        {
+          "name": "Etofenprox",
+          "percentage": "1.00%",
+          "type": "Pyrethroid insecticide",
+          "mode_of_action": "Affects sodium channels in insect neurons causing paralysis.",
+          "key_properties": ["Residual pyrethroid activity", "Low mammalian toxicity"],
+          "target_spectrum": "Fleas, ticks, ants, cockroaches, bed bugs.",
+          "safety_notes": ["Low mammalian toxicity", "Avoid inhalation"]
+        },
+        {
+          "name": "Tetramethrin",
+          "percentage": "0.25%",
+          "type": "Synthetic pyrethroid",
+          "mode_of_action": "Causes rapid knockdown by disrupting sodium channels.",
+          "key_properties": ["Fast knockdown"],
+          "target_spectrum": "Flying and crawling insects.",
+          "safety_notes": ["Toxic to aquatic organisms"]
+        },
+        {
+          "name": "Pyrethrins",
+          "percentage": "0.15%",
+          "type": "Botanical insecticide",
+          "mode_of_action": "Disrupts nerve function by prolonging sodium channel opening.",
+          "key_properties": ["Broad spectrum", "Quick kill"],
+          "target_spectrum": "Wide range of insects including fleas, ants, bed bugs.",
+          "safety_notes": ["Can cause skin irritation", "Highly toxic to fish"]
+        },
+        {
+          "name": "Piperonyl Butoxide",
+          "percentage": "1.50%",
+          "type": "Synergist",
+          "mode_of_action": "Inhibits insect detoxifying enzymes.",
+          "key_properties": ["Enhances pyrethrin efficacy"],
+          "target_spectrum": "Supports pyrethrins activity.",
+          "safety_notes": ["Low mammalian toxicity"]
+        },
+        {
+          "name": "S-Methoprene",
+          "percentage": "0.09%",
+          "type": "Insect growth regulator (juvenile hormone analog)",
+          "mode_of_action": "Prevents maturation of larvae to reproductive adults.",
+          "key_properties": ["Residual control", "Breaks life cycle"],
+          "target_spectrum": "Immature flea and insect stages.",
+          "safety_notes": ["Low mammalian toxicity"]
+        }
+      ],
+      "combination_rationale": {
+        "resistance_management": "Multiple activeIngredients with different modes of action reduce resistance risk.",
+        "knockdown_and_residual": "Tetramethrin and pyrethrins provide fast knockdown, etofenprox provides residual control, and s-methoprene ensures long-term suppression.",
+        "broader_coverage": "Controls both adult and immature insect stages."
+      }
+    },
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/Precor2625PremiseSpray/label-Precor2625Label1-1-18.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/Precor2625PremiseSpray/sds-Precor2625SDS2-26-20.pdf"
+  },
+  {
+     "id":20,
+    "sourceFile": "label-MaxforceQuantumLabel1-7-20AV1.pdf",
+    "title": "Maxforce® Quantum Ant Bait",
+    "productOverview": "Maxforce Quantum is a ready-to-use liquid ant bait containing imidacloprid. It is designed for indoor and outdoor use to control a broad range of ant species by exploiting trophallaxis, allowing poisoned ants to transfer bait to the colony and queen.",
+    "activeIngredients": "Imidacloprid 0.03%. Other Ingredients 99.97%.",
+    "howItWorks": "Imidacloprid is a systemic neonicotinoid insecticide that binds to insect nicotinic acetylcholine receptors, causing overstimulation, paralysis, and death. Ants consume the bait and share it within the colony, ultimately eliminating the queen and brood.",
+    "spectrumOfControl": "Acrobat ants, Argentine ants, big-headed ants, black garden ants, crazy ants, ghost ants, little black ants, odorous house ants, pavement ants, pharaoh ants, rover ants, thief ants, white-footed ants, and other sweet-feeding ants.",
+    "applicationRates": "Indoors: up to 2 g per 100 sq ft. Outdoors: apply up to 0.2 g per placement along trails. Apply 0.6 g per 10 linear ft of trail. Inject up to 2 g directly into nest entrances.",
+    "applicationTips": "Place bait near foraging trails and nest entrances. Avoid placing in areas accessible to children or pets. Do not contaminate food or feed. Protect bait from sunlight and rain for maximum longevity.",
+    "Advantages": "Highly attractive to many ant species. Long-lasting palatability indoors (up to 3 months). Effective colony elimination, including queens. Easy to apply via syringe or bait stations.",
+    "safetyEnvironmentalNotes": "Keep out of reach of children. Harmful if swallowed or absorbed. Avoid eye and skin contact. Do not contaminate water sources. Do not apply to linden/basswood trees.",
+    "whyTheseComponentsAreUsed": "Imidacloprid provides effective colony-level control via trophallaxis. Sugar matrix maintains bait palatability. Other ingredients stabilize and preserve the liquid formulation.",
+    "physicalChemicalProperties": "Liquid bait formulation. Clear viscous liquid. Stable under normal storage. Remains palatable indoors for 3 months.",
+    "Deep": {
+      "Ingredients": [
+        {
+          "name": "Imidacloprid",
+          "percentage": "0.03%",
+          "type": "Neonicotinoid systemic insecticide",
+          "mode_of_action": "Binds to nicotinic acetylcholine receptors in insect nervous system causing paralysis.",
+          "key_properties": ["Systemic activity", "Highly potent", "Stable in sugar-water formulation"],
+          "target_spectrum": "Wide range of ant species including Argentine, odorous house, and pharaoh ants.",
+          "safety_notes": ["Moderate toxicity to humans", "Highly toxic to bees and aquatic life"]
+        }
+      ],
+      "combination_rationale": null
+    },
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/MaxforceQuantumAntBait-Bayer/label-MaxforceQuantumLabel1-7-20AV1.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/MaxforceQuantumAntBait-Bayer/sds-MaxforceQuantumSDS10-8-15.pdf"
+  },
+  {
+     "id":21,
+    "sourceFile": "label-DeltaDustLabel8-5-16AV2.pdf",
+    "title": "DeltaDust® Insecticide",
+    "productOverview": "DeltaDust is a ready-to-use insecticidal dust formulation containing deltamethrin. It provides knockdown and long-term residual control of a wide variety of crawling insects. Labeled for use in residential, commercial, and industrial structures, including food-handling areas.",
+    "activeIngredients": "Deltamethrin 0.05%. Other Ingredients 99.95%.",
+    "howItWorks": "Deltamethrin is a pyrethroid insecticide that disrupts sodium channel function in insect neurons, causing paralysis and death. As a dust, it adheres to surfaces and pests pick up lethal doses through contact.",
+    "spectrumOfControl": "Ants, cockroaches, fleas, crickets, firebrats, silverfish, termites, and many other crawling insects. May also be used in food-handling areas as crack/crevice or spot treatments.",
+    "applicationRates": "Apply 2–3 g per sq yard (0.5 lb per 1000 sq ft). Apply to cracks, crevices, voids, wall spaces, and around pest harborages.",
+    "applicationTips": "Apply with hand or power duster. Focus on cracks, voids, and hiding places. Do not apply to exposed surfaces. Avoid contamination of food. Do not apply in HVAC ducts that circulate air.",
+    "Advantages": "Provides both knockdown and long residual control. Waterproof formulation. Effective against resistant cockroach strains.",
+    "safetyEnvironmentalNotes": "Highly toxic to fish and aquatic invertebrates. Toxic to bees if applied to blooming plants. Keep out of reach of children. Do not contaminate water sources.",
+    "whyTheseComponentsAreUsed": "Deltamethrin chosen for broad-spectrum control and long residual. Inert dust carrier allows easy application and persistence in voids.",
+    "physicalChemicalProperties": "Insecticidal dust. White powder. Stable when stored in cool, dry conditions. Waterproof formulation.",
+    "Deep": {
+      "Ingredients": [
+        {
+          "name": "Deltamethrin",
+          "percentage": "0.05%",
+          "type": "Synthetic pyrethroid",
+          "mode_of_action": "Disrupts voltage-gated sodium channels in insect neurons.",
+          "key_properties": ["Dust formulation", "Waterproof", "Residual activity"],
+          "target_spectrum": "Broad-spectrum crawling insects.",
+          "safety_notes": ["Highly toxic to fish and bees", "Low mammalian toxicity"]
+        }
+      ],
+      "combination_rationale": null
+    },
+    "url1": "assets/prod/paul-labels-sds-2025-06-14/DeltaDustInsecticide-Bayer/label-DeltaDustLabel8-5-16AV2.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/DeltaDustInsecticide-Bayer/sds-DeltaDustSDS9-29-21.PDF"
+  },
+  {
+     "id":22,
+    "sourceFile": "label-CB-80Label8-1-16.pdf",
+    "title": "CB-80® Insecticide",
+    "productOverview": "CB-80 is a pyrethrin-based aerosol insecticide with piperonyl butoxide synergist. Provides quick knockdown and flushing action against a broad spectrum of pests. Suitable for residential, commercial, agricultural, and animal housing use.",
+    "activeIngredients": "Pyrethrins 0.50%, Piperonyl Butoxide 4.00%. Other Ingredients 95.50%.",
+    "howItWorks": "Pyrethrins disrupt sodium channels in insect neurons, causing rapid knockdown. Piperonyl butoxide inhibits detoxification enzymes, enhancing pyrethrin effectiveness. Solvent system aids flushing action.",
+    "spectrumOfControl": "Ants, bed bugs, cockroaches, beetles, crickets, fleas, flies, gnats, moths, spiders, wasps, weevils, and grain pests.",
+    "applicationRates": "Apply as space spray, contact spray, or surface treatment per label. Do not exceed daily use limits. Ensure thorough ventilation after space spraying.",
+    "applicationTips": "Cover or remove food and utensils before spraying. Ventilate treated areas. Apply to cracks, crevices, voids, or as space spray in unoccupied areas. Do not use in aircraft cabins.",
+    "Advantages": "Provides rapid knockdown and flushing. Effective on a wide pest spectrum. Convenient aerosol use.",
+    "safetyEnvironmentalNotes": "Contains petroleum distillates. Harmful if swallowed, inhaled, or absorbed. Causes moderate eye irritation. Toxic to fish. Avoid skin contact. Wear PPE when applying.",
+    "whyTheseComponentsAreUsed": "Pyrethrins provide fast kill and flushing. Piperonyl butoxide synergizes pyrethrins for greater efficacy. Solvents enable aerosol application.",
+    "physicalChemicalProperties": "Aerosol spray. Solvent-based. Flammable. Store away from heat and flame.",
+    "Deep": {
+      "Ingredients": [
+        {
+          "name": "Pyrethrins",
+          "percentage": "0.50%",
+          "type": "Botanical insecticide",
+          "mode_of_action": "Disrupts sodium channel function in insect neurons, leading to paralysis and death.",
+          "key_properties": ["Fast knockdown", "Flushing action"],
+          "target_spectrum": "Wide range of insects including cockroaches, ants, flies, beetles.",
+          "safety_notes": ["Moderate eye irritant", "Highly toxic to fish"]
+        },
+        {
+          "name": "Piperonyl Butoxide",
+          "percentage": "4.00%",
+          "type": "Synergist",
+          "mode_of_action": "Inhibits insect enzymes that break down pyrethrins, extending their effectiveness.",
+          "key_properties": ["Synergist, not an insecticide alone"],
+          "target_spectrum": "Supports pyrethrins against broad insect spectrum.",
+          "safety_notes": ["Low mammalian toxicity", "Avoid inhalation"]
+        }
+      ],
+      "combination_rationale": {
+        "resistance_management": "Combining pyrethrins with PBO delays resistance development by reducing insect detoxification capacity.",
+        "knockdown_and_residual": "Pyrethrins provide knockdown, while PBO prolongs residual efficacy.",
+        "broader_coverage": "Combination enhances control against resistant pest strains."
+      }
+    },
+    "url1": "assets/paul-labels-sds-2025-06-14/CB-8 Insecticide/label-CB-80Label8-1-16.pdf",
+    "url2": "assets/prod/paul-labels-sds-2025-06-14/CB-8 Insecticide/sds-CB80SDS1-29-21.PDF"
+  }
+]
+
+

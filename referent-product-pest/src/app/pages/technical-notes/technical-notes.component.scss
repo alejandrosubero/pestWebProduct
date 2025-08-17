@@ -1,0 +1,60 @@
+mat-card {
+  width: 90%;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+mat-card-title {
+  font-size: 1.5rem;
+}
+
+mat-card-subtitle {
+  margin-bottom: 1rem;
+}
+
+ul {
+  padding-left: 1.2rem;
+  list-style-type: disc;
+}
+
+button {
+  margin-top: 1rem;
+}
+
+.highlight {
+  color: blue;
+  font-weight: bold;
+}
+
+
+// ============
+
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+/* Estilo común para el botón */
+.fav-button {
+  background: transparent !important;
+  font-weight: 500;
+  text-transform: none; /* opcional: para mantener mayúsculas/minúsculas */
+}
+
+/* Texto blanco para "Add to favorites" */
+.fav-button.add {
+  color: white;
+}
+
+/* Texto rojo para "Remove from favorites" */
+.fav-button.remove {
+  color: white;
+}

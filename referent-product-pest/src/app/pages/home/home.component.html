@@ -2,6 +2,13 @@
 
 <mat-sidenav-container class="container">
   <mat-sidenav #drawer mode="side" class="sidenav" [opened]="isWideScreen">
+    
+    <div class="buto"> 
+     <button mat-button (click)="goTecnnical()">
+           <mat-icon svgIcon="tecnnical"></mat-icon>
+      </button>
+    </div>
+
   <mat-nav-list>
     <mat-list-item *ngFor="let pest of uniquePests" (click)="seleccionarPest(pest)">
       {{ pest }}

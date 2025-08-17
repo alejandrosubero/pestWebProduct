@@ -1,0 +1,59 @@
+
+
+<mat-toolbar color="primary" class="toolbar mobile-toolbar">
+  <button mat-icon-button (click)="back()" aria-label="Back">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+
+  <span class="spacer"></span>
+  <button mat-icon-button (click)="viewPdf()" aria-label="View PDF">
+     <mat-icon svgIcon="label"></mat-icon>
+  </button>
+
+<span class="spacer"></span>
+ <button mat-icon-button (click)="viewSdS()" aria-label="Download Pdf">
+     <mat-icon svgIcon="sds"></mat-icon>
+  </button>
+
+  <!-- <span class="spacer"></span>
+  <button mat-icon-button matTooltip="Favorites" aria-label="Favorites" (click)="toggleFavorite()">
+    <mat-icon>{{ isFav ? 'star' : 'star_border' }}</mat-icon>
+  </button> -->
+
+</mat-toolbar>
+
+
+<mat-card>
+    @if(technicalProduct){
+    <mat-card-title>{{ technicalProduct.title }}</mat-card-title>
+    <mat-card-subtitle>
+        Product Overview: {{ technicalProduct.productOverview }}
+    </mat-card-subtitle>
+
+    <mat-card-content>
+         <p><strong>Active Ingredients:</strong></p> <p>{{technicalProduct.activeIngredients }}</p>
+        <p><strong>Active Ingredients:</strong></p> <p>{{technicalProduct.activeIngredients }}</p>
+        <p><strong>How It Works:</strong></p> <p>{{technicalProduct.howItWorks }}</p>
+        <p><strong>Application Rates:</strong></p> <p>{{technicalProduct.applicationRates }}</p>
+        <p><strong>Application Tips:</strong></p> <p>{{technicalProduct.applicationTips }}</p>
+        <p><strong>Advantages:</strong></p> <p>{{technicalProduct.Advantages }}</p>
+        <p><strong>why These Components Are Used:</strong></p> <p>{{technicalProduct.whyTheseComponentsAreUsed }}</p>
+
+        <p><strong>Spectrum Of Control:</strong></p> <p>{{technicalProduct.spectrumOfControl }}</p>
+        <p><strong>Safety Environmental Notes:</strong></p> <p>{{technicalProduct.safetyEnvironmentalNotes }}</p>
+
+        <p><strong>physical Chemical Properties:</strong></p> <p>{{technicalProduct.physicalChemicalProperties}}</p>
+
+<!-- <p><strong>Deep:</strong></p> <p>{{technicalProduct.Deep}}</p> -->
+
+        <p><strong>Pests Controlled:</strong></p>
+        <ul>
+            @for (pest of technicalProduct.Deep.Ingredients; track pest) {
+            <!-- <li [ngClass]="{ 'highlight': pest.toLowerCase() === pestData.name.toLowerCase() }">
+                {{ pest }}
+            </li> -->
+            }
+        </ul>
+    </mat-card-content>
+    }
+</mat-card>
