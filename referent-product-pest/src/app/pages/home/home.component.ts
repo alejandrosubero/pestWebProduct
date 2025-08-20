@@ -54,7 +54,7 @@ export class HomeComponent implements OnInit {
   filteredProducts: Product[] = [];
   uniquePests: string[] = [];
   searchTerm: string = '';
-  version: string = 'v3.0.0';
+  version: string = 'v3.0.1';
   private configUrl: string = 'assets/config/products.json';
   errorMessage: string = '';
   isWideScreen = true;
