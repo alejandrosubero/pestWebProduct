@@ -125,11 +125,6 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['/login']);
   }
 
-   goTecnnical(): void {
-     const routeBase = "technical/notes";
-    this.router.navigate([routeBase]);
-  }
-
 
   getPestName(phrase: string): string {
     const normalize = (text: string): string =>
@@ -271,6 +266,19 @@ export class HomeComponent implements OnInit {
   goFavorites(): void {
     this.navegateService.goFavorites('favorites', 1);
   }
+
+   goTecnnical(): void {
+     const routeBase = "technical/notes";
+    this.router.navigate([routeBase]);
+  }
+
+   goCompareTecnnical(): void {
+     const routeBase = "technical/notes/compare";
+    this.router.navigate([routeBase]);
+  }
+
+  
+
 
 }
 

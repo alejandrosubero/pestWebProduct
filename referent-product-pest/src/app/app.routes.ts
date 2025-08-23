@@ -53,6 +53,12 @@ export const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'home', component: HomeComponent, data: { animation: 'HomePage' }, canActivate: [authGuard] },
+   {
+    path: 'technical/notes/compare',
+    loadComponent: () => import('./pages/pro/comparator/compare-products/compare-products.component').then(c => c.CompareProductsComponent),
+    data: { animation: 'pro' },
+    canActivate: [authGuard]
+  },
   {
     path: 'technical/notes',
     loadComponent: () => import('./pages/technical-notes-list/technical-notes-list.component').then(c => c.TechnicalNotesListComponent),

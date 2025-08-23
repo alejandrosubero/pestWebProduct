@@ -69,7 +69,7 @@ export class TechnicalNotesListComponent {
         this.filteredProducts = this.allProducts;
       }
     }
-    console.log(products);
+    // console.log(products);
   }
 
 buscarCoincidencias2(): void {
