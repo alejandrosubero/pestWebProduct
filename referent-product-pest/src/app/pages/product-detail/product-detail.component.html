@@ -1,3 +1,50 @@
+
+
+
+
+<mat-toolbar color="primary" class="toolbar mobile-toolbar">
+  <!-- Botón de retroceso alineado a la izquierda -->
+  <button mat-icon-button (click)="back()" aria-label="Back">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+
+  <span class="spacer"></span>
+
+  <!-- <button
+    mat-button
+    class="fav-button"
+    [ngClass]="{ 'add': !isFav, 'remove': isFav }"
+    (click)="toggleFavorite()"
+  >
+    {{ isFav ? 'Remove from favorites' : 'Add to favorites' }}
+  </button> -->
+
+  <button mat-icon-button (click)="viewPdf()" aria-label="View PDF">
+    <!-- <mat-icon>visibility</mat-icon> -->
+     <mat-icon svgIcon="label"></mat-icon>
+  </button>
+
+<span class="spacer"></span>
+
+ <button mat-icon-button (click)="viewSdS()" aria-label="Download Pdf">
+    <!-- <mat-icon>picture_as_pdf</mat-icon> -->
+     <mat-icon svgIcon="sds"></mat-icon>
+  </button>
+
+  <span class="spacer"></span>
+
+  <button mat-icon-button matTooltip="Favorites" aria-label="Favorites" (click)="toggleFavorite()">
+    <mat-icon>{{ isFav ? 'star' : 'star_border' }}</mat-icon>
+  </button>
+
+
+
+</mat-toolbar>
+
+
+
+
+
 <mat-card>
     @if(product){
     <mat-card-title>{{ product.name }}</mat-card-title>
@@ -18,11 +65,5 @@
             }
         </ul>
     </mat-card-content>
-
-    <mat-card-actions>
-        <button mat-raised-button color="primary" (click)="back()">Back</button>
-        <button mat-button color="accent" (click)="toggleFavorite()"> {{ isFav ? 'Remove from favorites' : 'Add to favorites' }}</button>    
-    </mat-card-actions>
-
     }
 </mat-card>

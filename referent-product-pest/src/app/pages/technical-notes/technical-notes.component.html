@@ -1,0 +1,156 @@
+<!-- 
+<mat-toolbar color="primary" class="toolbar mobile-toolbar">
+  <button mat-icon-button (click)="back()" aria-label="Back">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+
+  <span class="spacer"></span>
+  <button mat-icon-button (click)="viewPdf()" aria-label="View PDF">
+     <mat-icon svgIcon="label"></mat-icon>
+  </button>
+
+<span class="spacer"></span>
+ <button mat-icon-button (click)="viewSdS()" aria-label="Download Pdf">
+     <mat-icon svgIcon="sds"></mat-icon>
+  </button>
+
+  <span class="spacer"></span>
+  <button mat-icon-button matTooltip="Favorites" aria-label="Favorites" (click)="toggleFavorite()">
+    <mat-icon>{{ isFav ? 'star' : 'star_border' }}</mat-icon>
+  </button>
+
+</mat-toolbar>
+
+
+<mat-card>
+    @if(technicalProduct){
+    <mat-card-title>{{ technicalProduct.title }}</mat-card-title>
+    <mat-card-subtitle>
+        Product Overview: {{ technicalProduct.productOverview }}
+    </mat-card-subtitle>
+
+    <mat-card-content>
+         <p><strong>Active Ingredients:</strong></p> <p>{{technicalProduct.activeIngredients }}</p>
+        <p><strong>Active Ingredients:</strong></p> <p>{{technicalProduct.activeIngredients }}</p>
+        <p><strong>How It Works:</strong></p> <p>{{technicalProduct.howItWorks }}</p>
+        <p><strong>Application Rates:</strong></p> <p>{{technicalProduct.applicationRates }}</p>
+        <p><strong>Application Tips:</strong></p> <p>{{technicalProduct.applicationTips }}</p>
+        <p><strong>Advantages:</strong></p> <p>{{technicalProduct.Advantages }}</p>
+        <p><strong>why These Components Are Used:</strong></p> <p>{{technicalProduct.whyTheseComponentsAreUsed }}</p>
+
+        <p><strong>Spectrum Of Control:</strong></p> <p>{{technicalProduct.spectrumOfControl }}</p>
+        <p><strong>Safety Environmental Notes:</strong></p> <p>{{technicalProduct.safetyEnvironmentalNotes }}</p>
+
+        <p><strong>physical Chemical Properties:</strong></p> <p>{{technicalProduct.physicalChemicalProperties}}</p>
+
+
+
+        <p><strong>Deep:</strong></p>
+ 
+    </mat-card-content>
+    }
+</mat-card> -->
+
+<mat-toolbar color="primary" class="toolbar mobile-toolbar">
+  <button mat-icon-button (click)="back()" aria-label="Back">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+
+  <span class="spacer"></span>
+  <button mat-icon-button (click)="viewPdf()" aria-label="View PDF">
+    <mat-icon svgIcon="label"></mat-icon>
+  </button>
+
+  <span class="spacer"></span>
+  <button mat-icon-button (click)="viewSdS()" aria-label="Download Pdf">
+    <mat-icon svgIcon="sds"></mat-icon>
+  </button>
+
+</mat-toolbar>
+
+
+<mat-card>
+      @if(technicalProduct){
+        
+        <mat-card-title>{{ technicalProduct.title }}</mat-card-title>
+        <mat-card-subtitle>
+          Product Overview: {{ technicalProduct.productOverview }}
+        </mat-card-subtitle>
+
+        <mat-card-content>
+          <p><strong>Active Ingredients:</strong></p>
+          <p>{{technicalProduct.activeIngredients }}</p>
+          <p><strong>How It Works:</strong></p>
+          <p>{{technicalProduct.howItWorks }}</p>
+          <p><strong>Application Rates:</strong></p>
+          <p>{{technicalProduct.applicationRates }}</p>
+          <p><strong>Application Tips:</strong></p>
+          <p>{{technicalProduct.applicationTips }}</p>
+          <p><strong>Advantages:</strong></p>
+          <p>{{technicalProduct.Advantages }}</p>
+          <p><strong>why These Components Are Used:</strong></p>
+          <p>{{technicalProduct.whyTheseComponentsAreUsed }}</p>
+
+          <p><strong>Spectrum Of Control:</strong></p>
+          <p>{{technicalProduct.spectrumOfControl }}</p>
+          <p><strong>Safety Environmental Notes:</strong></p>
+          <p>{{technicalProduct.safetyEnvironmentalNotes }}</p>
+
+          <p><strong>physical Chemical Properties:</strong></p>
+          <p>{{technicalProduct.physicalChemicalProperties}}</p>
+        </mat-card-content>
+
+          <mat-expansion-panel class="sep">
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    <strong>Deep</strong>
+                  </mat-panel-title>
+                  <!-- <mat-panel-description>
+                    View related ingredients
+                  </mat-panel-description> -->
+                </mat-expansion-panel-header>
+              
+                @if(technicalProduct.Deep){
+                    @if(technicalProduct.Deep.Ingredients.length > 0){
+                      <p><strong>Ingredients:</strong></p>
+                      @for (ingredients of technicalProduct.Deep.Ingredients; track ingredients) {
+                          <div class="caja">
+                            <p><strong>Ingredient Name:</strong></p>
+                            <p>{{ingredients.name}}</p>
+                            <p><strong>Percentage:</strong></p>
+                            <p>{{ingredients.percentage}}</p>
+                            <p><strong>Type:</strong></p>
+                            <p>{{ingredients.type}}</p>
+                            <p><strong>Mode Of Action:</strong></p>
+                            <p>{{ingredients.mode_of_action}}</p>
+                            <p><strong>Key Properties:</strong></p>
+                            <p>{{ingredients.key_properties}}</p>
+                            <p><strong>Target Spectrum:</strong></p>
+                            <p>{{ingredients.target_spectrum}}</p>
+                            <p><strong>Safety Notes:</strong></p>
+                            <p>{{ingredients.safety_notes}}</p>
+                          </div>
+                      }
+                    }
+              
+                      @if(technicalProduct.Deep.combination_rationale){
+                          <div class="caja_1">
+                              <p><strong> Ingredients Combination :</strong></p>
+                              @if(technicalProduct.Deep.combination_rationale.resistance_management){
+                                <p><strong>Resistance Management:</strong></p>
+                                <p>{{technicalProduct.Deep.combination_rationale.resistance_management}}</p>
+                              }
+                              @if(technicalProduct.Deep.combination_rationale.knockdown_and_residual){
+                                <p><strong>Knockdown and Residual:</strong></p>
+                                <p>{{technicalProduct.Deep.combination_rationale.knockdown_and_residual}}</p>
+                              }
+                              @if(technicalProduct.Deep.combination_rationale.broader_coverage){
+                                <p><strong>Broader Coverage:</strong></p>
+                                <p>{{technicalProduct.Deep.combination_rationale.broader_coverage}}</p>
+                              }
+                          </div>
+                      }
+                  }
+            </mat-expansion-panel>
+    }
+</mat-card>

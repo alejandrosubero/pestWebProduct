@@ -1,0 +1,53 @@
+
+  .dialog-container {
+      max-width: 95vw;
+      padding: 16px;
+      box-sizing: border-box;
+    }
+
+    .dialog-title {
+      display: flex;
+      align-items: center;
+      font-size: 1.25rem;
+      gap: 8px;
+    }
+
+    .dialog-content {
+      font-size: 1rem;
+      margin: 12px 0;
+      color: var(--dialog-text-color, #333);
+    }
+
+    .dialog-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      min-width: 100px;
+      box-sizing: border-box;
+    }
+
+    @media (max-width: 400px) {
+      .dialog-actions {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .btn {
+        width: 100%;
+        margin: 0;
+      }
+    }
+
+    /* Tema oscuro */
+    :host-context(.dark-theme) .dialog-content {
+      color: #ddd;
+    }
+
+    :host-context(.dark-theme) .dialog-container {
+      background-color: #1e1e1e;
+    }

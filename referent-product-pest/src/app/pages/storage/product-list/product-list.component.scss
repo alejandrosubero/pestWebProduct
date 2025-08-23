@@ -1,0 +1,155 @@
+
+
+@use '@angular/material' as mat;
+
+// Define palettes
+$green: mat.define-palette(mat.$green-palette);
+$orange: mat.define-palette(mat.$orange-palette);
+$grey: mat.define-palette(mat.$grey-palette);
+
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f0f2f5;
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+}
+
+.app-header {
+  height: 56px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+
+  .spacer {
+    flex: 1 1 auto;
+  }
+}
+
+.package-list-container {
+  flex-grow: 1;
+  padding: 16px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.search-field {
+  width: 100%;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  background-color: #ffffff;
+
+  .mat-mdc-text-field-wrapper {
+    border-radius: 8px;
+  }
+}
+
+.package-cards-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.package-card {
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  mat-card-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+  }
+
+  .package-info {
+    flex-grow: 1;
+    margin-right: 16px;
+
+    .product-name {
+      font-size: 1.1em;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 4px;
+    }
+
+    .quantity {
+      font-size: 0.9em;
+      color: #555;
+      margin-bottom: 4px;
+    }
+
+    .status-location {
+      display: flex;
+      align-items: center;
+      font-size: 0.8em;
+      color: #777;
+
+      .status-badge {
+        padding: 4px 8px;
+        border-radius: 8px;
+        font-weight: 500;
+        margin-right: 8px;
+
+        &.status-in-stock {
+          background-color: mat.get-color-from-palette($green, 50);
+          color: mat.get-color-from-palette($green, 700);
+        }
+
+        &.status-in-use {
+          background-color: mat.get-color-from-palette($orange, 50);
+          color: mat.get-color-from-palette($orange, 700);
+        }
+
+        &.status-empty {
+          background-color: mat.get-color-from-palette($grey, 100);
+          color: mat.get-color-from-palette($grey, 700);
+        }
+      }
+
+      .location {
+        font-weight: 400;
+      }
+    }
+  }
+
+  .arrow-icon {
+    color: #ccc;
+  }
+}
+
+.no-results-message {
+  text-align: center;
+  color: #777;
+  font-style: italic;
+  margin-top: 20px;
+}
+
+
+.error {
+    color: red;
+}
+
+.fab-button {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+  // Opcional: animación al presionar
+  transition: transform 0.2s ease-in-out;
+
+  &:active {
+    transform: scale(0.95);
+  }
+}

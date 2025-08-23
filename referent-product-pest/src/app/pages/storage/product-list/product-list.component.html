@@ -1,0 +1,59 @@
+<mat-toolbar color="primary" class="mobile-toolbar">
+    <button mat-icon-button (click)="onBackClick()">
+        <mat-icon>arrow_back</mat-icon>
+    </button>
+    <span>Inventory Packages</span>
+    <span class="spacer"></span>
+</mat-toolbar>
+
+
+<div class="package-list-container">
+    <!-- Search/Filter Bar -->
+    <mat-form-field appearance="outline" class="search-field">
+        <mat-label>Buscar producto</mat-label>
+        <input matInput placeholder="Nombre, ubicación, estado..." [(ngModel)]="searchQuery" (input)="applyFilter()" />
+        <mat-icon matPrefix>search</mat-icon>
+        <button *ngIf="searchQuery" matSuffix mat-icon-button (click)="clearSearch()">
+            <mat-icon>close</mat-icon>
+        </button>
+    </mat-form-field>
+
+    @if (loading) {
+    <div>🔄 Cargando productos...</div>
+    }
+
+    @if (error) {
+    <div class="error">❌ {{ error }}</div>
+    }
+
+
+    <div *ngIf="!loading && !error">
+        <div class="package-cards-wrapper">
+            @for (product of products; track product.id) {
+            <mat-card class="package-card" (click)="onDetail(product.id)">
+                <mat-card-content>
+                    <div class="package-info">
+                        <div class="product-name">{{ product.name }}</div>
+                         <div class="product-name">{{ product.id }}</div>
+                        <div class="quantity">
+                            {{ product.package.currentQuantity }} / {{ product.package.initialQuantity }}
+                        </div>
+                         <div class="quantity">{{ product.package.unitOfMeasure }}</div>
+                        <div class="status-location">
+                            <span class="status-badge" [ngClass]="getStatusClass(product.package.status)">{{
+                                product.package.status }}</span>
+                            <span class="location">Location: {{product.package.location.locationArea}}</span>
+                        </div>
+                    </div>
+                    <mat-icon class="arrow-icon">chevron_right</mat-icon>
+                </mat-card-content>
+            </mat-card>
+            }
+        </div>
+    </div>
+</div>
+
+<!-- FAB principal, flotando en la esquina inferior derecha -->
+<button mat-fab color="primary" class="fab-button" (click)="onAddNew()" aria-label="Add New">
+    <mat-icon>add</mat-icon>
+</button>

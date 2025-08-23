@@ -117,3 +117,68 @@
 .clickable-card:hover {
   transform: scale(1.02);
 }
+
+.mat-icon.star-active {
+  color: gold;
+}
+
+  // .buto {
+  //   margin-top: 5px;
+  //   margin-bottom: 5px;
+  //   padding: 0.8rem;
+  //   border: 1px solid #ccc;
+  //   border-radius: 6px;
+  // }
+
+  /* tu-componente.component.css */
+
+.buto {
+  /* --- Estilos base y visuales --- */
+  margin-top: 5px;
+  margin-left: 2px;
+  margin-right: 2px;
+  background-color: #f0f0f0; /* Un color base de tecla */
+  color: #333;
+  padding: 0.8rem 1.2rem; /* Más padding horizontal para que se vea mejor */
+  border: 1px solid #b0b0b0;
+  border-radius: 8px; /* Un poco más redondeado, como una tecla */
+  cursor: pointer;
+  
+  /* --- La Magia del 3D --- */
+  /* Sombra inferior que simula la profundidad de la tecla */
+  box-shadow: 0px 4px 0px 0px #c0c0c0;
+  
+  /* --- Preparación para la animación --- */
+  /* Transición para que el movimiento sea suave */
+  transition: transform 0.07s ease-in-out, box-shadow 0.07s ease-in-out;
+
+  /* Hacemos que la <p> de adentro no interfiera */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none; /* Evita que el texto se seleccione al hacer clic */
+}
+
+/* --- Estado Hover (cuando el mouse está encima) --- */
+.buto:hover {
+  background-color: #f8f8f8; /* Se aclara ligeramente */
+}
+
+/* --- Estado Active (MIENTRAS se hace clic) --- */
+/* ¡Aquí ocurre la animación de hundimiento! */
+.buto:active {
+  /* 1. Movemos el botón 4px hacia abajo, justo a la posición de la sombra */
+  transform: translateY(4px);
+  
+  /* 2. Eliminamos la sombra, dando la ilusión de que el botón ocupó su lugar */
+  box-shadow: 0px 0px 0px 0px #c0c0c0;
+
+  /* Opcional: oscurecer un poco al presionar */
+  background-color: #e9e9e9;
+}
+
+/* No olvides quitar el margen por defecto del párrafo */
+.buto p {
+  margin: 0;
+  font-weight: bold;
+}

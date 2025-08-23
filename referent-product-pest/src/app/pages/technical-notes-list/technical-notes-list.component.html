@@ -1,0 +1,27 @@
+<mat-toolbar color="primary" class="toolbar mobile-toolbar">
+  <!-- <button mat-icon-button (click)="back()" aria-label="Back"> -->
+  <mat-icon (click)="back()">arrow_back</mat-icon>
+  <!-- </button> -->
+  <span> </span>
+  <h2 class="mat-headline section-title">{{ title }}</h2>
+</mat-toolbar>
+
+
+<div class="content">
+
+  <mat-form-field appearance="fill" class="search-box">
+    <mat-label>Search for product or pest</mat-label>
+    <input matInput [(ngModel)]="searchTerm" (input)="buscarCoincidencias()" />
+  </mat-form-field>
+
+  <div class="results">
+    @for (product of filteredProducts; track product.title) {
+    <mat-card (click)="goToDetail(product.id)" class="clickable-card">
+      <mat-card-title>{{ product.title }}</mat-card-title>
+      <mat-card-content>
+        <p><strong>Active Ingredient:</strong> {{ product.activeIngredients }}</p>
+      </mat-card-content>
+    </mat-card>
+    }
+  </div>
+</div>

@@ -1,0 +1,116 @@
+
+.container {
+  height: 100vh;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.content {
+  padding: 1rem;
+
+  .search-box {
+    width: 100%;
+    max-width: 600px;
+    margin: 1rem auto;
+    display: block;
+  }
+
+  .results {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #eee;
+  font-size: 0.9rem;
+}
+
+.clickable-card {
+   padding: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.clickable-card:hover {
+  transform: scale(1.02);
+}
+
+.mat-icon.star-active {
+  color: gold;
+}
+
+
+.main-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 12px;
+  height: 56px;
+  // background-color: #1976d2; // Azul material
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.toolbar-title {
+  font-weight: 600;
+  margin-left: 16px;
+  font-size: 18px;
+}
+
+.section-title {
+  font-size: 22px;
+  font-weight: 500;
+  margin: 20px 0 12px;
+  text-align: center;
+  // color: #1c1c1e; // gris oscuro, como iOS
+}
+
+.step-nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #f5f5f5;
+  padding: 6px 0;
+  position: sticky;
+  top: 56px;
+  z-index: 9;
+  border-bottom: 1px solid #ddd;
+
+  button {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: none;
+    font-size: 12px;
+    color: #555;
+   
+
+    mat-icon {
+      font-size: 20px;
+    }
+
+    &.active {
+      color: #04519f;
+      mat-icon {
+        color:  #2c79c5;
+      }
+    }
+  }
+}
+
+.spacer {
+  flex: 1 1 auto;
+}

@@ -14,3 +14,41 @@ mat-card {
   margin-top: 20px;
   gap: 10px;
 }
+
+
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f9f9f9;
+}
+
+
+.formulation-card {
+  padding: 16px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  height: 100%;
+}
+
+
+.custom-textarea {
+  font-size: 19px !important;
+  color: #000 !important;
+  -webkit-text-fill-color: #000 !important; // Safari
+  opacity: 1 !important;
+  font-family: inherit;
+  background-color: transparent; 
+}
+
+
+mat-toolbar {
+  flex: 0 0 auto; // no se estira
+}
+
+.full-width {
+  width: 100%;
+  flex: 1;
+}
+

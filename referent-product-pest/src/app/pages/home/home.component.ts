@@ -7,7 +7,7 @@ import { CommonModule } from '@angular/common';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
-import { MatIconModule } from '@angular/material/icon';
+import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
@@ -15,16 +15,16 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Product } from '../../models/product.model';
 import { ProductService } from '../../services/product.service';
 import { PestData } from '../../models/pestdata.model';
-
-
-
-// interface Product {
-//   id: number;
-//   name: string;
-//   activeIngredients: string;
-//   applicationTreatment: string;
-//   pestsControlled: string[];
-// }
+import { ViewChild } from '@angular/core';
+import { MatSidenav } from '@angular/material/sidenav';
+import { FavoritesService } from '../../services/favorites.service';
+import { NavegateService } from '../../services/navegate.service';
+import { ProductStoreService } from '../../services/product-store.service';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { SearchInfoSheetComponent } from '../share/search-info-sheet/search-info-sheet.component';
+import { MatBottomSheet, MatBottomSheetModule } from '@angular/material/bottom-sheet';
+import { TechnicalProductService } from '../../services/TechnicalProductService';
+import { DomSanitizer } from '@angular/platform-browser';
 
 
 @Component({
@@ -39,29 +39,44 @@ import { PestData } from '../../models/pestdata.model';
     MatIconModule,
     MatCardModule,
     MatSidenavModule,
-  
+    MatTooltipModule,
+    MatBottomSheetModule,
     MatListModule,],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
 
 export class HomeComponent implements OnInit {
+
+  @ViewChild('drawer') drawer!: MatSidenav;
+
   allProducts: Product[] = [];
   filteredProducts: Product[] = [];
   uniquePests: string[] = [];
   searchTerm: string = '';
-  version: string = 'v1.0.0';
+  version: string = 'v3.0.1';
   private configUrl: string = 'assets/config/products.json';
   errorMessage: string = '';
   isWideScreen = true;
   pestName: string = '';
+  public isFavoriteView: boolean = false;
+  private favorites: any[] = [];
+  private productStoreService = inject(ProductStoreService);
+  // private technicalProductService = inject(TechnicalProductService);
 
   constructor(
     private http: HttpClient,
     private router: Router,
     private authService: AuthService,
     private breakpointObserver: BreakpointObserver,
-    private productService : ProductService) { }
+    private productService: ProductService,
+    private favService: FavoritesService,
+    private navegateService: NavegateService,
+    private bottomSheet: MatBottomSheet,
+    private domSanitizer: DomSanitizer,
+    private matIconRegistry: MatIconRegistry,) {
+           this.matIconRegistry.addSvgIcon('tecnnical', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/tecnnical.svg'));
+     }
 
   ngOnInit(): void {
     this.breakpointObserver
@@ -70,38 +85,39 @@ export class HomeComponent implements OnInit {
         this.isWideScreen = !result.matches;
       });
 
-      const prolist = this.productService.products(); 
-      this.allProducts = prolist;
-      this.filteredProducts = prolist;
-        if(prolist != undefined && prolist != null && prolist.length > 0){
-          this.getUniquePests(this.allProducts);
-        }
+    const prolist = this.productService.products();
+    this.allProducts = prolist;
+    this.filteredProducts = prolist;
+    if (prolist != undefined && prolist != null && prolist.length > 0) {
+      this.getUniquePests(this.allProducts);
+    }
 
-    // this.http.get<Product[]>(this.configUrl).subscribe({
-    //   next: (products) => {
-    //     this.allProducts = products;
-    //     this.filteredProducts = products;
-
-    //     const pestSet = new Set<string>();
-    //     for (const product of products) {
-    //       product.pestsControlled.forEach(pest => pestSet.add(pest));
-    //     }
-    //     this.uniquePests = Array.from(pestSet);
-    //   },
-    //   error: () => {
-    //     console.error('Error cargando productos.json');
-    //   },
-    // });
+    this.checkFavorites();
+    this.productStoreService.loadAll();
+    // this.technicalProductService.technicalProducts();
+    // const productsTechnical = this.technicalProductService.getAllTechnicalProducts();
   }
 
+  openSearchInfo(): void {
+    this.bottomSheet.open(SearchInfoSheetComponent);
+  }
 
-getUniquePests(products : Product[]){
-      const pestSet = new Set<string>();
-        for (const product of products) {
-          product.pestsControlled.forEach(pest => pestSet.add(pest));
-        }
-        this.uniquePests = Array.from(pestSet);
-}
+  checkFavorites() {
+    this.favorites = this.favService.getFavorites();
+    if (this.favorites != undefined && this.favorites != null && this.favorites.length > 0) {
+      this.isFavoriteView = true;
+      const pproducts: Product[] = this.favorites;
+      const pforname = pproducts.filter(x => x.name === "ZENPROX® EC");
+    }
+  }
+
+  getUniquePests(products: Product[]) {
+    const pestSet = new Set<string>();
+    for (const product of products) {
+      product.pestsControlled.forEach(pest => pestSet.add(pest));
+    }
+    this.uniquePests = Array.from(pestSet);
+  }
 
 
   logout(): void {
@@ -109,52 +125,9 @@ getUniquePests(products : Product[]){
     this.router.navigate(['/login']);
   }
 
-  buscarCoincidencias1(): void {
-    const term = this.searchTerm.toLowerCase();
-    this.filteredProducts = this.allProducts.filter(product =>
-      product.name.toLowerCase().includes(term) ||
-      product.pestsControlled.some(pest => pest.toLowerCase().includes(term) ||
-        product.applicationTreatment.toLowerCase().includes(term)
-      )
-    );
-  }
-
-
-
-
-  searchdouble(): void {
-    const term = this.searchTerm.toLowerCase().trim();
-
-    // Verificamos si hay un "-" para hacer búsqueda con AND
-    if (term.includes('-')) {
-      const [first, second] = term.split('-').map(t => t.trim());
-
-      this.filteredProducts = this.allProducts.filter(product => {
-        const name = product.name.toLowerCase();
-        const treatment = product.applicationTreatment.toLowerCase();
-        const pests = product.pestsControlled.map(p => p.toLowerCase());
-
-        const matchFirst =
-          name.includes(first) ||
-          treatment.includes(first) ||
-          pests.some(p => p.includes(first));
-
-        const matchSecond =
-          name.includes(second) ||
-          treatment.includes(second) ||
-          pests.some(p => p.includes(second));
-
-        return matchFirst && matchSecond;
-      });
-
-    } else {
-      // Búsqueda OR como ya hacías
-      this.filteredProducts = this.allProducts.filter(product =>
-        product.name.toLowerCase().includes(term) ||
-        product.applicationTreatment.toLowerCase().includes(term) ||
-        product.pestsControlled.some(p => p.toLowerCase().includes(term))
-      );
-    }
+   goTecnnical(): void {
+     const routeBase = "technical/notes";
+    this.router.navigate([routeBase]);
   }
 
 
@@ -172,25 +145,25 @@ getUniquePests(products : Product[]){
       }
     }
     return '';
-}
-
-
-getPestToGo(phrase: string, id: number): string {
-  const product = this.filteredProducts.find(p => p.id === id);
-
-  if (!product) return '';
-  const normalize = (text: string): string =>
-    text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
-
-  const searchTerm = normalize(phrase);
-
-  for (const pest of product.pestsControlled) {
-    if (normalize(pest).includes(searchTerm)) {
-      return pest;
-    }
   }
-  return '';
-}
+
+
+  getPestToGo(phrase: string, id: number): string {
+    const product = this.filteredProducts.find(p => p.id === id);
+
+    if (!product) return '';
+    const normalize = (text: string): string =>
+      text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+
+    const searchTerm = normalize(phrase);
+
+    for (const pest of product.pestsControlled) {
+      if (normalize(pest).includes(searchTerm)) {
+        return pest;
+      }
+    }
+    return '';
+  }
 
 
   buscarCoincidencias(): void {
@@ -203,15 +176,14 @@ getPestToGo(phrase: string, id: number): string {
       const name = normalize(product.name);
       const treatment = normalize(product.applicationTreatment);
       const pests = normalize(product.pestsControlled.join(' '));
- 
+
       return `${name} ${treatment} ${pests}`;
     };
 
-  const getTextFieldsProduct = (product: any): string => {
+    const getTextFieldsProduct = (product: any): string => {
       const name = normalize(product.name);
       return `${name}`;
     };
-
 
     //  Utilidad para crear una expresión de coincidencia exacta por palabra/frase
     const createExactMatchRegex = (phrase: string): RegExp => {
@@ -219,7 +191,19 @@ getPestToGo(phrase: string, id: number): string {
       return new RegExp(`\\b${escaped}\\b`, 'i'); // \b => límite de palabra
     };
 
-    if (rawInput.includes('&')) {
+    // Nuevo caso: búsqueda por ingrediente activo si empieza con "*"
+    if (rawInput.startsWith('*')) {
+      const searchTerm = normalize(rawInput.slice(1).trim());
+      if (searchTerm.length >= 2) {
+        this.filteredProducts = this.allProducts.filter(product => {
+          const ingredients = normalize(product.activeIngredients || '');
+          return ingredients.includes(searchTerm);
+        });
+      } else {
+        this.filteredProducts = [];
+      }
+
+    } else if (rawInput.includes('&')) {
       const searchTerm = normalize(rawInput.split('&')[1]?.trim() || '');
       if (searchTerm.length >= 2) {
         this.filteredProducts = this.allProducts.filter(product => {
@@ -227,17 +211,16 @@ getPestToGo(phrase: string, id: number): string {
           return fields.includes(searchTerm);
         });
       } else {
-        this.filteredProducts = []; // Si tiene menos de 2 letras, no se muestra nada
+        this.filteredProducts = [];
       }
 
-  // 🔍 Caso: búsqueda con "-"
-  } else if (rawInput.includes('-')) {
+    } else if (rawInput.includes('-')) {
 
       let leftRawi = '';
       let rightRawi = '';
-      
+
       const [leftRaw, rightRaw] = rawInput.split('-').map(s => normalize(s.trim()));
-      
+
       leftRawi = leftRaw;
       rightRawi = rightRaw;
 
@@ -253,7 +236,6 @@ getPestToGo(phrase: string, id: number): string {
       if (this.pestName === '') {
         this.pestName = this.getPestName(leftRawi);
       }
-
 
     } else {
       //  Caso: búsqueda simple (una frase completa, OR)
@@ -271,6 +253,11 @@ getPestToGo(phrase: string, id: number): string {
 
 
   seleccionarPest(pest: string): void {
+    this.isWideScreen = false;
+    if (!this.isWideScreen) {
+      this.drawer.close();
+    }
+
     this.searchTerm = pest;
     this.buscarCoincidencias();
     this.pestName = pest;
@@ -278,16 +265,12 @@ getPestToGo(phrase: string, id: number): string {
 
   goToDetail(id: number): void {
     let name = this.getPestToGo(this.pestName, id)
-    const pestData: PestData = {
-      id: id,
-      name: name
-    };
-    this.router.navigate(['/product', id], {
-      state: { data: pestData }
-    });
+    this.navegateService.goToDetail('product', id, name);
   }
 
   goFavorites(): void {
-    this.router.navigate(['/favorites']);
+    this.navegateService.goFavorites('favorites', 1);
   }
+
 }
+
