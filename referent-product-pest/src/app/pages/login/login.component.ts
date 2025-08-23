@@ -13,6 +13,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { ProductService } from '../../services/product.service';
 import { TechnicalProductService } from '../../services/TechnicalProductService';
+import { UserService } from '../../services/user.service';
+import { User } from '../../models/user.model';
 
 
 @Component({
@@ -41,16 +43,26 @@ export class LoginComponent implements OnInit {
   private storedUser: string = '';
   private storedPassword: string = '';
   private technicalProductService = inject(TechnicalProductService);
+  private userList: User[] = [];
 
   constructor(
     private http: HttpClient,
     private router: Router,
     private authService: AuthService,
-   private productService: ProductService) {}
-
-  
+    private productService: ProductService,
+    private userService: UserService) {
+    this.userService.getListUser().subscribe(users => {
+      if (users) {
+        this.userList = users;
+      }
+    });
+  }
 
   ngOnInit(): void {
+  }
+
+
+  getlistUser() {
     this.http.get<any>(this.configUrl).subscribe({
       next: (data) => {
         this.storedUser = data.username;
@@ -63,20 +75,25 @@ export class LoginComponent implements OnInit {
     });
   }
 
- 
-  login(): void {
 
-  if (
-    this.username === this.storedUser &&
-    this.password === this.storedPassword
-  ) {
-    this.productService.loadProducts();
-    this.technicalProductService.loadProducts();
-    this.authService.login(); // Guardar estado
-    this.router.navigate(['/home']);
-  } else {
-    this.errorMessage = 'Incorrect username or password';
+  login(): void {
+    const unUser: User | null = this.findUserByCredentials();
+    if (unUser) {
+      this.productService.loadProducts();
+      this.technicalProductService.loadProducts();
+      this.authService.loginU(unUser.rol);
+      this.router.navigate(['/home']);
+    } else {
+      this.errorMessage = 'Incorrect username or password';
+    }
   }
-}
+
+
+  findUserByCredentials() {
+    const found = this.userList.find(u => u.username === this.username && u.password === this.password);
+    return found ? found : null;
+  }
+
+
 
 }

@@ -10,10 +10,11 @@
        <div class="buto" (click)="goCompareTecnnical()">
         <p>Comparator</p>
       </div>
+          <div class="buto" (click)="goAbout()">
+        <p>About Me</p>
+      </div>
     </div>
 
-
-   
 
   <mat-nav-list>
     <mat-list-item *ngFor="let pest of uniquePests" (click)="seleccionarPest(pest)">
@@ -107,6 +108,6 @@
 
     </div>
 
-    <footer class="footer">Version: {{ version }}</footer>
+    <footer class="footer"></footer>
   </mat-sidenav-content>
 </mat-sidenav-container>

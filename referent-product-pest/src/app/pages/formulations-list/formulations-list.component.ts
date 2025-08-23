@@ -48,7 +48,8 @@ export class FormulationsListComponent {
   ngOnInit(): void {
     // this.formulations = this.service.getFormulations();
     this.db.getAllFormulations().then(data => {
-      this.formulations = data;
+        const sortedProducts  = data.sort((a, b) => a.title.localeCompare(b.title));
+      this.formulations = sortedProducts;
     });
 
 

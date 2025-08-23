@@ -40,7 +40,7 @@ export class CompareProductsComponent implements OnInit {
   allProducts: TechnicalProduct[] = [];
   quickCompare = false;
   selectedProducts: (TechnicalProduct | null)[] = [null, null];
-  title: string = 'Compare Technical Notes'
+  title: string = 'Comparator Technical Notes'
 
   fields: ComparableKeys[] = [
     'productOverview',
@@ -65,7 +65,8 @@ export class CompareProductsComponent implements OnInit {
   getAllProducts(): void {
     const products = this.technicalProductService.getAllTechnicalProducts();
     if (products) {
-      this.allProducts = products;
+       const sortedProducts  = products.sort((a, b) => a.title.localeCompare(b.title));
+      this.allProducts = sortedProducts;
       this.products = this.allProducts;
     }
   }
@@ -98,9 +99,12 @@ export class CompareProductsComponent implements OnInit {
   }
 
 
+  // get displayedColumns(): string[] {
+  //   return this.nonNullSelectedProducts.map(p => p.title || 'unknown');
+  // }
   get displayedColumns(): string[] {
-    return this.nonNullSelectedProducts.map(p => p.title || 'unknown');
-  }
+  return this.nonNullSelectedProducts.map((p, i) => 'col-' + p.id + '-' + i);
+}
 
   get nonNullSelectedProducts(): TechnicalProduct[] {
     return this.selectedProducts.filter((p): p is TechnicalProduct => p !== null);

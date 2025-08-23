@@ -44,7 +44,10 @@ export class ProductListComponent implements OnInit{
 
    // Accesos rápidos
   get products() {
-    return this.store.filteredProducts();
+        const produtsList = this.store.filteredProducts();
+        const sortedProducts = produtsList.sort((a, b) => a.name.localeCompare(b.name));
+    return sortedProducts;
+        // return this.store.filteredProducts();
   }
 
   get loading() {

@@ -64,7 +64,8 @@ export class TechnicalNotesListComponent {
     getAllProducts(): void {
     const products = this.technicalProductService.getAllTechnicalProducts();
     if(products){
-      this.allProducts = products;
+       const sortedProducts  = products.sort((a, b) => a.title.localeCompare(b.title));
+      this.allProducts = sortedProducts;
       if(this.allProducts){
         this.filteredProducts = this.allProducts;
       }

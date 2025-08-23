@@ -1,0 +1,69 @@
+<mat-toolbar color="primary" class="toolbar mobile-toolbar">
+  <mat-icon (click)="back()">arrow_back</mat-icon>
+  <span> </span>
+  <h2 class="mat-headline section-title">{{ title }}</h2>
+</mat-toolbar>
+
+<div class="about-container">
+  <!-- Header Card -->
+  <mat-card class="header-card">
+    <mat-card-header>
+      <mat-icon>info</mat-icon>
+      <mat-card-title>{{ appName }}</mat-card-title>
+      <mat-card-subtitle>Version {{ version }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>Author: {{ author }}</p>
+      <p>Contact: {{ email }}</p>
+      <p>This is a modern Angular 17 application using Angular Material 17.</p>
+    </mat-card-content>
+  </mat-card>
+
+  <!-- Features Card -->
+  <mat-card class="section-card">
+    <mat-card-header>
+      <mat-icon>star</mat-icon>
+      <mat-card-title>Features</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item *ngFor="let feature of features">
+          <mat-icon matListIcon>check_circle</mat-icon>
+          {{ feature }}
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
+
+  <!-- Technologies Card -->
+  <mat-card class="section-card">
+    <mat-card-header>
+      <mat-icon>build</mat-icon>
+      <mat-card-title>Technologies Used</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item *ngFor="let tech of technologies">
+          <mat-icon matListIcon>code</mat-icon>
+          {{ tech }}
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
+
+  <!-- Support Card -->
+  <mat-card class="section-card">
+    <mat-card-header>
+      <mat-icon>support</mat-icon>
+      <mat-card-title>Support</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item *ngFor="let link of supportLinks">
+          <mat-icon matListIcon>link</mat-icon>
+          <a [href]="link.url" target="_blank">{{ link.label }}</a>
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
+</div>

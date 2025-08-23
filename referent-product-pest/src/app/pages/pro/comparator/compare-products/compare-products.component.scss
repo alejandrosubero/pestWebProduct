@@ -1,11 +1,118 @@
+// .comparison-container {
+//   font-size: 12px;
+//   padding: 8px;
+//   overflow-x: auto;
+// }
+
+// .product-selector {
+//   margin-bottom: 12px;
+// }
+
+// .mode-toggle {
+//   text-align: center;
+//   margin-bottom: 10px;
+// }
+
+// .differences-counter {
+//   text-align: center;
+//   margin: 8px 0;
+//   font-size: 13px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   gap: 6px;
+// }
+
+// .comparison-table {
+//   width: 100%;
+//   margin-bottom: 10px;
+// }
+
+// .field-cell {
+//   font-weight: bold;
+//   background: var(--mat-table-header-container-background-color, #fafafa);
+// }
+
+// .highlight {
+//   color: var(--mat-sys-error, #d32f2f);
+//   font-weight: bold;
+// }
+
+// .highlight-cell {
+//   background-color: color-mix(in srgb, var(--mat-sys-primary) 15%, transparent);
+// }
+
+// .product-selectors {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 12px;
+//   margin-bottom: 12px;
+// }
+
+// @media (min-width: 480px) {
+//   .product-selectors {
+//     flex-direction: row;
+//     justify-content: space-between;
+//   }
+// }
+
+// .vertical-text {
+//   writing-mode: vertical-rl; /* texto de arriba hacia abajo, derecha a izquierda */
+//   text-orientation: mixed;    /* hace que los caracteres sean legibles */
+// }
+
+// // .vertical-text {
+// //   display: inline-block;
+// //   transform: rotate(-90deg);
+// //   transform-origin: left top; /* ajusta el punto de giro según necesites */
+// // }
+// // .comparison-table th, .comparison-table td {
+// //   writing-mode: vertical-rl;
+// //   text-orientation: mixed;
+// // }
+
+// .comparison-table td {
+//   text-align: left;
+//   vertical-align: top; /* opcional: para que se alinee con la parte superior */
+//   padding: 0.5rem;
+// }
+
+
+
+
 .comparison-container {
   font-size: 12px;
   padding: 8px;
   overflow-x: auto;
 }
 
-.product-selector {
+/* Contenedor para selects con scroll en móviles */
+.product-selectors-wrapper {
+  overflow-x: auto;
+}
+
+.product-selectors {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  min-width: 280px; /* ancho total mínimo de los selects */
   margin-bottom: 12px;
+}
+
+.product-selectors mat-form-field {
+  flex: 1 1 0;
+  min-width: 140px; /* ancho mínimo de cada select */
+}
+
+/* Ajuste para pantallas muy pequeñas (< 320px) */
+@media (max-width: 320px) {
+  .product-selectors {
+    gap: 4px;
+  }
+
+  .product-selectors mat-form-field {
+    min-width: 120px;
+  }
 }
 
 .mode-toggle {
@@ -26,6 +133,7 @@
 .comparison-table {
   width: 100%;
   margin-bottom: 10px;
+  border-collapse: collapse;
 }
 
 .field-cell {
@@ -42,31 +150,80 @@
   background-color: color-mix(in srgb, var(--mat-sys-primary) 15%, transparent);
 }
 
-.product-selectors {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-bottom: 12px;
+/* Texto vertical para encabezados si usas .vertical-text */
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
 }
 
-@media (min-width: 480px) {
-  .product-selectors {
-    flex-direction: row;
-    justify-content: space-between;
+/* Alineación de celdas de la tabla */
+.comparison-table td, .comparison-table th {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.5rem;
+  word-break: break-word; /* evita que textos largos rompan el layout */
+}
+
+/* Ajustes generales para mobile */
+@media (max-width: 400px) {
+  .comparison-container {
+    padding: 4px;
+    font-size: 11px;
+  }
+
+  .mode-toggle button {
+    font-size: 11px;
+    padding: 4px 8px;
+  }
+
+  .differences-counter {
+    font-size: 12px;
+    gap: 4px;
+  }
+
+  .comparison-table td, .comparison-table th {
+    font-size: 13px;
+    padding: 0.25rem;
   }
 }
 
-.vertical-text {
-  writing-mode: vertical-rl; /* texto de arriba hacia abajo, derecha a izquierda */
-  text-orientation: mixed;    /* hace que los caracteres sean legibles */
+
+/* Expansion panel general */
+mat-accordion mat-expansion-panel {
+  font-size: 20px; /* tamaño base más grande */
 }
 
-// .vertical-text {
-//   display: inline-block;
-//   transform: rotate(-90deg);
-//   transform-origin: left top; /* ajusta el punto de giro según necesites */
-// }
-// .comparison-table th, .comparison-table td {
-//   writing-mode: vertical-rl;
-//   text-orientation: mixed;
-// }
+/* Título del panel */
+mat-expansion-panel-header .mat-panel-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Descripción del panel */
+mat-expansion-panel-header .mat-panel-description {
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/* Contenido del panel */
+mat-expansion-panel .mat-expansion-panel-content {
+  font-size: 20px;
+  line-height: 1.4;
+  padding: 0.5rem 1rem;
+}
+
+/* Ajuste responsive para móviles */
+@media (max-width: 400px) {
+  mat-expansion-panel-header .mat-panel-title {
+    font-size: 20px;
+  }
+
+  mat-expansion-panel-header .mat-panel-description {
+    font-size: 20px;
+  }
+
+  mat-expansion-panel .mat-expansion-panel-content {
+    font-size: 20px;
+    padding: 0.25rem 0.5rem;
+  }
+}

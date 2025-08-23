@@ -85,9 +85,12 @@ export class HomeComponent implements OnInit {
         this.isWideScreen = !result.matches;
       });
 
-    const prolist = this.productService.products();
+    const forSortedProducts = this.productService.products();
+    // Sort alphabetically by name
+    const prolist  = forSortedProducts.sort((a, b) => a.name.localeCompare(b.name));
     this.allProducts = prolist;
     this.filteredProducts = prolist;
+    
     if (prolist != undefined && prolist != null && prolist.length > 0) {
       this.getUniquePests(this.allProducts);
     }
@@ -277,6 +280,10 @@ export class HomeComponent implements OnInit {
     this.router.navigate([routeBase]);
   }
 
+   goAbout(): void {
+     const routeBase = 'about';
+    this.router.navigate([routeBase]);
+  }
   
 
 

@@ -53,7 +53,10 @@ export class FavoritesComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.favorites = this.favService.getFavorites();
+    const favorites = this.favService.getFavorites();
+      const sortedFavirites  = favorites.sort((a, b) => a.title.localeCompare(b.title));
+    // this.favorites = this.favService.getFavorites();
+    this.favorites =sortedFavirites;
   }
 
  goToDetail(id: number): void {
