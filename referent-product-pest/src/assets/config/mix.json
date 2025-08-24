@@ -1,0 +1,394 @@
+[
+    {
+        "product_id": 1,
+        "product_title": "Temprid FX",
+        "analyses": [
+            {
+                "with_product_id": 2,
+                "with_product_title": "Suspend PolyZone",
+                "potential_benefits": [
+                    "Broader MOA stack (pyrethroid + neonic + microencapsulated pyrethroid) for diverse pests",
+                    "Potentially stronger residual on exterior substrates from PolyZone capsules",
+                    "Resistance management via dual MOA in Temprid FX plus encapsulated deltamethrin"
+                ],
+                "risks_drawbacks": [
+                    "Two residual pyrethroids increase aquatic/pollinator hazard",
+                    "Polymer capsule and SC dispersant systems could interact; risk of settling or nozzle fouling",
+                    "Off-label tank mix risk if labels restrict mixing"
+                ],
+                "would_it_work": {
+                    "answer": "Uncertain",
+                    "rationale": "Both are water-based (SC and polymer-encapsulated) but different capsule/dispersant chemistries may not co-disperse cleanly. Labels provide limited tank-mix guidance."
+                },
+                "conclusion": "Likely physically mixable but perform a jar test. Prefer sequential applications targeting need; avoid blooming plants and aquatic drift."
+            },
+            {
+                "with_product_id": 11,
+                "with_product_title": "Demand CS Insecticide",
+                "potential_benefits": [
+                    "Combines neonic ingestion activity with microencapsulated lambda-cyhalothrin residual",
+                    "Improved perimeter durability from CS capsules",
+                    "Broader control of mobile and hidden pests"
+                ],
+                "risks_drawbacks": [
+                    "Higher pyrethroid load raises non-target toxicity",
+                    "Capsule–SC interactions may alter suspension stability",
+                    "Potential label constraints on tank mixing for residential/sensitive sites"
+                ],
+                "would_it_work": {
+                    "answer": "Uncertain",
+                    "rationale": "Both are aqueous suspensions; Demand CS notes compatibility with IGRs, not specifically with other adulticides. Physical stability not assured."
+                },
+                "conclusion": "If mixing is necessary, jar test and maintain strong agitation. Otherwise, apply sequentially (CS perimeter, Temprid indoors/crack-crevice)."
+            },
+            {
+                "with_product_id": 12,
+                "with_product_title": "ExciteR",
+                "potential_benefits": [
+                    "Fast knockdown from pyrethrins complements Temprid’s residual",
+                    "Useful for flush-and-finish cleanouts"
+                ],
+                "risks_drawbacks": [
+                    "Petroleum distillates may destabilize SC and dull microresidual",
+                    "Oil solvents increase odor/flammability and surface staining risk",
+                    "Off-label tank mix risk; heightened aquatic/bee toxicity"
+                ],
+                "would_it_work": {
+                    "answer": "Uncertain",
+                    "rationale": "EC/oil-based synergized pyrethrins can be incompatible with water-based SC systems. Efficacy tradeoffs and phase separation are possible."
+                },
+                "conclusion": "Avoid tank mixing; use ExciteR as a separate knockdown treatment, then apply Temprid FX after drying/ventilation."
+            },
+            {
+                "with_product_id": 17,
+                "with_product_title": "InVade™ Bio Foam",
+                "potential_benefits": [
+                    "Sanitation removes organic harborage improving insecticide performance",
+                    "Foam reaches drains/voids where sprays don’t persist"
+                ],
+                "risks_drawbacks": [
+                    "Insecticides/solvents can kill Bacillus microbes",
+                    "Foaming agents/citrus oil may affect spray rheology",
+                    "Labels caution against mixing with cleaners/disinfectants"
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "Live microbes should not be co-tanked with insecticides; efficacy of both products may be compromised."
+                },
+                "conclusion": "Apply Bio Foam alone during low-use periods; allow dwell and dry. Apply Temprid FX later as a separate step."
+            }
+        ]
+    },
+    {
+        "product_id": 2,
+        "product_title": "Suspend PolyZone",
+        "analyses": [
+            {
+                "with_product_id": 1,
+                "with_product_title": "Temprid FX",
+                "potential_benefits": [
+                    "Adds neonic (imidacloprid) ingestion activity to microencapsulated deltamethrin",
+                    "Potentially improved performance on porous exterior surfaces"
+                ],
+                "risks_drawbacks": [
+                    "Elevated pyrethroid load increases off-target hazard",
+                    "Capsule–SC co-formulation may sediment or clog",
+                    "Possible off-label tank-mix limitations"
+                ],
+                "would_it_work": {
+                    "answer": "Uncertain",
+                    "rationale": "Both are water-based but rely on different polymer systems; physical compatibility not guaranteed."
+                },
+                "conclusion": "Jar test for 15–30 minutes with agitation. If any grit, creaming, or viscosity rise occurs, apply sequentially."
+            },
+            {
+                "with_product_id": 11,
+                "with_product_title": "Demand CS Insecticide",
+                "potential_benefits": [
+                    "Two microencapsulated pyrethroids could extend perimeter residual",
+                    "Different capsule chemistries may offer surface adhesion diversity"
+                ],
+                "risks_drawbacks": [
+                    "High total pyrethroid concentration increases risk to aquatic life and pollinators",
+                    "Capsule–capsule interactions risk flocculation/settling",
+                    "Redundant MOA offers limited resistance benefit"
+                ],
+                "would_it_work": {
+                    "answer": "Uncertain",
+                    "rationale": "Both CS/encapsulated systems; co-dispersion behavior is unpredictable without testing."
+                },
+                "conclusion": "Prefer using one encapsulated perimeter product. If combining, jar test and use coarse screens; monitor nozzle strainers."
+            },
+            {
+                "with_product_id": 12,
+                "with_product_title": "ExciteR",
+                "potential_benefits": [
+                    "Immediate knockdown complements long residual of PolyZone",
+                    "Useful for initial cleanout before perimeter residual"
+                ],
+                "risks_drawbacks": [
+                    "Petroleum solvents can plasticize/compromise polymer microcapsules",
+                    "Increased odor/flammability; potential staining on porous substrates",
+                    "Regulatory concerns for mixing EC with encapsulated SC"
+                ],
+                "would_it_work": {
+                    "answer": "Uncertain",
+                    "rationale": "Oil-based ECs can disrupt capsule integrity or destabilize suspensions."
+                },
+                "conclusion": "Avoid tank mixing. Use ExciteR as a separate knockdown; follow with PolyZone after surfaces dry."
+            },
+            {
+                "with_product_id": 17,
+                "with_product_title": "InVade™ Bio Foam",
+                "potential_benefits": [
+                    "Sanitation reduces organic matter, enhancing residual performance",
+                    "Foam treats drains/voids unsuitable for insecticide sprays"
+                ],
+                "risks_drawbacks": [
+                    "Microbes may be inactivated by residual pyrethroid contact",
+                    "Foam chemistry not designed for co-tank use with pesticides",
+                    "Label cautions on mixing with cleaners/disinfectants"
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "Live microbial cleaner should be applied separately to avoid mutual inactivation and instability."
+                },
+                "conclusion": "Use Bio Foam first; allow dwell/dry. Apply PolyZone later to structural surfaces only, not into drains."
+            }
+        ]
+    },
+    {
+        "product_id": 11,
+        "product_title": "Demand CS Insecticide",
+        "analyses": [
+            {
+                "with_product_id": 1,
+                "with_product_title": "Temprid FX",
+                "potential_benefits": [
+                    "Adds neonic ingestion/systemic-like activity to CS residual",
+                    "Potential improvement against pyrethroid-tolerant populations"
+                ],
+                "risks_drawbacks": [
+                    "Greater total pyrethroid hazard to aquatic organisms/bee-attractive blooms",
+                    "Suspension stability concerns (CS + SC)",
+                    "Possible label constraints beyond IGR compatibility"
+                ],
+                "would_it_work": {
+                    "answer": "Uncertain",
+                    "rationale": "Demand CS is often compatible with IGRs; compatibility with another adulticide SC is not assured."
+                },
+                "conclusion": "If attempted, jar test and maintain agitation. Prefer sequential use: CS for perimeter, Temprid for interior cracks."
+            },
+            {
+                "with_product_id": 2,
+                "with_product_title": "Suspend PolyZone",
+                "potential_benefits": [
+                    "Potentially longer outdoor residual via dual encapsulations",
+                    "Surface adhesion diversity across substrates"
+                ],
+                "risks_drawbacks": [
+                    "Two CS/encapsulated pyrethroids may flocculate",
+                    "Redundant MOA with minimal resistance advantage",
+                    "Higher environmental risk profile"
+                ],
+                "would_it_work": {
+                    "answer": "Uncertain",
+                    "rationale": "Co-encapsulated mixes can be unpredictable in viscosity and settling without empirical testing."
+                },
+                "conclusion": "Use one encapsulated perimeter product at a time. If mixing, jar test; filter/strain tank; monitor sprayer screens."
+            },
+            {
+                "with_product_id": 12,
+                "with_product_title": "ExciteR",
+                "potential_benefits": [
+                    "Immediate knockdown paired with long residual",
+                    "Flushes pests from harborages for CS contact"
+                ],
+                "risks_drawbacks": [
+                    "Petroleum distillates can soften capsule walls or destabilize dispersion",
+                    "Flammability/odor and possible staining",
+                    "Regulatory label caution for tank mixes not expressly permitted"
+                ],
+                "would_it_work": {
+                    "answer": "Uncertain",
+                    "rationale": "EC oils often reduce capsule integrity; performance and stability could suffer."
+                },
+                "conclusion": "Apply ExciteR separately as a knockdown. After ventilation/drying, apply Demand CS for residual."
+            },
+            {
+                "with_product_id": 17,
+                "with_product_title": "InVade™ Bio Foam",
+                "potential_benefits": [
+                    "Sanitation improves residual spray effectiveness",
+                    "Foam reaches drains/voids unsuitable for CS sprays"
+                ],
+                "risks_drawbacks": [
+                    "Microbial viability reduced by residual pyrethroid contact",
+                    "Foam chemistry not intended for pesticide tank mixes",
+                    "Potential equipment foaming/instability"
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "Combining live microbes with insecticide is counterproductive and chemically unstable."
+                },
+                "conclusion": "Use Bio Foam as a stand-alone sanitation step. Apply Demand CS later to structural surfaces only."
+            }
+        ]
+    },
+    {
+        "product_id": 12,
+        "product_title": "ExciteR",
+        "analyses": [
+            {
+                "with_product_id": 1,
+                "with_product_title": "Temprid FX",
+                "potential_benefits": [
+                    "Rapid knockdown (pyrethrins/PBO) complements Temprid’s residual",
+                    "Effective for initial cleanouts and flushing"
+                ],
+                "risks_drawbacks": [
+                    "EC petroleum solvents may destabilize SC",
+                    "Higher combined toxicity to aquatic organisms/beneficials",
+                    "Potential label/tank-mix prohibitions"
+                ],
+                "would_it_work": {
+                    "answer": "Uncertain",
+                    "rationale": "Oil-in-water compatibility varies; separation or residue dulling possible."
+                },
+                "conclusion": "Prefer sequential use: ExciteR first, ventilate/dry, then apply Temprid FX."
+            },
+            {
+                "with_product_id": 2,
+                "with_product_title": "Suspend PolyZone",
+                "potential_benefits": [
+                    "Immediate kill followed by extended polymer-protected residual",
+                    "Useful in high-pressure accounts"
+                ],
+                "risks_drawbacks": [
+                    "Solvents can compromise microcapsule integrity",
+                    "Staining/odor and flammability risks",
+                    "Potential off-label mix"
+                ],
+                "would_it_work": {
+                    "answer": "Uncertain",
+                    "rationale": "EC oils may plasticize encapsulation polymers; stability not guaranteed."
+                },
+                "conclusion": "Do not tank mix. Apply ExciteR separately; follow with PolyZone after area dries."
+            },
+            {
+                "with_product_id": 11,
+                "with_product_title": "Demand CS Insecticide",
+                "potential_benefits": [
+                    "Fast knockdown plus durable residual from CS",
+                    "Enhanced cleanout efficiency"
+                ],
+                "risks_drawbacks": [
+                    "Petroleum distillates may degrade capsules/suspension",
+                    "Increased non-target hazard and odor/flammability",
+                    "Possible label restrictions on mixing"
+                ],
+                "would_it_work": {
+                    "answer": "Uncertain",
+                    "rationale": "EC + CS mixtures are formulation-sensitive; capsule damage or creaming may occur."
+                },
+                "conclusion": "Use sequentially, not co-tanked. Knockdown with ExciteR, then apply Demand CS after ventilation."
+            },
+            {
+                "with_product_id": 17,
+                "with_product_title": "InVade™ Bio Foam",
+                "potential_benefits": [
+                    "Sanitation reduces organic film that can absorb insecticides",
+                    "Foam reaches build-up sites inaccessible to sprays"
+                ],
+                "risks_drawbacks": [
+                    "Pyrethrins/PBO and petroleum solvents can kill Bacillus microbes",
+                    "Foam stability altered by solvents; excessive foaming risk",
+                    "Not intended as a pesticide tank partner"
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "Live microbial cleaner should not be mixed with oil-solvent insecticide concentrates."
+                },
+                "conclusion": "Apply Bio Foam alone; wait for dwell/dry. Use ExciteR separately if needed for knockdown."
+            }
+        ]
+    },
+    {
+        "product_id": 17,
+        "product_title": "InVade™ Bio Foam",
+        "analyses": [
+            {
+                "with_product_id": 1,
+                "with_product_title": "Temprid FX",
+                "potential_benefits": [
+                    "Sanitation first can improve residual insecticide performance",
+                    "Foam penetrates drains/voids before pesticide treatment"
+                ],
+                "risks_drawbacks": [
+                    "Insecticide residues can kill Bacillus microbes",
+                    "Co-tank foaming/rheology issues; citrus oils/surfactants may destabilize SC",
+                    "Labels advise against mixing with cleaners/disinfectants"
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "Live microbial formulation should not be mixed with insecticides; mutual efficacy loss is likely."
+                },
+                "conclusion": "Use Bio Foam as a separate sanitation step; apply Temprid FX later to structural surfaces only."
+            },
+            {
+                "with_product_id": 2,
+                "with_product_title": "Suspend PolyZone",
+                "potential_benefits": [
+                    "Organic removal improves insecticide contact/residual",
+                    "Different application zones minimize overlap (drains vs. surfaces)"
+                ],
+                "risks_drawbacks": [
+                    "Polymer-encapsulated pyrethroid can inactivate microbes on contact",
+                    "Foam chemistry not intended for pesticide tank mixes",
+                    "Potential excessive foaming/equipment issues"
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "Mixing live microbes with encapsulated pyrethroids is inappropriate and unstable."
+                },
+                "conclusion": "Apply Bio Foam alone; after dwell and drying, apply PolyZone to non-drain structural areas."
+            },
+            {
+                "with_product_id": 11,
+                "with_product_title": "Demand CS Insecticide",
+                "potential_benefits": [
+                    "Sanitation step can reduce harborage and improve residual contact",
+                    "Distinct target zones (drains vs. structural surfaces)"
+                ],
+                "risks_drawbacks": [
+                    "Residual pyrethroid will suppress microbial activity",
+                    "Foam–capsule mixtures likely unstable; excessive foaming",
+                    "Not a labeled/coordinated tank partner"
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "Biological cleaner should not be co-formulated with insecticides; efficacy of microbes and spray stability suffer."
+                },
+                "conclusion": "Use separately with time separation. Bio Foam first; Demand CS later, avoiding drains."
+            },
+            {
+                "with_product_id": 12,
+                "with_product_title": "ExciteR",
+                "potential_benefits": [
+                    "Sanitation may enhance later knockdown effectiveness",
+                    "Different tools for different zones (drains vs. open surfaces)"
+                ],
+                "risks_drawbacks": [
+                    "Petroleum solvents and pyrethrins kill beneficial microbes",
+                    "Foam destabilization and over-foaming risk",
+                    "Not intended for co-tank; flammability concerns"
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "Microbial foam is incompatible with oil-solvent insecticides; both function and safety are compromised."
+                },
+                "conclusion": "Never co-mix. Apply Bio Foam alone; schedule ExciteR as a separate knockdown treatment after dwell/dry."
+            }
+        ]
+    }
+]

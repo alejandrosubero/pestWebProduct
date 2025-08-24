@@ -1023,7 +1023,7 @@
         "sourceFile": "label-GentrolPointSourceLabel10-1-17.pdf",
         "title": "Gentrol Point Source",
         "Product Overview": "A roach and stored product pest control device that uses GENTROL® Insect Growth Regulator. It is designed to affect pests without them needing to make direct contact with the device. This product reduces roach and stored product pest populations in a manner that conventional insecticides cannot, specifically by inhibiting reproduction and adult emergence. It is labeled for use in food handling establishments. The active ingredient, (S)-Hydroprene, is a biorational insecticide that functions similarly to naturally occurring insect growth hormones in roaches and Stored Products Pests (SPP). The device, by itself, will control populations over time, but for faster results, it can be used in conjunction with EPA-approved adulticides. When conventional insecticides don't provide 100% elimination, this product works to prevent survivors from re-establishing the population.",
-        "Active Ingredients": "[{\"ingredient_name\": \"(S)-Hydroprene (CAS #65733-18-8)\", \"percentage\": \"90.6%\", \"chemical_class\": \"Juvenile Hormone Analog\", \"function\": \"Insect Growth Regulator (IGR)\"}]",
+        "Active Ingredients": "[{\"ingredient_name\": \"(S)-Hydroprene (CAS #65733-18-8)\", \"percentage\": \"90.6%\", \"chemical_type\": \"Juvenile Hormone Analog\", \"function\": \"Insect Growth Regulator (IGR)\"}]",
         "How It Works": "The active ingredient, (S)-Hydroprene, is an insect growth regulator that mimics insect growth hormones found naturally in roaches and SPP. It controls pest populations by inhibiting reproduction and preventing the emergence of adults. Roaches exposed to the active ingredient exhibit visible effects, such as crinkled wings, within one to two weeks, rendering them unable to reproduce. By preventing immature pests from developing into reproductive adults, the product effectively breaks the pest life cycle. The active ingredient is released from the device and moves into the localized area, meaning pests do not have to physically contact the device to be affected.",
         "Spectrum of Control": "Pests: Roaches and Stored Product Pests (SPP), including red flour beetles, confused flour beetles, and merchant beetles.\nUse Sites: Permitted for use in buildings and modes of transportation. Specific sites include restaurants, homes, hotels, kitchens, laboratories, apartment buildings, day care centers, machinery, equipment, greenhouses, hospitals, mausoleums, nursing homes, office buildings, schools, and warehouses. Modes of transportation include aircraft, buses, trucks, trailers, rail cars, and marine vessels. It is also labeled for use in food handling establishments, including areas for receiving, storage, packing, edible waste storage, machinery, enclosed processing systems (mills, dairies, edible oils, syrups), and serving areas.",
         "Application Rates": "Place one GENTROL POINT SOURCE® device to treat an area up to 75 square feet. In areas with heavy roach or SPP infestations, more devices may be necessary.",
@@ -1037,7 +1037,7 @@
                 {
                     "name": "(S)-Hydroprene",
                     "percentage": "90.6%",
-                    "class": "Juvenile Hormone Analog, Insect Growth Regulator (IGR)",
+                    "type": "Juvenile Hormone Analog, Insect Growth Regulator (IGR)",
                     "mode_of_action": "Acts as a juvenile hormone mimic. It disrupts the insect's normal development and molting process, primarily affecting immature stages. It prevents larvae or nymphs from developing into viable, reproductive adults, leading to population decline.",
                     "key_properties": [
                         "Biorational insecticide, similar to naturally occurring insect hormones",
@@ -1062,7 +1062,7 @@
         "sourceFile": "label-ZenproxECLabel4-1-16.pdf",
         "title": "Zenprox EC",
         "Product Overview": "An emulsifiable concentrate insecticide designed to kill a broad spectrum of pests including ants, bed bugs, cockroaches, flies, and fleas. It is intended for use in a variety of locations such as homes, apartments, hotels, schools, hospitals, office buildings, and warehouses. The product provides residual control for up to 28 days for fleas and up to 14 days for other listed pest species. It can be applied as an indoor broadcast, spot, void, or crack and crevice treatment using various types of spray equipment.",
-        "Active Ingredients": "[{\"ingredient_name\": \"Etofenprox (CAS #80844-07-1)\", \"percentage\": \"16.2%\", \"chemical_class\": \"Pyrethroid (Ether)\", \"function\": \"Insecticide\"}, {\"ingredient_name\": \"Piperonyl butoxide (CAS #51-03-6)\", \"percentage\": \"64.8%\", \"chemical_class\": \"Piperonyl butoxide derivative\", \"function\": \"Synergist\"}]",
+        "Active Ingredients": "[{\"ingredient_name\": \"Etofenprox (CAS #80844-07-1)\", \"percentage\": \"16.2%\", \"chemical_type\": \"Pyrethroid (Ether)\", \"function\": \"Insecticide\"}, {\"ingredient_name\": \"Piperonyl butoxide (CAS #51-03-6)\", \"percentage\": \"64.8%\", \"chemical_type\": \"Piperonyl butoxide derivative\", \"function\": \"Synergist\"}]",
         "How It Works": "Zenprox EC provides effective kill of fleas, cockroaches, and other listed pests. Etofenprox, the primary active ingredient, is a pyrethroid insecticide that attacks the central and peripheral nervous systems of insects, leading to paralysis and death. Piperonyl butoxide acts as a synergist; it inhibits the metabolic enzymes within the insect that would normally degrade the etofenprox, thereby increasing the insecticide's potency and effectiveness. The formulation provides a residual effect that lasts up to 28 days for fleas and up to 14 days for other pests.",
         "Spectrum of Control": "Pests: Kills Ants, Bed Bugs, Cockroaches, Centipedes, Crickets, Flies, Fleas, Fruit Flies, Gnats, Mosquitoes, Moths, Scorpions, Silverfish, Spiders (Brown Recluse, Black Widow, others), Ticks, Wasps, Carpet beetles, Confused flour beetles, Darkling beetles, Dermestids, Earwigs, Firebrats, Indian meal moths, Lesser grain borers, Millipedes, Pillbugs, Red flour beetles, Saw-toothed grain beetles, Sowbugs, and Stink bugs.\nUse Sites: For use in Homes, Apartments, Hotels, Schools, Nursing Homes, Hospitals, Office Buildings, Warehouses, Commercial and Industrial Buildings, non-food/non-feed handling establishments, modes of transportation, institutions, attics, and crawlspaces.",
         "Application Rates": "For Broadcast (General Surface), Spot, Void, or Crack and Crevice treatments: Mix 2 fl oz of Zenprox EC per gallon of water to achieve a 0.25% Etofenprox solution. Apply the diluted spray at a rate of 1 gallon per 1,000 sq ft.",
@@ -1076,7 +1076,7 @@
                 {
                     "name": "Etofenprox",
                     "percentage": "16.2%",
-                    "class": "Pyrethroid (Ether)",
+                    "type": "Pyrethroid (Ether)",
                     "mode_of_action": "Acts as a sodium channel modulator in the insect's nervous system. It binds to voltage-gated sodium channels, forcing them to remain open, which leads to hyperexcitation of the nerves, followed by paralysis and death.",
                     "key_properties": [
                         "Provides up to 28 days residual control of fleas",
@@ -1093,7 +1093,7 @@
                 {
                     "name": "Piperonyl butoxide",
                     "percentage": "64.8%",
-                    "class": "Synergist",
+                    "type": "Synergist",
                     "mode_of_action": "Inhibits the action of mixed-function oxidase (MFO) enzymes, particularly cytochrome P450. These enzymes are a primary mechanism for insects to metabolize and detoxify insecticides. By blocking these enzymes, PBO prevents the breakdown of the pyrethroid (etofenprox), increasing its toxicity and effectiveness.",
                     "key_properties": [
                         "Synergizes etofenprox",
@@ -1120,7 +1120,7 @@
         "sourceFile": "label-PrecorIGRLabel10-1-17.pdf",
         "title": "Precor IGR Concentrate",
         "Product Overview": "An Insect Growth Regulator (IGR) concentrate specifically designed to prevent adult flea emergence for up to 7 months. It targets the immature life stages of the flea, preventing eggs and larvae on treated surfaces from developing into biting adult fleas. The product is intended for application on carpets, upholstered furniture, and pet sleeping areas. It does not affect existing adult fleas or pupae, so for infestations with a high population of biting adults, it is recommended to be tank-mixed with an EPA-registered adulticide.",
-        "Active Ingredients": "[{\"ingredient_name\": \"(S)-Methoprene (CAS #65733-16-6)\", \"percentage\": \"1.2%\", \"chemical_class\": \"Juvenile Hormone Analog\", \"function\": \"Insect Growth Regulator (IGR)\"}]",
+        "Active Ingredients": "[{\"ingredient_name\": \"(S)-Methoprene (CAS #65733-16-6)\", \"percentage\": \"1.2%\", \"chemical_type\": \"Juvenile Hormone Analog\", \"function\": \"Insect Growth Regulator (IGR)\"}]",
         "How It Works": "PRECOR® acts on the immature stages of the flea life cycle. The active ingredient, (S)-Methoprene, is a juvenile hormone analog. When flea eggs and larvae are exposed to it, their development is disrupted, and they are unable to mature into adult fleas. This breaks the flea life cycle. It provides a long-lasting residual effect, preventing adult flea emergence for up to 7 months on treated surfaces. Existing adult fleas and pupae are not affected by this product.",
         "Spectrum of Control": "Pests: Fleas (immature life stages: eggs and larvae).\nUse Sites: Indoor surfaces where fleas are found, such as carpets, upholstered furniture, pet sleeping and bedding areas, and throw rugs.",
         "Application Rates": "Prepare a diluted spray solution by adding 1 fl oz of PRECOR® to 1 gallon of water. Apply at a rate of 1 gallon of the diluted solution per 1500 sq ft of surface area.",
@@ -1134,7 +1134,7 @@
                 {
                     "name": "(S)-Methoprene",
                     "percentage": "1.2%",
-                    "class": "Juvenile Hormone Analog, Insect Growth Regulator (IGR)",
+                    "type": "Juvenile Hormone Analog, Insect Growth Regulator (IGR)",
                     "mode_of_action": "Functions as a mimic of insect juvenile hormone. Exposure to (S)-Methoprene disrupts the hormonal balance required for normal development in immature insects (eggs and larvae). This prevents them from successfully molting into the pupal and adult stages, effectively sterilizing the environment and breaking the pest life cycle.",
                     "key_properties": [
                         "Prevents adult flea emergence for up to 7 months",
@@ -1161,7 +1161,7 @@
         "sourceFile": "label-ShockwaveLabel8-1-20.pdf",
         "title": "SHOCKWAVE FOGGING CONCENTRATE",
         "Product Overview": "A multi-ingredient fogging concentrate designed for indoor use, providing flushing action, quick knockdown, and residual activity. It contains NYGUARD® insect growth regulator, which interferes with insect growth and development to break the life cycle. The product offers continuous protection against stored product pests for 3 months and keeps working on listed cockroaches for 180 days (6 months). It is formulated for use as a ULV, space, area, or contact spray in homes, food and non-food areas of food processing plants, and other commercial establishments.",
-        "Active Ingredients": "[{\"ingredient_name\": \"Pyrethrins\", \"percentage\": \"1.00%\", \"chemical_class\": \"Botanical Insecticide (Pyrethrum)\", \"function\": \"Contact Insecticide (Knockdown Agent)\"}, {\"ingredient_name\": \"Piperonyl butoxide, Technical\", \"percentage\": \"2.00%\", \"chemical_class\": \"Piperonyl butoxide derivative\", \"function\": \"Synergist\"}, {\"ingredient_name\": \"N-Octyl bicycloheptene dicarboximide (MGK® 264)\", \"percentage\": \"2.87%\", \"chemical_class\": \"Carboximide\", \"function\": \"Synergist\"}, {\"ingredient_name\": \"Esfenvalerate\", \"percentage\": \"0.20%\", \"chemical_class\": \"Pyrethroid\", \"function\": \"Contact Insecticide (Residual Agent)\"}, {\"ingredient_name\": \"2-[1-methyl-2-(4-phenoxyphenoxy) ethoxy] pyridine (Pyriproxyfen)\", \"percentage\": \"0.10%\", \"chemical_class\": \"Pyridine-based\", \"function\": \"Insect Growth Regulator (IGR)\"}]",
+        "Active Ingredients": "[{\"ingredient_name\": \"Pyrethrins\", \"percentage\": \"1.00%\", \"chemical_type\": \"Botanical Insecticide (Pyrethrum)\", \"function\": \"Contact Insecticide (Knockdown Agent)\"}, {\"ingredient_name\": \"Piperonyl butoxide, Technical\", \"percentage\": \"2.00%\", \"chemical_type\": \"Piperonyl butoxide derivative\", \"function\": \"Synergist\"}, {\"ingredient_name\": \"N-Octyl bicycloheptene dicarboximide (MGK® 264)\", \"percentage\": \"2.87%\", \"chemical_type\": \"Carboximide\", \"function\": \"Synergist\"}, {\"ingredient_name\": \"Esfenvalerate\", \"percentage\": \"0.20%\", \"chemical_type\": \"Pyrethroid\", \"function\": \"Contact Insecticide (Residual Agent)\"}, {\"ingredient_name\": \"2-[1-methyl-2-(4-phenoxyphenoxy) ethoxy] pyridine (Pyriproxyfen)\", \"percentage\": \"0.10%\", \"chemical_type\": \"Pyridine-based\", \"function\": \"Insect Growth Regulator (IGR)\"}]",
         "How It Works": "This product utilizes a five-component system for comprehensive pest control. Pyrethrins provide a rapid flushing and knockdown effect, irritating insects out of their harborages and quickly incapacitating them. Esfenvalerate, a synthetic pyrethroid, delivers longer-lasting residual control. Two synergists, Piperonyl butoxide and MGK® 264, are included to enhance the killing power of the pyrethrins and esfenvalerate by inhibiting the insects' natural defense enzymes. Finally, Pyriproxyfen (NYGUARD® IGR) acts as an insect growth regulator, mimicking juvenile hormone to halt the development of immature insects, preventing them from becoming reproductive adults and thereby breaking the life cycle for long-term control.",
         "Spectrum of Control": "Pests: A comprehensive list of crawling and flying insects, including, but not limited to: Almond Moths, Angoumois Grain Moths, Ants, Black Flies, Boxelder Bugs, Cadelles, Carpet Beetles, Cheese Mites, Cigarette Beetles, Clothes Moths, Cockroaches, Confused Flour Beetles, Crickets, Darkling Beetles, Drain Flies, Drugstore Beetles, Earwigs, Firebrats, Fleas, Flies, Fruit Flies, Gnats, Grain Mites, Granary Weevils, Hornets, Indian Meal Moths, Lesser Grain Borers, Litter Beetles, Mediterranean Flour Moths, Millipedes, Mosquitoes (that may carry West Nile virus), Pillbugs, Red Flour Beetles, Rice Weevils, Sawtoothed Grain Beetles, Silverfish, Spiders, Ticks (that may carry Lyme disease), Warehouse Beetles, Wasps, and Yellowjackets.\nUse Sites: For use in and around a wide range of indoor areas such as Animal Quarters, Apartments, Attics, Bakeries, Basements, Beverage Plants, Boats, Buses, Cafeterias, Canneries, Commercial Buildings, Day Care Centers, Food Processing Plants (food and non-food areas), Garages, Homes, Hospitals, Hotels, Kennels, Laboratories, Libraries, Museums, Nursing Homes, Office Buildings, Restaurants, Schools, Supermarkets, Theaters, Trains, Warehouses, and Zoos.",
         "Application Rates": "Undiluted Space Spray (Food Areas): Apply 0.5 fl. oz. per 1,000 cu. ft. of space for pests like flies, mosquitoes, roaches, and common stored product pests. For other stored food areas, apply 1.5 fl. oz. per 1,000 cu. ft..\nDiluted Space Spray (Food Areas): Dilute 1 part concentrate to 9 parts oil and apply at 5.0 fl. oz. of the mixture per 1,000 cu. ft.. For specific uses like stored dried fruit or federally inspected plants, different dilution ratios and rates apply (e.g., 1:29, 1:3).\nDiluted Surface Spray (Residential/Commercial Non-Food Areas): Dilute in a range from 1 part concentrate + 2.25 parts diluent to 1 part concentrate + 29 parts diluent. Apply as a coarse wetting spray at approximately 1 gallon per 750 sq. ft..\nOutdoor Surface Spray: Dilute as above and apply at 1 gallon per 1,000 sq. ft. to outside surfaces of buildings.",
@@ -1175,7 +1175,7 @@
                 {
                     "name": "Pyrethrins",
                     "percentage": "1.00%",
-                    "class": "Botanical Insecticide (Pyrethrum)",
+                    "type": "Botanical Insecticide (Pyrethrum)",
                     "mode_of_action": "Acts as a sodium channel modulator. Binds to voltage-gated sodium channels in nerve cells, forcing them to remain open. This leads to continuous nerve impulse transmission, causing hyperexcitation, paralysis, and rapid death. Known for its flushing action.",
                     "key_properties": [
                         "Provides flushing action and quick knockdown"
@@ -1189,7 +1189,7 @@
                 {
                     "name": "Piperonyl butoxide, Technical",
                     "percentage": "2.00%",
-                    "class": "Synergist",
+                    "type": "Synergist",
                     "mode_of_action": "Inhibits mixed-function oxidase (MFO) enzymes, like cytochrome P450, which insects use to metabolize insecticides. This prevents the breakdown of pyrethrins and pyrethroids, increasing their toxicity and effectiveness.",
                     "key_properties": [
                         "Insecticide Synergist"
@@ -1202,7 +1202,7 @@
                 {
                     "name": "N-Octyl bicycloheptene dicarboximide",
                     "percentage": "2.87%",
-                    "class": "Synergist",
+                    "type": "Synergist",
                     "mode_of_action": "Also acts as a synergist, likely inhibiting a different set of metabolic enzymes than PBO, providing a broader base of synergistic action against insecticides.",
                     "key_properties": [
                         "MGK® 264, Insecticide Synergist"
@@ -1215,7 +1215,7 @@
                 {
                     "name": "Esfenvalerate",
                     "percentage": "0.20%",
-                    "class": "Pyrethroid",
+                    "type": "Pyrethroid",
                     "mode_of_action": "Acts as a sodium channel modulator. It has a similar mode of action to pyrethrins but is more stable, providing a longer residual effect.",
                     "key_properties": [
                         "Provides residual activity",
@@ -1229,7 +1229,7 @@
                 {
                     "name": "2-[1-methyl-2-(4-phenoxyphenoxy) ethoxy] pyridine (Pyriproxyfen)",
                     "percentage": "0.10%",
-                    "class": "Insect Growth Regulator (IGR)",
+                    "type": "Insect Growth Regulator (IGR)",
                     "mode_of_action": "Acts as a juvenile hormone analog. It disrupts the insect's endocrine system, interfering with molting, embryogenesis, and metamorphosis. This prevents immature stages from developing into reproductive adults.",
                     "key_properties": [
                         "NYGUARD® insect growth regulator",
@@ -1256,7 +1256,7 @@
         "sourceFile": "label-AlpineWSGLabel4-1-19.pdf",
         "title": "Alpine WSG Water Soluble Granule Insecticide",
         "Product Overview": "A water-soluble granule insecticide featuring the non-repellent active ingredient dinotefuran. It is designed to kill a wide range of pests, including ants, bed bugs, cockroaches, fleas, house flies, and stored product pests. It is approved for use in and around a vast array of sites, such as animal housing, apartments, food handling establishments, homes, hospitals, schools, and transportation equipment. The product can be used in conjunction with non-repellent baits.",
-        "Active Ingredients": "[{\"ingredient_name\": \"Dinotefuran: N-methyl-N'-nitro-N''-[(tetrahydro-3-furanyl)methyl]guanidine\", \"percentage\": \"40.0%\", \"chemical_class\": \"Neonicotinoid\", \"function\": \"Insecticide\"}]",
+        "Active Ingredients": "[{\"ingredient_name\": \"Dinotefuran: N-methyl-N'-nitro-N''-[(tetrahydro-3-furanyl)methyl]guanidine\", \"percentage\": \"40.0%\", \"chemical_type\": \"Neonicotinoid\", \"function\": \"Insecticide\"}]",
         "How It Works": "The product contains the non-repellent active ingredient dinotefuran. As a neonicotinoid insecticide, dinotefuran works by targeting the nicotinic acetylcholine receptors (nAChRs) in the insect's central nervous system. This causes continuous nerve stimulation, leading to paralysis and death. Because it is non-repellent, insects do not avoid treated surfaces, increasing the likelihood of exposure and transfer within the pest population.",
         "Spectrum of Control": "Pests: Kills Ants (including Argentine, Carpenter, Harvester, Odorous House, Red Imported, and Southern Fire; excluding Pharaoh), Asian Lady Beetles, Bean Plataspid (Kudzu Bug), Bed Bugs, Beetles (including Confused Flour Beetle, Granary Weevil, Lesser Grain Borer, and Warehouse Beetle), Brown Marmorated Stink Bugs, Centipedes, Cockroaches (including American, German and Turkestan), Collembola, Crickets, Earwigs, Fleas, House Flies, Millipedes, Mosquitoes (Anopheles), Paper Wasps, Pillbugs, Sowbugs, Spiders (excluding Brown Recluse), Stored Product Pests, and Yellowjackets.\nUse Sites: For use in and around Animal Housing (including Calf Hutches, Chicken Houses, Dairy Areas, Dog Kennels, Horse Barns), Apartments, Campgrounds, Cemeteries, Clinics, Food Handling Establishments, Garbage Bins, Grain Mills, Granaries, Green Belts, Homes, Hospitals, Hotels, Mausoleums, Mobile Homes, Motels, Food Processing Plants, Nursing Homes, Resorts, Schools, Storage Buildings, Trailers, Transportation Equipment (Autos, Buses, Boats, Ships, Trains, Trucks, Planes - cargo areas only), Utilities, Warehouses, Commercial, Industrial, and Residential Buildings, Theme Parks, Parks and Recreational Areas, and Zoos.",
         "Application Rates": "Rates are given in grams of product per gallon of water to treat 1,000 sq ft. The desired finished dilution concentration determines the rate:\n- 0.1% Concentration: 10 grams per gallon. Used for Ants, Bed Bugs (low-maintenance), Fleas, Stored Product Pests.\n- 0.2% Concentration: 20 grams per gallon. Used for Bed Bugs (higher rate), Carpenter Ants, House Flies, Mosquitoes.\n- 0.3% Concentration: 30 grams per gallon. Used for Bed Bugs (heavy infestation), Crawling Insects (Pillbugs, Spiders, Turkestan Cockroaches), Crickets, Cockroaches, Millipedes, Asian Lady Beetles, Kudzu Bugs, Stink Bugs, Paper Wasps, Yellowjackets.\nOne gallon of finished dilution treats 1,000 square feet.",
@@ -1270,7 +1270,7 @@
                 {
                     "name": "Dinotefuran",
                     "percentage": "40.0%",
-                    "class": "Neonicotinoid (Subclass: nitroguanidine)",
+                    "type": "Neonicotinoid (Subtype: nitroguanidine)",
                     "mode_of_action": "Acts as an agonist at the nicotinic acetylcholine receptor (nAChR) in the insect's central nervous system. It binds to these receptors, causing irreversible overstimulation of the nerve cells, which leads to paralysis and eventual death of the insect.",
                     "key_properties": [
                         "Non-repellent active ingredient",
@@ -1297,13 +1297,13 @@
         "sourceFile": "label-PTAlpinePressurizedInsecticideLabel4-1-13.pdf",
         "title": "PT Alpine Pressurized Insecticide",
         "Product Overview": "A pressurized insecticide spray containing the active ingredient dinotefuran. It is designed to kill pests on contact. The product is formulated for use in and around a wide variety of locations, including apartments, homes, hospitals, hotels, and food handling establishments. It controls a broad spectrum of crawling insects such as ants, bed bugs, cockroaches, and spiders, as well as overwintering pests like Asian lady beetles and boxelder bugs. The product is designed for application as a Crack & Crevice®, void, or spot treatment.",
-        "Active Ingredients": "[{\"ingredient_name\": \"Dinotefuran: N-methyl-N'-((tetrahydro-3-furanyl)methyl]guanidine\", \"percentage\": \"0.5%\", \"chemical_class\": \"Neonicotinoid\", \"function\": \"Insecticide\"}]",
+        "Active Ingredients": "[{\"ingredient_name\": \"Dinotefuran: N-methyl-N'-((tetrahydro-3-furanyl)methyl]guanidine\", \"percentage\": \"0.5%\", \"chemical_type\": \"Neonicotinoid\", \"function\": \"Insecticide\"}]",
         "How It Works": "This product kills pests on direct contact at the time of application. The active ingredient, dinotefuran, is a neonicotinoid insecticide. It acts on the nervous system of insects by binding to nicotinic acetylcholine receptors (nAChRs), which causes overstimulation of the nerve cells, leading to paralysis and death. The pressurized formulation delivers the insecticide directly into cracks, crevices, and voids where pests harbor.",
         "Spectrum of Control": "Pests: Kills Ants (including foraging Carpenter, Fire, Harvester and Pharaoh Ants), Asian Lady Beetles, Bed Bugs, Booklice, Boxelder Bugs, Brown Marmorated Stink Bugs, Centipedes, Clover Mites, Cluster Flies, Cockroaches, Crickets, Dermestids, Drugstore Beetles, Earwigs, Elm Leaf Beetles, Flour Beetles (Red and Confused), Fruit Flies, Grain Weevils, Indianmeal Moths, Millipedes, Phorid Flies, Pillbugs, Powder Post Beetles, Silverfish, Sowbugs, Spiders (excluding Black Widow), Springtails, and Trogoderma.\nUse Sites: For use in and around Apartments, Campgrounds, Homes, Hospitals, Hotels, Motels, Food and Non-Food Areas of Food Handling Establishments (including Meat Packing and Food Processing Plants, Restaurants, Supermarkets), Nursing Homes, Resorts, Schools, Transportation Equipment (Buses, Boats, Ships, Trains, Trucks, Planes - cargo areas only), Utilities, Warehouses, and other Commercial and Industrial Buildings.",
         "Application Rates": "Crack & Crevice Treatment: For light infestations, move injection tip along cracks at 3 ft/sec. For heavy infestations, move tip at 1 ft/sec.\nVoid Treatment: For closed voids, treat at a rate of 1 to 5 sec per 3 ft³.\nForaging Carpenter Ants in Trees: Inject for 5 to 10 sec at highest and lowest elevations of the colony.\nForaging Carpenter Ants in Stumps, Poles, Fences: Inject 2 to 5 sec of product per hole.\nArgentine Ant Nests: Inject the nest at 3 to 6 sites at a rate of 5 to 10 sec/site.\nSpot Treatment: Hold can approx. 12\" from the surface to be treated and apply directly on pests.",
         "Application Tips": "Use with the supplied actuator and injection tubes. Place the injection tip into cracks, crevices, holes, and other small openings. For spot treatments, hold the container upright while spraying. For bed bugs, treat the room perimeter, furniture, headboards, and box springs; do not apply to mattresses, pillows, or areas of prolonged human contact. Test for staining on an inconspicuous area before treating items. In food handling establishments, general surface application is permitted only when the facility is not in operation and exposed food is covered or removed. To treat foraging carpenter ants in structures or trees, drill pilot holes into tunnels and galleries and inject the product. In Oregon, do not apply to linden, basswood, or other Tilia species.",
         "Advantages": "Delivers the active ingredient directly into pest harborage areas like cracks, crevices, and voids. Kills a broad spectrum of crawling and flying pests on contact. The pressurized can format is ready-to-use and convenient for targeted applications. Suitable for use in sensitive areas, including food handling establishments.",
-        "Safety & Environmental Notes": "Signal Word: CAUTION. Keep out of reach of children. Physical/Chemical Hazards: Flammable. Contents under pressure. Keep away from heat, sparks, and open flame. Do not puncture or incinerate container. Exposure to temperatures above 130°F may cause bursting. Do not spray on plastic, painted, or varnished surfaces or directly into electronic equipment. Environmental Hazards: Toxic to aquatic invertebrates and honey bees. Do not apply directly to water or where drift/runoff may occur. Application restrictions exist to protect bees. Groundwater Advisory: Dinotefuran has properties associated with chemicals detected in groundwater. Use Restrictions: Do not apply in occupied patient rooms or classrooms. Do not use in aircraft cabins. Storage: Store in a cool, dry area away from heat or open flame. Disposal: Do not puncture or incinerate. If empty, place in trash or offer for recycling. If partly filled, call your local solid waste agency for disposal instructions.",
+        "Safety & Environmental Notes": "Signal Word: CAUTION. Keep out of reach of children. Physical/Chemical Hazards: Flammable. Contents under pressure. Keep away from heat, sparks, and open flame. Do not puncture or incinerate container. Exposure to temperatures above 130°F may cause bursting. Do not spray on plastic, painted, or varnished surfaces or directly into electronic equipment. Environmental Hazards: Toxic to aquatic invertebrates and honey bees. Do not apply directly to water or where drift/runoff may occur. Application restrictions exist to protect bees. Groundwater Advisory: Dinotefuran has properties associated with chemicals detected in groundwater. Use Restrictions: Do not apply in occupied patient rooms or typerooms. Do not use in aircraft cabins. Storage: Store in a cool, dry area away from heat or open flame. Disposal: Do not puncture or incinerate. If empty, place in trash or offer for recycling. If partly filled, call your local solid waste agency for disposal instructions.",
         "Why These Components Are Used": "Dinotefuran (0.5%): The sole active ingredient is a neonicotinoid insecticide. It is used for its fast-acting, contact-kill properties against a wide range of pests. Its mode of action targets the insect nervous system effectively.\nOther Ingredients (99.5%): These inert components include solvents and propellants necessary for the pressurized aerosol formulation. They create the pressure to expel the product and form a spray that can be directed into small spaces, ensuring the active ingredient reaches pests in harborage areas.",
         "Physical & Chemical Properties": "Formulation: Pressurized Insecticide (Aerosol). Physical Hazard: Flammable. Contents under pressure.",
         "Deep": {
@@ -1311,7 +1311,7 @@
                 {
                     "name": "Dinotefuran",
                     "percentage": "0.5%",
-                    "class": "Neonicotinoid (Subclass: nitroguanidine)",
+                    "type": "Neonicotinoid (Subtype: nitroguanidine)",
                     "mode_of_action": "Acts as an agonist at the nicotinic acetylcholine receptor (nAChR) in the insect's central nervous system. It binds to these receptors, causing irreversible overstimulation of the nerve cells, which leads to paralysis and eventual death of the insect.",
                     "key_properties": [
                         "Kills pests on contact",
@@ -1338,7 +1338,7 @@
         "sourceFile": "label-WisdomLawnGranularLabel4-14-19.pdf",
         "title": "WISDOM LAWN GRANULAR INSECTICIDE",
         "Product Overview": "A granular insecticide designed to control Ants (including Imported Fire Ants), Mole Crickets, and other insect pests on lawns. It is for use on lawns in landscaped areas and as a perimeter treatment around residential, institutional, public, commercial, and industrial buildings, as well as in parks, recreational areas, and athletic fields.",
-        "Active Ingredients": "[{\"ingredient_name\": \"Bifenthrin* (*Cis isomers 97% minimum, trans isomers 3% maximum)\", \"percentage\": \"0.2%\", \"chemical_class\": \"Pyrethroid\", \"function\": \"Insecticide\"}]",
+        "Active Ingredients": "[{\"ingredient_name\": \"Bifenthrin* (*Cis isomers 97% minimum, trans isomers 3% maximum)\", \"percentage\": \"0.2%\", \"chemical_type\": \"Pyrethroid\", \"function\": \"Insecticide\"}]",
         "How It Works": "Bifenthrin, the active ingredient, is a synthetic pyrethroid insecticide. It works on contact and through ingestion, affecting the central and peripheral nervous systems of insects. It interferes with the sodium channels of nerve cells, causing repetitive nerve firing, which leads to paralysis and death. When applied to lawns, the granules release the active ingredient into the soil and thatch layer, especially after irrigation, where it contacts and controls target pests.",
         "Spectrum of Control": "Pests: Armyworms, Cutworms, Sod Webworms, Annual Bluegrass Weevil (Adult), Billbugs (Adult), Black Turfgrass Ataenius (Adult), Leafhoppers, Mealybugs, European Crane Fly, Ants, Centipedes, Chinch Bugs, Fleas (Larvae and Adults), Imported Fire Ants (Adult and Mounds), Millipedes, Mole Cricket (Adult and Nymph), Ticks, Pillbugs, and Sowbugs.\nUse Sites: Lawns in landscaped areas and perimeters around residential, institutional, public, commercial, and industrial buildings, parks, recreational areas, and athletic fields. Not for use on golf courses, sod farms, nurseries, commercial greenhouses, or grass grown for seed.",
         "Application Rates": "Application rates vary by pest, from 1.15 lbs per 1,000 sq. ft. (50 lbs/acre) up to 4.6 lbs per 1,000 sq. ft. (200 lbs/acre).\n- Armyworms, Cutworms, Sod Webworms: 1.15 lbs/1,000 sq. ft..\n- Annual Bluegrass Weevil, Billbugs, Black Turfgrass Ataenius: 1.15-2.3 lbs/1,000 sq. ft..\n- European Crane Fly: 1.75-3.50 lbs/1,000 sq. ft..\n- Ants, Chinch Bugs, Fleas, Imported Fire Ants, Millipedes, Mole Crickets, Ticks, Pillbugs, Sowbugs: 2.3-4.6 lbs/1,000 sq. ft..\nFire Ant Mound Treatment: Apply 1/2 cup of granules per mound and drench with 1 to 2 gallons of water.\nPerimeter Application: Apply in a 5 to 10 foot wide band around the structure.\nMaximum Application Rates: Do not apply more than 0.2 lb. a.i. per acre per application on residential sites. May be applied up to 0.4 lb. a.i. per acre on non-residential sites. Do not broadcast apply more than 0.4 lb. a.i. per acre per year.",
@@ -1352,7 +1352,7 @@
                 {
                     "name": "Bifenthrin",
                     "percentage": "0.2%",
-                    "class": "Pyrethroid",
+                    "type": "Pyrethroid",
                     "mode_of_action": "Acts as a sodium channel modulator in the insect's nervous system. It binds to voltage-gated sodium channels, disrupting their normal function by keeping them open for an extended period. This causes repetitive firing of neurons, leading to hyperexcitation, paralysis, and death.",
                     "key_properties": [
                         "Broad-spectrum control of turf pests",
@@ -1378,7 +1378,7 @@
         "sourceFile": "label-GentrolIGRConcLabel10-1-17.pdf",
         "title": "Gentrol IGR Concentrate",
         "Product Overview": "An Insect Growth Regulator (IGR) concentrate featuring GENTROL®, designed to control populations of cockroaches, drain flies, fruit flies, bedbugs, and stored product pests. It provides continuous protection against these pests for up to 4 months. The product is specifically labeled for use in food areas of food handling establishments, including as a fogging application.",
-        "Active Ingredients": "[{\"ingredient_name\": \"(S)-Hydroprene (CAS #65733-18-8)\", \"percentage\": \"9%\", \"chemical_class\": \"Juvenile Hormone Analog\", \"function\": \"Insect Growth Regulator (IGR)\"}]",
+        "Active Ingredients": "[{\"ingredient_name\": \"(S)-Hydroprene (CAS #65733-18-8)\", \"percentage\": \"9%\", \"chemical_type\": \"Juvenile Hormone Analog\", \"function\": \"Insect Growth Regulator (IGR)\"}]",
         "How It Works": "GENTROL® IGR Concentrate acts as a synthetic juvenile hormone look-alike. It disrupts the normal growth and development of target pests. For cockroaches and bedbugs, exposure to the active ingredient results in them becoming adults that are incapable of reproducing. For drain flies, fruit flies, stored product pests, and fleas, it disrupts the life cycle by killing the insects during the pupal stage. In both scenarios, the infestation cycle is broken, leading to population collapse.",
         "Spectrum of Control": "Pests: Controls Cockroaches, Drain Flies, Fruit Flies, Bedbugs, and Stored Product Pests (including Indian meal moths, rice moths, tobacco moths, red flour beetles, confused flour beetles, lesser grain borers, merchant grain beetles, sawtooth grain beetles, warehouse beetles, cigarette beetles, and Dermestid beetles).\nUse Sites: For use in apartment buildings, bakeries, bottling facilities, breweries, boiler rooms, cafeterias, candy plants, grocery stores, day care centers, hospitals, residential homes, hotel/motels, office buildings, kitchens, laboratories, cereal processing facilities, manufacturing plants, mausoleums, meat and produce canneries, nursing homes, restaurants, schools, locker rooms, stores, taverns, warehouses, and modes of transportation such as aircraft, buses, trucks, trailers, rail cars, and marine vessels.",
         "Application Rates": "Surface Spray/Paint Brush, Spot and Crack and Crevice: Mix 1 ounce of GENTROL® per 1 gallon of diluent. Apply the diluted solution at a rate of 1 gallon per 1500 sq ft of surface area.\nFogging (Space Spray/Mist) Application: Apply at a rate of 1 ounce of GENTROL® per 12,000 cubic feet. Can be diluted with water or oil depending on equipment.\nDrain Flies and Fruit Flies: Apply GENTROL® dilution to breeding areas, such as into and around drain downspouts and catch basins, thoroughly coating the sides of drain pipes.",
@@ -1392,7 +1392,7 @@
                 {
                     "name": "(S)-Hydroprene",
                     "percentage": "9%",
-                    "class": "Juvenile Hormone Analog, Insect Growth Regulator (IGR)",
+                    "type": "Juvenile Hormone Analog, Insect Growth Regulator (IGR)",
                     "mode_of_action": "Acts as a juvenile hormone mimic, which disrupts the insect's normal development. It prevents immature insects from reaching the reproductive adult stage (e.g., cockroaches, bedbugs) or kills them in the pupal stage (e.g., drain flies, stored product pests), thereby stopping the infestation cycle.",
                     "key_properties": [
                         "Disrupts normal growth development",
