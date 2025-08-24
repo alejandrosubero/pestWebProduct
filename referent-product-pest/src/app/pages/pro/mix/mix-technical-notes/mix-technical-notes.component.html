@@ -1,0 +1,71 @@
+<mat-toolbar color="primary" class="toolbar">
+  <mat-icon (click)="back()">arrow_back</mat-icon>
+  <span> {{ title }}</span>
+  <span class="spacer"></span>
+  <button mat-icon-button *ngIf="selectedProduct" (click)="goToDetail(selectedProduct.product_id)">
+    <mat-icon>description</mat-icon>
+    <!-- <mat-icon>open_in_new</mat-icon> -->
+    <!-- <mat-icon>source</mat-icon> -->
+  </button>
+</mat-toolbar>
+
+<div class="container">
+
+  <div class="box1">
+    <div [ngClass]="{ 'dual-selects': selectedProduct }">
+      <!-- Select Product -->
+      <mat-form-field appearance="fill" class="select-field">
+        <mat-label>Select Product</mat-label>
+        <mat-select (selectionChange)="onProductChange($event.value)">
+          <mat-option *ngFor="let product of mixNotes" [value]="product.product_id">
+            {{ product.product_title }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <!-- Select Analysis -->
+      <mat-form-field appearance="fill" class="select-field" *ngIf="selectedProduct">
+        <mat-label>Select Analysis</mat-label>
+        <mat-select (selectionChange)="onAnalysisChange($event.value)">
+          <mat-option value="" disabled selected>Select one element</mat-option>
+          <mat-option *ngFor="let analysis of selectedProduct.analyses" [value]="analysis.with_product_id">
+            {{ analysis.with_product_title }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+
+
+  <!-- Analysis Info -->
+  <div class="analysis-card" *ngIf="selectedAnalysis">
+    <h4 class="title-highlight">
+      {{ elementFather }} vs {{ selectedAnalysis.with_product_title }}
+    </h4>
+
+    <section>
+      <h4 class="subtitle-highlight ">Potential Benefits</h4>
+      <ul>
+        <li *ngFor="let benefit of selectedAnalysis.potential_benefits">{{ benefit }}</li>
+      </ul>
+    </section>
+
+    <section>
+      <h4 class="subtitle-highlight ">Risks & Drawbacks</h4>
+      <ul>
+        <li *ngFor="let risk of selectedAnalysis.risks_drawbacks">{{ risk }}</li>
+      </ul>
+    </section>
+
+    <section>
+      <h4 class="subtitle-highlight ">Would It Work?</h4>
+      <p><strong>Answer:</strong> {{ selectedAnalysis.would_it_work.answer }}</p>
+      <p><strong>Rationale:</strong> {{ selectedAnalysis.would_it_work.rationale }}</p>
+    </section>
+
+    <section>
+      <h4 class="subtitle-highlight">Conclusion</h4>
+      <p>{{ selectedAnalysis.conclusion }}</p>
+    </section>
+  </div>
+</div>

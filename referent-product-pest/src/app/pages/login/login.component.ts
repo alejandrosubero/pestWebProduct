@@ -15,6 +15,7 @@ import { ProductService } from '../../services/product.service';
 import { TechnicalProductService } from '../../services/TechnicalProductService';
 import { UserService } from '../../services/user.service';
 import { User } from '../../models/user.model';
+import { MixProductTechNoteService } from '../../services/mix-product-tech-note.service';
 
 
 @Component({
@@ -38,15 +39,11 @@ export class LoginComponent implements OnInit {
   username: string = '';
   password: string = '';
   errorMessage: string = '';
-
-  private configUrl: string = 'assets/config/config.json';
-  private storedUser: string = '';
-  private storedPassword: string = '';
   private technicalProductService = inject(TechnicalProductService);
+  private mixProductTechNoteService = inject(MixProductTechNoteService);
   private userList: User[] = [];
 
   constructor(
-    private http: HttpClient,
     private router: Router,
     private authService: AuthService,
     private productService: ProductService,
@@ -61,26 +58,10 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
-  getlistUser() {
-    this.http.get<any>(this.configUrl).subscribe({
-      next: (data) => {
-        this.storedUser = data.username;
-        this.storedPassword = data.password;
-      },
-      error: (error) => {
-        console.error('Error loading config.json', error);
-        this.errorMessage = 'Internal error, contact support';
-      },
-    });
-  }
-
-
   login(): void {
     const unUser: User | null = this.findUserByCredentials();
     if (unUser) {
-      this.productService.loadProducts();
-      this.technicalProductService.loadProducts();
+      this.chargeData();
       this.authService.loginU(unUser.rol);
       this.router.navigate(['/home']);
     } else {
@@ -88,12 +69,16 @@ export class LoginComponent implements OnInit {
     }
   }
 
+  chargeData() {
+    this.productService.loadProducts();
+    this.technicalProductService.loadProducts();
+    this.mixProductTechNoteService.loadMixData();
+  }
 
   findUserByCredentials() {
     const found = this.userList.find(u => u.username === this.username && u.password === this.password);
     return found ? found : null;
   }
-
 
 
 }

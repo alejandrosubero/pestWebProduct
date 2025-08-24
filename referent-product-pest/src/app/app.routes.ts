@@ -65,6 +65,12 @@ export const routes: Routes = [
     data: { animation: 'pro' },
     canActivate: [authGuard]
   },
+    {
+    path: 'technical/notes/mix',
+    loadComponent: () => import('./pages/pro/mix/mix-technical-notes/mix-technical-notes.component').then(c => c.MixTechnicalNotesComponent),
+    data: { animation: 'pro' },
+    canActivate: [authGuard]
+  },
   {
     path: 'technical/notes',
     loadComponent: () => import('./pages/technical-notes-list/technical-notes-list.component').then(c => c.TechnicalNotesListComponent),

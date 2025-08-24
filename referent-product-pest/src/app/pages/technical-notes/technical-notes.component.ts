@@ -14,12 +14,7 @@ import { MatListModule } from '@angular/material/list';
 
 // Importa MatExpansionModule
 import { MatExpansionModule } from '@angular/material/expansion'; 
-
-import { AuthService } from '../../services/auth.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { FavoritesService } from '../../services/favorites.service';
-import { ProductService } from '../../services/product.service';
-import { Product } from '../../models/product.model';
 import { PestData } from '../../models/pestdata.model';
 import { NavegateService } from '../../services/navegate.service';
 import { MatIconRegistry } from '@angular/material/icon';
@@ -52,6 +47,7 @@ export class TechnicalNotesComponent implements OnInit {
   id: number = 0;
   private nameToNavegate = '';
   technicalProduct: TechnicalProduct = new TechnicalProduct();
+  public title: string = 'Technical Note';
 
   constructor(
     private technicalProductService: TechnicalProductService,
@@ -66,9 +62,6 @@ export class TechnicalNotesComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // this.technicalProductService.getTechnicalProducts().subscribe(data => {
-    //   this.technicalProducts = data;
-    // });
   }
 
   getData() {
@@ -104,14 +97,14 @@ export class TechnicalNotesComponent implements OnInit {
 
   getAllProducts(): void {
     const products = this.technicalProductService.getAllTechnicalProducts();
-    console.log(products);
+    // console.log(products);
   }
 
   getProductById(id: number): void {
     const product = this.technicalProductService.getTechnicalProductBySourceFile(id);
       if (product) {
         this.technicalProduct = product;
-        console.log(product);
+        // console.log(product);
       }
   }
 

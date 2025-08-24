@@ -96,7 +96,7 @@ usageForm!: FormGroup;
   ngOnInit(): void {
    this.setForm();
      this.usageForm.get('productName')?.valueChanges.subscribe((value: number) => {
-        console.log('change the product: ', value);
+        // console.log('change the product: ', value);
         this.searchProduct = this.store.findById(value);
         if(this.searchProduct != undefined && this.searchProduct != null){
            this.updateFormWithProductData(this.searchProduct);

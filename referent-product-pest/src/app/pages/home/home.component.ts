@@ -272,20 +272,27 @@ export class HomeComponent implements OnInit {
 
    goTecnnical(): void {
      const routeBase = "technical/notes";
-    this.router.navigate([routeBase]);
+    this.navigate(routeBase);
   }
 
    goCompareTecnnical(): void {
      const routeBase = "technical/notes/compare";
-    this.router.navigate([routeBase]);
+    this.navigate(routeBase);
   }
 
    goAbout(): void {
      const routeBase = 'about';
-    this.router.navigate([routeBase]);
+    this.navigate(routeBase);
   }
   
+   goMix(): void {
+    const routeBase = 'technical/notes/mix';
+    this.navigate(routeBase);
+  }
 
+  navigate(routeBase:string){
+    this.router.navigate([routeBase]);
+  }
 
 }
 

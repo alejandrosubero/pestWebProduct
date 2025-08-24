@@ -57,7 +57,7 @@ export class DashboardComponent implements OnInit {
     if (maybeReco !== null) {
       this.reco = maybeReco;
       this.isMaybeReco = true;
-      console.log('record:', this.reco);
+      // console.log('record:', this.reco);
     }else{
       this.isMaybeReco = false;
     }
