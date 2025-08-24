@@ -1661,7 +1661,7 @@
                 ],
                 "would_it_work": {
                     "answer": "Uncertain",
-                    "rationale": "The physical compatibility of an EC with a microencapsulated suspension is unpredictable. The solvent in ExciteR could damage the polymer coating, shortening the residual life."
+                    "rationale": "The physical compatibility of an EC(Emulsifiable Concentrate) with a microencapsulated suspension is unpredictable. The solvent in ExciteR could damage the polymer coating, shortening the residual life."
                 },
                 "conclusion": "Do not mix without a jar test. Sequential application is recommended if compatibility issues arise."
             },

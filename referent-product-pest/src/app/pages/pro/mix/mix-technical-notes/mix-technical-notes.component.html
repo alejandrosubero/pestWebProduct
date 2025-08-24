@@ -59,7 +59,18 @@
 
     <section>
       <h4 class="subtitle-highlight ">Would It Work?</h4>
-      <p><strong>Answer:</strong> {{ selectedAnalysis.would_it_work.answer }}</p>
+      <!-- <p><strong>Answer:</strong> {{ selectedAnalysis.would_it_work.answer }}</p> -->
+
+<p>
+  <strong>Answer:</strong>
+  <span [ngClass]="getAnswerClass()">
+    {{ selectedAnalysis?.would_it_work?.answer }}
+  </span>
+</p>
+
+
+
+
       <p><strong>Rationale:</strong> {{ selectedAnalysis.would_it_work.rationale }}</p>
     </section>
 

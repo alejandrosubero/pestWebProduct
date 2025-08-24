@@ -43,7 +43,7 @@ export class MixTechnicalNotesComponent {
   public elementFather: string | null | undefined= '';
   
   mixNotes: MixProducTechNote[] = [];
-  selectedProduct: MixProducTechNote | null = null;
+  selectedProduct: MixProducTechNote | null  = null;
   selectedAnalysis: Analysis | null = null;
   
   constructor(
@@ -57,16 +57,33 @@ export class MixTechnicalNotesComponent {
   getData() {
     this.mixProductTechNoteService.getMixProductTechNotes()
       .subscribe(mix => {
-        this.mixNotes = mix;
+        const sorted = [...mix].sort((a, b) =>
+          a.product_title.localeCompare(b.product_title)
+        );
+        this.mixNotes = sorted
+        // this.mixNotes = mix;
         // console.log('Datos cargados:', this.mixNotes);
       });
   }
 
- onProductChange(productId: number): void {
+ onProductChange1(productId: number): void {
     this.selectedProduct = this.mixNotes.find(p => p.product_id === productId) || null;
     this.selectedAnalysis = null; // reset analysis when product changes
     this.elementFather = this.selectedProduct?.product_title;
   }
+
+  onProductChange(productId: number): void {
+  this.selectedProduct = this.mixNotes.find(p => p.product_id === productId) || null;
+  this.selectedAnalysis = null; 
+  if (this.selectedProduct && this.selectedProduct.analyses && this.selectedProduct.analyses.length > 0) {
+    const sorted = [...this.selectedProduct.analyses].sort((a, b) =>
+      a.with_product_title.localeCompare(b.with_product_title)
+    );
+    this.selectedProduct.analyses = sorted;
+  }
+  this.elementFather = this.selectedProduct?.product_title ?? '';
+}
+
 
   onAnalysisChange(withProductId: number): void {
     if (this.selectedProduct) {
@@ -84,5 +101,12 @@ export class MixTechnicalNotesComponent {
     this.navegateService.goToDetail(routeBase, id, routeBase);
   }
 
-  
+  getAnswerClass(): string {
+  const answer = this.selectedAnalysis?.would_it_work?.answer?.toLowerCase();
+  if (answer === 'yes') return 'answer-yes';
+  if (answer === 'no') return 'answer-no';
+  return 'answer-other';
+}
+
+
 }
