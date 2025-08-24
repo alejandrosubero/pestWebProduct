@@ -1,81 +1,1415 @@
 [
     {
-        "product_id": 1,
-        "product_title": "Temprid FX",
+        "product_id": 24,
+        "product_title": "Zenprox EC",
         "analyses": [
+            {
+                "with_product_id": 26,
+                "with_product_title": "SHOCKWAVE FOGGING CONCENTRATE",
+                "potential_benefits": [
+                    "Adds residual pyrethroid (Esfenvalerate) and an IGR (Pyriproxyfen)."
+                ],
+                "risks_drawbacks": [
+                    "Both are EC formulations with petroleum distillates, increasing solvent load.",
+                    "Redundant pyrethrins and PBO, potentially exceeding label rates for those actives.",
+                    "High potential for phytotoxicity on sensitive plants or surfaces."
+                ],
+                "would_it_work": {
+                    "answer": "Yes",
+                    "rationale": "Both are oil-based concentrates and are physically compatible. However, the combination results in a complex mix with overlapping active ingredients, which may not be practical or cost-effective."
+                },
+                "conclusion": "Technically compatible, but the mixture is redundant. Using Shockwave alone is preferable as it already contains a knockdown, residual, synergist, and IGR."
+            },
+            {
+                "with_product_id": 30,
+                "with_product_title": "Gentrol IGR Concentrate",
+                "potential_benefits": [
+                    "Adds long-term population control by breaking the insect life cycle.",
+                    "Etofenprox provides adult knockdown while Hydroprene prevents reproduction."
+                ],
+                "risks_drawbacks": [
+                    "Both products contain petroleum distillates, which could increase odor or surface damage risk.",
+                    "Both labels must allow for the specific use site and target pest."
+                ],
+                "would_it_work": {
+                    "answer": "Yes",
+                    "rationale": "This is a classic adulticide plus IGR combination. The EC + IGR concentrate formulations are chemically compatible as both are solvent-based."
+                },
+                "conclusion": "A common and effective combination. Jar test recommended to ensure final dilution stability, but generally compatible."
+            },
+            {
+                "with_product_id": 25,
+                "with_product_title": "Precor IGR Concentrate",
+                "potential_benefits": [
+                    "Adds long-term flea control by preventing larvae from becoming adults.",
+                    "Provides immediate adult flea knockdown (Zenprox) plus 7-month residual IGR activity (Precor)."
+                ],
+                "risks_drawbacks": [
+                    "Both products contain petroleum distillates.",
+                    "The Precor label specifically recommends tank-mixing with an adulticide."
+                ],
+                "would_it_work": {
+                    "answer": "Yes",
+                    "rationale": "This is an ideal adulticide plus IGR mix for flea control. The formulations are compatible, and the Precor label explicitly supports such a mixture."
+                },
+                "conclusion": "Excellent and recommended combination for integrated flea management. Follow Precor's tank-mixing instructions."
+            },
+            {
+                "with_product_id": 27,
+                "with_product_title": "Alpine WSG Water Soluble Granule Insecticide",
+                "potential_benefits": [
+                    "Adds a non-repellent neonicotinoid (Dinotefuran) for an alternative mode of action.",
+                    "Combines knockdown (Zenprox) with a systemic, non-repellent active (Alpine)."
+                ],
+                "risks_drawbacks": [
+                    "Potential for repellency from Zenprox's pyrethroid to interfere with Alpine's non-repellent transfer effect.",
+                    "The EC solvents in Zenprox could cause compatibility issues with the dissolved granules."
+                ],
+                "would_it_work": {
+                    "answer": "Uncertain",
+                    "rationale": "The opposing repellent vs. non-repellent properties create a functional conflict. While they might be physically mixable, the efficacy of the non-repellent component could be compromised."
+                },
+                "conclusion": "Avoid mixing due to conflicting modes of action. Apply sequentially to different areas if both products are needed."
+            },
+            {
+                "with_product_id": 28,
+                "with_product_title": "PT Alpine Pressurized Insecticide",
+                "potential_benefits": [
+                    "Not applicable; not intended for tank mixing."
+                ],
+                "risks_drawbacks": [
+                    "Aerosol products are not designed to be mixed with liquid concentrates in a sprayer."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "PT Alpine is a ready-to-use aerosol formulation and cannot be tank-mixed with a liquid concentrate like Zenprox EC."
+                },
+                "conclusion": "Do not mix. These products are formulated for completely different application equipment and cannot be combined."
+            },
+            {
+                "with_product_id": 1,
+                "with_product_title": "Temprid FX",
+                "potential_benefits": [
+                    "Adds fast knockdown from synergized etofenprox.",
+                    "Increases the overall pyrethroid concentration."
+                ],
+                "risks_drawbacks": [
+                    "Petroleum solvents in Zenprox EC may destabilize the water-based SC formulation of Temprid FX.",
+                    "Adds a third active ingredient, complicating compliance and risk assessment.",
+                    "Redundant pyrethroid modes of action (Group 3A) without improving resistance management strategy."
+                ],
+                "would_it_work": {
+                    "answer": "Uncertain",
+                    "rationale": "Mixing a solvent-based EC with a water-based SC is physically risky and can lead to product separation or clogging. A jar test is essential."
+                },
+                "conclusion": "Avoid mixing due to high risk of physical incompatibility. If both are needed, apply sequentially after the first application has dried."
+            },
             {
                 "with_product_id": 2,
                 "with_product_title": "Suspend PolyZone",
                 "potential_benefits": [
-                    "Broader MOA stack (pyrethroid + neonic + microencapsulated pyrethroid) for diverse pests",
-                    "Potentially stronger residual on exterior substrates from PolyZone capsules",
-                    "Resistance management via dual MOA in Temprid FX plus encapsulated deltamethrin"
+                    "Adds a different pyrethroid active for rotational purposes.",
+                    "Zenprox provides knockdown, while Suspend provides extended residual."
                 ],
                 "risks_drawbacks": [
-                    "Two residual pyrethroids increase aquatic/pollinator hazard",
-                    "Polymer capsule and SC dispersant systems could interact; risk of settling or nozzle fouling",
-                    "Off-label tank mix risk if labels restrict mixing"
+                    "Petroleum solvents in Zenprox EC can damage the polymer microcapsules in Suspend PolyZone, destroying its long-residual properties.",
+                    "Redundant pyrethroid modes of action (Group 3A).",
+                    "High risk of formulation incompatibility."
                 ],
                 "would_it_work": {
-                    "answer": "Uncertain",
-                    "rationale": "Both are water-based (SC and polymer-encapsulated) but different capsule/dispersant chemistries may not co-disperse cleanly. Labels provide limited tank-mix guidance."
+                    "answer": "No",
+                    "rationale": "The solvent-based EC formulation is highly likely to compromise the integrity of the polymer microencapsulation in Suspend PolyZone, negating its primary benefit."
                 },
-                "conclusion": "Likely physically mixable but perform a jar test. Prefer sequential applications targeting need; avoid blooming plants and aquatic drift."
+                "conclusion": "Do not mix due to chemical incompatibility. Apply sequentially if necessary."
             },
             {
                 "with_product_id": 11,
                 "with_product_title": "Demand CS Insecticide",
                 "potential_benefits": [
-                    "Combines neonic ingestion activity with microencapsulated lambda-cyhalothrin residual",
-                    "Improved perimeter durability from CS capsules",
-                    "Broader control of mobile and hidden pests"
+                    "Adds a different pyrethroid active for broader claims.",
+                    "Zenprox offers knockdown, while Demand CS provides long-lasting residual control."
                 ],
                 "risks_drawbacks": [
-                    "Higher pyrethroid load raises non-target toxicity",
-                    "Capsule–SC interactions may alter suspension stability",
-                    "Potential label constraints on tank mixing for residential/sensitive sites"
+                    "The petroleum distillates in Zenprox EC can damage the microcapsules in Demand CS, reducing its residual lifespan.",
+                    "Redundant pyrethroid modes of action (Group 3A)."
                 ],
                 "would_it_work": {
                     "answer": "Uncertain",
-                    "rationale": "Both are aqueous suspensions; Demand CS notes compatibility with IGRs, not specifically with other adulticides. Physical stability not assured."
+                    "rationale": "Mixing a solvent-based EC with a microencapsulated CS formulation is not recommended as the solvents may dissolve the capsule walls, leading to instability and loss of residual."
                 },
-                "conclusion": "If mixing is necessary, jar test and maintain strong agitation. Otherwise, apply sequentially (CS perimeter, Temprid indoors/crack-crevice)."
+                "conclusion": "Avoid mixing. A jar test is required to check for physical compatibility, but sequential application is the safer approach."
             },
             {
                 "with_product_id": 12,
                 "with_product_title": "ExciteR",
                 "potential_benefits": [
-                    "Fast knockdown from pyrethrins complements Temprid’s residual",
-                    "Useful for flush-and-finish cleanouts"
+                    "Increases concentration of PBO and adds natural pyrethrins for enhanced flushing and knockdown."
                 ],
                 "risks_drawbacks": [
-                    "Petroleum distillates may destabilize SC and dull microresidual",
-                    "Oil solvents increase odor/flammability and surface staining risk",
-                    "Off-label tank mix risk; heightened aquatic/bee toxicity"
+                    "Highly redundant; both are pyrethroid/PBO concentrates with petroleum distillates.",
+                    "Creates a very 'hot' mix with high potential for surface damage or phytotoxicity.",
+                    "Difficult to calculate legal application rates for the overlapping active ingredients."
                 ],
                 "would_it_work": {
-                    "answer": "Uncertain",
-                    "rationale": "EC/oil-based synergized pyrethrins can be incompatible with water-based SC systems. Efficacy tradeoffs and phase separation are possible."
+                    "answer": "Yes",
+                    "rationale": "The formulations are chemically similar (pyrethroid + PBO in a solvent carrier) and will mix. However, the resulting combination is redundant and offers little practical advantage over using either product alone at the correct rate."
                 },
-                "conclusion": "Avoid tank mixing; use ExciteR as a separate knockdown treatment, then apply Temprid FX after drying/ventilation."
+                "conclusion": "Compatible but not recommended. The mixture is redundant and provides no significant benefit."
             },
             {
-                "with_product_id": 17,
-                "with_product_title": "InVade™ Bio Foam",
+                "with_product_id": 16,
+                "with_product_title": "InVade Bio Drain",
                 "potential_benefits": [
-                    "Sanitation removes organic harborage improving insecticide performance",
-                    "Foam reaches drains/voids where sprays don’t persist"
+                    "None. The products have completely different purposes."
                 ],
                 "risks_drawbacks": [
-                    "Insecticides/solvents can kill Bacillus microbes",
-                    "Foaming agents/citrus oil may affect spray rheology",
-                    "Labels caution against mixing with cleaners/disinfectants"
+                    "The insecticide in Zenprox will kill the beneficial microbes in InVade.",
+                    "The InVade label explicitly warns against mixing with antimicrobial products."
                 ],
                 "would_it_work": {
                     "answer": "No",
-                    "rationale": "Live microbes should not be co-tanked with insecticides; efficacy of both products may be compromised."
+                    "rationale": "Insecticides are antimicrobial and will render the biological drain cleaner useless. The product label for InVade forbids this type of mixture."
                 },
-                "conclusion": "Apply Bio Foam alone during low-use periods; allow dwell and dry. Apply Temprid FX later as a separate step."
+                "conclusion": "Do not mix. These products are fundamentally incompatible and have conflicting purposes."
+            },
+            {
+                "with_product_id": 17,
+                "with_product_title": "InVade Bio Foam",
+                "potential_benefits": [
+                    "None. The products are designed for different purposes."
+                ],
+                "risks_drawbacks": [
+                    "The insecticidal components of Zenprox will kill the microbes in InVade Bio Foam, destroying its efficacy.",
+                    "Mixing insecticides with microbial cleaners is explicitly advised against."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "Zenprox is a pesticide that will kill the active microbial ingredient in InVade Bio Foam. This mixture is counterproductive and violates the intended use of the biological cleaner."
+                },
+                "conclusion": "Do not mix. The products are chemically and functionally incompatible."
+            },
+            {
+                "with_product_id": 18,
+                "with_product_title": "Onslaught Microencapsulated Insecticide",
+                "potential_benefits": [
+                    "Zenprox adds flushing and knockdown to Onslaught's residual control.",
+                    "Combines two different pyrethroid actives (etofenprox and esfenvalerate)."
+                ],
+                "risks_drawbacks": [
+                    "The petroleum solvents in the Zenprox EC formulation may damage the microcapsules in Onslaught, reducing its residual effectiveness.",
+                    "Mixing two Group 3A pyrethroids does not improve resistance management.",
+                    "High risk of physical incompatibility."
+                ],
+                "would_it_work": {
+                    "answer": "Uncertain",
+                    "rationale": "A solvent-based EC is likely to harm a water-based microencapsulated formulation. This could cause the product to become unstable and lose its long-residual properties."
+                },
+                "conclusion": "Not recommended due to probable formulation incompatibility. Perform a jar test before considering, or apply sequentially."
+            }
+        ]
+    },
+    {
+        "product_id": 26,
+        "product_title": "SHOCKWAVE FOGGING CONCENTRATE",
+        "analyses": [
+            {
+                "with_product_id": 24,
+                "with_product_title": "Zenprox EC",
+                "potential_benefits": [
+                    "Adds etofenprox, a different pyrethroid.",
+                    "Increases overall concentration of PBO synergist."
+                ],
+                "risks_drawbacks": [
+                    "Highly redundant mix of pyrethrins, pyrethroids, and PBO.",
+                    "Both are petroleum distillate-based concentrates.",
+                    "Complicates calculating legal application rates of individual AIs.",
+                    "Lacks a clear strategic advantage over using Shockwave alone."
+                ],
+                "would_it_work": {
+                    "answer": "Yes",
+                    "rationale": "Both are solvent-based concentrates and are physically compatible. However, the mixture is functionally redundant as Shockwave already contains knockdown agents, synergists, a residual, and an IGR."
+                },
+                "conclusion": "Physically compatible, but functionally redundant and not recommended. Shockwave is a more complete product on its own."
+            },
+            {
+                "with_product_id": 30,
+                "with_product_title": "Gentrol IGR Concentrate",
+                "potential_benefits": [
+                    "Adds a second IGR with a different active (Hydroprene)."
+                ],
+                "risks_drawbacks": [
+                    "Redundant IGR action, as Shockwave already contains Pyriproxyfen.",
+                    "Both are petroleum-based concentrates, increasing solvent load.",
+                    "Adds unnecessary complexity and cost for minimal gain."
+                ],
+                "would_it_work": {
+                    "answer": "Yes",
+                    "rationale": "The solvent-based formulations are physically compatible. While adding a second IGR could theoretically help with resistance, it's generally unnecessary and not cost-effective."
+                },
+                "conclusion": "Compatible, but not practical or necessary. Shockwave's built-in IGR is sufficient for most applications."
+            },
+            {
+                "with_product_id": 25,
+                "with_product_title": "Precor IGR Concentrate",
+                "potential_benefits": [
+                    "Adds a second IGR active ((S)-Methoprene) for flea control."
+                ],
+                "risks_drawbacks": [
+                    "Shockwave already contains an effective IGR (Pyriproxyfen).",
+                    "Redundant functionality for most pests.",
+                    "Increases chemical load and cost without significant benefit."
+                ],
+                "would_it_work": {
+                    "answer": "Yes",
+                    "rationale": "Both are solvent-based concentrates and should be physically compatible. However, the use of two IGRs is redundant for most situations."
+                },
+                "conclusion": "Compatible but unnecessary. Shockwave already provides robust IGR activity."
+            },
+            {
+                "with_product_id": 27,
+                "with_product_title": "Alpine WSG Water Soluble Granule Insecticide",
+                "potential_benefits": [
+                    "Adds a non-repellent, systemic neonicotinoid (Dinotefuran) mode of action.",
+                    "Combines knockdown/flushing with a non-repellent for comprehensive control."
+                ],
+                "risks_drawbacks": [
+                    "The repellent pyrethrins/pyrethroid in Shockwave will counteract the non-repellent properties of Alpine WSG.",
+                    "High risk of physical incompatibility between the solvent-based fogging concentrate and the water-soluble granules."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "The opposing properties (repellent vs. non-repellent) make this an antagonistic mix. Furthermore, mixing a heavy oil-based concentrate with a water-soluble granule is likely to be physically unstable."
+                },
+                "conclusion": "Do not mix. The products are incompatible both chemically and functionally. Apply in different areas or at different times."
+            },
+            {
+                "with_product_id": 28,
+                "with_product_title": "PT Alpine Pressurized Insecticide",
+                "potential_benefits": [
+                    "Not applicable; not intended for tank mixing."
+                ],
+                "risks_drawbacks": [
+                    "Aerosol products are not designed to be mixed with liquid concentrates in a sprayer."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "PT Alpine is a ready-to-use aerosol formulation and cannot be tank-mixed with a liquid fogging concentrate."
+                },
+                "conclusion": "Do not mix. These products are formulated for completely different application equipment and cannot be combined."
+            },
+            {
+                "with_product_id": 1,
+                "with_product_title": "Temprid FX",
+                "potential_benefits": [
+                    "Adds a neonicotinoid (Imidacloprid) for an additional mode of action."
+                ],
+                "risks_drawbacks": [
+                    "High risk of physical incompatibility between Shockwave's oil/solvent base and Temprid's water-based SC formulation.",
+                    "The repellency of Shockwave's pyrethrins may interfere with the non-repellent transfer of imidacloprid.",
+                    "Mixing adds a fifth and sixth active ingredient, creating a very complex and potentially unstable dilution."
+                ],
+                "would_it_work": {
+                    "answer": "Uncertain",
+                    "rationale": "A solvent-based EC and a water-based SC are not predictably compatible. Functionally, the repellent and non-repellent characteristics are also in conflict."
+                },
+                "conclusion": "Not recommended due to high risk of physical incompatibility and conflicting modes of action. A jar test is essential, but sequential application is safer."
+            },
+            {
+                "with_product_id": 2,
+                "with_product_title": "Suspend PolyZone",
+                "potential_benefits": [
+                    "Adds extended residual of a different pyrethroid (Deltamethrin)."
+                ],
+                "risks_drawbacks": [
+                    "Petroleum distillates in Shockwave will destroy the polymer microcapsules in Suspend PolyZone.",
+                    "Functionally redundant pyrethroid action.",
+                    "Defeats the purpose of the PolyZone technology."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "The solvent-based formulation of Shockwave is chemically incompatible with the polymer encapsulation of Suspend PolyZone, which would dissolve the protective shells."
+                },
+                "conclusion": "Do not mix. The products are chemically incompatible and the mixture would negate the benefits of Suspend PolyZone."
+            },
+            {
+                "with_product_id": 11,
+                "with_product_title": "Demand CS Insecticide",
+                "potential_benefits": [
+                    "Adds a different, encapsulated pyrethroid for long-term residual."
+                ],
+                "risks_drawbacks": [
+                    "The petroleum solvents in Shockwave are likely to damage the microcapsules of Demand CS, reducing its residual effectiveness.",
+                    "Redundant pyrethroid modes of action."
+                ],
+                "would_it_work": {
+                    "answer": "Uncertain",
+                    "rationale": "Mixing a solvent-based concentrate with a water-based microencapsulated product is risky. The solvents can compromise the capsule integrity, leading to premature release of the active and loss of residual control."
+                },
+                "conclusion": "Avoid mixing due to high risk of formulation damage. Apply sequentially if the benefits of both products are desired."
+            },
+            {
+                "with_product_id": 12,
+                "with_product_title": "ExciteR",
+                "potential_benefits": [
+                    "Boosts the concentration of pyrethrins and PBO for faster knockdown."
+                ],
+                "risks_drawbacks": [
+                    "Extremely redundant, as both are pyrethrin/PBO concentrates.",
+                    "Creates a very high concentration of flushing agents and solvents.",
+                    "No strategic benefit over using either product alone at the correct rate."
+                ],
+                "would_it_work": {
+                    "answer": "Yes",
+                    "rationale": "Both products are solvent-based pyrethrin/PBO concentrates and are chemically compatible. However, the mixture is functionally redundant."
+                },
+                "conclusion": "Compatible but not recommended. The mix offers no practical advantage and increases chemical load unnecessarily."
+            },
+            {
+                "with_product_id": 16,
+                "with_product_title": "InVade Bio Drain",
+                "potential_benefits": [
+                    "None."
+                ],
+                "risks_drawbacks": [
+                    "The five active insecticidal ingredients in Shockwave will kill the microbes in InVade.",
+                    "The InVade label warns against mixing with antimicrobial products."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "Shockwave is a powerful, multi-active insecticide that will sterilize the microbial culture in InVade Bio Drain, rendering it completely ineffective."
+                },
+                "conclusion": "Do not mix. The products are fundamentally incompatible."
+            },
+            {
+                "with_product_id": 17,
+                "with_product_title": "InVade Bio Foam",
+                "potential_benefits": [
+                    "None."
+                ],
+                "risks_drawbacks": [
+                    "The insecticide will kill the beneficial microbes.",
+                    "Mixing a pesticide with a biological cleaner is counterproductive and against the cleaner's label instructions."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "The insecticidal properties of Shockwave are directly opposed to the biological action of InVade Bio Foam. The pesticide will destroy the microbes."
+                },
+                "conclusion": "Do not mix. These products are incompatible and should be used at different times."
+            },
+            {
+                "with_product_id": 18,
+                "with_product_title": "Onslaught Microencapsulated Insecticide",
+                "potential_benefits": [
+                    "Adds immediate knockdown (pyrethrins), IGR (pyriproxyfen), and synergists from Shockwave to Onslaught's residual."
+                ],
+                "risks_drawbacks": [
+                    "The petroleum distillates in Shockwave will likely damage the microcapsules in Onslaught.",
+                    "Both products contain the same residual active, Esfenvalerate, leading to redundancy.",
+                    "High risk of physical incompatibility."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "The solvent-based Shockwave formulation is expected to compromise the water-based microencapsulation of Onslaught, destroying its primary feature of long-term, controlled release."
+                },
+                "conclusion": "Do not mix. The formulations are chemically incompatible, and the mix contains a redundant active ingredient."
+            }
+        ]
+    },
+    {
+        "product_id": 30,
+        "product_title": "Gentrol IGR Concentrate",
+        "analyses": [
+            {
+                "with_product_id": 24,
+                "with_product_title": "Zenprox EC",
+                "potential_benefits": [
+                    "Combines an adulticide (Zenprox) with an IGR (Gentrol) for comprehensive life cycle control.",
+                    "Provides immediate knockdown and residual kill of adults, plus long-term population suppression."
+                ],
+                "risks_drawbacks": [
+                    "Both products contain petroleum distillates, which could increase odor or risk of surface damage."
+                ],
+                "would_it_work": {
+                    "answer": "Yes",
+                    "rationale": "This is a standard and effective integrated pest management strategy. The solvent-based EC and concentrate formulations are physically compatible."
+                },
+                "conclusion": "A good combination for controlling active infestations and preventing future generations. Jar testing is a good practice but compatibility is expected."
+            },
+            {
+                "with_product_id": 26,
+                "with_product_title": "SHOCKWAVE FOGGING CONCENTRATE",
+                "potential_benefits": [
+                    "Adds a second IGR (Hydroprene) to Shockwave's existing IGR (Pyriproxyfen)."
+                ],
+                "risks_drawbacks": [
+                    "Highly redundant; Shockwave is already a complete product with an IGR.",
+                    "Mixing two IGRs is generally not necessary and not cost-effective.",
+                    "Both are solvent-based, increasing the total solvent load in the application."
+                ],
+                "would_it_work": {
+                    "answer": "Yes",
+                    "rationale": "The petroleum distillate-based formulations are physically compatible. However, the mixture is functionally redundant."
+                },
+                "conclusion": "Compatible, but not a practical or recommended mix. Use Shockwave alone."
+            },
+            {
+                "with_product_id": 25,
+                "with_product_title": "Precor IGR Concentrate",
+                "potential_benefits": [
+                    "Combines two different IGRs, which could theoretically combat IGR resistance in some populations."
+                ],
+                "risks_drawbacks": [
+                    "Redundant action for most applications; mixing two IGRs is rarely necessary.",
+                    "Increases cost and chemical load without a clear, proven benefit."
+                ],
+                "would_it_work": {
+                    "answer": "Yes",
+                    "rationale": "Both are IGR concentrates containing petroleum distillates, so they are physically compatible. The combination is functionally redundant, however."
+                },
+                "conclusion": "Compatible, but not recommended. Choose the IGR best suited for the target pest rather than mixing them."
+            },
+            {
+                "with_product_id": 27,
+                "with_product_title": "Alpine WSG Water Soluble Granule Insecticide",
+                "potential_benefits": [
+                    "Classic IGR + adulticide combination for full life cycle control.",
+                    "Combines a non-repellent adulticide with a non-repellent IGR effect.",
+                    "Excellent for resistance management (Group 4A + Group 7A)."
+                ],
+                "risks_drawbacks": [
+                    "Potential for physical incompatibility between the solvent-based Gentrol and the water-soluble Alpine WSG."
+                ],
+                "would_it_work": {
+                    "answer": "Uncertain",
+                    "rationale": "Mixing a petroleum distillate-based concentrate with a product that forms a true solution in water can be unpredictable. The solvents could affect the stability of the final dilution."
+                },
+                "conclusion": "Functionally an excellent pairing, but a jar test is critical to ensure physical compatibility before tank mixing."
+            },
+            {
+                "with_product_id": 28,
+                "with_product_title": "PT Alpine Pressurized Insecticide",
+                "potential_benefits": [
+                    "Not applicable; not intended for tank mixing."
+                ],
+                "risks_drawbacks": [
+                    "Aerosol products are not designed to be mixed with liquid concentrates in a sprayer."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "PT Alpine is a ready-to-use aerosol formulation and cannot be tank-mixed with a liquid IGR concentrate."
+                },
+                "conclusion": "Do not mix. Use sequentially, such as applying Gentrol IGR concentrate as a broadcast and Alpine PT as a crack and crevice treatment."
+            },
+            {
+                "with_product_id": 1,
+                "with_product_title": "Temprid FX",
+                "potential_benefits": [
+                    "Excellent IGR + adulticide combination, providing two adulticide modes of action (neonicotinoid, pyrethroid) and one IGR.",
+                    "Comprehensive control for tough pests like cockroaches or bed bugs."
+                ],
+                "risks_drawbacks": [
+                    "High risk of physical incompatibility between the solvent-based Gentrol and the water-based Temprid FX SC formulation."
+                ],
+                "would_it_work": {
+                    "answer": "Uncertain",
+                    "rationale": "Mixing a petroleum distillate-based IGR concentrate with a water-based suspension concentrate is likely to cause formulation instability, such as particle agglomeration or separation."
+                },
+                "conclusion": "A powerful combination on paper, but very risky to tank mix. A jar test is mandatory, but sequential application is the safest approach."
+            },
+            {
+                "with_product_id": 2,
+                "with_product_title": "Suspend PolyZone",
+                "potential_benefits": [
+                    "Combines a long-residual adulticide with a long-residual IGR for extended control.",
+                    "Excellent for breaking pest life cycles in persistent outdoor or indoor situations."
+                ],
+                "risks_drawbacks": [
+                    "The petroleum distillates in Gentrol are highly likely to damage or dissolve the polymer microcapsules in Suspend PolyZone."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "The solvent-based Gentrol formulation is chemically incompatible with the protective polymer shell of Suspend PolyZone, which would negate its primary advantage."
+                },
+                "conclusion": "Do not mix due to formulation incompatibility. Apply sequentially to achieve the desired combined effect."
+            },
+            {
+                "with_product_id": 11,
+                "with_product_title": "Demand CS Insecticide",
+                "potential_benefits": [
+                    "Pairs a long-residual adulticide with a long-residual IGR.",
+                    "Offers excellent, extended control of pest life cycles."
+                ],
+                "risks_drawbacks": [
+                    "Petroleum distillates in Gentrol IGR may damage the microcapsules of Demand CS, compromising its residual performance."
+                ],
+                "would_it_work": {
+                    "answer": "Uncertain",
+                    "rationale": "The solvent carrier in Gentrol poses a significant risk to the integrity of the microcapsules in Demand CS. This can lead to formulation failure."
+                },
+                "conclusion": "Avoid mixing due to the high risk of chemical incompatibility. A jar test is required, but sequential application is a safer alternative."
+            },
+            {
+                "with_product_id": 12,
+                "with_product_title": "ExciteR",
+                "potential_benefits": [
+                    "Combines a fast-acting, flushing adulticide (ExciteR) with a long-term IGR (Gentrol).",
+                    "Excellent for clean-outs, providing immediate results and long-term population control."
+                ],
+                "risks_drawbacks": [
+                    "Both products contain petroleum distillates, resulting in a high-solvent mixture."
+                ],
+                "would_it_work": {
+                    "answer": "Yes",
+                    "rationale": "Both products are formulated with petroleum distillates and are chemically compatible. This is a classic combination for flushing and residual IGR action."
+                },
+                "conclusion": "A very effective and common pairing for pest management clean-outs. Both products are solvent-based and mix well."
+            },
+            {
+                "with_product_id": 16,
+                "with_product_title": "InVade Bio Drain",
+                "potential_benefits": [
+                    "None."
+                ],
+                "risks_drawbacks": [
+                    "Gentrol contains insecticide and solvents that will kill the beneficial microbes in InVade.",
+                    "The InVade label advises against mixing with such chemicals."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "The chemical nature of the IGR concentrate is antimicrobial and will destroy the biological activity of the drain cleaner."
+                },
+                "conclusion": "Do not mix. The products are chemically and functionally incompatible."
+            },
+            {
+                "with_product_id": 17,
+                "with_product_title": "InVade Bio Foam",
+                "potential_benefits": [
+                    "None."
+                ],
+                "risks_drawbacks": [
+                    "The IGR concentrate is a pesticide and will kill the microbes in the foam product.",
+                    "Mixing violates the intended use of the biological cleaner."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "The pesticide formulation will render the microbial component of InVade Bio Foam ineffective."
+                },
+                "conclusion": "Do not mix. The products have opposing mechanisms and are incompatible."
+            },
+            {
+                "with_product_id": 18,
+                "with_product_title": "Onslaught Microencapsulated Insecticide",
+                "potential_benefits": [
+                    "Creates a powerful combination of a long-residual adulticide and a long-residual IGR.",
+                    "Excellent for comprehensive, long-term pest control."
+                ],
+                "risks_drawbacks": [
+                    "The petroleum distillates in Gentrol are likely to damage the microcapsules of Onslaught, reducing its residual performance.",
+                    "High risk of formulation instability."
+                ],
+                "would_it_work": {
+                    "answer": "Uncertain",
+                    "rationale": "Mixing a solvent-based concentrate with a water-based microencapsulated product is not recommended due to the risk of the solvent compromising the capsule integrity."
+                },
+                "conclusion": "Avoid mixing. A jar test is mandatory to check for physical compatibility, but applying sequentially is the safer method."
+            }
+        ]
+    },
+    {
+        "product_id": 25,
+        "product_title": "Precor IGR Concentrate",
+        "analyses": [
+            {
+                "with_product_id": 24,
+                "with_product_title": "Zenprox EC",
+                "potential_benefits": [
+                    "Excellent adulticide + IGR combination for flea control.",
+                    "Zenprox provides knockdown of adult fleas while Precor prevents reinfestation for up to 7 months.",
+                    "The Precor label explicitly suggests tank-mixing with an adulticide."
+                ],
+                "risks_drawbacks": [
+                    "Both products contain petroleum distillates, potentially increasing odor."
+                ],
+                "would_it_work": {
+                    "answer": "Yes",
+                    "rationale": "This is a classic and label-recommended combination for flea management. The formulations (EC and concentrate with solvents) are compatible."
+                },
+                "conclusion": "An ideal and recommended tank mix for effective, long-term flea control. Follow label directions for mixing."
+            },
+            {
+                "with_product_id": 26,
+                "with_product_title": "SHOCKWAVE FOGGING CONCENTRATE",
+                "potential_benefits": [
+                    "Adds a second IGR ((S)-Methoprene) to Shockwave's existing IGR (Pyriproxyfen)."
+                ],
+                "risks_drawbacks": [
+                    "Functionally redundant, as Shockwave is a comprehensive product that already includes an IGR.",
+                    "Mixing two IGRs is typically unnecessary."
+                ],
+                "would_it_work": {
+                    "answer": "Yes",
+                    "rationale": "Both are solvent-based concentrates and are physically compatible. The combination is simply redundant from an IGR standpoint."
+                },
+                "conclusion": "Compatible, but not a practical mixture. Use Shockwave by itself."
+            },
+            {
+                "with_product_id": 30,
+                "with_product_title": "Gentrol IGR Concentrate",
+                "potential_benefits": [
+                    "Theoretically provides action against a broader range of IGR-resistant pests by using two different actives."
+                ],
+                "risks_drawbacks": [
+                    "Highly redundant; mixing two IGRs offers little practical benefit in most situations.",
+                    "Increases cost and chemical load without a clear advantage."
+                ],
+                "would_it_work": {
+                    "answer": "Yes",
+                    "rationale": "Both are petroleum distillate-based IGR concentrates and are physically compatible. The combination is functionally duplicative."
+                },
+                "conclusion": "Compatible but not recommended. Select the most appropriate IGR for the target pest instead of combining them."
+            },
+            {
+                "with_product_id": 27,
+                "with_product_title": "Alpine WSG Water Soluble Granule Insecticide",
+                "potential_benefits": [
+                    "Combines a non-repellent adulticide with IGR activity.",
+                    "Good for resistance management (Group 4A + Group 7A)."
+                ],
+                "risks_drawbacks": [
+                    "Potential for physical incompatibility between the petroleum distillate-based Precor and the water-soluble Alpine WSG."
+                ],
+                "would_it_work": {
+                    "answer": "Uncertain",
+                    "rationale": "Tank mixing a solvent-based concentrate with a water-soluble granule can lead to an unstable final dilution. The physical compatibility is not guaranteed."
+                },
+                "conclusion": "A jar test is required to ensure the products can be mixed physically. This is a functionally sound pairing if they are compatible."
+            },
+            {
+                "with_product_id": 28,
+                "with_product_title": "PT Alpine Pressurized Insecticide",
+                "potential_benefits": [
+                    "Not applicable; not intended for tank mixing."
+                ],
+                "risks_drawbacks": [
+                    "Aerosol products are not designed to be mixed with liquid concentrates in a sprayer."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "PT Alpine is a ready-to-use aerosol formulation and cannot be tank-mixed with a liquid IGR concentrate."
+                },
+                "conclusion": "Do not mix. Use sequentially for different application needs (e.g., Precor for broadcast, Alpine PT for crack and crevice)."
+            },
+            {
+                "with_product_id": 1,
+                "with_product_title": "Temprid FX",
+                "potential_benefits": [
+                    "Creates a powerful mixture with two adulticide modes of action plus an IGR for flea and bed bug control.",
+                    "Precor label allows for tank mixing with an adulticide."
+                ],
+                "risks_drawbacks": [
+                    "High risk of physical incompatibility between the solvent-based Precor and the water-based Temprid FX SC formulation."
+                ],
+                "would_it_work": {
+                    "answer": "Uncertain",
+                    "rationale": "The petroleum distillates in Precor can cause the suspended particles in the Temprid FX SC formulation to agglomerate or fall out of suspension."
+                },
+                "conclusion": "This is a very risky tank mix. A jar test is absolutely mandatory. Applying sequentially after drying is a much safer option."
+            },
+            {
+                "with_product_id": 2,
+                "with_product_title": "Suspend PolyZone",
+                "potential_benefits": [
+                    "Combines a long-residual adulticide with a long-residual IGR for powerful, extended flea control."
+                ],
+                "risks_drawbacks": [
+                    "The petroleum distillates in Precor are highly likely to dissolve the polymer microcapsules of Suspend PolyZone, destroying its primary feature."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "The solvent base of Precor is chemically incompatible with the protective polymer shell of Suspend PolyZone. The mixture would damage the formulation."
+                },
+                "conclusion": "Do not mix. The formulations are incompatible. Apply sequentially if both effects are desired."
+            },
+            {
+                "with_product_id": 11,
+                "with_product_title": "Demand CS Insecticide",
+                "potential_benefits": [
+                    "Combines a long-lasting microencapsulated adulticide with a long-lasting IGR.",
+                    "Excellent combination for severe, persistent flea infestations."
+                ],
+                "risks_drawbacks": [
+                    "The petroleum distillates in Precor pose a high risk of damaging the microcapsules in Demand CS."
+                ],
+                "would_it_work": {
+                    "answer": "Uncertain",
+                    "rationale": "Mixing a solvent-based concentrate with a microencapsulated suspension is not recommended. The solvent can compromise the capsule walls, leading to formulation failure and loss of residual."
+                },
+                "conclusion": "Mixing is not recommended due to chemical incompatibility risk. A jar test is required, but sequential application is safer."
+            },
+            {
+                "with_product_id": 12,
+                "with_product_title": "ExciteR",
+                "potential_benefits": [
+                    "Classic combination for flea clean-outs: fast knockdown/flushing from ExciteR plus long-term IGR control from Precor."
+                ],
+                "risks_drawbacks": [
+                    "Both products are petroleum distillate-based, creating a high-solvent mixture."
+                ],
+                "would_it_work": {
+                    "answer": "Yes",
+                    "rationale": "Both are solvent-based concentrates and are physically compatible. This is a very common and effective combination for flea control."
+                },
+                "conclusion": "An excellent and widely used combination for integrated flea management. The formulations are compatible."
+            },
+            {
+                "with_product_id": 16,
+                "with_product_title": "InVade Bio Drain",
+                "potential_benefits": [
+                    "None."
+                ],
+                "risks_drawbacks": [
+                    "The pesticide formulation of Precor will kill the microbes in InVade.",
+                    "The InVade label explicitly warns against mixing with such chemicals."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "The IGR concentrate is a pesticide and is antimicrobial, which would negate the biological action of the drain cleaner."
+                },
+                "conclusion": "Do not mix. The products are fundamentally incompatible."
+            },
+            {
+                "with_product_id": 17,
+                "with_product_title": "InVade Bio Foam",
+                "potential_benefits": [
+                    "None."
+                ],
+                "risks_drawbacks": [
+                    "The pesticide in Precor will destroy the microbial culture in InVade Bio Foam."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "The insecticide concentrate will kill the active microbial ingredients in the foam, rendering it useless."
+                },
+                "conclusion": "Do not mix. The products are incompatible and serve conflicting purposes."
+            },
+            {
+                "with_product_id": 18,
+                "with_product_title": "Onslaught Microencapsulated Insecticide",
+                "potential_benefits": [
+                    "Excellent adulticide + IGR combination for long-term control of fleas and other pests.",
+                    "Combines Onslaught's long residual kill with Precor's life cycle disruption."
+                ],
+                "risks_drawbacks": [
+                    "High risk of formulation damage; the petroleum distillates in Precor could destroy the microcapsules in Onslaught.",
+                    "Potential for physical incompatibility."
+                ],
+                "would_it_work": {
+                    "answer": "Uncertain",
+                    "rationale": "The solvent-based nature of Precor makes it a poor candidate for mixing with a water-based microencapsulated product like Onslaught, as it can damage the capsules."
+                },
+                "conclusion": "Avoid mixing. The risk of chemical incompatibility is high. Perform a jar test, but sequential application is strongly recommended."
+            }
+        ]
+    },
+    {
+        "product_id": 27,
+        "product_title": "Alpine WSG Water Soluble Granule Insecticide",
+        "analyses": [
+            {
+                "with_product_id": 24,
+                "with_product_title": "Zenprox EC",
+                "potential_benefits": [
+                    "Adds a fast-acting, synergized pyrethroid for quick knockdown.",
+                    "Combines a repellent adulticide with a non-repellent one for a dual effect."
+                ],
+                "risks_drawbacks": [
+                    "The repellent nature of Zenprox (pyrethroid) is antagonistic to the non-repellent, transfer-effect goal of Alpine WSG.",
+                    "Potential for physical incompatibility between the dissolved granules and the emulsifiable concentrate."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "The conflicting modes of action (repellent vs. non-repellent) make this mixture counterproductive. Pests may be repelled by the Zenprox before they can pick up a lethal dose of the slower-acting Alpine."
+                },
+                "conclusion": "Do not mix. The products work against each other. Use separately based on the desired effect (repellency vs. non-repellency)."
+            },
+            {
+                "with_product_id": 26,
+                "with_product_title": "SHOCKWAVE FOGGING CONCENTRATE",
+                "potential_benefits": [
+                    "Adds knockdown (pyrethrins), a residual pyrethroid, and an IGR.",
+                    "Creates a mixture with three different adulticide modes of action."
+                ],
+                "risks_drawbacks": [
+                    "Severe risk of physical incompatibility between a water-soluble granule and an oil-based fogging concentrate.",
+                    "The repellent pyrethrins in Shockwave will negate the non-repellent benefit of Alpine WSG."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "The formulations are chemically incompatible (water-soluble solid vs. oil-based liquid). Functionally, the repellent and non-repellent properties conflict directly."
+                },
+                "conclusion": "Do not mix. The products are incompatible in every respect."
+            },
+            {
+                "with_product_id": 30,
+                "with_product_title": "Gentrol IGR Concentrate",
+                "potential_benefits": [
+                    "Excellent pairing of a non-repellent adulticide with a long-lasting IGR for full life cycle control.",
+                    "Both products support a non-repellent treatment strategy.",
+                    "Great for resistance management."
+                ],
+                "risks_drawbacks": [
+                    "Physical compatibility is questionable due to Gentrol's petroleum distillate base and Alpine's water-soluble nature."
+                ],
+                "would_it_work": {
+                    "answer": "Uncertain",
+                    "rationale": "While functionally an ideal combination, the physical compatibility of a solvent-based concentrate and a water-soluble granule in the same tank is not guaranteed."
+                },
+                "conclusion": "This is a strategically strong pairing. A jar test is essential to confirm they can be mixed without separation or precipitation."
+            },
+            {
+                "with_product_id": 25,
+                "with_product_title": "Precor IGR Concentrate",
+                "potential_benefits": [
+                    "Combines a non-repellent adulticide with a proven IGR for flea control.",
+                    "Good resistance management profile."
+                ],
+                "risks_drawbacks": [
+                    "Physical compatibility is uncertain between Precor's petroleum-based formulation and Alpine's water-soluble granules."
+                ],
+                "would_it_work": {
+                    "answer": "Uncertain",
+                    "rationale": "The oil-based nature of the Precor concentrate could lead to an unstable mixture when combined with the dissolved Alpine WSG solution."
+                },
+                "conclusion": "A jar test is required to ensure physical compatibility. If they mix well, it is a functionally effective combination for flea control."
+            },
+            {
+                "with_product_id": 28,
+                "with_product_title": "PT Alpine Pressurized Insecticide",
+                "potential_benefits": [
+                    "Not applicable; not intended for tank mixing."
+                ],
+                "risks_drawbacks": [
+                    "Redundant active ingredient (Dinotefuran).",
+                    "Aerosol cans cannot be mixed with water-soluble granules in a sprayer."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "One is a ready-to-use aerosol and the other is a concentrate mixed with water. They cannot be combined in application equipment."
+                },
+                "conclusion": "Do not mix. They share the same active ingredient and are formulated for different application methods."
+            },
+            {
+                "with_product_id": 1,
+                "with_product_title": "Temprid FX",
+                "potential_benefits": [
+                    "Adds a pyrethroid (Beta-cyfluthrin) for faster knockdown.",
+                    "Combines three active ingredients for very broad-spectrum control."
+                ],
+                "risks_drawbacks": [
+                    "Redundant neonicotinoid modes of action (Dinotefuran and Imidacloprid are both Group 4A).",
+                    "The repellency from the pyrethroid in Temprid could interfere with Alpine's non-repellent effect."
+                ],
+                "would_it_work": {
+                    "answer": "Yes",
+                    "rationale": "Alpine WSG dissolves into a true solution, which is generally compatible with water-based suspension concentrates like Temprid FX. However, the mixture is functionally questionable due to redundant and conflicting modes of action."
+                },
+                "conclusion": "Physically compatible, but strategically poor due to redundant neonicotinoids and repellent/non-repellent conflict. Not a recommended mix."
+            },
+            {
+                "with_product_id": 2,
+                "with_product_title": "Suspend PolyZone",
+                "potential_benefits": [
+                    "Combines a long-lasting repellent pyrethroid with a non-repellent neonicotinoid."
+                ],
+                "risks_drawbacks": [
+                    "The repellent nature of Suspend PolyZone is antagonistic to the non-repellent mode of action of Alpine WSG.",
+                    "Reduces the effectiveness of the non-repellent transfer effect."
+                ],
+                "would_it_work": {
+                    "answer": "Uncertain",
+                    "rationale": "While likely physically compatible (WSG solution + SC suspension), the mixture is functionally flawed. The repellency of the pyrethroid works against the non-repellency of the neonicotinoid."
+                },
+                "conclusion": "Do not mix due to conflicting repellent/non-repellent properties. Use separately for different strategic purposes."
+            },
+            {
+                "with_product_id": 11,
+                "with_product_title": "Demand CS Insecticide",
+                "potential_benefits": [
+                    "Combines a fast-acting neonicotinoid with a long-lasting microencapsulated pyrethroid.",
+                    "Provides two different modes of action for resistance management."
+                ],
+                "risks_drawbacks": [
+                    "The potential repellency of the pyrethroid in Demand CS may conflict with the non-repellent action of Alpine WSG."
+                ],
+                "would_it_work": {
+                    "answer": "Yes",
+                    "rationale": "Alpine WSG (a true solution) should be physically compatible with Demand CS (a water-based capsule suspension). A jar test is still good practice."
+                },
+                "conclusion": "A potentially effective combination for broad-spectrum control, though repellency conflict should be considered. Jar test before use."
+            },
+            {
+                "with_product_id": 12,
+                "with_product_title": "ExciteR",
+                "potential_benefits": [
+                    "Adds extremely fast knockdown and flushing action from synergized pyrethrins."
+                ],
+                "risks_drawbacks": [
+                    "Strong repellency from ExciteR will completely negate the non-repellent benefit of Alpine WSG.",
+                    "High risk of physical incompatibility between the water-soluble granules and the petroleum-based ExciteR concentrate."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "The products are incompatible both physically (water solution vs. oil concentrate) and functionally (non-repellent vs. highly repellent flushing agent)."
+                },
+                "conclusion": "Do not mix. The products are completely incompatible."
+            },
+            {
+                "with_product_id": 16,
+                "with_product_title": "InVade Bio Drain",
+                "potential_benefits": [
+                    "None."
+                ],
+                "risks_drawbacks": [
+                    "Alpine WSG is an insecticide and will kill the beneficial microbes in InVade.",
+                    "The InVade label warns against mixing with antimicrobial products."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "The insecticide will render the microbial drain cleaner useless. The product label for InVade forbids this type of mixture."
+                },
+                "conclusion": "Do not mix. These products are fundamentally incompatible."
+            },
+            {
+                "with_product_id": 17,
+                "with_product_title": "InVade Bio Foam",
+                "potential_benefits": [
+                    "None."
+                ],
+                "risks_drawbacks": [
+                    "The dinotefuran insecticide will kill the microbes, making the foam ineffective.",
+                    "Mixing pesticide with a biological product is counterproductive."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "Alpine WSG is a pesticide that will destroy the active microbial ingredient in InVade Bio Foam."
+                },
+                "conclusion": "Do not mix. The products are incompatible."
+            },
+            {
+                "with_product_id": 18,
+                "with_product_title": "Onslaught Microencapsulated Insecticide",
+                "potential_benefits": [
+                    "Combines a neonicotinoid with a microencapsulated pyrethroid for dual modes of action and long residual.",
+                    "Good for resistance management."
+                ],
+                "risks_drawbacks": [
+                    "The potential repellency of the pyrethroid in Onslaught may interfere with the non-repellent properties of Alpine WSG."
+                ],
+                "would_it_work": {
+                    "answer": "Yes",
+                    "rationale": "As a water-soluble granule that forms a true solution, Alpine WSG should be physically compatible with a water-based microencapsulated suspension like Onslaught. A jar test is recommended as a precaution."
+                },
+                "conclusion": "A good combination for resistance management. Jar test to ensure compatibility, but mixing should be possible."
+            }
+        ]
+    },
+    {
+        "product_id": 28,
+        "product_title": "PT Alpine Pressurized Insecticide",
+        "analyses": [
+            {
+                "with_product_id": 24,
+                "with_product_title": "Zenprox EC",
+                "potential_benefits": [
+                    "Not applicable."
+                ],
+                "risks_drawbacks": [
+                    "Products cannot be mixed.",
+                    "One is a ready-to-use aerosol, the other is a liquid concentrate for dilution."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "A ready-to-use aerosol cannot be tank-mixed with a liquid concentrate."
+                },
+                "conclusion": "Do not mix. The delivery systems are incompatible."
+            },
+            {
+                "with_product_id": 26,
+                "with_product_title": "SHOCKWAVE FOGGING CONCENTRATE",
+                "potential_benefits": [
+                    "Not applicable."
+                ],
+                "risks_drawbacks": [
+                    "Products cannot be mixed.",
+                    "One is a ready-to-use aerosol, the other is a liquid concentrate for dilution."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "A ready-to-use aerosol cannot be tank-mixed with a liquid concentrate."
+                },
+                "conclusion": "Do not mix. The delivery systems are incompatible."
+            },
+            {
+                "with_product_id": 30,
+                "with_product_title": "Gentrol IGR Concentrate",
+                "potential_benefits": [
+                    "Not applicable."
+                ],
+                "risks_drawbacks": [
+                    "Products cannot be mixed.",
+                    "One is a ready-to-use aerosol, the other is a liquid concentrate for dilution."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "A ready-to-use aerosol cannot be tank-mixed with a liquid concentrate."
+                },
+                "conclusion": "Do not mix. The delivery systems are incompatible. They can be used sequentially."
+            },
+            {
+                "with_product_id": 25,
+                "with_product_title": "Precor IGR Concentrate",
+                "potential_benefits": [
+                    "Not applicable."
+                ],
+                "risks_drawbacks": [
+                    "Products cannot be mixed.",
+                    "One is a ready-to-use aerosol, the other is a liquid concentrate for dilution."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "A ready-to-use aerosol cannot be tank-mixed with a liquid concentrate."
+                },
+                "conclusion": "Do not mix. The delivery systems are incompatible. They can be used sequentially."
+            },
+            {
+                "with_product_id": 27,
+                "with_product_title": "Alpine WSG Water Soluble Granule Insecticide",
+                "potential_benefits": [
+                    "Not applicable."
+                ],
+                "risks_drawbacks": [
+                    "Redundant active ingredient (Dinotefuran).",
+                    "Products cannot be mixed; different formulation and delivery systems."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "A ready-to-use aerosol cannot be tank-mixed with a water-soluble granule concentrate."
+                },
+                "conclusion": "Do not mix. The products are for different application types and share the same active ingredient."
+            },
+            {
+                "with_product_id": 1,
+                "with_product_title": "Temprid FX",
+                "potential_benefits": [
+                    "Not applicable."
+                ],
+                "risks_drawbacks": [
+                    "Products cannot be mixed.",
+                    "One is a ready-to-use aerosol, the other is a liquid concentrate for dilution."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "A ready-to-use aerosol cannot be tank-mixed with a liquid concentrate."
+                },
+                "conclusion": "Do not mix. The delivery systems are incompatible."
+            },
+            {
+                "with_product_id": 2,
+                "with_product_title": "Suspend PolyZone",
+                "potential_benefits": [
+                    "Not applicable."
+                ],
+                "risks_drawbacks": [
+                    "Products cannot be mixed.",
+                    "One is a ready-to-use aerosol, the other is a liquid concentrate for dilution."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "A ready-to-use aerosol cannot be tank-mixed with a liquid concentrate."
+                },
+                "conclusion": "Do not mix. The delivery systems are incompatible."
+            },
+            {
+                "with_product_id": 11,
+                "with_product_title": "Demand CS Insecticide",
+                "potential_benefits": [
+                    "Not applicable."
+                ],
+                "risks_drawbacks": [
+                    "Products cannot be mixed.",
+                    "One is a ready-to-use aerosol, the other is a liquid concentrate for dilution."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "A ready-to-use aerosol cannot be tank-mixed with a liquid concentrate."
+                },
+                "conclusion": "Do not mix. The delivery systems are incompatible."
+            },
+            {
+                "with_product_id": 12,
+                "with_product_title": "ExciteR",
+                "potential_benefits": [
+                    "Not applicable."
+                ],
+                "risks_drawbacks": [
+                    "Products cannot be mixed.",
+                    "One is a ready-to-use aerosol, the other is a liquid concentrate for dilution."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "A ready-to-use aerosol cannot be tank-mixed with a liquid concentrate."
+                },
+                "conclusion": "Do not mix. The delivery systems are incompatible."
+            },
+            {
+                "with_product_id": 16,
+                "with_product_title": "InVade Bio Drain",
+                "potential_benefits": [
+                    "Not applicable."
+                ],
+                "risks_drawbacks": [
+                    "Products cannot be mixed.",
+                    "The insecticide in PT Alpine would kill the microbes in InVade."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "A ready-to-use aerosol cannot be mixed with a liquid biological cleaner, and the insecticide would destroy the microbes."
+                },
+                "conclusion": "Do not mix. The products are incompatible."
+            },
+            {
+                "with_product_id": 17,
+                "with_product_title": "InVade Bio Foam",
+                "potential_benefits": [
+                    "Not applicable."
+                ],
+                "risks_drawbacks": [
+                    "Products cannot be mixed.",
+                    "The insecticide in PT Alpine would kill the microbes in InVade."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "A ready-to-use aerosol cannot be mixed with a biological concentrate, and the pesticide would kill the microbes."
+                },
+                "conclusion": "Do not mix. The products are incompatible."
+            },
+            {
+                "with_product_id": 18,
+                "with_product_title": "Onslaught Microencapsulated Insecticide",
+                "potential_benefits": [
+                    "Not applicable."
+                ],
+                "risks_drawbacks": [
+                    "Products cannot be mixed.",
+                    "One is a ready-to-use aerosol, the other is a liquid concentrate for dilution."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "A ready-to-use aerosol cannot be tank-mixed with a liquid concentrate."
+                },
+                "conclusion": "Do not mix. The delivery systems are incompatible."
+            }
+        ]
+    },
+    {
+        "product_id": 1,
+        "product_title": "Temprid FX",
+        "analyses": [
+            {
+                "with_product_id": 24,
+                "with_product_title": "Zenprox EC",
+                "potential_benefits": [
+                    "Adds synergized knockdown and flushing action.",
+                    "Adds a third adulticide active (etofenprox)."
+                ],
+                "risks_drawbacks": [
+                    "High risk of physical incompatibility between the water-based SC (Temprid) and solvent-based EC (Zenprox).",
+                    "Redundant pyrethroid action (Group 3A)."
+                ],
+                "would_it_work": {
+                    "answer": "Uncertain",
+                    "rationale": "The petroleum distillates in Zenprox EC are likely to cause the suspended particles in Temprid FX to fall out of suspension, leading to an unstable and ineffective mix."
+                },
+                "conclusion": "Avoid mixing due to high incompatibility risk. A jar test is essential, but sequential application is much safer."
+            },
+            {
+                "with_product_id": 26,
+                "with_product_title": "SHOCKWAVE FOGGING CONCENTRATE",
+                "potential_benefits": [
+                    "Adds flushing action (pyrethrins) and an IGR (pyriproxyfen).",
+                    "Creates a mix with four different adulticide actives."
+                ],
+                "risks_drawbacks": [
+                    "Extreme risk of physical incompatibility between a water-based SC and a petroleum-based fogging concentrate.",
+                    "The repellency of Shockwave would negate the non-repellent benefits of Temprid's imidacloprid.",
+                    "Extremely complex mix of active ingredients."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "The formulations (water-based SC vs. oil-based EC) are chemically incompatible and will likely separate. The repellent and non-repellent properties are functionally antagonistic."
+                },
+                "conclusion": "Do not mix. The products are incompatible both physically and functionally."
+            },
+            {
+                "with_product_id": 30,
+                "with_product_title": "Gentrol IGR Concentrate",
+                "potential_benefits": [
+                    "Creates a powerful mix with two adulticide modes of action and an IGR.",
+                    "Excellent for severe infestations of cockroaches or bed bugs requiring life cycle control."
+                ],
+                "risks_drawbacks": [
+                    "High risk of physical incompatibility; Gentrol's petroleum distillates could destabilize Temprid's water-based suspension."
+                ],
+                "would_it_work": {
+                    "answer": "Uncertain",
+                    "rationale": "Mixing a solvent-based concentrate with a water-based suspension concentrate (SC) is very risky and can lead to clogged equipment and reduced efficacy."
+                },
+                "conclusion": "This is a strategically potent combination, but a jar test is mandatory to check for physical compatibility. Sequential application is the safer choice."
+            },
+            {
+                "with_product_id": 25,
+                "with_product_title": "Precor IGR Concentrate",
+                "potential_benefits": [
+                    "Adds a long-lasting IGR for flea control to Temprid's adulticide action.",
+                    "Provides immediate kill and long-term prevention of flea reinfestation."
+                ],
+                "risks_drawbacks": [
+                    "The petroleum distillates in Precor are likely to be incompatible with the water-based suspension of Temprid FX."
+                ],
+                "would_it_work": {
+                    "answer": "Uncertain",
+                    "rationale": "A solvent-based concentrate (Precor) and a water-based suspension (Temprid FX) are not predictably compatible and may separate or form precipitates."
+                },
+                "conclusion": "A jar test is required before tank mixing. Given the incompatibility risk, applying the products sequentially would be a safer and more effective strategy."
+            },
+            {
+                "with_product_id": 27,
+                "with_product_title": "Alpine WSG Water Soluble Granule Insecticide",
+                "potential_benefits": [
+                    "Adds a third mode of action if there's resistance to pyrethroids or imidacloprid.",
+                    "Both products support a non-repellent strategy."
+                ],
+                "risks_drawbacks": [
+                    "Redundant neonicotinoid modes of action (both are Group 4A).",
+                    "The added pyrethroid from Temprid adds some repellency, which can conflict with a pure non-repellent approach."
+                ],
+                "would_it_work": {
+                    "answer": "Yes",
+                    "rationale": "A water-based SC (Temprid) and a water-soluble granule (Alpine WSG) are generally compatible. However, the combination of two Group 4A insecticides is redundant."
+                },
+                "conclusion": "Physically compatible, but not a recommended mix due to the redundant neonicotinoid actives. Use one or the other."
+            },
+            {
+                "with_product_id": 28,
+                "with_product_title": "PT Alpine Pressurized Insecticide",
+                "potential_benefits": [
+                    "Not applicable; not intended for tank mixing."
+                ],
+                "risks_drawbacks": [
+                    "Aerosol products are not designed to be mixed with liquid concentrates in a sprayer."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "PT Alpine is a ready-to-use aerosol formulation and cannot be tank-mixed with a liquid concentrate like Temprid FX."
+                },
+                "conclusion": "Do not mix. The application systems are incompatible."
+            },
+            {
+                "with_product_id": 2,
+                "with_product_title": "Suspend PolyZone",
+                "potential_benefits": [
+                    "Combines the dual-action of Temprid with the extended residual of Suspend PolyZone."
+                ],
+                "risks_drawbacks": [
+                    "Redundant pyrethroid modes of action (Group 3A).",
+                    "Mixing two different suspension concentrates can sometimes lead to instability.",
+                    "The repellency of pyrethroids could conflict with the non-repellent imidacloprid."
+                ],
+                "would_it_work": {
+                    "answer": "Yes",
+                    "rationale": "Both are water-based suspension concentrates and are likely to be physically compatible. A jar test is still recommended to be certain."
+                },
+                "conclusion": "Likely compatible, but creates a mix with two pyrethroids and a neonicotinoid. This may be overly complex; sequential application may be better."
+            },
+            {
+                "with_product_id": 11,
+                "with_product_title": "Demand CS Insecticide",
+                "potential_benefits": [
+                    "Combines Temprid's dual modes of action with the long residual of an encapsulated pyrethroid."
+                ],
+                "risks_drawbacks": [
+                    "Redundant pyrethroid modes of action (Group 3A).",
+                    "Potential for repellency of pyrethroids to interfere with imidacloprid's non-repellent effect."
+                ],
+                "would_it_work": {
+                    "answer": "Yes",
+                    "rationale": "Both are water-based suspension formulations (SC and CS) and are generally compatible. A jar test is good practice."
+                },
+                "conclusion": "A compatible and powerful mix for long-lasting control, but consider the potential for pyrethroid repellency to affect the non-repellent component."
+            },
+            {
+                "with_product_id": 12,
+                "with_product_title": "ExciteR",
+                "potential_benefits": [
+                    "Adds potent, fast flushing and knockdown action to Temprid's residual control."
+                ],
+                "risks_drawbacks": [
+                    "High risk of physical incompatibility between the water-based Temprid SC and the petroleum-based ExciteR concentrate.",
+                    "Strong repellency of ExciteR would negate the non-repellent benefit of Temprid's imidacloprid."
+                ],
+                "would_it_work": {
+                    "answer": "Uncertain",
+                    "rationale": "The solvent-based EC formulation of ExciteR is likely to be incompatible with the water-based SC formulation of Temprid. Functionally, the repellent and non-repellent properties also conflict."
+                },
+                "conclusion": "Avoid mixing due to high risk of physical incompatibility and antagonistic modes of action. A jar test is required, but sequential use is far better."
+            },
+            {
+                "with_product_id": 16,
+                "with_product_title": "InVade Bio Drain",
+                "potential_benefits": [
+                    "None."
+                ],
+                "risks_drawbacks": [
+                    "The insecticides in Temprid FX will kill the beneficial microbes in InVade.",
+                    "InVade's label warns against mixing with antimicrobial products."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "Temprid FX is an insecticide and its active ingredients will destroy the microbial culture in the drain cleaner."
+                },
+                "conclusion": "Do not mix. The products are fundamentally incompatible."
+            },
+            {
+                "with_product_id": 17,
+                "with_product_title": "InVade Bio Foam",
+                "potential_benefits": [
+                    "None."
+                ],
+                "risks_drawbacks": [
+                    "Temprid's insecticides will kill the microbes in the foam.",
+                    "The mixture is counterproductive to the purpose of the biological cleaner."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "The insecticidal properties of Temprid FX will render the microbial components of InVade Bio Foam ineffective."
+                },
+                "conclusion": "Do not mix. They are incompatible products."
+            },
+            {
+                "with_product_id": 18,
+                "with_product_title": "Onslaught Microencapsulated Insecticide",
+                "potential_benefits": [
+                    "Combines the dual-action of Temprid with the long residual of Onslaught's encapsulated pyrethroid."
+                ],
+                "risks_drawbacks": [
+                    "Redundant pyrethroid modes of action (Group 3A).",
+                    "Potential for repellency from the pyrethroids to interfere with the non-repellent imidacloprid."
+                ],
+                "would_it_work": {
+                    "answer": "Yes",
+                    "rationale": "Both are water-based suspension formulations (SC and CS) and should be physically compatible. A jar test is still recommended."
+                },
+                "conclusion": "Likely compatible and creates a powerful residual spray. Consider the functional overlap and potential for repellency to affect behavior."
             }
         ]
     },
@@ -84,76 +1418,200 @@
         "product_title": "Suspend PolyZone",
         "analyses": [
             {
-                "with_product_id": 1,
-                "with_product_title": "Temprid FX",
+                "with_product_id": 24,
+                "with_product_title": "Zenprox EC",
                 "potential_benefits": [
-                    "Adds neonic (imidacloprid) ingestion activity to microencapsulated deltamethrin",
-                    "Potentially improved performance on porous exterior surfaces"
+                    "Adds a synergist (PBO) which may enhance the deltamethrin in Suspend.",
+                    "Adds a second pyrethroid active for rotational purposes."
                 ],
                 "risks_drawbacks": [
-                    "Elevated pyrethroid load increases off-target hazard",
-                    "Capsule–SC co-formulation may sediment or clog",
-                    "Possible off-label tank-mix limitations"
+                    "The petroleum distillates in Zenprox EC will dissolve the polymer microcapsules of Suspend PolyZone, destroying its long-residual feature.",
+                    "Redundant pyrethroid action."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "The solvent base of Zenprox EC is chemically incompatible with the polymer encapsulation technology of Suspend PolyZone. This mixture would damage the formulation and negate its key benefit."
+                },
+                "conclusion": "Do not mix. The formulations are incompatible. Apply sequentially if necessary."
+            },
+            {
+                "with_product_id": 26,
+                "with_product_title": "SHOCKWAVE FOGGING CONCENTRATE",
+                "potential_benefits": [
+                    "Adds fast knockdown (pyrethrins), synergists, and an IGR.",
+                    "Creates a multi-pronged attack with flushing, residual, and life cycle control."
+                ],
+                "risks_drawbacks": [
+                    "The petroleum distillates in Shockwave will destroy the polymer microcapsules of Suspend PolyZone.",
+                    "Completely negates the extended residual benefit of PolyZone technology."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "The oil/solvent-based fogging concentrate is chemically incompatible with the water-based polymer suspension of Suspend PolyZone. The solvents will compromise the capsules."
+                },
+                "conclusion": "Do not mix due to chemical incompatibility that would destroy the PolyZone feature."
+            },
+            {
+                "with_product_id": 30,
+                "with_product_title": "Gentrol IGR Concentrate",
+                "potential_benefits": [
+                    "Combines a premier long-residual adulticide with a long-acting IGR for superior, extended control.",
+                    "Excellent for breaking pest life cycles in challenging environments."
+                ],
+                "risks_drawbacks": [
+                    "The petroleum distillates in the Gentrol concentrate are highly likely to damage the polymer shells of Suspend PolyZone."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "The solvent-based formulation of Gentrol is chemically incompatible with the polymer microencapsulation of Suspend PolyZone, which would dissolve the protective shells and ruin the residual."
+                },
+                "conclusion": "Do not mix. The formulations are incompatible. Apply sequentially to achieve the desired effect."
+            },
+            {
+                "with_product_id": 25,
+                "with_product_title": "Precor IGR Concentrate",
+                "potential_benefits": [
+                    "Pairs a long-residual pyrethroid with a long-residual IGR for exceptional flea control.",
+                    "Provides knockdown and kill of adults plus up to 7 months of larval control."
+                ],
+                "risks_drawbacks": [
+                    "The petroleum distillates in Precor will likely dissolve or damage the polymer microcapsules in Suspend PolyZone."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "The solvent-based Precor is chemically incompatible with the water-based polymer suspension technology of Suspend PolyZone. This would destroy the long-residual properties of Suspend."
+                },
+                "conclusion": "Do not mix due to formulation incompatibility. For best results, apply sequentially after the first product has dried."
+            },
+            {
+                "with_product_id": 27,
+                "with_product_title": "Alpine WSG Water Soluble Granule Insecticide",
+                "potential_benefits": [
+                    "Adds a non-repellent neonicotinoid (Group 4A) for resistance management.",
+                    "Combines a perimeter residual with a systemic, non-repellent active."
+                ],
+                "risks_drawbacks": [
+                    "The repellent nature of the pyrethroid in Suspend conflicts with the non-repellent action of Alpine WSG."
                 ],
                 "would_it_work": {
                     "answer": "Uncertain",
-                    "rationale": "Both are water-based but rely on different polymer systems; physical compatibility not guaranteed."
+                    "rationale": "While physically compatible (water-based SC + WSG solution), the combination is functionally antagonistic. The repellency of Suspend may prevent pests from contacting the Alpine-treated zones."
                 },
-                "conclusion": "Jar test for 15–30 minutes with agitation. If any grit, creaming, or viscosity rise occurs, apply sequentially."
+                "conclusion": "Avoid mixing due to conflicting modes of action. Use separately, for example, Suspend for exterior perimeter and Alpine for targeted interior/non-repellent uses."
+            },
+            {
+                "with_product_id": 28,
+                "with_product_title": "PT Alpine Pressurized Insecticide",
+                "potential_benefits": [
+                    "Not applicable; not intended for tank mixing."
+                ],
+                "risks_drawbacks": [
+                    "Aerosol products are not designed to be mixed with liquid concentrates in a sprayer."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "PT Alpine is a ready-to-use aerosol formulation and cannot be tank-mixed with a liquid concentrate like Suspend PolyZone."
+                },
+                "conclusion": "Do not mix. The products are formulated for different application equipment."
+            },
+            {
+                "with_product_id": 1,
+                "with_product_title": "Temprid FX",
+                "potential_benefits": [
+                    "Adds a second mode of action (neonicotinoid) for resistance management.",
+                    "Combines long residual with the dual-action of Temprid."
+                ],
+                "risks_drawbacks": [
+                    "Redundant pyrethroid modes of action (Group 3A).",
+                    "Mixing two different suspension concentrates could have unforseen stability issues.",
+                    "Repellent pyrethroids may conflict with the non-repellent imidacloprid."
+                ],
+                "would_it_work": {
+                    "answer": "Yes",
+                    "rationale": "Both are water-based suspension concentrates and are likely to be physically compatible. A jar test is recommended to ensure the mixture remains stable."
+                },
+                "conclusion": "The products are likely compatible, creating a powerful but complex spray. Consider the functional overlaps before mixing."
             },
             {
                 "with_product_id": 11,
                 "with_product_title": "Demand CS Insecticide",
                 "potential_benefits": [
-                    "Two microencapsulated pyrethroids could extend perimeter residual",
-                    "Different capsule chemistries may offer surface adhesion diversity"
+                    "Both offer extended residual via microencapsulation, potentially enhancing overall longevity.",
+                    "Uses two different pyrethroids for rotation."
                 ],
                 "risks_drawbacks": [
-                    "High total pyrethroid concentration increases risk to aquatic life and pollinators",
-                    "Capsule–capsule interactions risk flocculation/settling",
-                    "Redundant MOA offers limited resistance benefit"
+                    "Redundant modes of action (both Group 3A pyrethroids).",
+                    "Mixing two different microencapsulated products offers no clear synergistic benefit."
                 ],
                 "would_it_work": {
-                    "answer": "Uncertain",
-                    "rationale": "Both CS/encapsulated systems; co-dispersion behavior is unpredictable without testing."
+                    "answer": "Yes",
+                    "rationale": "Both are water-based microencapsulated suspensions (CS/PolyZone SC) and are physically compatible. The mixture is simply a combination of two similar long-residual pyrethroids."
                 },
-                "conclusion": "Prefer using one encapsulated perimeter product. If combining, jar test and use coarse screens; monitor nozzle strainers."
+                "conclusion": "Compatible, but redundant. It is better to use them in rotation rather than as a tank mix."
             },
             {
                 "with_product_id": 12,
                 "with_product_title": "ExciteR",
                 "potential_benefits": [
-                    "Immediate knockdown complements long residual of PolyZone",
-                    "Useful for initial cleanout before perimeter residual"
+                    "Adds flushing and rapid knockdown to Suspend's long-term residual.",
+                    "PBO in ExciteR may synergize the deltamethrin in Suspend."
                 ],
                 "risks_drawbacks": [
-                    "Petroleum solvents can plasticize/compromise polymer microcapsules",
-                    "Increased odor/flammability; potential staining on porous substrates",
-                    "Regulatory concerns for mixing EC with encapsulated SC"
-                ],
-                "would_it_work": {
-                    "answer": "Uncertain",
-                    "rationale": "Oil-based ECs can disrupt capsule integrity or destabilize suspensions."
-                },
-                "conclusion": "Avoid tank mixing. Use ExciteR as a separate knockdown; follow with PolyZone after surfaces dry."
-            },
-            {
-                "with_product_id": 17,
-                "with_product_title": "InVade™ Bio Foam",
-                "potential_benefits": [
-                    "Sanitation reduces organic matter, enhancing residual performance",
-                    "Foam treats drains/voids unsuitable for insecticide sprays"
-                ],
-                "risks_drawbacks": [
-                    "Microbes may be inactivated by residual pyrethroid contact",
-                    "Foam chemistry not designed for co-tank use with pesticides",
-                    "Label cautions on mixing with cleaners/disinfectants"
+                    "The petroleum distillates in ExciteR will damage or destroy the polymer microcapsules in Suspend PolyZone."
                 ],
                 "would_it_work": {
                     "answer": "No",
-                    "rationale": "Live microbial cleaner should be applied separately to avoid mutual inactivation and instability."
+                    "rationale": "The solvent-based EC formulation of ExciteR is chemically destructive to the water-based polymer microencapsulation of Suspend PolyZone. This will ruin the long-residual feature."
                 },
-                "conclusion": "Use Bio Foam first; allow dwell/dry. Apply PolyZone later to structural surfaces only, not into drains."
+                "conclusion": "Do not mix. The formulations are chemically incompatible."
+            },
+            {
+                "with_product_id": 16,
+                "with_product_title": "InVade Bio Drain",
+                "potential_benefits": [
+                    "None."
+                ],
+                "risks_drawbacks": [
+                    "Suspend PolyZone is a pyrethroid insecticide that will kill the microbes in InVade.",
+                    "The InVade label warns against mixing with such chemicals."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "The insecticide will sterilize the microbial culture in the drain cleaner, making it ineffective."
+                },
+                "conclusion": "Do not mix. The products are fundamentally incompatible."
+            },
+            {
+                "with_product_id": 17,
+                "with_product_title": "InVade Bio Foam",
+                "potential_benefits": [
+                    "None."
+                ],
+                "risks_drawbacks": [
+                    "The insecticide in Suspend PolyZone will kill the active microbes in the foam.",
+                    "The mixture is counterproductive."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "The insecticidal properties of Suspend PolyZone will destroy the biological activity of InVade Bio Foam."
+                },
+                "conclusion": "Do not mix. The products are incompatible."
+            },
+            {
+                "with_product_id": 18,
+                "with_product_title": "Onslaught Microencapsulated Insecticide",
+                "potential_benefits": [
+                    "Combines two different microencapsulated pyrethroids for a potentially longer or broader residual effect."
+                ],
+                "risks_drawbacks": [
+                    "Redundant pyrethroid mode of action (Group 3A).",
+                    "No significant advantage over using either product alone or in rotation."
+                ],
+                "would_it_work": {
+                    "answer": "Yes",
+                    "rationale": "Both are water-based microencapsulated suspensions and are physically compatible. The mixture combines two similar residual pyrethroids."
+                },
+                "conclusion": "Compatible but functionally redundant. Better to rotate between these products than to tank mix them."
             }
         ]
     },
@@ -162,76 +1620,198 @@
         "product_title": "Demand CS Insecticide",
         "analyses": [
             {
-                "with_product_id": 1,
-                "with_product_title": "Temprid FX",
+                "with_product_id": 24,
+                "with_product_title": "Zenprox EC",
                 "potential_benefits": [
-                    "Adds neonic ingestion/systemic-like activity to CS residual",
-                    "Potential improvement against pyrethroid-tolerant populations"
+                    "Adds knockdown and flushing (Zenprox) to the long residual of Demand CS.",
+                    "Adds a synergist (PBO) that may enhance the pyrethroid in Demand CS."
                 ],
                 "risks_drawbacks": [
-                    "Greater total pyrethroid hazard to aquatic organisms/bee-attractive blooms",
-                    "Suspension stability concerns (CS + SC)",
-                    "Possible label constraints beyond IGR compatibility"
+                    "The petroleum distillates in Zenprox EC are likely to damage the microcapsules in Demand CS, reducing its residual life.",
+                    "Redundant pyrethroid action (Group 3A)."
                 ],
                 "would_it_work": {
                     "answer": "Uncertain",
-                    "rationale": "Demand CS is often compatible with IGRs; compatibility with another adulticide SC is not assured."
+                    "rationale": "The solvent-based EC formulation poses a significant risk to the integrity of the water-based CS formulation's microcapsules. This can cause instability and loss of residual."
                 },
-                "conclusion": "If attempted, jar test and maintain agitation. Prefer sequential use: CS for perimeter, Temprid for interior cracks."
+                "conclusion": "Mixing is not recommended due to high risk of chemical incompatibility. A jar test is mandatory, but sequential application is safer."
+            },
+            {
+                "with_product_id": 26,
+                "with_product_title": "SHOCKWAVE FOGGING CONCENTRATE",
+                "potential_benefits": [
+                    "Adds fast knockdown (pyrethrins), synergists, and an IGR to Demand's long residual.",
+                    "Creates a comprehensive spray for clean-outs and long-term control."
+                ],
+                "risks_drawbacks": [
+                    "The petroleum solvents in Shockwave will damage the microcapsules in Demand CS, destroying its long-residual benefit.",
+                    "Redundant pyrethroid action."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "The solvent-based formulation of Shockwave is chemically incompatible with the water-based microencapsulation of Demand CS. The solvents will compromise the capsules."
+                },
+                "conclusion": "Do not mix due to chemical incompatibility that would destroy the primary feature of Demand CS."
+            },
+            {
+                "with_product_id": 30,
+                "with_product_title": "Gentrol IGR Concentrate",
+                "potential_benefits": [
+                    "Classic adulticide + IGR pairing for complete life cycle control.",
+                    "Combines the long residual of Demand CS with the long residual of Gentrol."
+                ],
+                "risks_drawbacks": [
+                    "The petroleum distillates in Gentrol IGR concentrate pose a high risk of damaging the microcapsules of Demand CS."
+                ],
+                "would_it_work": {
+                    "answer": "Uncertain",
+                    "rationale": "A solvent-based concentrate is not recommended for mixing with a microencapsulated product because the solvent can compromise the capsule walls."
+                },
+                "conclusion": "Functionally an excellent combination, but chemically risky. A jar test is essential, but sequential application is the recommended approach."
+            },
+            {
+                "with_product_id": 25,
+                "with_product_title": "Precor IGR Concentrate",
+                "potential_benefits": [
+                    "Pairs a long-residual adulticide with a long-residual IGR for powerful, extended flea control."
+                ],
+                "risks_drawbacks": [
+                    "The petroleum distillates in Precor are likely to damage the microcapsules of Demand CS, reducing its residual effectiveness."
+                ],
+                "would_it_work": {
+                    "answer": "Uncertain",
+                    "rationale": "The solvent-based formulation of Precor can compromise the integrity of the water-based microencapsulated formulation of Demand CS."
+                },
+                "conclusion": "Avoid mixing due to the high risk of formulation damage. Apply sequentially for a combined adulticide and IGR effect."
+            },
+            {
+                "with_product_id": 27,
+                "with_product_title": "Alpine WSG Water Soluble Granule Insecticide",
+                "potential_benefits": [
+                    "Adds a non-repellent neonicotinoid (Group 4A) for a second mode of action.",
+                    "Good combination for resistance management."
+                ],
+                "risks_drawbacks": [
+                    "The potential repellency from the pyrethroid in Demand CS may interfere with the non-repellent transfer effect of Alpine WSG."
+                ],
+                "would_it_work": {
+                    "answer": "Yes",
+                    "rationale": "Both are water-based formulations (CS and WSG) and should be physically compatible. The WSG dissolves fully and should not interfere with the suspended capsules."
+                },
+                "conclusion": "A good resistance management mix. A jar test is recommended to ensure stability, but they are expected to be compatible."
+            },
+            {
+                "with_product_id": 28,
+                "with_product_title": "PT Alpine Pressurized Insecticide",
+                "potential_benefits": [
+                    "Not applicable; not intended for tank mixing."
+                ],
+                "risks_drawbacks": [
+                    "Aerosol products are not designed to be mixed with liquid concentrates in a sprayer."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "PT Alpine is a ready-to-use aerosol formulation and cannot be tank-mixed with a liquid concentrate like Demand CS."
+                },
+                "conclusion": "Do not mix. The products are formulated for different application equipment."
+            },
+            {
+                "with_product_id": 1,
+                "with_product_title": "Temprid FX",
+                "potential_benefits": [
+                    "Combines Demand's long residual with Temprid's dual-action adulticides.",
+                    "Excellent for resistance management with three actives from two mode of action groups."
+                ],
+                "risks_drawbacks": [
+                    "Redundant pyrethroid modes of action (Group 3A).",
+                    "Potential for repellency from pyrethroids to affect the non-repellent imidacloprid."
+                ],
+                "would_it_work": {
+                    "answer": "Yes",
+                    "rationale": "Both are water-based suspension concentrates (CS and SC) and are generally compatible. A jar test is good practice."
+                },
+                "conclusion": "A powerful and compatible mixture for severe infestations. Be mindful of the potential for repellency to influence pest behavior."
             },
             {
                 "with_product_id": 2,
                 "with_product_title": "Suspend PolyZone",
                 "potential_benefits": [
-                    "Potentially longer outdoor residual via dual encapsulations",
-                    "Surface adhesion diversity across substrates"
+                    "Combines two different long-residual microencapsulated pyrethroids.",
+                    "Could offer a broader spectrum or longer residual than either alone, though this is not proven."
                 ],
                 "risks_drawbacks": [
-                    "Two CS/encapsulated pyrethroids may flocculate",
-                    "Redundant MOA with minimal resistance advantage",
-                    "Higher environmental risk profile"
+                    "Redundant modes of action (both Group 3A pyrethroids).",
+                    "No clear synergistic benefit; rotation is a better strategy."
                 ],
                 "would_it_work": {
-                    "answer": "Uncertain",
-                    "rationale": "Co-encapsulated mixes can be unpredictable in viscosity and settling without empirical testing."
+                    "answer": "Yes",
+                    "rationale": "Both are water-based encapsulated suspensions and are physically compatible. The result is a mix of two similar products."
                 },
-                "conclusion": "Use one encapsulated perimeter product at a time. If mixing, jar test; filter/strain tank; monitor sprayer screens."
+                "conclusion": "Compatible, but a redundant mix. Use in rotation for resistance management rather than as a tank mix."
             },
             {
                 "with_product_id": 12,
                 "with_product_title": "ExciteR",
                 "potential_benefits": [
-                    "Immediate knockdown paired with long residual",
-                    "Flushes pests from harborages for CS contact"
+                    "Adds rapid knockdown and flushing to Demand's long residual.",
+                    "PBO in ExciteR can synergize the pyrethroid in Demand CS."
                 ],
                 "risks_drawbacks": [
-                    "Petroleum distillates can soften capsule walls or destabilize dispersion",
-                    "Flammability/odor and possible staining",
-                    "Regulatory label caution for tank mixes not expressly permitted"
-                ],
-                "would_it_work": {
-                    "answer": "Uncertain",
-                    "rationale": "EC oils often reduce capsule integrity; performance and stability could suffer."
-                },
-                "conclusion": "Apply ExciteR separately as a knockdown. After ventilation/drying, apply Demand CS for residual."
-            },
-            {
-                "with_product_id": 17,
-                "with_product_title": "InVade™ Bio Foam",
-                "potential_benefits": [
-                    "Sanitation improves residual spray effectiveness",
-                    "Foam reaches drains/voids unsuitable for CS sprays"
-                ],
-                "risks_drawbacks": [
-                    "Microbial viability reduced by residual pyrethroid contact",
-                    "Foam chemistry not intended for pesticide tank mixes",
-                    "Potential equipment foaming/instability"
+                    "The petroleum distillates in ExciteR will damage the microcapsules of Demand CS, destroying its long-residual properties."
                 ],
                 "would_it_work": {
                     "answer": "No",
-                    "rationale": "Combining live microbes with insecticide is counterproductive and chemically unstable."
+                    "rationale": "The solvent-based EC formulation of ExciteR is chemically incompatible with the water-based microencapsulation of Demand CS. The mixture would damage the capsules."
                 },
-                "conclusion": "Use Bio Foam as a stand-alone sanitation step. Apply Demand CS later to structural surfaces only."
+                "conclusion": "Do not mix due to chemical incompatibility. This would negate the primary benefit of Demand CS."
+            },
+            {
+                "with_product_id": 16,
+                "with_product_title": "InVade Bio Drain",
+                "potential_benefits": [
+                    "None."
+                ],
+                "risks_drawbacks": [
+                    "The insecticide in Demand CS will kill the beneficial microbes in InVade.",
+                    "The InVade label warns against mixing with antimicrobial products."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "The pesticide active ingredient is antimicrobial and will render the biological cleaner completely ineffective."
+                },
+                "conclusion": "Do not mix. The products are fundamentally incompatible."
+            },
+            {
+                "with_product_id": 17,
+                "with_product_title": "InVade Bio Foam",
+                "potential_benefits": [
+                    "None."
+                ],
+                "risks_drawbacks": [
+                    "The insecticide will kill the microbes in the foam, destroying its purpose.",
+                    "Mixing a pesticide with a biological cleaner is counterproductive."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "Demand CS is a pesticide that will kill the active microbial ingredient in InVade Bio Foam."
+                },
+                "conclusion": "Do not mix. The products are incompatible."
+            },
+            {
+                "with_product_id": 18,
+                "with_product_title": "Onslaught Microencapsulated Insecticide",
+                "potential_benefits": [
+                    "Combines two different microencapsulated pyrethroids."
+                ],
+                "risks_drawbacks": [
+                    "Highly redundant, as both are encapsulated Group 3A pyrethroids.",
+                    "Offers no resistance management benefit over using a single product."
+                ],
+                "would_it_work": {
+                    "answer": "Yes",
+                    "rationale": "Both are water-based microencapsulated suspensions and are physically compatible. The mix is simply a combination of two similar long-residual insecticides."
+                },
+                "conclusion": "Compatible, but a redundant mixture. Using these products in rotation is a better pest management strategy than tank mixing."
             }
         ]
     },
@@ -240,154 +1820,794 @@
         "product_title": "ExciteR",
         "analyses": [
             {
+                "with_product_id": 24,
+                "with_product_title": "Zenprox EC",
+                "potential_benefits": [
+                    "Adds a residual pyrethroid (etofenprox) to ExciteR's flushing action."
+                ],
+                "risks_drawbacks": [
+                    "Highly redundant; both are pyrethroid/PBO concentrates with petroleum distillates.",
+                    "High solvent load can increase risk of surface damage.",
+                    "No clear strategic benefit."
+                ],
+                "would_it_work": {
+                    "answer": "Yes",
+                    "rationale": "Both products are solvent-based ECs and are physically compatible. Functionally, the mixture is very redundant."
+                },
+                "conclusion": "Compatible but not recommended due to redundancy. Choose one product based on desired longevity and flushing action."
+            },
+            {
+                "with_product_id": 26,
+                "with_product_title": "SHOCKWAVE FOGGING CONCENTRATE",
+                "potential_benefits": [
+                    "Adds a residual pyrethroid (Esfenvalerate) and an IGR (Pyriproxyfen)."
+                ],
+                "risks_drawbacks": [
+                    "Extremely redundant mix of pyrethrins and PBO.",
+                    "Creates a complex, five-active-ingredient mixture that is difficult to justify.",
+                    "High solvent load."
+                ],
+                "would_it_work": {
+                    "answer": "Yes",
+                    "rationale": "Both are oil/solvent-based concentrates and are physically compatible. However, Shockwave is already a complete product that includes the benefits of ExciteR and more."
+                },
+                "conclusion": "Compatible, but a poor and redundant mix. Using Shockwave alone is superior."
+            },
+            {
+                "with_product_id": 30,
+                "with_product_title": "Gentrol IGR Concentrate",
+                "potential_benefits": [
+                    "Classic clean-out combination: ExciteR for flushing and knockdown, Gentrol for long-term IGR control.",
+                    "Provides immediate results while breaking the pest life cycle."
+                ],
+                "risks_drawbacks": [
+                    "Both products contain petroleum distillates, resulting in a high-solvent mixture that may have a strong odor."
+                ],
+                "would_it_work": {
+                    "answer": "Yes",
+                    "rationale": "Both are petroleum distillate-based concentrates and are chemically compatible. This is a common and highly effective tank mix for pest management professionals."
+                },
+                "conclusion": "An excellent and recommended combination for severe infestations requiring both immediate and long-term control."
+            },
+            {
+                "with_product_id": 25,
+                "with_product_title": "Precor IGR Concentrate",
+                "potential_benefits": [
+                    "Excellent tank mix for flea control, providing fast knockdown of adults (ExciteR) and long-term prevention of larvae (Precor)."
+                ],
+                "risks_drawbacks": [
+                    "Both are petroleum distillate-based, leading to a higher solvent load."
+                ],
+                "would_it_work": {
+                    "answer": "Yes",
+                    "rationale": "The formulations are compatible (both solvent-based concentrates). This is a standard and effective combination for integrated flea control."
+                },
+                "conclusion": "A highly effective and recommended tank mix for flea clean-outs."
+            },
+            {
+                "with_product_id": 27,
+                "with_product_title": "Alpine WSG Water Soluble Granule Insecticide",
+                "potential_benefits": [
+                    "Adds a non-repellent mode of action (neonicotinoid)."
+                ],
+                "risks_drawbacks": [
+                    "Severe physical incompatibility risk between the oil-based ExciteR and water-soluble Alpine WSG.",
+                    "The high repellency and flushing action of ExciteR is functionally antagonistic to the non-repellent properties of Alpine WSG."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "The products are incompatible both physically (oil vs. water-soluble) and functionally (repellent vs. non-repellent). The mixture would be unstable and ineffective."
+                },
+                "conclusion": "Do not mix. The products are completely incompatible."
+            },
+            {
+                "with_product_id": 28,
+                "with_product_title": "PT Alpine Pressurized Insecticide",
+                "potential_benefits": [
+                    "Not applicable; not intended for tank mixing."
+                ],
+                "risks_drawbacks": [
+                    "Aerosol products are not designed to be mixed with liquid concentrates in a sprayer."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "PT Alpine is a ready-to-use aerosol formulation and cannot be tank-mixed with a liquid concentrate like ExciteR."
+                },
+                "conclusion": "Do not mix. The delivery systems are incompatible."
+            },
+            {
                 "with_product_id": 1,
                 "with_product_title": "Temprid FX",
                 "potential_benefits": [
-                    "Rapid knockdown (pyrethrins/PBO) complements Temprid’s residual",
-                    "Effective for initial cleanouts and flushing"
+                    "Adds two residual adulticides (neonicotinoid, pyrethroid) to ExciteR's non-residual knockdown."
                 ],
                 "risks_drawbacks": [
-                    "EC petroleum solvents may destabilize SC",
-                    "Higher combined toxicity to aquatic organisms/beneficials",
-                    "Potential label/tank-mix prohibitions"
+                    "High risk of physical incompatibility between the petroleum-based ExciteR (EC) and the water-based Temprid FX (SC).",
+                    "The strong repellency of ExciteR negates the non-repellent benefit of imidacloprid in Temprid."
                 ],
                 "would_it_work": {
                     "answer": "Uncertain",
-                    "rationale": "Oil-in-water compatibility varies; separation or residue dulling possible."
+                    "rationale": "The solvent-based EC and water-based SC formulations are not predictably compatible. Functionally, the repellent and non-repellent properties conflict."
                 },
-                "conclusion": "Prefer sequential use: ExciteR first, ventilate/dry, then apply Temprid FX."
+                "conclusion": "Avoid mixing due to high incompatibility risk and conflicting actions. Sequential application is the only viable approach."
             },
             {
                 "with_product_id": 2,
                 "with_product_title": "Suspend PolyZone",
                 "potential_benefits": [
-                    "Immediate kill followed by extended polymer-protected residual",
-                    "Useful in high-pressure accounts"
+                    "Combines fast flushing/knockdown with a very long-lasting residual.",
+                    "The PBO in ExciteR may synergize the deltamethrin in Suspend."
                 ],
                 "risks_drawbacks": [
-                    "Solvents can compromise microcapsule integrity",
-                    "Staining/odor and flammability risks",
-                    "Potential off-label mix"
+                    "The petroleum distillates in ExciteR will dissolve the polymer microcapsules in Suspend PolyZone, destroying its main feature."
                 ],
                 "would_it_work": {
-                    "answer": "Uncertain",
-                    "rationale": "EC oils may plasticize encapsulation polymers; stability not guaranteed."
+                    "answer": "No",
+                    "rationale": "The solvent-based EC formulation of ExciteR is chemically incompatible with the water-based polymer microencapsulation of Suspend PolyZone."
                 },
-                "conclusion": "Do not tank mix. Apply ExciteR separately; follow with PolyZone after area dries."
+                "conclusion": "Do not mix. The formulations are chemically incompatible, and the mix would ruin the PolyZone technology."
             },
             {
                 "with_product_id": 11,
                 "with_product_title": "Demand CS Insecticide",
                 "potential_benefits": [
-                    "Fast knockdown plus durable residual from CS",
-                    "Enhanced cleanout efficiency"
+                    "Combines fast flushing/knockdown with a long-lasting microencapsulated residual.",
+                    "PBO in ExciteR can synergize the pyrethroid in Demand CS."
                 ],
                 "risks_drawbacks": [
-                    "Petroleum distillates may degrade capsules/suspension",
-                    "Increased non-target hazard and odor/flammability",
-                    "Possible label restrictions on mixing"
-                ],
-                "would_it_work": {
-                    "answer": "Uncertain",
-                    "rationale": "EC + CS mixtures are formulation-sensitive; capsule damage or creaming may occur."
-                },
-                "conclusion": "Use sequentially, not co-tanked. Knockdown with ExciteR, then apply Demand CS after ventilation."
-            },
-            {
-                "with_product_id": 17,
-                "with_product_title": "InVade™ Bio Foam",
-                "potential_benefits": [
-                    "Sanitation reduces organic film that can absorb insecticides",
-                    "Foam reaches build-up sites inaccessible to sprays"
-                ],
-                "risks_drawbacks": [
-                    "Pyrethrins/PBO and petroleum solvents can kill Bacillus microbes",
-                    "Foam stability altered by solvents; excessive foaming risk",
-                    "Not intended as a pesticide tank partner"
+                    "The petroleum distillates in ExciteR will likely damage the microcapsules of Demand CS, reducing or destroying its residual action."
                 ],
                 "would_it_work": {
                     "answer": "No",
-                    "rationale": "Live microbial cleaner should not be mixed with oil-solvent insecticide concentrates."
+                    "rationale": "The solvent-based EC formulation of ExciteR is chemically incompatible with the water-based microencapsulation of Demand CS, as it can dissolve the capsule walls."
                 },
-                "conclusion": "Apply Bio Foam alone; wait for dwell/dry. Use ExciteR separately if needed for knockdown."
+                "conclusion": "Do not mix due to chemical incompatibility that would negate the primary benefit of Demand CS."
+            },
+            {
+                "with_product_id": 16,
+                "with_product_title": "InVade Bio Drain",
+                "potential_benefits": [
+                    "None."
+                ],
+                "risks_drawbacks": [
+                    "ExciteR is a potent insecticide that will kill the beneficial microbes in InVade.",
+                    "The InVade label warns against mixing with such chemicals."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "The insecticide and solvents in ExciteR are antimicrobial and will render the biological drain cleaner useless."
+                },
+                "conclusion": "Do not mix. The products are fundamentally incompatible."
+            },
+            {
+                "with_product_id": 17,
+                "with_product_title": "InVade Bio Foam",
+                "potential_benefits": [
+                    "None."
+                ],
+                "risks_drawbacks": [
+                    "The insecticide will kill the microbes in the foam.",
+                    "Mixing is counterproductive."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "The insecticide in ExciteR will destroy the active microbial ingredient in InVade Bio Foam."
+                },
+                "conclusion": "Do not mix. The products are incompatible."
+            },
+            {
+                "with_product_id": 18,
+                "with_product_title": "Onslaught Microencapsulated Insecticide",
+                "potential_benefits": [
+                    "Combines flushing/knockdown with a long-lasting residual.",
+                    "PBO in ExciteR may synergize the esfenvalerate in Onslaught."
+                ],
+                "risks_drawbacks": [
+                    "The petroleum distillates in ExciteR are highly likely to damage the microcapsules in Onslaught, destroying its residual benefit."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "The solvent-based EC formulation of ExciteR is chemically incompatible with the water-based microencapsulation of Onslaught and will damage the capsules."
+                },
+                "conclusion": "Do not mix due to chemical incompatibility. This combination would destroy the long-residual feature of Onslaught."
             }
         ]
     },
     {
-        "product_id": 17,
-        "product_title": "InVade™ Bio Foam",
+        "product_id": 16,
+        "product_title": "InVade Bio Drain",
         "analyses": [
+            {
+                "with_product_id": 24,
+                "with_product_title": "Zenprox EC",
+                "potential_benefits": [
+                    "None."
+                ],
+                "risks_drawbacks": [
+                    "The insecticide in Zenprox will kill the microbes in InVade.",
+                    "The InVade label states not to mix with cleaners or antimicrobial products."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "Insecticides are antimicrobial. Mixing them will negate the function of the biological drain cleaner."
+                },
+                "conclusion": "Do not mix. The products are chemically and functionally incompatible."
+            },
+            {
+                "with_product_id": 26,
+                "with_product_title": "SHOCKWAVE FOGGING CONCENTRATE",
+                "potential_benefits": [
+                    "None."
+                ],
+                "risks_drawbacks": [
+                    "The multiple insecticides in Shockwave will kill the microbes in InVade.",
+                    "Mixing violates the use directions on the InVade label."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "The potent insecticide blend in Shockwave will sterilize the microbial culture in InVade Bio Drain."
+                },
+                "conclusion": "Do not mix. The products are fundamentally incompatible."
+            },
+            {
+                "with_product_id": 30,
+                "with_product_title": "Gentrol IGR Concentrate",
+                "potential_benefits": [
+                    "None."
+                ],
+                "risks_drawbacks": [
+                    "The pesticide and solvent system in Gentrol will kill the microbes.",
+                    "Mixing violates the use directions on the InVade label."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "The IGR concentrate formulation is antimicrobial and will destroy the biological activity of the drain cleaner."
+                },
+                "conclusion": "Do not mix. The products are incompatible."
+            },
+            {
+                "with_product_id": 25,
+                "with_product_title": "Precor IGR Concentrate",
+                "potential_benefits": [
+                    "None."
+                ],
+                "risks_drawbacks": [
+                    "The pesticide formulation of Precor will kill the microbes in InVade.",
+                    "Mixing violates the use directions on the InVade label."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "The IGR concentrate is antimicrobial and would neutralize the effect of the bio-cleaner."
+                },
+                "conclusion": "Do not mix. The products are incompatible."
+            },
+            {
+                "with_product_id": 27,
+                "with_product_title": "Alpine WSG Water Soluble Granule Insecticide",
+                "potential_benefits": [
+                    "None."
+                ],
+                "risks_drawbacks": [
+                    "The insecticide in Alpine WSG will kill the beneficial microbes.",
+                    "Mixing violates the use directions on the InVade label."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "The insecticide active ingredient is antimicrobial by nature and will render the biological cleaner ineffective."
+                },
+                "conclusion": "Do not mix. The products are incompatible."
+            },
+            {
+                "with_product_id": 28,
+                "with_product_title": "PT Alpine Pressurized Insecticide",
+                "potential_benefits": [
+                    "None."
+                ],
+                "risks_drawbacks": [
+                    "Cannot mix an aerosol with a liquid cleaner.",
+                    "The insecticide would kill the microbes."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "The products have incompatible delivery systems and the insecticide would negate the biological cleaner's function."
+                },
+                "conclusion": "Do not mix. The products are incompatible in every way."
+            },
             {
                 "with_product_id": 1,
                 "with_product_title": "Temprid FX",
                 "potential_benefits": [
-                    "Sanitation first can improve residual insecticide performance",
-                    "Foam penetrates drains/voids before pesticide treatment"
+                    "None."
                 ],
                 "risks_drawbacks": [
-                    "Insecticide residues can kill Bacillus microbes",
-                    "Co-tank foaming/rheology issues; citrus oils/surfactants may destabilize SC",
-                    "Labels advise against mixing with cleaners/disinfectants"
+                    "The insecticides in Temprid FX will kill the microbes in InVade.",
+                    "Mixing violates the use directions on the InVade label."
                 ],
                 "would_it_work": {
                     "answer": "No",
-                    "rationale": "Live microbial formulation should not be mixed with insecticides; mutual efficacy loss is likely."
+                    "rationale": "The dual-active insecticide formulation is antimicrobial and will destroy the microbial culture in the drain cleaner."
                 },
-                "conclusion": "Use Bio Foam as a separate sanitation step; apply Temprid FX later to structural surfaces only."
+                "conclusion": "Do not mix. The products are incompatible."
             },
             {
                 "with_product_id": 2,
                 "with_product_title": "Suspend PolyZone",
                 "potential_benefits": [
-                    "Organic removal improves insecticide contact/residual",
-                    "Different application zones minimize overlap (drains vs. surfaces)"
+                    "None."
                 ],
                 "risks_drawbacks": [
-                    "Polymer-encapsulated pyrethroid can inactivate microbes on contact",
-                    "Foam chemistry not intended for pesticide tank mixes",
-                    "Potential excessive foaming/equipment issues"
+                    "The insecticide in Suspend PolyZone will kill the microbes in InVade.",
+                    "Mixing violates the use directions on the InVade label."
                 ],
                 "would_it_work": {
                     "answer": "No",
-                    "rationale": "Mixing live microbes with encapsulated pyrethroids is inappropriate and unstable."
+                    "rationale": "The insecticidal pyrethroid is antimicrobial and will render the biological cleaner ineffective."
                 },
-                "conclusion": "Apply Bio Foam alone; after dwell and drying, apply PolyZone to non-drain structural areas."
+                "conclusion": "Do not mix. The products are incompatible."
             },
             {
                 "with_product_id": 11,
                 "with_product_title": "Demand CS Insecticide",
                 "potential_benefits": [
-                    "Sanitation step can reduce harborage and improve residual contact",
-                    "Distinct target zones (drains vs. structural surfaces)"
+                    "None."
                 ],
                 "risks_drawbacks": [
-                    "Residual pyrethroid will suppress microbial activity",
-                    "Foam–capsule mixtures likely unstable; excessive foaming",
-                    "Not a labeled/coordinated tank partner"
+                    "The insecticide in Demand CS will kill the microbes in InVade.",
+                    "Mixing violates the use directions on the InVade label."
                 ],
                 "would_it_work": {
                     "answer": "No",
-                    "rationale": "Biological cleaner should not be co-formulated with insecticides; efficacy of microbes and spray stability suffer."
+                    "rationale": "The microencapsulated pyrethroid is antimicrobial and will destroy the active component of the drain cleaner."
                 },
-                "conclusion": "Use separately with time separation. Bio Foam first; Demand CS later, avoiding drains."
+                "conclusion": "Do not mix. The products are incompatible."
             },
             {
                 "with_product_id": 12,
                 "with_product_title": "ExciteR",
                 "potential_benefits": [
-                    "Sanitation may enhance later knockdown effectiveness",
-                    "Different tools for different zones (drains vs. open surfaces)"
+                    "None."
                 ],
                 "risks_drawbacks": [
-                    "Petroleum solvents and pyrethrins kill beneficial microbes",
-                    "Foam destabilization and over-foaming risk",
-                    "Not intended for co-tank; flammability concerns"
+                    "The insecticide and solvents in ExciteR will kill the microbes in InVade.",
+                    "Mixing violates the use directions on the InVade label."
                 ],
                 "would_it_work": {
                     "answer": "No",
-                    "rationale": "Microbial foam is incompatible with oil-solvent insecticides; both function and safety are compromised."
+                    "rationale": "The pyrethrin insecticide is antimicrobial by nature and will render the biological cleaner ineffective."
                 },
-                "conclusion": "Never co-mix. Apply Bio Foam alone; schedule ExciteR as a separate knockdown treatment after dwell/dry."
+                "conclusion": "Do not mix. The products are incompatible."
+            },
+            {
+                "with_product_id": 17,
+                "with_product_title": "InVade Bio Foam",
+                "potential_benefits": [
+                    "Uses the same microbial technology for different application methods (liquid vs. foam)."
+                ],
+                "risks_drawbacks": [
+                    "No benefit to mixing; they are different formulations of the same concept.",
+                    "InVade Bio Foam is a concentrate designed to be used with a foaming agent."
+                ],
+                "would_it_work": {
+                    "answer": "Uncertain",
+                    "rationale": "While the active microbes are compatible, there is no reason to mix these products. They are designed for different applications (drains vs. surface foaming)."
+                },
+                "conclusion": "No need to mix. Use InVade Bio Drain for drains and InVade Bio Foam for surface foaming applications as directed."
+            },
+            {
+                "with_product_id": 18,
+                "with_product_title": "Onslaught Microencapsulated Insecticide",
+                "potential_benefits": [
+                    "None."
+                ],
+                "risks_drawbacks": [
+                    "The insecticide in Onslaught will kill the microbes in InVade.",
+                    "Mixing violates the use directions on the InVade label."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "The pyrethroid insecticide is antimicrobial and will negate the function of the biological drain cleaner."
+                },
+                "conclusion": "Do not mix. The products are incompatible."
+            }
+        ]
+    },
+    {
+        "product_id": 17,
+        "product_title": "InVade Bio Foam",
+        "analyses": [
+            {
+                "with_product_id": 24,
+                "with_product_title": "Zenprox EC",
+                "potential_benefits": [
+                    "None."
+                ],
+                "risks_drawbacks": [
+                    "The insecticide in Zenprox will kill the microbes in the foam.",
+                    "The mixture is counterproductive to the purpose of the biological cleaner."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "Zenprox is a pesticide that will destroy the active microbial ingredient in InVade Bio Foam."
+                },
+                "conclusion": "Do not mix. The products are incompatible."
+            },
+            {
+                "with_product_id": 26,
+                "with_product_title": "SHOCKWAVE FOGGING CONCENTRATE",
+                "potential_benefits": [
+                    "None."
+                ],
+                "risks_drawbacks": [
+                    "The multiple insecticides in Shockwave will kill the microbes.",
+                    "Mixing violates the label directions for the biological cleaner."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "The potent blend of insecticides and solvents in Shockwave will sterilize the microbial component of InVade Bio Foam."
+                },
+                "conclusion": "Do not mix. The products are fundamentally incompatible."
+            },
+            {
+                "with_product_id": 30,
+                "with_product_title": "Gentrol IGR Concentrate",
+                "potential_benefits": [
+                    "None."
+                ],
+                "risks_drawbacks": [
+                    "The pesticide and solvents in Gentrol will kill the beneficial microbes.",
+                    "Mixing is counterproductive and against label advice."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "The IGR concentrate formulation is antimicrobial and will destroy the biological activity of the foam."
+                },
+                "conclusion": "Do not mix. The products are incompatible."
+            },
+            {
+                "with_product_id": 25,
+                "with_product_title": "Precor IGR Concentrate",
+                "potential_benefits": [
+                    "None."
+                ],
+                "risks_drawbacks": [
+                    "The IGR concentrate will kill the microbes in the foam.",
+                    "Mixing violates the label directions for the biological cleaner."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "The pesticide in Precor would neutralize the biological action of InVade Bio Foam."
+                },
+                "conclusion": "Do not mix. The products are incompatible."
+            },
+            {
+                "with_product_id": 27,
+                "with_product_title": "Alpine WSG Water Soluble Granule Insecticide",
+                "potential_benefits": [
+                    "None."
+                ],
+                "risks_drawbacks": [
+                    "The insecticide in Alpine WSG will kill the beneficial microbes.",
+                    "Mixing violates the label directions for the biological cleaner."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "The insecticide active ingredient is antimicrobial and will render the biological foam ineffective."
+                },
+                "conclusion": "Do not mix. The products are incompatible."
+            },
+            {
+                "with_product_id": 28,
+                "with_product_title": "PT Alpine Pressurized Insecticide",
+                "potential_benefits": [
+                    "None."
+                ],
+                "risks_drawbacks": [
+                    "Cannot mix an aerosol with a liquid foaming concentrate.",
+                    "The insecticide would kill the microbes."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "The products have incompatible delivery systems, and the insecticide would negate the biological cleaner's function."
+                },
+                "conclusion": "Do not mix. The products are incompatible."
+            },
+            {
+                "with_product_id": 1,
+                "with_product_title": "Temprid FX",
+                "potential_benefits": [
+                    "None."
+                ],
+                "risks_drawbacks": [
+                    "The insecticides in Temprid FX will kill the beneficial microbes.",
+                    "Mixing violates the label directions for the biological cleaner."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "The dual-active insecticide formulation is antimicrobial and will destroy the microbial culture in the foam."
+                },
+                "conclusion": "Do not mix. The products are incompatible."
+            },
+            {
+                "with_product_id": 2,
+                "with_product_title": "Suspend PolyZone",
+                "potential_benefits": [
+                    "None."
+                ],
+                "risks_drawbacks": [
+                    "The insecticide in Suspend PolyZone will kill the microbes.",
+                    "Mixing violates the label directions for the biological cleaner."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "The insecticidal pyrethroid is antimicrobial and will render the biological foam ineffective."
+                },
+                "conclusion": "Do not mix. The products are incompatible."
+            },
+            {
+                "with_product_id": 11,
+                "with_product_title": "Demand CS Insecticide",
+                "potential_benefits": [
+                    "None."
+                ],
+                "risks_drawbacks": [
+                    "The insecticide in Demand CS will kill the microbes.",
+                    "Mixing violates the label directions for the biological cleaner."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "The microencapsulated pyrethroid is antimicrobial and will destroy the active component of the bio-foam."
+                },
+                "conclusion": "Do not mix. The products are incompatible."
+            },
+            {
+                "with_product_id": 12,
+                "with_product_title": "ExciteR",
+                "potential_benefits": [
+                    "None."
+                ],
+                "risks_drawbacks": [
+                    "The insecticide and solvents in ExciteR will kill the microbes.",
+                    "Mixing violates the label directions for the biological cleaner."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "The pyrethrin insecticide is antimicrobial by nature and will render the biological foam ineffective."
+                },
+                "conclusion": "Do not mix. The products are incompatible."
+            },
+            {
+                "with_product_id": 16,
+                "with_product_title": "InVade Bio Drain",
+                "potential_benefits": [
+                    "Uses the same microbial technology for different application methods (foam vs. liquid)."
+                ],
+                "risks_drawbacks": [
+                    "No benefit to mixing; they are different formulations of the same concept.",
+                    "InVade Bio Foam is designed for use with a foamer."
+                ],
+                "would_it_work": {
+                    "answer": "Uncertain",
+                    "rationale": "While the active microbes are compatible, there is no reason to mix these products. They are designed for different applications (surface foaming vs. drains)."
+                },
+                "conclusion": "No need to mix. Use InVade Bio Foam for foaming applications and InVade Bio Drain for direct drain treatments as directed."
+            },
+            {
+                "with_product_id": 18,
+                "with_product_title": "Onslaught Microencapsulated Insecticide",
+                "potential_benefits": [
+                    "None."
+                ],
+                "risks_drawbacks": [
+                    "The insecticide in Onslaught will kill the microbes.",
+                    "Mixing violates the label directions for the biological cleaner."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "The pyrethroid insecticide is antimicrobial and will negate the function of the biological foam."
+                },
+                "conclusion": "Do not mix. The products are incompatible."
+            }
+        ]
+    },
+    {
+        "product_id": 18,
+        "product_title": "Onslaught Microencapsulated Insecticide",
+        "analyses": [
+            {
+                "with_product_id": 24,
+                "with_product_title": "Zenprox EC",
+                "potential_benefits": [
+                    "Adds flushing and knockdown (Zenprox) to Onslaught's long residual.",
+                    "The PBO in Zenprox can synergize the esfenvalerate in Onslaught."
+                ],
+                "risks_drawbacks": [
+                    "The petroleum distillates in Zenprox EC will likely damage the microcapsules in Onslaught, reducing its residual effectiveness.",
+                    "Redundant pyrethroid action."
+                ],
+                "would_it_work": {
+                    "answer": "Uncertain",
+                    "rationale": "Mixing a solvent-based EC with a water-based microencapsulated formulation is not recommended, as the solvent can destroy the capsule integrity."
+                },
+                "conclusion": "Avoid mixing due to high risk of formulation damage. A jar test is required, but sequential application is much safer."
+            },
+            {
+                "with_product_id": 26,
+                "with_product_title": "SHOCKWAVE FOGGING CONCENTRATE",
+                "potential_benefits": [
+                    "Adds flushing/knockdown (pyrethrins), synergists, and an IGR.",
+                    "Creates a multi-faceted approach to pest control."
+                ],
+                "risks_drawbacks": [
+                    "The petroleum solvents in Shockwave will destroy the microcapsules in Onslaught.",
+                    "The active Esfenvalerate is present in both products, creating redundancy.",
+                    "Formulations are chemically incompatible."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "The solvent-based Shockwave is chemically incompatible with the water-based microencapsulation of Onslaught. The mixture would destroy Onslaught's primary feature."
+                },
+                "conclusion": "Do not mix. The formulations are incompatible and the actives are redundant."
+            },
+            {
+                "with_product_id": 30,
+                "with_product_title": "Gentrol IGR Concentrate",
+                "potential_benefits": [
+                    "Excellent IGR + adulticide combination for long-term, comprehensive control.",
+                    "Combines a long-residual adulticide with a long-residual IGR."
+                ],
+                "risks_drawbacks": [
+                    "The petroleum distillates in Gentrol can damage the microcapsules of Onslaught, reducing its residual performance."
+                ],
+                "would_it_work": {
+                    "answer": "Uncertain",
+                    "rationale": "The solvent carrier in the IGR concentrate poses a significant risk to the integrity of the microcapsules in the adulticide formulation."
+                },
+                "conclusion": "Functionally a great pair, but chemically risky to mix. A jar test is mandatory, but sequential application is the safer method."
+            },
+            {
+                "with_product_id": 25,
+                "with_product_title": "Precor IGR Concentrate",
+                "potential_benefits": [
+                    "Combines a long-residual adulticide with a long-residual IGR for powerful flea control.",
+                    "Provides both adult kill and disruption of the flea life cycle."
+                ],
+                "risks_drawbacks": [
+                    "High risk of formulation damage; the petroleum distillates in Precor could destroy the microcapsules in Onslaught."
+                ],
+                "would_it_work": {
+                    "answer": "Uncertain",
+                    "rationale": "The solvent-based nature of Precor makes it a poor candidate for mixing with a water-based microencapsulated product like Onslaught due to capsule damage risk."
+                },
+                "conclusion": "Mixing is not recommended due to chemical incompatibility risk. Apply sequentially for a combined effect."
+            },
+            {
+                "with_product_id": 27,
+                "with_product_title": "Alpine WSG Water Soluble Granule Insecticide",
+                "potential_benefits": [
+                    "Adds a non-repellent neonicotinoid (Group 4A) for a second mode of action.",
+                    "Excellent for resistance management."
+                ],
+                "risks_drawbacks": [
+                    "The potential repellency of the pyrethroid in Onslaught may interfere with the non-repellent transfer effect of Alpine WSG."
+                ],
+                "would_it_work": {
+                    "answer": "Yes",
+                    "rationale": "Both are water-based formulations (CS and WSG) and should be physically compatible. The dissolved WSG is unlikely to affect the suspended capsules."
+                },
+                "conclusion": "A good resistance management combination. A jar test is recommended as a best practice before mixing."
+            },
+            {
+                "with_product_id": 28,
+                "with_product_title": "PT Alpine Pressurized Insecticide",
+                "potential_benefits": [
+                    "Not applicable; not intended for tank mixing."
+                ],
+                "risks_drawbacks": [
+                    "Aerosol products are not designed to be mixed with liquid concentrates in a sprayer."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "PT Alpine is a ready-to-use aerosol formulation and cannot be tank-mixed with a liquid concentrate like Onslaught."
+                },
+                "conclusion": "Do not mix. The products are formulated for different application equipment."
+            },
+            {
+                "with_product_id": 1,
+                "with_product_title": "Temprid FX",
+                "potential_benefits": [
+                    "Combines Onslaught's long residual with Temprid's dual-action adulticides.",
+                    "Excellent for resistance management with three actives from two MOA groups."
+                ],
+                "risks_drawbacks": [
+                    "Redundant pyrethroid modes of action (Group 3A).",
+                    "Potential for repellency from pyrethroids to affect the non-repellent imidacloprid."
+                ],
+                "would_it_work": {
+                    "answer": "Yes",
+                    "rationale": "Both are water-based suspension formulations (CS and SC) and are generally compatible. A jar test is recommended."
+                },
+                "conclusion": "A powerful and likely compatible mixture for severe infestations. Consider the potential for repellency to influence pest behavior."
+            },
+            {
+                "with_product_id": 2,
+                "with_product_title": "Suspend PolyZone",
+                "potential_benefits": [
+                    "Combines two different long-residual microencapsulated pyrethroids.",
+                    "May offer a slightly broader pyrethroid profile."
+                ],
+                "risks_drawbacks": [
+                    "Redundant modes of action (both Group 3A pyrethroids).",
+                    "No significant benefit over using either product alone or rotating them."
+                ],
+                "would_it_work": {
+                    "answer": "Yes",
+                    "rationale": "Both are water-based microencapsulated suspensions and are physically compatible. The mixture combines two similar long-residual insecticides."
+                },
+                "conclusion": "Compatible, but functionally redundant. It is better to rotate between these products than to tank mix them."
+            },
+            {
+                "with_product_id": 11,
+                "with_product_title": "Demand CS Insecticide",
+                "potential_benefits": [
+                    "Combines two different microencapsulated pyrethroids."
+                ],
+                "risks_drawbacks": [
+                    "Highly redundant, as both are encapsulated Group 3A pyrethroids.",
+                    "Offers no resistance management benefit over using a single product."
+                ],
+                "would_it_work": {
+                    "answer": "Yes",
+                    "rationale": "Both are water-based microencapsulated suspensions and are physically compatible. The mix is simply a combination of two similar long-residual insecticides."
+                },
+                "conclusion": "Compatible, but a redundant mixture. Using these products in rotation is a better pest management strategy than tank mixing."
+            },
+            {
+                "with_product_id": 12,
+                "with_product_title": "ExciteR",
+                "potential_benefits": [
+                    "Adds rapid knockdown and flushing to Onslaught's long-term residual.",
+                    "The PBO in ExciteR can synergize the esfenvalerate in Onslaught."
+                ],
+                "risks_drawbacks": [
+                    "The petroleum distillates in ExciteR are highly likely to damage the microcapsules in Onslaught, destroying its residual benefit."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "The solvent-based EC formulation of ExciteR is chemically incompatible with the water-based microencapsulation of Onslaught and will damage the capsules."
+                },
+                "conclusion": "Do not mix. The chemical incompatibility would negate the primary benefit of Onslaught."
+            },
+            {
+                "with_product_id": 16,
+                "with_product_title": "InVade Bio Drain",
+                "potential_benefits": [
+                    "None."
+                ],
+                "risks_drawbacks": [
+                    "The insecticide in Onslaught will kill the beneficial microbes in InVade.",
+                    "Mixing violates the label directions for the biological cleaner."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "The pyrethroid insecticide is antimicrobial and will negate the function of the biological drain cleaner."
+                },
+                "conclusion": "Do not mix. The products are incompatible."
+            },
+            {
+                "with_product_id": 17,
+                "with_product_title": "InVade Bio Foam",
+                "potential_benefits": [
+                    "None."
+                ],
+                "risks_drawbacks": [
+                    "The insecticide will kill the microbes in the foam.",
+                    "Mixing is counterproductive to the purpose of the biological cleaner."
+                ],
+                "would_it_work": {
+                    "answer": "No",
+                    "rationale": "The insecticide in Onslaught will destroy the active microbial ingredient in InVade Bio Foam."
+                },
+                "conclusion": "Do not mix. The products are incompatible."
             }
         ]
     }
