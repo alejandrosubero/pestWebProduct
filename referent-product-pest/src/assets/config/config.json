@@ -1,4 +1,5 @@
-{
-  "username": "pest",
-  "password": "1225"
-}
+[
+  { "username": "pest", "password": "1225", "rol": "user" },
+  { "username": "admin", "password": "supercalifragilistico", "rol": "admin" }
+]
+

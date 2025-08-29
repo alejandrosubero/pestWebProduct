@@ -13,6 +13,9 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { ProductService } from '../../services/product.service';
 import { TechnicalProductService } from '../../services/TechnicalProductService';
+import { UserService } from '../../services/user.service';
+import { User } from '../../models/user.model';
+import { MixProductTechNoteService } from '../../services/mix-product-tech-note.service';
 
 
 @Component({
@@ -36,47 +39,46 @@ export class LoginComponent implements OnInit {
   username: string = '';
   password: string = '';
   errorMessage: string = '';
-
-  private configUrl: string = 'assets/config/config.json';
-  private storedUser: string = '';
-  private storedPassword: string = '';
   private technicalProductService = inject(TechnicalProductService);
+  private mixProductTechNoteService = inject(MixProductTechNoteService);
+  private userList: User[] = [];
 
   constructor(
-    private http: HttpClient,
     private router: Router,
     private authService: AuthService,
-   private productService: ProductService) {}
-
-  
-
-  ngOnInit(): void {
-    this.http.get<any>(this.configUrl).subscribe({
-      next: (data) => {
-        this.storedUser = data.username;
-        this.storedPassword = data.password;
-      },
-      error: (error) => {
-        console.error('Error loading config.json', error);
-        this.errorMessage = 'Internal error, contact support';
-      },
+    private productService: ProductService,
+    private userService: UserService) {
+    this.userService.getListUser().subscribe(users => {
+      if (users) {
+        this.userList = users;
+      }
     });
   }
 
- 
-  login(): void {
+  ngOnInit(): void {
+  }
 
-  if (
-    this.username === this.storedUser &&
-    this.password === this.storedPassword
-  ) {
+  login(): void {
+    const unUser: User | null = this.findUserByCredentials();
+    if (unUser) {
+      this.chargeData();
+      this.authService.loginU(unUser.rol);
+      this.router.navigate(['/home']);
+    } else {
+      this.errorMessage = 'Incorrect username or password';
+    }
+  }
+
+  chargeData() {
     this.productService.loadProducts();
     this.technicalProductService.loadProducts();
-    this.authService.login(); // Guardar estado
-    this.router.navigate(['/home']);
-  } else {
-    this.errorMessage = 'Incorrect username or password';
+    this.mixProductTechNoteService.loadMixData();
   }
-}
+
+  findUserByCredentials() {
+    const found = this.userList.find(u => u.username === this.username && u.password === this.password);
+    return found ? found : null;
+  }
+
 
 }

@@ -85,9 +85,12 @@ export class HomeComponent implements OnInit {
         this.isWideScreen = !result.matches;
       });
 
-    const prolist = this.productService.products();
+    const forSortedProducts = this.productService.products();
+    // Sort alphabetically by name
+    const prolist  = forSortedProducts.sort((a, b) => a.name.localeCompare(b.name));
     this.allProducts = prolist;
     this.filteredProducts = prolist;
+    
     if (prolist != undefined && prolist != null && prolist.length > 0) {
       this.getUniquePests(this.allProducts);
     }
@@ -123,11 +126,6 @@ export class HomeComponent implements OnInit {
   logout(): void {
     this.authService.logout();
     this.router.navigate(['/login']);
-  }
-
-   goTecnnical(): void {
-     const routeBase = "technical/notes";
-    this.router.navigate([routeBase]);
   }
 
 
@@ -270,6 +268,30 @@ export class HomeComponent implements OnInit {
 
   goFavorites(): void {
     this.navegateService.goFavorites('favorites', 1);
+  }
+
+   goTecnnical(): void {
+     const routeBase = "technical/notes";
+    this.navigate(routeBase);
+  }
+
+   goCompareTecnnical(): void {
+     const routeBase = "technical/notes/compare";
+    this.navigate(routeBase);
+  }
+
+   goAbout(): void {
+     const routeBase = 'about';
+    this.navigate(routeBase);
+  }
+  
+   goMix(): void {
+    const routeBase = 'technical/notes/mix';
+    this.navigate(routeBase);
+  }
+
+  navigate(routeBase:string){
+    this.router.navigate([routeBase]);
   }
 
 }

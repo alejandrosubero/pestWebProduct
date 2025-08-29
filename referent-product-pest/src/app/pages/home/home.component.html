@@ -3,9 +3,21 @@
 <mat-sidenav-container class="container">
   <mat-sidenav #drawer mode="side" class="sidenav" [opened]="isWideScreen">
     
- <div class="buto" (click)="goTecnnical()" >
-  <p>Technical Notes</p>
-</div>
+    <div class="boxButton">
+      <div class="buto" (click)="goTecnnical()">
+        <p>Technical Notes</p>
+      </div>
+      <div class="buto" (click)="goMix()">
+        <p>Technical Notes Mix</p>
+      </div>
+      <div class="buto" (click)="goCompareTecnnical()">
+        <p>Comparator</p>
+      </div>
+      <div class="buto" (click)="goAbout()">
+        <p>About Me</p>
+      </div>
+    </div>
+
 
   <mat-nav-list>
     <mat-list-item *ngFor="let pest of uniquePests" (click)="seleccionarPest(pest)">
@@ -99,6 +111,6 @@
 
     </div>
 
-    <footer class="footer">Version: {{ version }}</footer>
+    <footer class="footer"></footer>
   </mat-sidenav-content>
 </mat-sidenav-container>
