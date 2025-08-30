@@ -10,7 +10,7 @@
   [style.width.px]="200"
   >
     <h3 style="margin: 16px;">Select Pests:</h3>
-    <mat-list-item *ngFor="let pest of uniquePests" (click)="seleccionarPest(pest, sidenav)">
+    <mat-list-item *ngFor="let pest of uniquePests" (click)="seleccionarPest(pest)">
       {{ pest }}
     </mat-list-item>
   </mat-sidenav>

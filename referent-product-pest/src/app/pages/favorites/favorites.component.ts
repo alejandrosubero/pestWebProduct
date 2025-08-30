@@ -16,6 +16,8 @@ import {FormulationsListComponent} from '../../pages/formulations-list/formulati
 import { NavegateService } from '../../services/navegate.service';
 import { DBService } from '../../services/db.service';
 import { DashboardComponent } from "../storage/dashboard/dashboard.component";
+import { NavConfig } from '../../models/navElemet.model';
+import { NavService } from '../../services/nav.service';
 
 
 
@@ -43,6 +45,7 @@ export class FavoritesComponent implements OnInit {
   currentStep: 'favorites' | 'formulations' | 'storage' = 'favorites';
   private pestData: PestData = { id: 0, name: '' };
   private id:number = 0;
+  private navService = inject(NavService);
  
    
   constructor(
@@ -53,14 +56,11 @@ export class FavoritesComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // const favorites = this.favService.getFavorites();
-      // const sortedFavirites  = favorites.sort((a, b) => a.title.localeCompare(b.title));
     this.favorites = this.favService.getFavorites();
-    // this.favorites =sortedFavirites;
   }
 
  goToDetail(id: number): void {
-      this.navegateService.goToDetail('product',id, 'favorites');
+      this.navegateService.goToDetail('app/product',id, 'favorites');
   }
 
   goHome(): void {
@@ -72,6 +72,7 @@ export class FavoritesComponent implements OnInit {
       this.pestData = this.navegateService.getData(this.router);
       this.id = this.pestData.id;
       this.checkCcurrentStep(this.pestData.name);
+      this.setNav(); 
   }
 
 
@@ -90,15 +91,34 @@ setStep(step: 'favorites' | 'formulations' | 'storage') {
   switch (step) {
     case 'favorites':
       this.title = 'My Products';
+      this.navService.updateTitle(this.title);
       break;
     case 'formulations':
       this.title = 'Formulations';
+      this.navService.updateTitle(this.title);
       break;
     case 'storage':
       this.title = 'Storage';
+      this.navService.updateTitle(this.title);
       break;
   }
 }
 
+
+  setNav() {
+    this.navService.reSetNavConfig();
+
+    let navConfig: NavConfig = new NavConfig();
+    navConfig.title = 'My Products';
+    navConfig.ico.menu = false;
+    navConfig.ico.back = true;
+    navConfig.ico.favorite = false;
+    navConfig.ico.logut = false;
+    navConfig.ico.label = false;
+    navConfig.ico.sds = false;
+    navConfig.goto = 'app/home';
+
+    this.navService.setNavConfig(navConfig);
+  }
 
 }

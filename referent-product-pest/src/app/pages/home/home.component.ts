@@ -50,7 +50,8 @@ import { NavConfig } from '../../models/navElemet.model';
 
 export class HomeComponent implements OnInit {
 
-  @ViewChild('drawer') drawer!: MatSidenav;
+  // @ViewChild('drawer') drawer!: MatSidenav;
+  @ViewChild('sidenav', { static: true }) sidenav!: MatSidenav;
 
   allProducts: Product[] = [];
   filteredProducts: Product[] = [];
@@ -277,17 +278,21 @@ export class HomeComponent implements OnInit {
   }
 
 
-  seleccionarPest(pest: string, sidenav: any): void {
+  seleccionarPest(pest: string): void {
     // this.isWideScreen = false;
     this.opened = false; 
-    sidenav.close();
-    if (!this.isWideScreen) {
-      this.drawer.close();
-    }
+    // if (!this.isWideScreen) {
+    //   this.drawer.close();
+    // }
 
     this.searchTerm = pest;
     this.buscarCoincidencias();
     this.pestName = pest;
+
+    if(this.sidenav){
+this.sidenav.close();
+    } 
+       
   }
 
   goToDetail(id: number): void {

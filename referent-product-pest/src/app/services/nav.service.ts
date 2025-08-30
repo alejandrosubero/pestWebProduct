@@ -38,7 +38,12 @@ updateToggleFavorite(value: boolean) {
   }));
 }
 
-
+updateTitle(value: string) {
+  this.navConfig.update(config => ({
+    ...config,
+    title:value
+  }));
+}
 
 
 }

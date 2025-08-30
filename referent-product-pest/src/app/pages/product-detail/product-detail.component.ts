@@ -132,6 +132,9 @@ export class ProductDetailComponent implements OnInit {
       navConfig.goto = 'app/home';
     }
     this.navService.setNavConfig(navConfig);
+
+    console.log(navConfig);
+    console.log(this.navService.config());
   }
 
 

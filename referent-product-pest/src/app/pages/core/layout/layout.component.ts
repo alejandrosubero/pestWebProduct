@@ -120,16 +120,20 @@ export class LayoutComponent  implements OnInit {
       sidenav.toggle();
     this.navigate(routeBase);
   }
-//  ============ ================
+//  ============ ********** ================
 
-
+//  ============ logout and back================
     logout(): void {
     this.authService.logout();
     this.router.navigate(['/login']);
   }
 
     back(): void {
-    this.navigate(this.navConfig().goto);
+      if(this.navConfig().goto === 'app/favorites'){
+         this.navegateService.goFavorites('favorites', 1);
+      }else{
+        this.navigate(this.navConfig().goto);
+      }
   }
 
  // ======= ********** =============== //

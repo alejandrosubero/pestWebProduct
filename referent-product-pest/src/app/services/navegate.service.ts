@@ -18,7 +18,7 @@ export class NavegateService {
       id: id,
       name: routeName
     };
-    this.router.navigate(['/favorites', id], {
+    this.router.navigate(['app/favorites', id], {
       state: { data: pestData }
     });
   }
