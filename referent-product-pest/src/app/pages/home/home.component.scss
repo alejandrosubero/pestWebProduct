@@ -123,3 +123,21 @@ background: linear-gradient(225deg, #d4d4d4, #fbfbfb);
 box-shadow:  -9px 9px 16px #b3b3b3,
              9px -9px 16px #ffffff;
 }
+
+
+// ===================
+.sidenav-container {
+  height: 100vh;
+}
+
+.content {
+  position: relative;
+  padding: 16px;
+}
+
+.fab-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 1000;
+}

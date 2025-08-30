@@ -63,7 +63,8 @@ export class LoginComponent implements OnInit {
     if (unUser) {
       this.chargeData();
       this.authService.loginU(unUser.rol);
-      this.router.navigate(['/home']);
+      // this.router.navigate(['/home']);
+      this.router.navigate(['/app/home']);
     } else {
       this.errorMessage = 'Incorrect username or password';
     }

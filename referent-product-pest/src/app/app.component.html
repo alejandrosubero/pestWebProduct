@@ -1,10 +1,10 @@
 
-<!-- <router-outlet></router-outlet> -->
-
-<!-- <main [@routeAnimations]="o.isActivated ? o.activatedRoute : ''">
-  <router-outlet #o="outlet"></router-outlet>
-</main> -->
-
 <main [@routeAnimations]="getAnimationState(outlet)">
   <router-outlet #outlet="outlet"></router-outlet>
 </main>
+
+<!-- <app-layout>
+        <main [@routeAnimations]="getAnimationState(outlet)">
+  <router-outlet #outlet="outlet"></router-outlet>
+</main>
+</app-layout> -->

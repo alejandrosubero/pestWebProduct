@@ -3,12 +3,13 @@ import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { slideInAnimation } from './route-animations';
 import { ProductService } from './services/product.service';
+import { LayoutComponent } from './pages/core/layout/layout.component';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet],
+  imports: [CommonModule, RouterOutlet, LayoutComponent],
   animations: [slideInAnimation],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

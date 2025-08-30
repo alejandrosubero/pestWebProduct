@@ -25,6 +25,8 @@ import { SearchInfoSheetComponent } from '../share/search-info-sheet/search-info
 import { MatBottomSheet, MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { TechnicalProductService } from '../../services/TechnicalProductService';
 import { DomSanitizer } from '@angular/platform-browser';
+import { NavService } from '../../services/nav.service';
+import { NavConfig } from '../../models/navElemet.model';
 
 
 @Component({
@@ -63,6 +65,11 @@ export class HomeComponent implements OnInit {
   private favorites: any[] = [];
   private productStoreService = inject(ProductStoreService);
   // private technicalProductService = inject(TechnicalProductService);
+  private navService = inject(NavService);
+
+  opened = false; // cerrado por defecto
+
+
 
   constructor(
     private http: HttpClient,
@@ -75,8 +82,14 @@ export class HomeComponent implements OnInit {
     private bottomSheet: MatBottomSheet,
     private domSanitizer: DomSanitizer,
     private matIconRegistry: MatIconRegistry,) {
-           this.matIconRegistry.addSvgIcon('tecnnical', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/tecnnical.svg'));
-     }
+    this.matIconRegistry.addSvgIcon('tecnnical', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/tecnnical.svg'));
+    this.setNav();
+  }
+
+   toggleSidenav(sidenav: any) {
+    sidenav.toggle();
+  }
+  
 
   ngOnInit(): void {
     this.breakpointObserver
@@ -101,6 +114,23 @@ export class HomeComponent implements OnInit {
     // const productsTechnical = this.technicalProductService.getAllTechnicalProducts();
   }
 
+
+  setNav(){
+     this.checkFavorites();
+    let navConfig: NavConfig = new NavConfig();
+    navConfig.title = 'Pest products';
+    navConfig.ico.menu = true;
+    navConfig.ico.favorite = true;
+    navConfig.ico.logut = true;
+    if(this.isFavoriteView){
+      navConfig.favorite.active = this.isFavoriteView;
+    }
+    navConfig.favorite.url = 'favorites';
+    this.navService.setNavConfig(navConfig);
+  }
+
+
+
   openSearchInfo(): void {
     this.bottomSheet.open(SearchInfoSheetComponent);
   }
@@ -109,8 +139,8 @@ export class HomeComponent implements OnInit {
     this.favorites = this.favService.getFavorites();
     if (this.favorites != undefined && this.favorites != null && this.favorites.length > 0) {
       this.isFavoriteView = true;
-      const pproducts: Product[] = this.favorites;
-      const pforname = pproducts.filter(x => x.name === "ZENPROX® EC");
+      // const pproducts: Product[] = this.favorites;
+      // const pforname = pproducts.filter(x => x.name === "ZENPROX® EC");
     }
   }
 
@@ -123,10 +153,7 @@ export class HomeComponent implements OnInit {
   }
 
 
-  logout(): void {
-    this.authService.logout();
-    this.router.navigate(['/login']);
-  }
+
 
 
   getPestName(phrase: string): string {
@@ -250,8 +277,10 @@ export class HomeComponent implements OnInit {
   }
 
 
-  seleccionarPest(pest: string): void {
-    this.isWideScreen = false;
+  seleccionarPest(pest: string, sidenav: any): void {
+    // this.isWideScreen = false;
+    this.opened = false; 
+    sidenav.close();
     if (!this.isWideScreen) {
       this.drawer.close();
     }
@@ -263,8 +292,9 @@ export class HomeComponent implements OnInit {
 
   goToDetail(id: number): void {
     let name = this.getPestToGo(this.pestName, id)
-    this.navegateService.goToDetail('product', id, name);
+    this.navegateService.goToDetail('app/product', id, name);
   }
+
 
   goFavorites(): void {
     this.navegateService.goFavorites('favorites', 1);
@@ -294,5 +324,9 @@ export class HomeComponent implements OnInit {
     this.router.navigate([routeBase]);
   }
 
+    logout(): void {
+    this.authService.logout();
+    this.router.navigate(['/login']);
+  }
 }
 

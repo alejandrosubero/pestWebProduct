@@ -1,5 +1,5 @@
 
-import { Component, OnInit } from '@angular/core';
+import { Component, effect, inject, OnInit } from '@angular/core';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
@@ -20,6 +20,8 @@ import { NavegateService } from '../../services/navegate.service';
 
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
+import { NavService } from '../../services/nav.service';
+import { NavConfig } from '../../models/navElemet.model';
 
 @Component({
   selector: 'app-product-detail',
@@ -58,6 +60,10 @@ export class ProductDetailComponent implements OnInit {
     url2: ''
  }
 
+   private navService = inject(NavService);
+   public navConfig: NavConfig = this.navService.config();
+
+   
   constructor(
     private route: ActivatedRoute,
     private router: Router,
@@ -71,6 +77,12 @@ export class ProductDetailComponent implements OnInit {
     this.matIconRegistry.addSvgIcon( 'sds', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/sds.svg') );
     this.matIconRegistry.addSvgIcon( 'label', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/label.svg') );
     this.getData();
+    effect(() => {
+      let trogleFavorite: boolean = this.navService.config().favorite.toggleFavorite;
+      if (trogleFavorite != this.isFav) {
+        this.toggleFavorite();
+      }
+    });
   }
 
  
@@ -91,8 +103,38 @@ export class ProductDetailComponent implements OnInit {
     const prolist = this.productService.products();
     if (prolist != undefined && prolist != null && prolist.length > 0) {
       this.checkProduct(prolist, this.id);
+
     }
   }
+
+
+
+  setNav() {
+    let navConfig: NavConfig = new NavConfig();
+    navConfig.title = "Product Detail";
+    navConfig.ico.menu = false;
+    navConfig.ico.back = true;
+    navConfig.ico.favorite = true;
+    navConfig.ico.logut = false;
+    navConfig.ico.label = true;
+    navConfig.ico.sds = true;
+    
+    navConfig.favorite.viewDetail = true;
+    navConfig.favorite.active = this.isFav;
+    navConfig.favorite.toggleFavorite = this.isFav;
+
+    navConfig.label = this.oneProduct.url1;
+    navConfig.sds = this.oneProduct.url2;
+
+    if (this.nameToNavegate === 'favorites') {
+      navConfig.goto = 'app/favorites';
+    } else {
+      navConfig.goto = 'app/home';
+    }
+    this.navService.setNavConfig(navConfig);
+  }
+
+
 
   checkProduct(prolist: Product[], id: number) {
 
@@ -105,19 +147,13 @@ export class ProductDetailComponent implements OnInit {
     }
 
     if (!this.product) {
-      this.router.navigate(['/home']);
+      this.router.navigate(['app/home']);
     }else{
     this.isFav = this.favService.isFavorite(this.id);
     }
+     this.setNav(); 
   }
 
-  back(): void {
-    if(this.nameToNavegate === 'favorites'){
-     this.goFavorites();
-    }else {
-      this.router.navigate(['/home']);
-    }
-  }
 
   toggleFavorite(): void {
     if (this.isFav) {
@@ -128,28 +164,36 @@ export class ProductDetailComponent implements OnInit {
     this.isFav = !this.isFav;
   }
 
-  goFavorites(): void {
-    this.navegateService.goFavorites('favorites', 1);
-  }
+  // back(): void {
+  //   if(this.nameToNavegate === 'favorites'){
+  //    this.goFavorites();
+  //   }else {
+  //     this.router.navigate(['app/home']);
+  //   }
+  // }
 
-    viewPdf(): void {
-    window.open( this.oneProduct.url1, '_blank');
-  }
+  // goFavorites(): void {
+  //   this.navegateService.goFavorites('app/favorites', 1);
+  // }
 
-    viewSdS(): void {
-    window.open( this.oneProduct.url2, '_blank');
-  }
+  //   viewPdf(): void {
+  //   window.open( this.oneProduct.url1, '_blank');
+  // }
+
+  //   viewSdS(): void {
+  //   window.open( this.oneProduct.url2, '_blank');
+  // }
   
-  downloadPdf(): void {
-    const pdfUrl = this.oneProduct.url1;
-    const pdfName = `${new Date()}.pdf`;
-    // Crea un enlace temporal.
-    const link = document.createElement('a');
-    link.href = pdfUrl;
-    link.download = pdfName;
-    link.click();
-    link.remove();
-  }
+  // downloadPdf(): void {
+  //   const pdfUrl = this.oneProduct.url1;
+  //   const pdfName = `${new Date()}.pdf`;
+  //   // Crea un enlace temporal.
+  //   const link = document.createElement('a');
+  //   link.href = pdfUrl;
+  //   link.download = pdfName;
+  //   link.click();
+  //   link.remove();
+  // }
 
 }
 

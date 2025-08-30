@@ -1,0 +1,318 @@
+/* Variables CSS para consistencia */
+:host {
+  --primary-color: #3f51b5;
+  --primary-light: #757de8;
+  --primary-dark: #002984;
+  --text-color: #333;
+  --text-light: #666;
+  --background-light: #f5f5f5;
+  --background-dark: #e0e0e0;
+  --shadow: 0 2px 4px rgba(0,0,0,0.1);
+  --border-radius: 4px;
+}
+
+.sidenav-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidenav {
+  width: 280px;
+  background: linear-gradient(135deg, var(--background-light) 0%, #ffffff 100%);
+  box-shadow: 2px 0 8px rgba(0,0,0,0.15);
+}
+
+.sidenav .mat-nav-list a {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+.sidenav .mat-nav-list a:hover {
+  background-color: var(--background-dark);
+  border-left-color: var(--primary-color);
+}
+
+.sidenav .mat-nav-list a mat-icon {
+  color: var(--primary-color);
+  transition: transform 0.3s ease;
+}
+
+.sidenav .mat-nav-list a:hover mat-icon {
+  transform: scale(1.1);
+}
+
+/* Toolbar Styles */
+.toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: var(--shadow);
+  padding: 0 16px;
+}
+
+
+.toolbar-title {
+  margin-left: 16px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.toolbar-title h1 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: white;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+/* Desktop Navigation */
+.desktop-nav {
+  display: flex;
+  gap: 4px;
+}
+
+.desktop-nav a {
+  border-radius: var(--border-radius);
+  transition: background-color 0.3s ease;
+}
+
+.desktop-nav a.active {
+  background-color: rgba(255, 255, 255, 0.2);
+  font-weight: 500;
+}
+
+.desktop-nav a:hover:not(.active) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Main Content */
+.content {
+  min-height: calc(100vh - 160px);
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Footer Styles */
+.footer {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 100%);
+  color: white;
+  padding: 40px 0 20px;
+  margin-top: auto;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.footer-section h3,
+.footer-section h4 {
+  margin: 0 0 16px 0;
+  color: #ffffff;
+}
+
+.footer-section p {
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+.footer-section a {
+  display: block;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  margin-bottom: 12px;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.footer-section address {
+  font-style: normal;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 24px;
+  margin-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-bottom p {
+  margin: 0;
+  opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sidenav {
+    width: 250px;
+  }
+  
+  .content {
+    padding: 20px 16px;
+    min-height: calc(100vh - 140px);
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 24px;
+  }
+  
+  .toolbar {
+    padding: 0 12px;
+  }
+  
+  .toolbar-title h1 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    padding: 16px 12px;
+  }
+  
+  .footer {
+    padding: 32px 0 16px;
+  }
+  
+  .footer-content {
+    padding: 0 16px;
+  }
+}
+
+/* iPhone 13 mini specific adjustments */
+@media (max-width: 375px) and (max-height: 812px) {
+  .content {
+    padding: 12px;
+  }
+  
+  .toolbar-title h1 {
+    font-size: 1.1rem;
+  }
+  
+  .footer-section {
+    text-align: center;
+  }
+}
+
+/* Safe area insets for modern devices */
+@supports(padding: max(0px)) {
+  .content {
+    padding-left: max(16px, env(safe-area-inset-left));
+    padding-right: max(16px, env(safe-area-inset-right));
+  }
+  
+  .footer {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .sidenav .mat-nav-list a {
+    border-left-width: 3px;
+  }
+  
+  .desktop-nav a.active {
+    outline: 2px solid white;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .sidenav .mat-nav-list a,
+  .sidenav .mat-nav-list a mat-icon,
+  .desktop-nav a {
+    transition: none;
+  }
+}
+
+
+// =============== buton ===================
+
+
+.buto {
+  /* --- Estilos base y visuales --- */
+  margin-top: 5px;
+  margin-left: 2px;
+  margin-right: 2px;
+  background-color: #f0f0f0; /* Un color base de tecla */
+  color: #333;
+  padding: 0.8rem 1.2rem; /* Más padding horizontal para que se vea mejor */
+  border: 1px solid #b0b0b0;
+  border-radius: 8px; /* Un poco más redondeado, como una tecla */
+  cursor: pointer;
+  
+  /* --- La Magia del 3D --- */
+  /* Sombra inferior que simula la profundidad de la tecla */
+  box-shadow: 0px 4px 0px 0px #c0c0c0;
+  
+  /* --- Preparación para la animación --- */
+  /* Transición para que el movimiento sea suave */
+  transition: transform 0.07s ease-in-out, box-shadow 0.07s ease-in-out;
+
+  /* Hacemos que la <p> de adentro no interfiera */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none; /* Evita que el texto se seleccione al hacer clic */
+}
+
+/* --- Estado Hover (cuando el mouse está encima) --- */
+.buto:hover {
+  background-color: #f8f8f8; /* Se aclara ligeramente */
+}
+
+/* --- Estado Active (MIENTRAS se hace clic) --- */
+/* ¡Aquí ocurre la animación de hundimiento! */
+.buto:active {
+  /* 1. Movemos el botón 4px hacia abajo, justo a la posición de la sombra */
+  transform: translateY(4px);
+  
+  /* 2. Eliminamos la sombra, dando la ilusión de que el botón ocupó su lugar */
+  box-shadow: 0px 0px 0px 0px #c0c0c0;
+
+  /* Opcional: oscurecer un poco al presionar */
+  background-color: #e9e9e9;
+}
+
+/* No olvides quitar el margen por defecto del párrafo */
+.buto p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.boxButton{
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 10px;
+  
+border-radius: 0px;
+background: linear-gradient(225deg, #d4d4d4, #fbfbfb);
+box-shadow:  -9px 9px 16px #b3b3b3,
+             9px -9px 16px #ffffff;
+}

@@ -1,116 +1,48 @@
 
+<mat-sidenav-container class="sidenav-container">
 
-<mat-sidenav-container class="container">
-  <mat-sidenav #drawer mode="side" class="sidenav" [opened]="isWideScreen">
-    
-    <div class="boxButton">
-      <div class="buto" (click)="goTecnnical()">
-        <p>Technical Notes</p>
-      </div>
-      <div class="buto" (click)="goMix()">
-        <p>Technical Notes Mix</p>
-      </div>
-      <div class="buto" (click)="goCompareTecnnical()">
-        <p>Comparator</p>
-      </div>
-      <div class="buto" (click)="goAbout()">
-        <p>About Me</p>
-      </div>
-    </div>
-
-
-  <mat-nav-list>
-    <mat-list-item *ngFor="let pest of uniquePests" (click)="seleccionarPest(pest)">
+  <!-- Sidenav -->
+  <mat-sidenav 
+  #sidenav 
+  mode="over" 
+  position="end" 
+  [opened]="false"
+  [style.width.px]="200"
+  >
+    <h3 style="margin: 16px;">Select Pests:</h3>
+    <mat-list-item *ngFor="let pest of uniquePests" (click)="seleccionarPest(pest, sidenav)">
       {{ pest }}
     </mat-list-item>
-  </mat-nav-list>
-</mat-sidenav>
+  </mat-sidenav>
 
+  <!-- Contenido principal -->
   <mat-sidenav-content>
-    <mat-toolbar color="primary" class="mobile-toolbar">
-    
-      @if (!isWideScreen){
-      <button mat-icon-button (click)="drawer.toggle()">
-        <mat-icon>menu</mat-icon>
-      </button>
-      }
-    
-      <span>Pest products</span>
-      <span class="spacer"></span>
-    
-    
-      <button mat-icon-button matTooltip="Favorites" aria-label="Favorites" (click)="goFavorites()">
-        <mat-icon>{{ isFavoriteView ? 'star' : 'star_border' }}</mat-icon>
-      </button>
-    
-      <button mat-button (click)="logout()">
-        <mat-icon>exit_to_app</mat-icon></button>
-    </mat-toolbar>
-
     <div class="content">
-
-
-
-<mat-form-field appearance="fill" class="search-box">
+     
+        <mat-form-field appearance="fill" class="search-box">
         <mat-label>Search for product or pest</mat-label>
-        <input
-          matInput
-          [(ngModel)]="searchTerm"
-          (input)="buscarCoincidencias()"
-        />
-        <button
-          mat-icon-button
-          matSuffix
-          aria-label="Search Information"
-          (click)="openSearchInfo()"
-        >
+        <input matInput [(ngModel)]="searchTerm" (input)="buscarCoincidencias()" />
+        <button mat-icon-button matSuffix aria-label="Search Information" (click)="openSearchInfo()">
           <mat-icon>info</mat-icon>
         </button>
       </mat-form-field>
-
-  <!-- <mat-form-field appearance="fill" class="search-box">
-    <mat-label>Search for product or pest</mat-label>
-    <input
-      matInput
-      [(ngModel)]="searchTerm"
-      (input)="buscarCoincidencias()"
-    />
-    <button
-      mat-icon-button
-      matSuffix
-      matTooltip="Use '*' followed by a word to search by active ingredient. Use '&' to search by product name. Use '-' between two words (e.g., a pest and 'granular') to filter."
-      matTooltipPosition="above"
-      aria-label="Search Information"
-    >
-      <mat-icon>info</mat-icon>
-    </button>
-  </mat-form-field> -->
-
-      <!-- <mat-form-field appearance="fill" class="search-box">
-        <mat-label>Search for product or pest</mat-label>
-        <input
-          matInput
-          [(ngModel)]="searchTerm"
-          (input)="buscarCoincidencias()"
-        />
-      </mat-form-field> -->
-
-
-
+    
       <div class="results">
-
-          @for (product of filteredProducts; track product.name) {
+        @for (product of filteredProducts; track product.name) {
         <mat-card (click)="goToDetail(product.id)" class="clickable-card">
           <mat-card-title>{{ product.name }}</mat-card-title>
           <mat-card-content>
             <p><strong>Active Ingredient:</strong> {{ product.activeIngredients }}</p>
           </mat-card-content>
         </mat-card>
-      }
+        }
       </div>
 
+      <!-- Botón flotante a la derecha -->
+      <button mat-fab color="primary" class="fab-btn" (click)="sidenav.toggle()">
+        <mat-icon>bug_report</mat-icon>
+      </button>
     </div>
-
-    <footer class="footer"></footer>
   </mat-sidenav-content>
+
 </mat-sidenav-container>

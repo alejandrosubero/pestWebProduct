@@ -1,32 +1,50 @@
-export class navConfig {
-    
-    title:string;
-    label:string;
-    sds:string;
-    favorite:Favorite;
-    goto:string;
-    noteSource:string;
-    hideNemu: boolean;
+export class NavConfig {
 
-    constructor(){
-        this.title ="";
-        this.label= "";
-        this.sds ="";
+    public title: string;
+    public label: string;
+    public sds: string;
+    public favorite: Favorite;
+    public goto: string;
+    public noteSource: string;
+    public hideNemu: boolean;
+    public ico: IcoConfig;
+
+    constructor() {
+        this.title = "";
+        this.label = "";
+        this.sds = "";
         this.favorite = new Favorite();
-        this.goto ="";
-        this.noteSource ="";
-        this.hideNemu =false;
+        this.goto = "";
+        this.noteSource = "";
+        this.hideNemu = false;
+        this.ico = new IcoConfig();
     }
 
 }
 
 export class Favorite {
-    active:boolean;
-    url:string;
+    active: boolean;
+    url: string;
+    toggleFavorite: boolean;
+     viewDetail: boolean;
 
-    constructor(){
+    constructor() {
         this.active = false;
-        this.url ="";
+        this.url = "";
+        this.toggleFavorite = false;
+        this.viewDetail = false;
     }
+
+}
+
+export class IcoConfig {
+
+    public menu: boolean = false;
+    public favorite: boolean = false;
+    public label: boolean = false;
+    public sds: boolean = false;
+    public source: boolean = false;
+    public back: boolean = false;
+    public logut: boolean = false;
 
 }
