@@ -64,17 +64,17 @@ export class DashboardComponent implements OnInit {
   }
 
   onRegisterUsage(): void {
-    this.router.navigate(['/storage/products/register/use']);
+    this.router.navigate(['app/storage/products/register/use']);
   }
 
 
   onAddNewProduct(): void {
-    this.router.navigate(['/storage/products/add']);
+    this.router.navigate(['app/storage/products/add']);
   }
 
 
   goToStorageList(): void {
-    this.router.navigate(['/storage/products']);
+    this.router.navigate(['app/storage/products']);
   }
 
 

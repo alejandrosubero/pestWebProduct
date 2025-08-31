@@ -108,6 +108,21 @@ getProductIcon(type: ProductType): string {
 }
 
 
+ setNav() {
+            this.navService.reSetNavConfig();
+      
+            let navConfig: NavConfig = new NavConfig();
+            navConfig.title = "Add Product";
+            navConfig.ico.menu = false;
+            navConfig.ico.back = true;
+            navConfig.ico.favorite = false;
+            navConfig.ico.logut = false;
+            navConfig.ico.label = false;
+            navConfig.ico.sds = false;      
+            
+            navConfig.goto = 'app/storage/products';
+            this.navService.setNavConfig(navConfig);
+          }
 
 
 

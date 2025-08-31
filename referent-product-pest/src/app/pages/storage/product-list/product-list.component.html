@@ -1,16 +1,9 @@
-<mat-toolbar color="primary" class="mobile-toolbar">
-    <button mat-icon-button (click)="onBackClick()">
-        <mat-icon>arrow_back</mat-icon>
-    </button>
-    <span>Inventory Packages</span>
-    <span class="spacer"></span>
-</mat-toolbar>
 
 
 <div class="package-list-container">
     <!-- Search/Filter Bar -->
     <mat-form-field appearance="outline" class="search-field">
-        <mat-label>Buscar producto</mat-label>
+        <mat-label> Search product</mat-label>
         <input matInput placeholder="Nombre, ubicación, estado..." [(ngModel)]="searchQuery" (input)="applyFilter()" />
         <mat-icon matPrefix>search</mat-icon>
         <button *ngIf="searchQuery" matSuffix mat-icon-button (click)="clearSearch()">
@@ -19,7 +12,7 @@
     </mat-form-field>
 
     @if (loading) {
-    <div>🔄 Cargando productos...</div>
+    <div>🔄 loading products...</div>
     }
 
     @if (error) {

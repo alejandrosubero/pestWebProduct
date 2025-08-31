@@ -18,6 +18,8 @@ import { ProductService } from '../../../services/product.service';
 import { Product } from '../../../models/product.model';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { map, Observable, startWith } from 'rxjs';
+import { NavConfig } from '../../../models/navElemet.model';
+import { NavService } from '../../../services/nav.service';
 
 
 
@@ -51,6 +53,7 @@ export class AddProductComponent {
   protected navegateService = inject(NavegateService);
   protected unitService = inject(DefaultUnitServiceService);
   protected productService = inject(ProductService);
+  private navService = inject(NavService);
 
   protected pestData: PestData = { id: 0, name: '' };
   protected id: number = 0;
@@ -64,7 +67,7 @@ export class AddProductComponent {
   constructor(public router: Router,) {
    this.setForm();
    this. getData();
-   
+   this.setNav();
   }
  
 
@@ -107,7 +110,7 @@ export class AddProductComponent {
   }
 
   goBack() {
-        this.router.navigate(['/storage/products']);
+        this.router.navigate(['app/storage/products']);
   }
 
 
@@ -192,6 +195,20 @@ setList(){
     return this.nameValue === ''? false : true;
   }
 
-
+   setNav() {
+            this.navService.reSetNavConfig();
+      
+            let navConfig: NavConfig = new NavConfig();
+            navConfig.title = "Add Product";
+            navConfig.ico.menu = false;
+            navConfig.ico.back = true;
+            navConfig.ico.favorite = false;
+            navConfig.ico.logut = false;
+            navConfig.ico.label = false;
+            navConfig.ico.sds = false;      
+            
+            navConfig.goto = 'app/storage/products';
+            this.navService.setNavConfig(navConfig);
+          }
 
 }

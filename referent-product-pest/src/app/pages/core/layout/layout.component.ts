@@ -128,19 +128,40 @@ export class LayoutComponent  implements OnInit {
     this.router.navigate(['/login']);
   }
 
-    back(): void {
-
+    backs(): void {
       if(this.navConfig().goto === 'app/favorites'){
          this.navegateService.goFavorites('favorites', 1);
       }else{
         this.navigate(this.navConfig().goto);
       }
-
       if(this.navConfig().goto === 'formulations' &&  this.navConfig().favorite.url === 'formulations'){
         this.navegateService.goFavorites('formulations', this.navConfig().favorite.id);
       }
-
+      if(this.navConfig().goto === 'storage' &&  this.navConfig().favorite.url === 'storage'){
+        this.navegateService.goFavorites('storage', 1);
+      }
       
+  }
+
+
+  back() {
+    let goto: string = this.navConfig().goto;
+
+    switch (goto) {
+      case 'app/favorites':
+        this.navegateService.goFavorites('favorites', 1);
+        break;
+      case 'formulations':
+        this.navegateService.goFavorites('formulations', this.navConfig().favorite.id);
+        break;
+      case 'storage':
+        this.navegateService.goFavorites('storage', 1);
+        break;
+      default:
+        debugger
+        this.navigate(this.navConfig().goto);
+        break;
+    }
   }
 
  // ======= ********** =============== //

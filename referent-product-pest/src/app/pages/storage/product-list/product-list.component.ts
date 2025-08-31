@@ -12,6 +12,8 @@ import { PackageStatus } from '../../../models/interfaces';
 import { NavegateService } from '../../../services/navegate.service';
 import { Router } from '@angular/router';
 import { PestData } from '../../../models/pestdata.model';
+import { NavConfig } from '../../../models/navElemet.model';
+import { NavService } from '../../../services/nav.service';
 
 
 
@@ -36,10 +38,17 @@ export class ProductListComponent implements OnInit{
  private router = inject(Router);
  private navegateService = inject( NavegateService);
  private store = inject(ProductStoreService);
+ private navService = inject(NavService);
  public searchQuery = '';
 
 
- ngOnInit() {}
+  constructor() {
+    this.setNav();
+  }
+
+ ngOnInit() {
+  
+ }
 
 
    // Accesos rápidos
@@ -70,7 +79,7 @@ clearSearch(): void {
 
 
   async deleteProduct(id: number) {
-    if (confirm('¿Eliminar este producto?')) {
+    if (confirm('¿Do ypu whant Delete this Product?')) {
       await this.store.delete(id);
     }
   }
@@ -92,7 +101,7 @@ clearSearch(): void {
 
   onDetail(id: number | undefined): void {
     if (id !== undefined) { 
-      this.navegateService.goToDetail('storage/products/detail', id, '');
+      this.navegateService.goToDetail('app/storage/products/detail', id, '');
     } else {
       console.warn('Attempting to browse in detail with an undefined ID.');
     }
@@ -105,7 +114,26 @@ clearSearch(): void {
 
 
   onAddNew(): void {
-   this.router.navigate(['/storage/products/add']);
+   this.router.navigate(['app/storage/products/add']);
   }
+
+
+   setNav() {
+            this.navService.reSetNavConfig();
+      
+            let navConfig: NavConfig = new NavConfig();
+            navConfig.title = "Inventory Packages";
+            navConfig.ico.menu = false;
+            navConfig.ico.back = true;
+            navConfig.ico.favorite = false;
+            navConfig.ico.logut = false;
+            navConfig.ico.label = false;
+            navConfig.ico.sds = false;      
+            navConfig.favorite.url = 'storage';
+            navConfig.goto = 'storage';
+            this.navService.setNavConfig(navConfig);
+          }
+
+
 
 }
