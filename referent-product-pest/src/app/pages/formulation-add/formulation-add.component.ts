@@ -20,6 +20,8 @@ import { DBService } from '../../services/db.service';
 import { DefaultUnitServiceService } from '../../services/default-unit-service.service';
 import { Product } from '../../models/product.model';
 import { ProductService } from '../../services/product.service';
+import { NavConfig } from '../../models/navElemet.model';
+import { NavService } from '../../services/nav.service';
 
 
 @Component({
@@ -42,28 +44,33 @@ import { ProductService } from '../../services/product.service';
   templateUrl: './formulation-add.component.html',
   styleUrls: ['./formulation-add.component.scss']
 })
-export class FormulationAddComponent {
+export class FormulationAddComponent implements OnInit {
 
   @ViewChild('textarea') textareaRef!: ElementRef<HTMLTextAreaElement>;
   title = '';
   content = '';
   form!: FormGroup;
   formulation : Formulation = { id: 0, title: '', content: ''}
+  text: string = '';
+  suggestion: string = '';
   protected allProducts: Product[] = [];
   private fb = inject(FormBuilder);
   private navegateService = inject( NavegateService);
-  private id:number = 0;
   private db = inject(DBService);
+  private navService = inject(NavService);
   private unitService = inject(DefaultUnitServiceService);
   private productService = inject(ProductService);
+  private route = inject(ActivatedRoute);
+  private id:number = 0;
   private PRODUCTS: string[] = [];
   private UNITS: string[] = [];
   private ALL_SUGGESTIONS: string[] = [];
-  text: string = '';
-  suggestion: string = '';
+
+  formulationId!: number;
 
   constructor(private service: FormulationService, private router: Router) {
    this.updateUnits('Liquid');
+   this.setNav();
   }
 
 
@@ -97,7 +104,6 @@ export class FormulationAddComponent {
     return list;
   }
 
-
  
   save(): void {
     const newFormulation: Formulation = {
@@ -109,14 +115,15 @@ export class FormulationAddComponent {
     this.db.addFormulations(newFormulation);
     this.goBack();
   }
+  
+  cancel(): void {
+    this.goBack();
+  }
 
   goBack(): void {
     this.navegateService.goFavorites('formulations', this.id);
   }
 
-  cancel(): void {
-    this.goBack();
-  }
 
 
   handleInputChange(): void {
@@ -163,5 +170,28 @@ export class FormulationAddComponent {
     }
   }
 
+
+
+  setNav() {
+          this.navService.reSetNavConfig();
+    
+          let navConfig: NavConfig = new NavConfig();
+          navConfig.title = "Add Formulation";
+          navConfig.ico.menu = false;
+          navConfig.ico.back = true;
+          navConfig.ico.favorite = false;
+          navConfig.ico.logut = false;
+          navConfig.ico.label = false;
+          navConfig.ico.sds = false;      
+          
+          navConfig.favorite.url = 'formulations';
+          if(this.id){
+            navConfig.favorite.id = this.id;
+          }
+          navConfig.goto = 'formulations';
+          this.navService.setNavConfig(navConfig);
+        }
+
+        
 }
 

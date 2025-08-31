@@ -133,8 +133,6 @@ export class ProductDetailComponent implements OnInit {
     }
     this.navService.setNavConfig(navConfig);
 
-    console.log(navConfig);
-    console.log(this.navService.config());
   }
 
 

@@ -16,15 +16,15 @@ export type TabType = "favorites" | "formulations" | "storage";
 })
 export class MagicNavComponent {
 
- @Output() stepChanged = new EventEmitter<TabType>();
-  
+@Output() stepChanged = new EventEmitter<TabType>();
+
   tabs = [
     { id: 'favorites' as TabType, label: 'FAVORITES', icon: 'star' },
     { id: 'formulations' as TabType, label: 'FORMULATIONS', icon: 'science' },
     { id: 'storage' as TabType, label: 'STORAGE', icon: 'inventory_2' }
   ];
-  
-  currentStep: TabType = 'formulations';
+
+  currentStep: TabType = 'favorites';
 
   setStep(step: TabType) {
     this.currentStep = step;

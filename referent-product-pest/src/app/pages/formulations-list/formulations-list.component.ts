@@ -46,10 +46,7 @@ export class FormulationsListComponent {
     private navegateService: NavegateService) {}
 
   ngOnInit(): void {
-    // this.formulations = this.service.getFormulations();
     this.db.getAllFormulations().then(data => {
-      //   const sortedProducts  = data.sort((a, b) => a.title.localeCompare(b.title));
-      // this.formulations = sortedProducts;
       this.formulations = data;
     });
 
@@ -57,11 +54,11 @@ export class FormulationsListComponent {
   }
 
  goToDetail(id: number): void {
-      this.navegateService.goToDetail('formulation',id, 'formulations');
+      this.navegateService.goToDetail('app/formulation',id, 'formulations');
   }
 
   addNew(): void {
-    this.router.navigate(['/formulation/add']);
+    this.router.navigate(['app/formulation/add']);
   }
 
   

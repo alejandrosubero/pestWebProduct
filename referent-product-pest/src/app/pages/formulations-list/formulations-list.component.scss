@@ -2,10 +2,19 @@
   padding: 1rem;
 }
 
+// .add-btn {
+//   position: fixed;
+//   // bottom: 20px;
+//   top: 30px;
+//   right: 20px;
+// }
+
 .add-btn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
+  position: absolute;
+  // top: 60px;
+  bottom: 90px;
+  right: 15px;
+  z-index: 1000;
 }
 
 .clickable-card {
@@ -17,3 +26,4 @@
 .clickable-card:hover {
   transform: scale(1.02);
 }
+

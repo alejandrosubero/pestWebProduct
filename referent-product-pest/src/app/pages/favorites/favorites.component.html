@@ -1,31 +1,7 @@
 
-<!-- <mat-toolbar color="primary" class="main-toolbar mobile-toolbar">
-  <button mat-icon-button (click)="goHome()" aria-label="Back">
-    <mat-icon>arrow_back</mat-icon>
-  </button>
-  <h2 class="mat-headline section-title">{{ title }}</h2>
-</mat-toolbar> -->
-
-
-<!-- <nav class="step-nav mobile-toolbar">
-  <button mat-button (click)="setStep('favorites')" [ngClass]="{ active: currentStep === 'favorites' }">
-    <mat-icon>star</mat-icon>
-    <span class="step-label">Favorites</span>
-  </button>
-
-  <button mat-button (click)="setStep('formulations')" [ngClass]="{ active: currentStep === 'formulations' }">
-    <mat-icon>science</mat-icon>
-    <span class="step-label">Formulations</span>
-  </button>
-
-  <button mat-button (click)="setStep('storage')"  [ngClass]="{ active: currentStep === 'storage' }">
-    <mat-icon>inventory_2</mat-icon>
-    <span class="step-label">Storage</span>
-  </button>
-</nav> -->
-<app-magic-nav (stepChanged)="setStep($event)"></app-magic-nav>
 
 <!-- Contenido dinámico -->
+ <app-magic-nav (stepChanged)="setStep($event)"></app-magic-nav>
 <main class="section-container">
   <ng-container [ngSwitch]="currentStep">
     <section *ngSwitchCase="'favorites'">

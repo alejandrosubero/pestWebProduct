@@ -20,6 +20,8 @@ import { PestData } from '../../models/pestdata.model';
 import { NavegateService } from '../../services/navegate.service';
 import { NgIf } from '@angular/common';
 import { DBService } from '../../services/db.service';
+import { NavConfig } from '../../models/navElemet.model';
+import { NavService } from '../../services/nav.service';
 
 
 @Component({
@@ -45,12 +47,13 @@ import { DBService } from '../../services/db.service';
 
 export class FormulationDetailComponent implements OnInit{
 
- formulation!: Formulation | undefined;
-   private pestData: PestData = { id: 0, name: '' };
-   private id:number = 0;
-   private nameToNavegate ='';
+  formulation!: Formulation | undefined;
+  private pestData: PestData = { id: 0, name: '' };
+  private id: number = 0;
+  private nameToNavegate = '';
   isFabOpen = false;
-   private db = inject(DBService);
+  private db = inject(DBService);
+  private navService = inject(NavService);
 
   constructor(
     private route: ActivatedRoute,
@@ -67,6 +70,7 @@ export class FormulationDetailComponent implements OnInit{
 
    this.db.getFormulationsById(this.id).then(data => {
         this.formulation = data;
+           this.setNav();
     });
 
     // this.formulation = this.service.getFormulationById(id);
@@ -83,16 +87,17 @@ export class FormulationDetailComponent implements OnInit{
 
   edit(): void {
     this.isFabOpen = false;
-    this.router.navigate(['/formulation/edit', this.formulation?.id]);
+    this.router.navigate(['app/formulation/edit', this.formulation?.id]);
   }
 
 
-  delete(): void {
-    if (this.formulation && confirm('Are you sure you want to delete this formulation?')) {
-      this.service.deleteFormulation(this.formulation.id);
-      this.router.navigate(['/formulations']);
-    }
-  }
+  // delete(): void {
+  //   if (this.formulation && confirm('Are you sure you want to delete this formulation?')) {
+  //     this.service.deleteFormulation(this.formulation.id);
+  //     // this.router.navigate(['app/formulations']);
+  //    this.goBack();
+  //   }
+  // }
 
 
   confirmDelete(): void {
@@ -123,5 +128,31 @@ export class FormulationDetailComponent implements OnInit{
   }
 
 
+
+    setNav() {
+      this.navService.reSetNavConfig();
+
+      let navConfig: NavConfig = new NavConfig();
+      navConfig.title = "Formulation Detail";
+      navConfig.ico.menu = false;
+      navConfig.ico.back = true;
+      navConfig.ico.favorite = false;
+      navConfig.ico.logut = false;
+      navConfig.ico.label = false;
+      navConfig.ico.sds = false;      
+      
+      navConfig.favorite.url = 'formulations';
+      if(this.id){
+        navConfig.favorite.id = this.id;
+      }
+      navConfig.goto = 'formulations';
+  
+
+      this.navService.setNavConfig(navConfig);
+  
+ 
+    }
+
+    
 }
 

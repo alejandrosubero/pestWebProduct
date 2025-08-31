@@ -25,6 +25,7 @@ export class NavConfig {
 export class Favorite {
     active: boolean;
     url: string;
+    id: number;
     toggleFavorite: boolean;
      viewDetail: boolean;
 
@@ -33,6 +34,7 @@ export class Favorite {
         this.url = "";
         this.toggleFavorite = false;
         this.viewDetail = false;
+        this.id = 0;
     }
 
 }

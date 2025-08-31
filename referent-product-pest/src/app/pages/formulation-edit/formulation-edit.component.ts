@@ -1,64 +1,86 @@
+import { Component, inject, OnInit ,  ElementRef, ViewChild } from '@angular/core';
+import { HttpClientModule} from '@angular/common/http';
+import { FormGroup, FormsModule , ReactiveFormsModule, FormControl, Validators, FormBuilder} from '@angular/forms';
 
-// 📁 src/app/pages/formulation-edit/formulation-edit.component.ts
-import { Component, inject, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { MatButtonModule } from '@angular/material/button';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { MatCardModule } from '@angular/material/card';
-import { FormulationService } from '../../services/formulation.service';
-import { Formulation } from '../../models/formulation.model';
-import { FormsModule } from '@angular/forms';
-import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { FormulationService } from '../../services/formulation.service';
+import { Formulation } from '../../models/formulation.model';
 import { NavegateService } from '../../services/navegate.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { DBService } from '../../services/db.service';
+import { DefaultUnitServiceService } from '../../services/default-unit-service.service';
+import { Product } from '../../models/product.model';
+import { ProductService } from '../../services/product.service';
+import { NavConfig } from '../../models/navElemet.model';
+import { NavService } from '../../services/nav.service';
+
 
 @Component({
-  selector: 'app-formulation-edit',
-  standalone: true,
-  imports: [
-    CommonModule,
-    MatButtonModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatCardModule,
-    FormsModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatSidenavModule,
-    MatListModule,
-    ReactiveFormsModule
-
-  ],
+  selector: 'app-formulation-add',
+    standalone: true,
+    imports: [
+      CommonModule,
+      HttpClientModule,
+      FormsModule,
+      MatToolbarModule,
+      MatButtonModule,
+      MatInputModule,
+      MatIconModule,
+      MatCardModule,
+      MatSidenavModule,
+      MatListModule,
+      ReactiveFormsModule,
+      MatFormFieldModule 
+    ],
   templateUrl: './formulation-edit.component.html',
   styleUrls: ['./formulation-edit.component.scss']
 })
 
 export class FormulationEditComponent implements OnInit {
 
-  private db = inject(DBService);
-  private route = inject(ActivatedRoute);
-  private router = inject(Router);
-  private formulationService = inject(FormulationService);
+
+@ViewChild('textarea') textareaRef!: ElementRef<HTMLTextAreaElement>;
+  title = '';
+  content = '';
+  form!: FormGroup;
+  formulation : Formulation = { id: 0, title: '', content: ''}
+  text: string = '';
+  suggestion: string = '';
+  protected allProducts: Product[] = [];
   private fb = inject(FormBuilder);
   private navegateService = inject( NavegateService);
+  private db = inject(DBService);
+  private navService = inject(NavService);
+  private unitService = inject(DefaultUnitServiceService);
+  private productService = inject(ProductService);
+  private route = inject(ActivatedRoute);
   private id:number = 0;
-  formulation: Formulation = { id: 1, title:'', content:''};
+  private PRODUCTS: string[] = [];
+  private UNITS: string[] = [];
+  private ALL_SUGGESTIONS: string[] = [];
 
-  form!: FormGroup;
   formulationId!: number;
 
-  ngOnInit(): void {
-    let formulation: Formulation | undefined;
-    this.formulationId = Number(this.route.snapshot.paramMap.get('id'));
-    // const formulation = this.formulationService.getFormulationById(this.formulationId);
-    
-    this.db.getFormulationsById(this.formulationId).then(data => {
+  constructor() {
+   this.updateUnits('Liquid');
+  }
+
+
+ ngOnInit(): void {
+   this.formulationId = Number(this.route.snapshot.paramMap.get('id'));
+   let formulation: Formulation | undefined;
+
+
+if(this.formulationId  !== undefined && this.formulationId !== null){
+ this.db.getFormulationsById(this.formulationId).then(data => {
       formulation = data;
       if (formulation != undefined && formulation != null) {
         this.form = this.fb.group({
@@ -66,8 +88,100 @@ export class FormulationEditComponent implements OnInit {
           content: [formulation.content, Validators.required]
         });
       }
+      this.setNav();
     });
+}
   }
+
+
+  updateUnits(type: string): void {
+    if (type != undefined && type != null) {
+      this.UNITS = this.unitService.getUnitsByProductType(type);
+      this.PRODUCTS = this.getProductNames();
+      if (this.UNITS.length > 0) {
+        this.ALL_SUGGESTIONS = [...new Set([...this.PRODUCTS, ...this.UNITS])].sort();
+      } else {
+        this.UNITS = ['oz', 'fl oz', 'gal', 'L', 'mL', 'g', 'kg', 'lb', 'ft', 'm', 'sq ft','sq m'];
+      }
+    }
+  }
+
+
+  getProductNames(): string[] {
+    const products: Product[] = this.productService.products();
+    let list: string[] = [];
+    if (products != undefined && products != null) {
+      list = products.map(product => product.name);
+    }
+    return list;
+  }
+
+
+  handleInputChange(): void {
+    this.form.get('content')?.valueChanges.subscribe((content: string) => {
+      this.text = content;
+    });
+
+    const lastWordMatch = this.text.match(/(\S+)$/);
+    if (lastWordMatch && lastWordMatch[1]) {
+      const lastWord = lastWordMatch[1];
+      const foundSuggestion = this.ALL_SUGGESTIONS.find(s =>
+        s.toLowerCase().startsWith(lastWord.toLowerCase()) && s.toLowerCase() !== lastWord.toLowerCase()
+      );
+      this.suggestion = foundSuggestion || '';
+    } else {
+      this.suggestion = '';
+    }
+  }
+
+
+  acceptSuggestion(): void {
+    if (!this.suggestion) return;
+    const lastWordMatch = this.text.match(/(\S+)$/);
+    let newText: string;
+
+    if (lastWordMatch) {
+      const lastWord = lastWordMatch[1];
+      const baseText = this.text.substring(0, this.text.length - lastWord.length);
+      newText = baseText + this.suggestion + ' ';
+    } else {
+      newText = this.text + this.suggestion + ' ';
+    }
+
+    this.text = newText;
+    this.form.get('content')?.setValue(this.text);
+    this.suggestion = '';
+    setTimeout(() => this.textareaRef.nativeElement.focus(), 0);
+  }
+
+  handleKeyDown(event: KeyboardEvent): void {
+    if ((event.key === 'Tab' || event.key === 'Enter') && this.suggestion) {
+      event.preventDefault(); 
+      this.acceptSuggestion();
+    }
+  }
+
+
+     setNav() {
+        this.navService.reSetNavConfig();
+  
+        let navConfig: NavConfig = new NavConfig();
+        navConfig.title = "Edit Formulation";
+        navConfig.ico.menu = false;
+        navConfig.ico.back = true;
+        navConfig.ico.favorite = false;
+        navConfig.ico.logut = false;
+        navConfig.ico.label = false;
+        navConfig.ico.sds = false;      
+        
+        navConfig.favorite.url = 'formulations';
+        if(this.id){
+          navConfig.favorite.id = this.id;
+        }
+        navConfig.goto = 'formulations';
+        this.navService.setNavConfig(navConfig);
+      }
+
 
   save(): void {
     const updated: Formulation = {
@@ -76,15 +190,17 @@ export class FormulationEditComponent implements OnInit {
       content: this.form.value.content
     };
      this.db.updateFormulations(updated);
-    // this.formulationService.updateFormulation(updated);
-     this.goBack();
+     this.goToDetail(this.formulationId);
   }
 
   cancel(): void {
-    this.goBack();
+    this.navegateService.goFavorites('formulations', this.id);
   }
 
-    goBack(): void {
-      this.navegateService.goFavorites('formulations', this.id);
+   goToDetail(id: number): void {
+      this.navegateService.goToDetail('app/formulation',id, 'formulations');
   }
+
+        
 }
+

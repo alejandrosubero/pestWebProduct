@@ -129,11 +129,18 @@ export class LayoutComponent  implements OnInit {
   }
 
     back(): void {
+
       if(this.navConfig().goto === 'app/favorites'){
          this.navegateService.goFavorites('favorites', 1);
       }else{
         this.navigate(this.navConfig().goto);
       }
+
+      if(this.navConfig().goto === 'formulations' &&  this.navConfig().favorite.url === 'formulations'){
+        this.navegateService.goFavorites('formulations', this.navConfig().favorite.id);
+      }
+
+      
   }
 
  // ======= ********** =============== //
