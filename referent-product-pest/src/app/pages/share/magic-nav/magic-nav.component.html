@@ -1,0 +1,11 @@
+<nav class="magic-menu">
+  <div class="tab-container">
+    <div *ngFor="let tab of tabs" 
+         class="tab"
+         [class.active]="currentStep === tab.id"
+         (click)="setStep(tab.id)">
+      <mat-icon>{{tab.icon}}</mat-icon>
+      <span class="tab-label">{{tab.label}}</span>
+    </div>
+  </div>
+</nav>

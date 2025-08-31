@@ -18,6 +18,7 @@ import { DBService } from '../../services/db.service';
 import { DashboardComponent } from "../storage/dashboard/dashboard.component";
 import { NavConfig } from '../../models/navElemet.model';
 import { NavService } from '../../services/nav.service';
+import { MagicNavComponent } from "../share/magic-nav/magic-nav.component";
 
 
 
@@ -34,7 +35,7 @@ import { NavService } from '../../services/nav.service';
     MatCardModule,
     MatSidenavModule,
     FormulationsListComponent,
-    MatListModule, DashboardComponent],
+    MatListModule, DashboardComponent, MagicNavComponent],
   templateUrl: './favorites.component.html',
   styleUrl: './favorites.component.scss'
 })
@@ -85,6 +86,7 @@ export class FavoritesComponent implements OnInit {
       this.setStep(this.currentStep);
   }
 
+ 
 
 setStep(step: 'favorites' | 'formulations' | 'storage') {
   this.currentStep = step;

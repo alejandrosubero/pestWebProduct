@@ -7,8 +7,7 @@
 </mat-toolbar> -->
 
 
-<nav class="step-nav mobile-toolbar">
-
+<!-- <nav class="step-nav mobile-toolbar">
   <button mat-button (click)="setStep('favorites')" [ngClass]="{ active: currentStep === 'favorites' }">
     <mat-icon>star</mat-icon>
     <span class="step-label">Favorites</span>
@@ -23,9 +22,8 @@
     <mat-icon>inventory_2</mat-icon>
     <span class="step-label">Storage</span>
   </button>
-
-
-</nav>
+</nav> -->
+<app-magic-nav (stepChanged)="setStep($event)"></app-magic-nav>
 
 <!-- Contenido dinámico -->
 <main class="section-container">
