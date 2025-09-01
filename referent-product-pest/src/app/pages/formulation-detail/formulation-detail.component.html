@@ -3,7 +3,19 @@
 
   <mat-form-field appearance="fill" class="full-width" floatLabel="auto">
     <mat-label>Formulation</mat-label>
-    <textarea matInput rows="6" [value]="formulation?.content" disabled class="custom-textarea"></textarea>
+    <!-- <textarea matInput rows="6" [value]="formulation?.content" disabled class="custom-textarea"></textarea> -->
+    <textarea
+    matInput
+    cdkTextareaAutosize
+    #autosize="cdkTextareaAutosize"
+    cdkAutosizeMinRows="5"
+    cdkAutosizeMaxRows="10"
+    [value]="formulation?.content"
+    disabled
+    class="custom-textarea">
+  </textarea>
+  
+  
   </mat-form-field>
 </mat-card>
 

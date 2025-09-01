@@ -22,6 +22,8 @@ import { NgIf } from '@angular/common';
 import { DBService } from '../../services/db.service';
 import { NavConfig } from '../../models/navElemet.model';
 import { NavService } from '../../services/nav.service';
+import { TextFieldModule } from '@angular/cdk/text-field';
+
 
 
 @Component({
@@ -40,6 +42,7 @@ import { NavService } from '../../services/nav.service';
       MatSidenavModule,
       MatListModule,
       MatDialogModule,
+       TextFieldModule
     ],
   templateUrl: './formulation-detail.component.html',
   styleUrl: './formulation-detail.component.scss'
