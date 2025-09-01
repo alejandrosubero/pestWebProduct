@@ -26,8 +26,8 @@
 .sidenav .mat-nav-list a {
   display: flex;
   align-items: center;
-  gap: 16px;
-  padding: 16px;
+  gap: 12px;
+  padding: 12px;
   color: var(--text-color);
   text-decoration: none;
   transition: all 0.3s ease;
@@ -54,19 +54,19 @@
   top: 0;
   z-index: 1000;
   box-shadow: var(--shadow);
-  padding: 0 16px;
+  padding: 0 10px;
 }
 
 
 .toolbar-title {
-  margin-left: 16px;
+  margin-left: 3px;
   cursor: pointer;
   text-decoration: none;
 }
 
 .toolbar-title h1 {
   margin: 0;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: white;
 }

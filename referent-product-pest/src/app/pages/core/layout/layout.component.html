@@ -51,17 +51,17 @@
         <nav aria-label="Navegación principal">
           @if (navConfig().ico.sds) {
             <a mat-icon-button (click)="viewSdS()" aria-label="Download Pdf sds"> <mat-icon svgIcon="sds"></mat-icon> </a>
-            <span class="spacer"></span>
+            <!-- <span class="spacer"></span> -->
           }
           @if (navConfig().ico.label) {
             <a mat-icon-button (click)="viewPdf()" aria-label="View PDF"> <mat-icon svgIcon="label"></mat-icon> </a>
-            <span class="spacer"></span>
+            <!-- <span class="spacer"></span> -->
           }
           @if (navConfig().ico.favorite) {
             <a mat-icon-button (click)="goFavorites()">
               <mat-icon>{{ navConfig().favorite.active ? 'star' : 'star_border'}}</mat-icon>
             </a>
-            <span class="spacer"></span>
+            <!-- <span class="spacer"></span> -->
           }
           @if (navConfig().ico.source) {
             <a mat-icon-button (click)="goToSourceDetail()"> <mat-icon>description</mat-icon></a>
