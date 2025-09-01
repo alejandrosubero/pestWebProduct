@@ -5,7 +5,8 @@
   <mat-sidenav #sidenav  mode="over" [opened]="false" [fixedInViewport]="isHandset$ | async"
               fixedTopGap="56" class="sidenav" role="navigation" aria-label="Menú principal">
     <mat-nav-list>
-      <div class="boxButton">
+      <div>
+         <!-- <div class="boxButton"></div> -->
         <div class="buto" (click)="goHome(sidenav)">
           <mat-icon aria-hidden="true">home</mat-icon>
         </div>

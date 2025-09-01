@@ -136,8 +136,29 @@ box-shadow:  -9px 9px 16px #b3b3b3,
 }
 
 .fab-btn {
-  position: absolute;
-  top: 16px;
+  // position: absolute;
+  position: fixed;
+  bottom: 60px;
+  // top: 50px;
   right: 16px;
-  z-index: 1000;
+  z-index: 2000;
 }
+
+.fab-button {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+  // Opcional: animación al presionar
+  transition: transform 0.2s ease-in-out;
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+
+
+
