@@ -14,6 +14,8 @@ import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators, FormsModule } from '@angular/forms';
 import { ProductStoreService } from '../../../services/product-store.service';
 import { NavegateService } from '../../../services/navegate.service';
+import { NavConfig } from '../../../models/navElemet.model';
+import { NavService } from '../../../services/nav.service';
 
 
 @Component({
@@ -40,11 +42,12 @@ import { NavegateService } from '../../../services/navegate.service';
 
 export class RegisterProductUsageComponent implements OnInit {
 
-  private store = inject(ProductStoreService);
-  private navegateService = inject( NavegateService);
-
   @Output() saveRecord = new EventEmitter<IUsageRecord>();
   @Output() cancelForm = new EventEmitter<void>();
+
+  private store = inject(ProductStoreService);
+  private navegateService = inject(NavegateService);
+  private navService = inject(NavService);
   protected myProducts: IProduct[] =[];
   protected searchQuery:string ='';
 
@@ -81,22 +84,18 @@ usageForm!: FormGroup;
 //   productName: ''
 // };
 
- 
-
-
-
   constructor(
     private fb: FormBuilder,
     private snackBar: MatSnackBar,
     private router: Router
   ) {
      this.myProducts = this.products;
+     this.setNav();
   }
 
   ngOnInit(): void {
    this.setForm();
      this.usageForm.get('productName')?.valueChanges.subscribe((value: number) => {
-        // console.log('change the product: ', value);
         this.searchProduct = this.store.findById(value);
         if(this.searchProduct != undefined && this.searchProduct != null){
            this.updateFormWithProductData(this.searchProduct);
@@ -131,11 +130,7 @@ setForm(){
     });
   }
 
-
-
-
   onSave(): void {
-
     if (this.usageForm.valid) {
       const record: IUsageRecord = {
         ...this.usageForm.value,
@@ -143,7 +138,6 @@ setForm(){
       };
       this.store.applyUsage(record);
       this.onBackClick();
-      // this.saveRecord.emit(record);
       this.snackBar.open('Usage record saved!', 'Close', { duration: 2000 });
     } else {
       this.usageForm.markAllAsTouched();
@@ -162,6 +156,23 @@ setForm(){
     this.navegateService.goFavorites('storage', 1);
   }
 
+
+  setNav():void{
+                this.navService.reSetNavConfig();
+        
+                let navConfig: NavConfig = new NavConfig();
+                navConfig.title = "Add Usage Record";
+                navConfig.ico.menu = false;
+                navConfig.ico.back = true;
+                navConfig.ico.favorite = false;
+                navConfig.ico.logut = false;
+                navConfig.ico.label = false;
+                navConfig.ico.sds = false;      
+          
+                navConfig.goto = 'storage';
+                this.navService.setNavConfig(navConfig);
+              }
+              
 }
 
 

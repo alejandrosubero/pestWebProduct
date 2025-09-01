@@ -46,12 +46,8 @@ export class ProductListComponent implements OnInit{
     this.setNav();
   }
 
- ngOnInit() {
-  
- }
+ ngOnInit() { }
 
-
-   // Accesos rápidos
   get products() {
         const produtsList = this.store.filteredProducts();
         const sortedProducts = produtsList.sort((a, b) => a.name.localeCompare(b.name));
@@ -106,7 +102,6 @@ clearSearch(): void {
       console.warn('Attempting to browse in detail with an undefined ID.');
     }
   }
-
 
   onBackClick(): void {
     this.navegateService.goFavorites('storage', 1);

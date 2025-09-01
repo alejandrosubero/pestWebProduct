@@ -11,6 +11,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { AddProductComponent } from '../add-product/add-product.component';
 import { IProduct } from '../../../models/interfaces';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { NavConfig } from '../../../models/navElemet.model';
+import { NavService } from '../../../services/nav.service';
 
 @Component({
   selector: 'app-edit-product',
@@ -33,10 +35,9 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 export class EditProductComponent extends AddProductComponent implements OnInit {
 
    protected product: IProduct | undefined;
-
-
+    
   override ngOnInit() {
-   
+   this.setNav();
     this.setList();
     this.product = this.store.findById(this.id);
 
@@ -59,7 +60,6 @@ export class EditProductComponent extends AddProductComponent implements OnInit 
     this.form.get('name')?.valueChanges.subscribe(value => {
       this.nameValue = value;
     });
-
   }
   
   updateUnit(){
@@ -99,4 +99,23 @@ export class EditProductComponent extends AddProductComponent implements OnInit 
     }
   }
 
+   override goBack() {
+          this.navegateService.goToDetail('app/storage/products/detail', this.id, '');
+  }
+
+   override setNav():void{
+              this.navService.reSetNavConfig();
+        
+              let navConfig: NavConfig = new NavConfig();
+              navConfig.title = "Edit Product";
+              navConfig.ico.menu = false;
+              navConfig.ico.back = true;
+              navConfig.ico.favorite = false;
+              navConfig.ico.logut = false;
+              navConfig.ico.label = false;
+              navConfig.ico.sds = false;      
+        
+              navConfig.goto = 'app/storage/products';
+              this.navService.setNavConfig(navConfig);
+            }
 }

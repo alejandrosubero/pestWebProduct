@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, inject, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
@@ -13,6 +13,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { NavService } from '../../../../services/nav.service';
+import { NavConfig } from '../../../../models/navElemet.model';
 
 type ComparableKeys = keyof TechnicalProduct;
 
@@ -36,6 +38,7 @@ type ComparableKeys = keyof TechnicalProduct;
 })
 export class CompareProductsComponent implements OnInit {
 
+  private navService = inject(NavService);
   products: TechnicalProduct[] = [];
   allProducts: TechnicalProduct[] = [];
   quickCompare = false;
@@ -60,6 +63,7 @@ export class CompareProductsComponent implements OnInit {
     private router: Router
   ) {
     this.getAllProducts();
+    this.setNav();
   }
 
   getAllProducts(): void {
@@ -98,10 +102,10 @@ export class CompareProductsComponent implements OnInit {
     return this.fields.filter(field => this.isDifferent(field)).length;
   }
 
-
   // get displayedColumns(): string[] {
   //   return this.nonNullSelectedProducts.map(p => p.title || 'unknown');
   // }
+
   get displayedColumns(): string[] {
   return this.nonNullSelectedProducts.map((p, i) => 'col-' + p.id + '-' + i);
 }
@@ -110,7 +114,6 @@ export class CompareProductsComponent implements OnInit {
     return this.selectedProducts.filter((p): p is TechnicalProduct => p !== null);
   }
 
-
   formatFieldName(field: string): string {
     return field.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase());
   }
@@ -118,5 +121,19 @@ export class CompareProductsComponent implements OnInit {
   back(): void {
     this.router.navigate(['/home']);
   }
+
+   setNav(): void {
+      this.navService.reSetNavConfig();
+      let navConfig: NavConfig = new NavConfig();
+      navConfig.title = this.title;
+      navConfig.ico.menu = true;
+      navConfig.ico.back = false;
+      navConfig.ico.favorite = false;
+      navConfig.ico.logut = false;
+      navConfig.ico.label = false;
+      navConfig.ico.sds = false;
+      navConfig.goto = 'app/home';
+      this.navService.setNavConfig(navConfig);
+    }
 
 }

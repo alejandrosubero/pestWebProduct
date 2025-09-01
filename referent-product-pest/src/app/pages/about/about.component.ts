@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
@@ -6,6 +6,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { Router } from '@angular/router';
+import { NavService } from '../../services/nav.service';
+import { NavConfig } from '../../models/navElemet.model';
 
 @Component({
   selector: 'app-about',
@@ -22,10 +24,10 @@ import { Router } from '@angular/router';
   styleUrl: './about.component.scss'
 })
 export class AboutComponent {
-
+ private navService = inject(NavService);
   title: string = 'About this App';
   appName = 'PestProduct';
-  version = '3.1.0';
+  version = '4.0.0';
   author = 'Alejandro';
   email = 'alex295226@gmail.com';
 
@@ -50,14 +52,25 @@ export class AboutComponent {
     { label: 'Contact Support', url: 'mailto:alex295226@gmail.com' }
   ];
 
-  constructor(
-      private router: Router
-    ) {
-    
-    }
+  constructor(private router: Router) {
+    this.setNav();
+  }
 
     back(): void {
-    this.router.navigate(['/home']);
-
+    this.router.navigate(['app/home']);
   }
+
+   setNav(): void {
+        this.navService.reSetNavConfig();
+        let navConfig: NavConfig = new NavConfig();
+        navConfig.title = this.title;
+        navConfig.ico.menu = false;
+        navConfig.ico.back = true;
+        navConfig.ico.favorite = false;
+        navConfig.ico.logut = false;
+        navConfig.ico.label = false;
+        navConfig.ico.sds = false;
+        navConfig.goto = 'app/home';
+        this.navService.setNavConfig(navConfig);
+      }
 }

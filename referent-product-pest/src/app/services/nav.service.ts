@@ -45,5 +45,15 @@ updateTitle(value: string) {
   }));
 }
 
+updateSource(sourceIdValue: number, sourceView:boolean){
+   this.navConfig.update(config => ({
+    ...config,
+    sourceId:sourceIdValue,
+    ico: {
+      ...config.ico,
+      source:sourceView
+    }
+  }));
+}
 
 }

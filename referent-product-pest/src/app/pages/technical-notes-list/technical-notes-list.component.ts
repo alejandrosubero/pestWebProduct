@@ -11,6 +11,8 @@ import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatCardModule } from '@angular/material/card';
+import { NavService } from '../../services/nav.service';
+import { NavConfig } from '../../models/navElemet.model';
 
 
 @Component({
@@ -35,6 +37,7 @@ export class TechnicalNotesListComponent {
   allProducts: TechnicalProduct[] = [];
   searchTerm: string = '';
   title: string = 'Technical Notes'
+  private navService = inject(NavService);
 
  constructor(
     private technicalProductService: TechnicalProductService,
@@ -42,6 +45,7 @@ export class TechnicalNotesListComponent {
     private router: Router,
   ) {
     this.getAllProducts();
+     this.setNav();
   }
 
     getAllProducts(): void {
@@ -53,7 +57,6 @@ export class TechnicalNotesListComponent {
         this.filteredProducts = this.allProducts;
       }
     }
-    // console.log(products);
   }
 
 buscarCoincidencias2(): void {
@@ -97,27 +100,20 @@ buscarCoincidencias2(): void {
 
 buscarCoincidencias(): void {
   const rawInput = this.searchTerm.trim().toLowerCase();
+  const normalize = (text: string): string => text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
   
-  // Normaliza el texto quitando acentos y convirtiendo a minúsculas
-  const normalize = (text: string): string =>
-    text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
-
-  // Obtiene una cadena de texto de todos los campos relevantes para la búsqueda
   const getSearchableText = (product: TechnicalProduct): string => {
     const title = normalize(product.title);
     const activeIngredients = normalize(product.activeIngredients);
     const spectrumOfControl = normalize(product.spectrumOfControl);
-    
     return `${title} ${activeIngredients} ${spectrumOfControl}`;
   };
 
-  // Si no hay texto o es muy corto, limpia los resultados
   if (rawInput.length < 2) {
     this.filteredProducts = [];
     return;
   }
   
-  // Normaliza el término de búsqueda
   const normalizedSearchTerm = normalize(rawInput);
   
   // Lógica de búsqueda principal
@@ -129,19 +125,34 @@ buscarCoincidencias(): void {
       const ingredientTerm = normalizedSearchTerm.slice(1).trim();
       return normalize(product.activeIngredients).includes(ingredientTerm);
     } 
-  
     return searchableText.includes(normalizedSearchTerm);
   });
 }
 
  back(): void {
-      this.router.navigate(['/home']);
+      this.router.navigate(['app/home']);
   }
 
  goToDetail(id: number): void {
-  const routeBase = "technical/notes";
+  const routeBase = "app/technical/notes";
     this.navegateService.goToDetail(routeBase, id, routeBase);
   }
 
+
+ setNav():void{
+                  this.navService.reSetNavConfig();
+          
+                  let navConfig: NavConfig = new NavConfig();
+                  navConfig.title = "Technical Notes";
+                  navConfig.ico.menu = true;
+                  navConfig.ico.back = false;
+                  navConfig.ico.favorite = false;
+                  navConfig.ico.logut = false;
+                  navConfig.ico.label = false;
+                  navConfig.ico.sds = false;  
+              
+                  navConfig.goto = 'app/home';
+                  this.navService.setNavConfig(navConfig);
+                }
 
 }

@@ -53,10 +53,7 @@ export class LayoutComponent  implements OnInit {
      });
   }
 
-  ngOnInit(): void {
-   
-  }
-
+  ngOnInit(): void {}
 
  // ======= isHandset =============== //
   getAnimationState(outlet: RouterOutlet) {
@@ -72,53 +69,55 @@ export class LayoutComponent  implements OnInit {
   );
  // ======= ********** =============== //
 
-
-
  // ======= navegate =============== //
 
-  navigate(routeBase:string){
+  navigate(routeBase: string) {
     this.router.navigate([routeBase]);
   }
 
-    goFavorites(): void {
-      if (this.navConfig().favorite.viewDetail) {
-        let value = this.navConfig().favorite.toggleFavorite ? false : true;
-        this.navService.updateToggleFavorite(value);
-      } else {
-          this.navegateService.goFavorites('favorites', 1);
-      }
+  goFavorites(): void {
+    if (this.navConfig().favorite.viewDetail) {
+      let value = this.navConfig().favorite.toggleFavorite ? false : true;
+      this.navService.updateToggleFavorite(value);
+    } else {
+      this.navegateService.goFavorites('favorites', 1);
+    }
   }
-
 
   //  ============ buto ================
-     goTecnnical(sidenav:any): void {
-     const routeBase = "app/technical/notes";
-      sidenav.toggle();
+  goTecnnical(sidenav: any): void {
+    const routeBase = "app/technical/notes";
+    sidenav.toggle();
     this.navigate(routeBase);
   }
 
-   goCompareTecnnical(sidenav:any): void {
-     const routeBase = "app/technical/notes/compare";
-      sidenav.toggle();
+  goCompareTecnnical(sidenav: any): void {
+    const routeBase = "app/technical/notes/compare";
+    sidenav.toggle();
     this.navigate(routeBase);
   }
 
-   goAbout(sidenav:any): void {
-     const routeBase = 'app/about';
-     sidenav.toggle();
+  goAbout(sidenav: any): void {
+    const routeBase = 'app/about';
+    sidenav.toggle();
     this.navigate(routeBase);
   }
-  
-   goMix(sidenav:any): void {
+
+  goMix(sidenav: any): void {
     const routeBase = 'app/technical/notes/mix';
-     sidenav.toggle();
+    sidenav.toggle();
     this.navigate(routeBase);
   }
 
-     goHome(sidenav:any): void {
-     const routeBase = "app/home";
-      sidenav.toggle();
+  goHome(sidenav: any): void {
+    const routeBase = "app/home";
+    sidenav.toggle();
     this.navigate(routeBase);
+  }
+
+  goToSourceDetail(): void {
+    const routeBase = "app/technical/notes";
+    this.navegateService.goToDetail(routeBase, this.navConfig().sourceId, 'mix');
   }
 //  ============ ********** ================
 
@@ -158,7 +157,6 @@ export class LayoutComponent  implements OnInit {
         this.navegateService.goFavorites('storage', 1);
         break;
       default:
-        debugger
         this.navigate(this.navConfig().goto);
         break;
     }
@@ -166,10 +164,10 @@ export class LayoutComponent  implements OnInit {
 
  // ======= ********** =============== //
 
+
   // ======= PDF secction =============== //
   viewPdf(): void {
     let url: string = this.navConfig().label;
-    debugger
     window.open(url, '_blank');
   }
 

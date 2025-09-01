@@ -1,15 +1,5 @@
 <div class="product-detail-page">
 
-  <header class="ios-navbar mobile-toolbar" color="primary">
-    <button class="back-button" (click)="goBack()">
-      <mat-icon>chevron_left</mat-icon>
-      <span>Back</span>
-    </button>
-    <h1 class="nav-title">Product Details</h1>
-    <div class="nav-right-placeholder"></div>
-  </header>
-
-
   <main class="content-area" *ngIf="product">
     <section class="product-header-card">
       <div class="product-icon-placeholder">
@@ -72,22 +62,6 @@
       </div>
     </section>
   </main>
-
-  <!-- <div class="fab-menu-container">
-    <button mat-fab class="main-fab" color="primary" (click)="toggleFab()" aria-label="Actions menu">
-      <mat-icon>{{ isFabOpen ? 'close' : 'more_vert' }}</mat-icon> </button>
-
-    @if (isFabOpen) {
-      <div class="fab-actions">
-        <button mat-mini-fab class="green" (click)="onEdit()" aria-label="Edit product">
-          <mat-icon>edit</mat-icon>
-        </button>
-        <button mat-mini-fab color="warn" (click)="onDelete()" aria-label="Delete product">
-          <mat-icon>delete</mat-icon>
-        </button>
-      </div>
-    }
-  </div> -->
 
   <div class="fab-container">
     <button mat-fab color="primary" (click)="toggleFab()" aria-label="Menu">

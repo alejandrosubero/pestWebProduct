@@ -8,6 +8,8 @@ import { PestData } from '../../../models/pestdata.model';
 import { Router } from '@angular/router';
 import { NavegateService } from '../../../services/navegate.service';
 import { ProductType } from '../../../models/interfaces';
+import { NavService } from '../../../services/nav.service';
+import { NavConfig } from '../../../models/navElemet.model';
 
 
 @Component({
@@ -22,6 +24,7 @@ export class StorageProductDetailComponent {
 
   isFabOpen = false;
   private store = inject(ProductStoreService);
+  private navService = inject(NavService);
   private pestData: PestData = { id: 0, name: '' };
   private id: number = 0;
   private nameToNavegate = '';
@@ -30,12 +33,27 @@ export class StorageProductDetailComponent {
     private router: Router,
     private navegateService: NavegateService) {
     this.getData();
+    this.setNav();
+  }
+
+ toggleFab() {
+    this.isFabOpen = !this.isFabOpen;
+  }
+
+  getData() {
+    this.pestData = this.navegateService.getData(this.router);
+    this.id = this.pestData.id;
+    this.nameToNavegate = this.pestData.name
   }
 
 
-  onEdit() {
+  get product() {
+    return this.store.findById(this.id);
+  }
+
+   onEdit() {
     if (this.id !== undefined) {
-      this.navegateService.goToDetail('storage/products/edit', this.id, '');
+      this.navegateService.goToDetail('app/storage/products/edit', this.id, '');
     } else {
       console.warn('Attempting to browse in detail with an undefined ID.');
     }
@@ -49,27 +67,10 @@ export class StorageProductDetailComponent {
     }
   }
 
- toggleFab() {
-    this.isFabOpen = !this.isFabOpen;
+    goBack() {
+    this.router.navigate(['app/storage/products']);
   }
-
-  goBack() {
-    this.router.navigate(['/storage/products']);
-  }
-
-
-  getData() {
-    this.pestData = this.navegateService.getData(this.router);
-    this.id = this.pestData.id;
-    this.nameToNavegate = this.pestData.name
-
-  }
-
-
-  get product() {
-    return this.store.findById(this.id);
-  }
-
+  
 
 // Helper for dynamic icons based on product type
   getProductIcon2(type: ProductType): string {
@@ -108,11 +109,11 @@ getProductIcon(type: ProductType): string {
 }
 
 
- setNav() {
+ setNav():void{
             this.navService.reSetNavConfig();
       
             let navConfig: NavConfig = new NavConfig();
-            navConfig.title = "Add Product";
+            navConfig.title = "Product Details";
             navConfig.ico.menu = false;
             navConfig.ico.back = true;
             navConfig.ico.favorite = false;

@@ -16,6 +16,8 @@ import { Analysis, MixProducTechNote } from '../../../../models/MixProducTechNot
 
 import { TechnicalProduct } from '../../../../models/technical_product.model';
 import { TechnicalProductService } from '../../../../services/TechnicalProductService';
+import { NavService } from '../../../../services/nav.service';
+import { NavConfig } from '../../../../models/navElemet.model';
 
 
 @Component({
@@ -38,7 +40,8 @@ import { TechnicalProductService } from '../../../../services/TechnicalProductSe
 })
 export class MixTechnicalNotesComponent {
 
-  private mixProductTechNoteService = inject(MixProductTechNoteService);
+  private mixProductTechNoteService = inject(MixProductTechNoteService); 
+  private navService = inject(NavService);
   public title: string = 'Mix Product Analysis';
   public elementFather: string | null | undefined= '';
   
@@ -51,6 +54,7 @@ export class MixTechnicalNotesComponent {
     private router: Router
   ) {
     this.getData();
+    this.setNav();
   }
 
 
@@ -73,8 +77,11 @@ export class MixTechnicalNotesComponent {
   }
 
   onProductChange(productId: number): void {
+
   this.selectedProduct = this.mixNotes.find(p => p.product_id === productId) || null;
   this.selectedAnalysis = null; 
+   this.setNav();
+
   if (this.selectedProduct && this.selectedProduct.analyses && this.selectedProduct.analyses.length > 0) {
     const sorted = [...this.selectedProduct.analyses].sort((a, b) =>
       a.with_product_title.localeCompare(b.with_product_title)
@@ -82,8 +89,10 @@ export class MixTechnicalNotesComponent {
     this.selectedProduct.analyses = sorted;
   }
   this.elementFather = this.selectedProduct?.product_title ?? '';
-}
 
+  this.setNav();
+ 
+}
 
   onAnalysisChange(withProductId: number): void {
     if (this.selectedProduct) {
@@ -97,7 +106,7 @@ export class MixTechnicalNotesComponent {
   }
 
   goToDetail(id: number): void {
-    const routeBase = "technical/notes";
+    const routeBase = "app/technical/notes";
     this.navegateService.goToDetail(routeBase, id, routeBase);
   }
 
@@ -108,5 +117,25 @@ export class MixTechnicalNotesComponent {
   return 'answer-other';
 }
 
+  setNav(): void {
+    this.navService.reSetNavConfig();
+
+    let navConfig: NavConfig = new NavConfig();
+    navConfig.title = this.title;
+    navConfig.ico.menu = true;
+    navConfig.ico.back = false;
+    navConfig.ico.favorite = false;
+    navConfig.ico.logut = false;
+    navConfig.ico.label = false;
+    navConfig.ico.sds = false;
+
+    if (this.selectedProduct) {
+      navConfig.ico.source = true;
+      navConfig.sourceId = this.selectedProduct.product_id;
+    }
+
+    navConfig.goto = 'app/home';
+    this.navService.setNavConfig(navConfig);
+  }
 
 }

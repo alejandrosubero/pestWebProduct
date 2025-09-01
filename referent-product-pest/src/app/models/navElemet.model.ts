@@ -8,6 +8,7 @@ export class NavConfig {
     public noteSource: string;
     public hideNemu: boolean;
     public ico: IcoConfig;
+    public sourceId: number;
 
     constructor() {
         this.title = "";
@@ -18,8 +19,8 @@ export class NavConfig {
         this.noteSource = "";
         this.hideNemu = false;
         this.ico = new IcoConfig();
+        this.sourceId = 0;
     }
-
 }
 
 export class Favorite {
@@ -27,7 +28,7 @@ export class Favorite {
     url: string;
     id: number;
     toggleFavorite: boolean;
-     viewDetail: boolean;
+    viewDetail: boolean;
 
     constructor() {
         this.active = false;

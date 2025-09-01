@@ -53,7 +53,7 @@ export class AddProductComponent {
   protected navegateService = inject(NavegateService);
   protected unitService = inject(DefaultUnitServiceService);
   protected productService = inject(ProductService);
-  private navService = inject(NavService);
+  protected navService = inject(NavService);
 
   protected pestData: PestData = { id: 0, name: '' };
   protected id: number = 0;
