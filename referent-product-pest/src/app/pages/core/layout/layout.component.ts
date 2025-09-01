@@ -135,9 +135,14 @@ export class LayoutComponent  implements OnInit {
       }
       if(this.navConfig().goto === 'formulations' &&  this.navConfig().favorite.url === 'formulations'){
         this.navegateService.goFavorites('formulations', this.navConfig().favorite.id);
+       let title = 'Formulations';
+      //  this.navService.updateTitle(title);
+      
       }
       if(this.navConfig().goto === 'storage' &&  this.navConfig().favorite.url === 'storage'){
         this.navegateService.goFavorites('storage', 1);
+        let title = 'Storage';
+        // this.navService.updateTitle(title);
       }
       
   }

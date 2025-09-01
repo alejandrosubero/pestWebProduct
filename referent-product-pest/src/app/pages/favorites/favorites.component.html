@@ -1,7 +1,8 @@
 
 
 <!-- Contenido dinámico -->
- <app-magic-nav (stepChanged)="setStep($event)"></app-magic-nav>
+ <!-- <app-magic-nav (stepChanged)="setStep($event)"></app-magic-nav> -->
+  <app-magic-nav #magicNav (stepChanged)="setStep($event)"></app-magic-nav>
 <main class="section-container">
   <ng-container [ngSwitch]="currentStep">
     <section *ngSwitchCase="'favorites'">

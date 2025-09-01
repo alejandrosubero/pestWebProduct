@@ -1,8 +1,9 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { AfterViewInit, ChangeDetectorRef, Component, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
+import { TabType } from '../../../models/tabtype.model';
 
-export type TabType = "favorites" | "formulations" | "storage";
+// export type TabType = "favorites" | "formulations" | "storage";
 
 @Component({
   selector: 'app-magic-nav',
@@ -24,10 +25,12 @@ export class MagicNavComponent {
     { id: 'storage' as TabType, label: 'STORAGE', icon: 'inventory_2' }
   ];
 
-  currentStep: TabType = 'favorites';
+  public currentStep: TabType = 'favorites';
 
   setStep(step: TabType) {
     this.currentStep = step;
     this.stepChanged.emit(step);
   }
+
+
 }

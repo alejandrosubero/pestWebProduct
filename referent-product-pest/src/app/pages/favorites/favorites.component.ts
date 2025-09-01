@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { AfterViewInit, Component, inject, OnInit, ViewChild } from '@angular/core';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -19,8 +19,9 @@ import { DashboardComponent } from "../storage/dashboard/dashboard.component";
 import { NavConfig } from '../../models/navElemet.model';
 import { NavService } from '../../services/nav.service';
 import { MagicNavComponent } from "../share/magic-nav/magic-nav.component";
+import { TabType } from '../../models/tabtype.model';
 
-
+import { ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-favorites',
@@ -39,22 +40,43 @@ import { MagicNavComponent } from "../share/magic-nav/magic-nav.component";
   templateUrl: './favorites.component.html',
   styleUrl: './favorites.component.scss'
 })
-export class FavoritesComponent implements OnInit {
+export class FavoritesComponent implements OnInit, AfterViewInit  {
 
+ @ViewChild('magicNav') magicChild?: MagicNavComponent;
+  
   favorites: any[] = [];
   public title = 'My Products';
   currentStep: 'favorites' | 'formulations' | 'storage' = 'favorites';
   private pestData: PestData = { id: 0, name: '' };
   private id:number = 0;
   private navService = inject(NavService);
- 
+  currentStepInternal: TabType = "favorites"; 
    
   constructor(
     private favService: FavoritesService, 
     private router: Router,
-    private navegateService: NavegateService) { 
+    private navegateService: NavegateService,
+  private cdr: ChangeDetectorRef) { 
     this.getData();
   }
+
+
+ngAfterViewInit(): void {
+  if (!this.magicChild) return;
+  if (this.pestData.name === 'formulations' || this.pestData.name === 'storage') {
+    this.magicChild.currentStep = this.currentStepInternal;
+    this.cdr.detectChanges();
+  }
+}
+  
+
+// ngAfterViewInit(): void {
+//   if (!this.magicChild) return;
+//   if (this.pestData.name === "formulations" || this.pestData.name === "storage") {
+//     this.magicChild.currentStep = this.currentStepInternal;
+//   }
+// }
+
 
   ngOnInit(): void {
     this.favorites = this.favService.getFavorites();
@@ -74,6 +96,14 @@ export class FavoritesComponent implements OnInit {
       this.id = this.pestData.id;
       this.checkCcurrentStep(this.pestData.name);
       this.setNav(); 
+
+  if(this.pestData.name === "formulations" || this.pestData.name === "storage"){
+         this.currentStepInternal = this.pestData.name;
+         let intcurrentStep: 'favorites' | 'formulations' | 'storage' = 'favorites';
+         intcurrentStep = this.pestData.name;
+          this.setStep(intcurrentStep);
+      }
+
   }
 
 
@@ -105,7 +135,7 @@ setStep(step: 'favorites' | 'formulations' | 'storage') {
       break;
   }
 }
-
+   
 
   setNav() {
     this.navService.reSetNavConfig();

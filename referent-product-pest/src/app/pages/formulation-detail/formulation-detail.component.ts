@@ -145,6 +145,7 @@ export class FormulationDetailComponent implements OnInit{
       navConfig.ico.sds = false;      
       
       navConfig.favorite.url = 'formulations';
+      
       if(this.id){
         navConfig.favorite.id = this.id;
       }
