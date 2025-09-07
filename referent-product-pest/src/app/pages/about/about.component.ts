@@ -27,15 +27,16 @@ export class AboutComponent {
  private navService = inject(NavService);
   title: string = 'About this App';
   appName = 'PestProduct';
-  version = '4.0.0';
+  version = '4.2.9';
   author = 'Alejandro';
   email = 'alex295226@gmail.com';
 
   features = [
-    'Product Management',
-    'Product Comparison',
-    'Automatic Reports',
-    'Modern and Responsive Interface'
+'Product comparison',
+'Theoretical product mix analysis',
+'Quick access to product labels and SDS',
+'Product inventory management',
+'Management of formulation notes',
   ];
 
   technologies = [

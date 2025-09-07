@@ -58,7 +58,7 @@
                 "conclusion": "Perform a jar test before tank mixing to ensure physical stability and avoid issues."
             },
             {
-                "with_product_id": 23,
+                "with_product_id": 30,
                 "with_product_title": "Precor IGR Concentrate",
                 "potential_benefits": [
                     "Combines Temprid's powerful adulticide with a targeted IGR for flea control.",
@@ -75,7 +75,7 @@
                 "conclusion": "A jar test is highly recommended prior to use to ensure the mixture remains stable."
             },
             {
-                "with_product_id": 20,
+                "with_product_id": 27,
                 "with_product_title": "Alpine WSG Water Soluble Granule Insecticide",
                 "potential_benefits": [
                     "None. Both are broad-spectrum insecticides for the same types of pests.",
@@ -94,7 +94,7 @@
                 "conclusion": "Do not mix these products. Use one or the other as a standalone solution."
             },
             {
-                "with_product_id": 27,
+                "with_product_id": 28,
                 "with_product_title": "PT Alpine pressurized insecticide",
                 "potential_benefits": [
                     "None. These products are for different application methods."
@@ -111,7 +111,7 @@
                 "conclusion": "Never mix these products. Use each for its intended purpose."
             },
             {
-                "with_product_id": 21,
+                "with_product_id": 2,
                 "with_product_title": "Suspend PolyZone",
                 "potential_benefits": [
                     "Combines different pyrethroid insecticides (Deltamethrin vs. Beta-cyfluthrin) and a neonicotinoid (Imidacloprid).",
@@ -130,7 +130,7 @@
                 "conclusion": "Avoid this mix as it offers little benefit. Use one or the other, or perform a jar test to check for physical compatibility."
             },
             {
-                "with_product_id": 22,
+                "with_product_id": 11,
                 "with_product_title": "Demand CS Insecticide",
                 "potential_benefits": [
                     "Combines a pyrethroid and a neonicotinoid with a microencapsulated pyrethroid.",
@@ -149,7 +149,7 @@
                 "conclusion": "This mixture is redundant and risky. Use one or the other as a standalone product."
             },
             {
-                "with_product_id": 25,
+                "with_product_id": 12,
                 "with_product_title": "ExciteR",
                 "potential_benefits": [
                     "Adds a powerful pyrethrin for rapid knockdown of pests, which can be useful for heavy infestations.",
@@ -200,7 +200,7 @@
                 "conclusion": "Never mix these two products. Apply them sequentially, with the biological agent applied after the chemical has dried and is no longer active."
             },
             {
-                "with_product_id": 19,
+                "with_product_id": 18,
                 "with_product_title": "Onslaught",
                 "potential_benefits": [
                     "Adds a different pyrethroid (Esfenvalerate) and a synergist (PBO) to Temprid's dual-action formula.",
@@ -281,7 +281,7 @@
                 "conclusion": "This mixture is physically compatible and could provide enhanced IGR coverage."
             },
             {
-                "with_product_id": 23,
+                "with_product_id": 30,
                 "with_product_title": "Precor IGR Concentrate",
                 "potential_benefits": [
                     "Combines two different IGRs (Pyriproxyfen vs. S-methoprene) for a broader approach to life cycle disruption.",
@@ -299,7 +299,7 @@
                 "conclusion": "This is a specialized mixture for flea control. It is physically compatible but may be an unnecessary expense."
             },
             {
-                "with_product_id": 20,
+                "with_product_id": 27,
                 "with_product_title": "Alpine WSG Water Soluble Granule Insecticide",
                 "potential_benefits": [
                     "Adds a different pyrethroid (Esfenvalerate) and an IGR (Pyriproxyfen) to Alpine's unique active ingredient (Dinotefuran).",
@@ -317,7 +317,7 @@
                 "conclusion": "Do not mix without a jar test. Sequential application is recommended if compatibility issues arise."
             },
             {
-                "with_product_id": 27,
+                "with_product_id": 28,
                 "with_product_title": "PT Alpine pressurized insecticide",
                 "potential_benefits": [
                     "None. These products are for different application methods."
@@ -334,7 +334,7 @@
                 "conclusion": "Never mix these products. Use each for its intended purpose."
             },
             {
-                "with_product_id": 21,
+                "with_product_id": 2,
                 "with_product_title": "Suspend PolyZone",
                 "potential_benefits": [
                     "Adds a different pyrethroid (Esfenvalerate) and an IGR (Pyriproxyfen) to Suspend's formula for a broader spectrum of control.",
@@ -351,7 +351,7 @@
                 "conclusion": "Perform a jar test before mixing to check for physical stability. If incompatible, apply sequentially."
             },
             {
-                "with_product_id": 22,
+                "with_product_id": 11,
                 "with_product_title": "Demand CS Insecticide",
                 "potential_benefits": [
                     "Adds a different pyrethroid (Esfenvalerate) and an IGR (Pyriproxyfen) to Demand's formula.",
@@ -370,7 +370,7 @@
                 "conclusion": "Perform a jar test before mixing. This mixture is not recommended due to the high risk of compromising the products' unique formulations."
             },
             {
-                "with_product_id": 25,
+                "with_product_id": 12,
                 "with_product_title": "ExciteR",
                 "potential_benefits": [
                     "Adds a synergist (PBO) to Zenprox's formula, which contains a pyrethroid but no PBO.",
@@ -420,7 +420,7 @@
                 "conclusion": "Never mix these two products. Apply them sequentially, with the biological agent applied after the chemical has dried and is no longer active."
             },
             {
-                "with_product_id": 19,
+                "with_product_id": 18,
                 "with_product_title": "Onslaught",
                 "potential_benefits": [
                     "Combines two different pyrethroid insecticides and two different IGRs.",
@@ -497,7 +497,7 @@
                 "conclusion": "Do not mix these products. Use each for its intended application."
             },
             {
-                "with_product_id": 23,
+                "with_product_id": 30,
                 "with_product_title": "Precor IGR Concentrate",
                 "potential_benefits": [
                     "None. Shockwave is a fogging concentrate and Precor is a liquid concentrate for spraying."
@@ -514,7 +514,7 @@
                 "conclusion": "Do not mix these products. Use each for its intended application."
             },
             {
-                "with_product_id": 20,
+                "with_product_id": 27,
                 "with_product_title": "Alpine WSG Water Soluble Granule Insecticide",
                 "potential_benefits": [
                     "None. Shockwave is a fogging concentrate and Alpine WSG is a water-soluble granule for spraying."
@@ -531,7 +531,7 @@
                 "conclusion": "Never mix these products. Use each for its intended purpose."
             },
             {
-                "with_product_id": 27,
+                "with_product_id": 28,
                 "with_product_title": "PT Alpine pressurized insecticide",
                 "potential_benefits": [
                     "None. These products are for different application methods."
@@ -548,7 +548,7 @@
                 "conclusion": "Never mix these products. Use each for its intended purpose."
             },
             {
-                "with_product_id": 21,
+                "with_product_id": 2,
                 "with_product_title": "Suspend PolyZone",
                 "potential_benefits": [
                     "None. Shockwave is a fogging concentrate and Suspend PolyZone is a liquid concentrate for spraying."
@@ -565,7 +565,7 @@
                 "conclusion": "Never mix these products. Use each for its intended purpose."
             },
             {
-                "with_product_id": 22,
+                "with_product_id": 11,
                 "with_product_title": "Demand CS Insecticide",
                 "potential_benefits": [
                     "None. Shockwave is a fogging concentrate and Demand CS is a liquid concentrate for spraying."
@@ -582,7 +582,7 @@
                 "conclusion": "Never mix these products. Use each for its intended purpose."
             },
             {
-                "with_product_id": 25,
+                "with_product_id": 12,
                 "with_product_title": "ExciteR",
                 "potential_benefits": [
                     "Both are EC formulations intended for oil-based ULV/fogging machines.",
@@ -635,7 +635,7 @@
                 "conclusion": "Never mix these two products."
             },
             {
-                "with_product_id": 19,
+                "with_product_id": 18,
                 "with_product_title": "Onslaught",
                 "potential_benefits": [
                     "None. Shockwave is an oil-based ULV/fogging concentrate and Onslaught is a water-based liquid concentrate for spraying."
@@ -710,7 +710,7 @@
                 "conclusion": "Do not mix these products. Use each for its intended application."
             },
             {
-                "with_product_id": 23,
+                "with_product_id": 30,
                 "with_product_title": "Precor IGR Concentrate",
                 "potential_benefits": [
                     "Combines two different IGRs (Hydroprene vs. S-methoprene).",
@@ -728,7 +728,7 @@
                 "conclusion": "This mixture is physically compatible but may be an unnecessary expense depending on the target pest."
             },
             {
-                "with_product_id": 20,
+                "with_product_id": 27,
                 "with_product_title": "Alpine WSG Water Soluble Granule Insecticide",
                 "potential_benefits": [
                     "Adds an IGR (Hydroprene) to Alpine's unique adulticide (Dinotefuran) for life cycle disruption.",
@@ -745,7 +745,7 @@
                 "conclusion": "Do not mix without a jar test. Sequential application is recommended if compatibility issues arise."
             },
             {
-                "with_product_id": 27,
+                "with_product_id": 28,
                 "with_product_title": "PT Alpine pressurized insecticide",
                 "potential_benefits": [
                     "None. These products are for different application methods."
@@ -762,7 +762,7 @@
                 "conclusion": "Never mix these products. Use each for its intended purpose."
             },
             {
-                "with_product_id": 21,
+                "with_product_id": 2,
                 "with_product_title": "Suspend PolyZone",
                 "potential_benefits": [
                     "Adds an IGR (Hydroprene) for long-term population control.",
@@ -779,7 +779,7 @@
                 "conclusion": "Perform a jar test before mixing to check for physical stability. If incompatible, apply sequentially."
             },
             {
-                "with_product_id": 22,
+                "with_product_id": 11,
                 "with_product_title": "Demand CS Insecticide",
                 "potential_benefits": [
                     "Adds an IGR (Hydroprene) to Demand's microencapsulated formula.",
@@ -797,7 +797,7 @@
                 "conclusion": "Perform a jar test before mixing. This mixture is not recommended due to the high risk of compromising the products' unique formulations."
             },
             {
-                "with_product_id": 25,
+                "with_product_id": 12,
                 "with_product_title": "ExciteR",
                 "potential_benefits": [
                     "Adds an IGR (Hydroprene) to ExciteR's pyrethroid/synergist formula.",
@@ -846,7 +846,7 @@
                 "conclusion": "Never mix these two products. Apply them sequentially for different purposes."
             },
             {
-                "with_product_id": 19,
+                "with_product_id": 18,
                 "with_product_title": "Onslaught",
                 "potential_benefits": [
                     "Combines Gentrol's IGR (Hydroprene) with Onslaught's adulticide (Esfenvalerate) and synergist (PBO).",
@@ -866,218 +866,7 @@
         ]
     },
     {
-        "product_id": 23,
-        "product_title": "Precor IGR Concentrate",
-        "analyses": [
-            {
-                "with_product_id": 1,
-                "with_product_title": "Temprid FX",
-                "potential_benefits": [
-                    "Combines Temprid's broad-spectrum adulticide with a targeted IGR for flea control.",
-                    "Adds control of flea eggs and larvae to Temprid's adult flea kill.",
-                    "Both formulations are designed to be mixed in water, suggesting physical compatibility."
-                ],
-                "risks_drawbacks": [
-                    "Precor is an EC with petroleum distillates, which can potentially destabilize Temprid's WP formulation."
-                ],
-                "would_it_work": {
-                    "answer": "Uncertain",
-                    "rationale": "Mixing a WP with an EC formulation can be unpredictable. Physical compatibility should be confirmed with a jar test to prevent clumping or separation."
-                },
-                "conclusion": "A jar test is highly recommended prior to use to ensure the mixture remains stable."
-            },
-            {
-                "with_product_id": 24,
-                "with_product_title": "Zenprox",
-                "potential_benefits": [
-                    "Combines two different IGRs (S-methoprene vs. Pyriproxyfen) for a broader approach to life cycle disruption.",
-                    "Zenprox already has a knockdown insecticide and an IGR, so adding Precor is a specialized use case.",
-                    "Both are EC formulations with similar carriers, suggesting physical compatibility."
-                ],
-                "risks_drawbacks": [
-                    "Significant overlap in function. The benefit may not justify the added cost.",
-                    "Precor is primarily for fleas, while Zenprox has a broader label. Mixing may be off-label for certain pests."
-                ],
-                "would_it_work": {
-                    "answer": "Yes",
-                    "rationale": "Both products are EC formulations with similar carriers, making them physically compatible for a tank mix."
-                },
-                "conclusion": "This is a specialized mixture for flea control. It is physically compatible but may be an unnecessary expense."
-            },
-            {
-                "with_product_id": 26,
-                "with_product_title": "SHOCKWAVE FOGGING CONCENTRATE",
-                "potential_benefits": [
-                    "None. Precor is a liquid concentrate for spraying and Shockwave is a fogging concentrate."
-                ],
-                "risks_drawbacks": [
-                    "Precor is intended for a water-based spray mixture, while Shockwave is oil-based for fogging.",
-                    "Attempting to mix a spray concentrate with a fogging concentrate is an off-label use and could damage equipment.",
-                    "Mixing could cause physical incompatibility and destroy the IGR component."
-                ],
-                "would_it_work": {
-                    "answer": "No",
-                    "rationale": "The different intended application methods and carrier types make these products fundamentally incompatible."
-                },
-                "conclusion": "Do not mix these products. Use each for its intended application."
-            },
-            {
-                "with_product_id": 30,
-                "with_product_title": "Gentrol IGR Concentrate",
-                "potential_benefits": [
-                    "Combines two different IGRs (S-methoprene vs. Hydroprene).",
-                    "Both are EC formulations with similar carriers, suggesting physical compatibility.",
-                    "Can be used for a combination IGR approach, especially for multiple pest types."
-                ],
-                "risks_drawbacks": [
-                    "Significant overlap in function, may not provide a cost-effective benefit.",
-                    "Precor is targeted at fleas, while Gentrol is broader. The mixture may not be ideal for all scenarios."
-                ],
-                "would_it_work": {
-                    "answer": "Yes",
-                    "rationale": "Both products are EC formulations with similar carriers, making them physically compatible for a tank mix."
-                },
-                "conclusion": "This mixture is physically compatible but may be an unnecessary expense depending on the target pest."
-            },
-            {
-                "with_product_id": 20,
-                "with_product_title": "Alpine WSG Water Soluble Granule Insecticide",
-                "potential_benefits": [
-                    "Adds an IGR (S-methoprene) to Alpine's unique adulticide (Dinotefuran) for flea control.",
-                    "The IGR and insecticide modes of action are complementary."
-                ],
-                "risks_drawbacks": [
-                    "Precor is an EC formulation with petroleum distillates. This can compromise the water-based formulation of Alpine WSG.",
-                    "The oil-based carrier in Precor could cause the water-soluble granules to clump or not dissolve properly."
-                ],
-                "would_it_work": {
-                    "answer": "Uncertain",
-                    "rationale": "The oil-based carrier of Precor's EC formulation is chemically incompatible with the water-based formulation of Alpine WSG. Mixing could lead to separation or reduced efficacy."
-                },
-                "conclusion": "Do not mix without a jar test. Sequential application is recommended if compatibility issues arise."
-            },
-            {
-                "with_product_id": 27,
-                "with_product_title": "PT Alpine pressurized insecticide",
-                "potential_benefits": [
-                    "None. These products are for different application methods."
-                ],
-                "risks_drawbacks": [
-                    "Precor is a liquid concentrate for spraying.",
-                    "PT Alpine is a pre-mixed, pressurized aerosol.",
-                    "Mixing or combining these products is physically impossible and an extreme safety hazard."
-                ],
-                "would_it_work": {
-                    "answer": "No",
-                    "rationale": "Aerosol products cannot be mixed with liquid concentrates. This is a severe safety and physical incompatibility issue."
-                },
-                "conclusion": "Never mix these products. Use each for its intended purpose."
-            },
-            {
-                "with_product_id": 21,
-                "with_product_title": "Suspend PolyZone",
-                "potential_benefits": [
-                    "Adds a targeted IGR (S-methoprene) for fleas, complementing Suspend's broad-spectrum adulticide.",
-                    "Both are water-based formulations intended for tank mixing."
-                ],
-                "risks_drawbacks": [
-                    "Precor's EC formulation with petroleum distillates may compromise the integrity of Suspend's microencapsulated polymer suspension.",
-                    "Mixing could lead to a less stable solution and reduced residual efficacy."
-                ],
-                "would_it_work": {
-                    "answer": "Uncertain",
-                    "rationale": "The physical compatibility of an EC with a microencapsulated suspension is unpredictable and may cause the polymer to break down, shortening the residual life."
-                },
-                "conclusion": "Perform a jar test before mixing to check for physical stability. If incompatible, apply sequentially."
-            },
-            {
-                "with_product_id": 22,
-                "with_product_title": "Demand CS Insecticide",
-                "potential_benefits": [
-                    "Adds a targeted IGR (S-methoprene) for fleas, complementing Demand's microencapsulated adulticide.",
-                    "The IGR and insecticide modes of action are complementary."
-                ],
-                "risks_drawbacks": [
-                    "Precor's EC formulation with petroleum distillates may compromise the integrity of Demand's microencapsulated suspension.",
-                    "Mixing could lead to a less stable solution and reduced residual efficacy."
-                ],
-                "would_it_work": {
-                    "answer": "Uncertain",
-                    "rationale": "Mixing an EC with a microencapsulated suspension is unpredictable. The solvent in Precor could damage the microcapsules of Demand CS."
-                },
-                "conclusion": "Perform a jar test before mixing. This mixture is not recommended due to the high risk of compromising the products' unique formulations."
-            },
-            {
-                "with_product_id": 25,
-                "with_product_title": "ExciteR",
-                "potential_benefits": [
-                    "Adds a knockdown and synergist (from ExciteR) to Precor's IGR for a complete flea treatment.",
-                    "Both are EC formulations with similar carriers, suggesting physical compatibility."
-                ],
-                "risks_drawbacks": [
-                    "Both are EC formulations, increasing the solvent load and risk of phytotoxicity.",
-                    "The mixture is highly specialized for fleas; other tank mixes may be more versatile."
-                ],
-                "would_it_work": {
-                    "answer": "Yes",
-                    "rationale": "Both products are EC formulations with similar carriers, making them physically compatible for a tank mix."
-                },
-                "conclusion": "This mixture is physically compatible and provides a complete treatment for fleas, targeting all life stages."
-            },
-            {
-                "with_product_id": 16,
-                "with_product_title": "InVade™ Bio Drain",
-                "potential_benefits": [
-                    "None. Precor is a chemical IGR and InVade is a biological cleaner. They are not compatible."
-                ],
-                "risks_drawbacks": [
-                    "The chemical components of Precor will likely kill the beneficial microbes in InVade Bio Drain.",
-                    "The biological components may react with the chemical formulation of Precor, making both ineffective."
-                ],
-                "would_it_work": {
-                    "answer": "No",
-                    "rationale": "Chemicals and biologicals are incompatible. Mixing will destroy the active microbial ingredient."
-                },
-                "conclusion": "Never mix these two products. Apply them sequentially for different purposes."
-            },
-            {
-                "with_product_id": 17,
-                "with_product_title": "InVade™ Bio Foam",
-                "potential_benefits": [
-                    "None. Precor is a chemical IGR and InVade is a biological cleaner. They are not compatible."
-                ],
-                "risks_drawbacks": [
-                    "The chemical components of Precor will likely kill the beneficial microbes in InVade Bio Foam.",
-                    "The biological components may react with the chemical formulation of Precor, making both ineffective."
-                ],
-                "would_it_work": {
-                    "answer": "No",
-                    "rationale": "Chemicals and biologicals are incompatible. Mixing will destroy the active microbial ingredient."
-                },
-                "conclusion": "Never mix these two products. Apply them sequentially for different purposes."
-            },
-            {
-                "with_product_id": 19,
-                "with_product_title": "Onslaught",
-                "potential_benefits": [
-                    "Combines Precor's IGR (S-methoprene) with Onslaught's adulticide (Esfenvalerate) and synergist (PBO) for complete flea control.",
-                    "The combination targets multiple life stages for a complete kill.",
-                    "Both are water-based tank mix products."
-                ],
-                "risks_drawbacks": [
-                    "Precor's EC formulation with petroleum distillates may compromise the integrity of Onslaught's microencapsulated suspension.",
-                    "Mixing could lead to a less stable solution and reduced residual efficacy."
-                ],
-                "would_it_work": {
-                    "answer": "Uncertain",
-                    "rationale": "Mixing an EC with a microencapsulated suspension is unpredictable. The solvent in Precor could damage the microcapsules of Onslaught."
-                },
-                "conclusion": "Perform a jar test before mixing. This mixture is not recommended due to the high risk of compromising the products' unique formulations."
-            }
-        ]
-    },
-    {
-        "product_id": 20,
+        "product_id": 27,
         "product_title": "Alpine WSG Water Soluble Granule Insecticide",
         "analyses": [
             {
@@ -1152,7 +941,7 @@
                 "conclusion": "Do not mix without a jar test. Sequential application is recommended if compatibility issues arise."
             },
             {
-                "with_product_id": 23,
+                "with_product_id": 30,
                 "with_product_title": "Precor IGR Concentrate",
                 "potential_benefits": [
                     "Adds a targeted IGR (S-methoprene) for fleas to Alpine's unique adulticide (Dinotefuran).",
@@ -1169,7 +958,7 @@
                 "conclusion": "Do not mix without a jar test. Sequential application is recommended if compatibility issues arise."
             },
             {
-                "with_product_id": 27,
+                "with_product_id": 28,
                 "with_product_title": "PT Alpine pressurized insecticide",
                 "potential_benefits": [
                     "None. These products are for different application methods."
@@ -1186,7 +975,7 @@
                 "conclusion": "Never mix these products. Use each for its intended purpose."
             },
             {
-                "with_product_id": 21,
+                "with_product_id": 2,
                 "with_product_title": "Suspend PolyZone",
                 "potential_benefits": [
                     "None. Both are broad-spectrum insecticides for the same types of pests.",
@@ -1205,7 +994,7 @@
                 "conclusion": "Do not mix these products. Use one or the other as a standalone solution."
             },
             {
-                "with_product_id": 22,
+                "with_product_id": 11,
                 "with_product_title": "Demand CS Insecticide",
                 "potential_benefits": [
                     "Combines a microencapsulated pyrethroid with Dinotefuran for different modes of action.",
@@ -1224,7 +1013,7 @@
                 "conclusion": "Avoid this mixture as it offers little benefit and may compromise the formulations. Use one or the other."
             },
             {
-                "with_product_id": 25,
+                "with_product_id": 12,
                 "with_product_title": "ExciteR",
                 "potential_benefits": [
                     "Adds a knockdown and synergist (pyrethrins + PBO) to Alpine's formula for rapid kill.",
@@ -1273,7 +1062,7 @@
                 "conclusion": "Never mix these two products. Apply them sequentially for different purposes."
             },
             {
-                "with_product_id": 19,
+                "with_product_id": 18,
                 "with_product_title": "Onslaught",
                 "potential_benefits": [
                     "Combines two unique formulations with different active ingredients (Dinotefuran vs. Esfenvalerate) for a broader kill spectrum and resistance management.",
@@ -1293,7 +1082,7 @@
         ]
     },
     {
-        "product_id": 27,
+        "product_id": 28,
         "product_title": "PT Alpine pressurized insecticide",
         "analyses": [
             {
@@ -1365,7 +1154,7 @@
                 "conclusion": "Never mix these products. Use each for its intended purpose."
             },
             {
-                "with_product_id": 23,
+                "with_product_id": 30,
                 "with_product_title": "Precor IGR Concentrate",
                 "potential_benefits": [
                     "None. These products are for different application methods."
@@ -1382,7 +1171,7 @@
                 "conclusion": "Never mix these products. Use each for its intended purpose."
             },
             {
-                "with_product_id": 20,
+                "with_product_id": 27,
                 "with_product_title": "Alpine WSG Water Soluble Granule Insecticide",
                 "potential_benefits": [
                     "None. These products are for different application methods."
@@ -1399,7 +1188,7 @@
                 "conclusion": "Never mix these products. Use each for its intended purpose."
             },
             {
-                "with_product_id": 21,
+                "with_product_id": 2,
                 "with_product_title": "Suspend PolyZone",
                 "potential_benefits": [
                     "None. These products are for different application methods."
@@ -1416,7 +1205,7 @@
                 "conclusion": "Never mix these products. Use each for its intended purpose."
             },
             {
-                "with_product_id": 22,
+                "with_product_id": 11,
                 "with_product_title": "Demand CS Insecticide",
                 "potential_benefits": [
                     "None. These products are for different application methods."
@@ -1433,7 +1222,7 @@
                 "conclusion": "Never mix these products. Use each for its intended purpose."
             },
             {
-                "with_product_id": 25,
+                "with_product_id": 12,
                 "with_product_title": "ExciteR",
                 "potential_benefits": [
                     "None. These products are for different application methods."
@@ -1484,7 +1273,7 @@
                 "conclusion": "Never mix these products. Use each for its intended purpose."
             },
             {
-                "with_product_id": 19,
+                "with_product_id": 18,
                 "with_product_title": "Onslaught",
                 "potential_benefits": [
                     "None. These products are for different application methods."
@@ -1503,7 +1292,7 @@
         ]
     },
     {
-        "product_id": 21,
+        "product_id": 2,
         "product_title": "Suspend PolyZone",
         "analyses": [
             {
@@ -1577,7 +1366,7 @@
                 "conclusion": "Perform a jar test before mixing to check for physical stability. If incompatible, apply sequentially."
             },
             {
-                "with_product_id": 23,
+                "with_product_id": 30,
                 "with_product_title": "Precor IGR Concentrate",
                 "potential_benefits": [
                     "Adds a targeted IGR (S-methoprene) for fleas, complementing Suspend's broad-spectrum adulticide.",
@@ -1594,7 +1383,7 @@
                 "conclusion": "Perform a jar test before mixing to check for physical stability. If incompatible, apply sequentially."
             },
             {
-                "with_product_id": 20,
+                "with_product_id": 27,
                 "with_product_title": "Alpine WSG Water Soluble Granule Insecticide",
                 "potential_benefits": [
                     "None. Both are broad-spectrum insecticides for the same types of pests.",
@@ -1613,7 +1402,7 @@
                 "conclusion": "Do not mix these products. Use one or the other as a standalone solution."
             },
             {
-                "with_product_id": 27,
+                "with_product_id": 28,
                 "with_product_title": "PT Alpine pressurized insecticide",
                 "potential_benefits": [
                     "None. These products are for different application methods."
@@ -1630,7 +1419,7 @@
                 "conclusion": "Never mix these products. Use each for its intended purpose."
             },
             {
-                "with_product_id": 22,
+                "with_product_id": 11,
                 "with_product_title": "Demand CS Insecticide",
                 "potential_benefits": [
                     "Combines two different microencapsulated pyrethroids (Deltamethrin vs. Lambda-cyhalothrin).",
@@ -1649,7 +1438,7 @@
                 "conclusion": "This mixture is redundant. Use one product or the other to ensure maximum efficacy."
             },
             {
-                "with_product_id": 25,
+                "with_product_id": 12,
                 "with_product_title": "ExciteR",
                 "potential_benefits": [
                     "Adds a knockdown and synergist (pyrethrins + PBO) to Suspend's formula for rapid kill.",
@@ -1698,7 +1487,7 @@
                 "conclusion": "Never mix these two products. Apply them sequentially for different purposes."
             },
             {
-                "with_product_id": 19,
+                "with_product_id": 18,
                 "with_product_title": "Onslaught",
                 "potential_benefits": [
                     "Combines two different microencapsulated pyrethroids (Deltamethrin vs. Esfenvalerate) for a broader kill spectrum and resistance management.",
@@ -1718,7 +1507,7 @@
         ]
     },
     {
-        "product_id": 22,
+        "product_id": 11,
         "product_title": "Demand CS Insecticide",
         "analyses": [
             {
@@ -1795,7 +1584,7 @@
                 "conclusion": "Perform a jar test before mixing. This mixture is not recommended due to the high risk of compromising the products' unique formulations."
             },
             {
-                "with_product_id": 23,
+                "with_product_id": 30,
                 "with_product_title": "Precor IGR Concentrate",
                 "potential_benefits": [
                     "Adds a targeted IGR (S-methoprene) for fleas, complementing Demand's microencapsulated adulticide.",
@@ -1812,7 +1601,7 @@
                 "conclusion": "Perform a jar test before mixing. This mixture is not recommended due to the high risk of compromising the products' unique formulations."
             },
             {
-                "with_product_id": 20,
+                "with_product_id": 27,
                 "with_product_title": "Alpine WSG Water Soluble Granule Insecticide",
                 "potential_benefits": [
                     "Combines a microencapsulated pyrethroid with Dinotefuran for different modes of action.",
@@ -1831,7 +1620,7 @@
                 "conclusion": "Avoid this mixture as it offers little benefit and may compromise the formulations. Use one or the other."
             },
             {
-                "with_product_id": 27,
+                "with_product_id": 28,
                 "with_product_title": "PT Alpine pressurized insecticide",
                 "potential_benefits": [
                     "None. These products are for different application methods."
@@ -1848,7 +1637,7 @@
                 "conclusion": "Never mix these products. Use each for its intended purpose."
             },
             {
-                "with_product_id": 21,
+                "with_product_id": 2,
                 "with_product_title": "Suspend PolyZone",
                 "potential_benefits": [
                     "Combines two different microencapsulated pyrethroids (Lambda-cyhalothrin vs. Deltamethrin).",
@@ -1867,7 +1656,7 @@
                 "conclusion": "This mixture is redundant. Use one product or the other to ensure maximum efficacy."
             },
             {
-                "with_product_id": 25,
+                "with_product_id": 12,
                 "with_product_title": "ExciteR",
                 "potential_benefits": [
                     "Adds a knockdown and synergist (pyrethrins + PBO) to Demand's formula for rapid kill.",
@@ -1916,7 +1705,7 @@
                 "conclusion": "Never mix these two products. Apply them sequentially for different purposes."
             },
             {
-                "with_product_id": 19,
+                "with_product_id": 18,
                 "with_product_title": "Onslaught",
                 "potential_benefits": [
                     "Combines two different microencapsulated pyrethroids (Lambda-cyhalothrin vs. Esfenvalerate) for a broader kill spectrum and resistance management.",
@@ -1936,7 +1725,7 @@
         ]
     },
     {
-        "product_id": 25,
+        "product_id": 12,
         "product_title": "ExciteR",
         "analyses": [
             {
@@ -2013,7 +1802,7 @@
                 "conclusion": "This mixture is physically compatible and provides both knockdown and IGR control. Use where both effects are needed."
             },
             {
-                "with_product_id": 23,
+                "with_product_id": 30,
                 "with_product_title": "Precor IGR Concentrate",
                 "potential_benefits": [
                     "Adds a knockdown and synergist (from ExciteR) to Precor's IGR for a complete flea treatment.",
@@ -2030,7 +1819,7 @@
                 "conclusion": "This mixture is physically compatible and provides a complete treatment for fleas, targeting all life stages."
             },
             {
-                "with_product_id": 20,
+                "with_product_id": 27,
                 "with_product_title": "Alpine WSG Water Soluble Granule Insecticide",
                 "potential_benefits": [
                     "Adds a knockdown and synergist (pyrethrins + PBO) to Alpine's formula for rapid kill.",
@@ -2047,7 +1836,7 @@
                 "conclusion": "Do not mix without a jar test. Sequential application is recommended if compatibility issues arise."
             },
             {
-                "with_product_id": 27,
+                "with_product_id": 28,
                 "with_product_title": "PT Alpine pressurized insecticide",
                 "potential_benefits": [
                     "None. These products are for different application methods."
@@ -2064,7 +1853,7 @@
                 "conclusion": "Never mix these products. Use each for its intended purpose."
             },
             {
-                "with_product_id": 21,
+                "with_product_id": 2,
                 "with_product_title": "Suspend PolyZone",
                 "potential_benefits": [
                     "Adds a knockdown and synergist (pyrethrins + PBO) to Suspend's formula for rapid kill.",
@@ -2081,7 +1870,7 @@
                 "conclusion": "Do not mix without a jar test. Sequential application is recommended if compatibility issues arise."
             },
             {
-                "with_product_id": 22,
+                "with_product_id": 11,
                 "with_product_title": "Demand CS Insecticide",
                 "potential_benefits": [
                     "Adds a knockdown and synergist (pyrethrins + PBO) to Demand's formula for rapid kill.",
@@ -2130,7 +1919,7 @@
                 "conclusion": "Never mix these two products. Apply them sequentially for different purposes."
             },
             {
-                "with_product_id": 19,
+                "with_product_id": 18,
                 "with_product_title": "Onslaught",
                 "potential_benefits": [
                     "Adds a fast knockdown and synergist (pyrethrins + PBO) to Onslaught's microencapsulated formula.",
@@ -2219,7 +2008,7 @@
                 "conclusion": "Never mix these two products. Apply them sequentially for different purposes."
             },
             {
-                "with_product_id": 23,
+                "with_product_id": 30,
                 "with_product_title": "Precor IGR Concentrate",
                 "potential_benefits": [
                     "None. InVade is a biological cleaner and Precor is a chemical IGR. They are not compatible."
@@ -2235,7 +2024,7 @@
                 "conclusion": "Never mix these two products. Apply them sequentially for different purposes."
             },
             {
-                "with_product_id": 20,
+                "with_product_id": 27,
                 "with_product_title": "Alpine WSG Water Soluble Granule Insecticide",
                 "potential_benefits": [
                     "None. InVade is a biological cleaner and Alpine is a chemical insecticide. They are not compatible."
@@ -2251,7 +2040,7 @@
                 "conclusion": "Never mix these two products. Apply them sequentially for different purposes."
             },
             {
-                "with_product_id": 27,
+                "with_product_id": 28,
                 "with_product_title": "PT Alpine pressurized insecticide",
                 "potential_benefits": [
                     "None. These products are for different application methods."
@@ -2268,7 +2057,7 @@
                 "conclusion": "Never mix these products. Use each for its intended purpose."
             },
             {
-                "with_product_id": 21,
+                "with_product_id": 2,
                 "with_product_title": "Suspend PolyZone",
                 "potential_benefits": [
                     "None. InVade is a biological cleaner and Suspend is a chemical insecticide. They are not compatible."
@@ -2284,7 +2073,7 @@
                 "conclusion": "Never mix these two products. Apply them sequentially for different purposes."
             },
             {
-                "with_product_id": 22,
+                "with_product_id": 11,
                 "with_product_title": "Demand CS Insecticide",
                 "potential_benefits": [
                     "None. InVade is a biological cleaner and Demand is a chemical insecticide. They are not compatible."
@@ -2300,7 +2089,7 @@
                 "conclusion": "Never mix these two products. Apply them sequentially for different purposes."
             },
             {
-                "with_product_id": 25,
+                "with_product_id": 12,
                 "with_product_title": "ExciteR",
                 "potential_benefits": [
                     "None. InVade is a biological cleaner and ExciteR is a chemical insecticide. They are not compatible."
@@ -2331,7 +2120,7 @@
                 "conclusion": "Do not mix these products. Use each for its intended application."
             },
             {
-                "with_product_id": 19,
+                "with_product_id": 18,
                 "with_product_title": "Onslaught",
                 "potential_benefits": [
                     "None. InVade is a biological cleaner and Onslaught is a chemical insecticide. They are not compatible."
@@ -2418,7 +2207,7 @@
                 "conclusion": "Never mix these two products. Apply them sequentially for different purposes."
             },
             {
-                "with_product_id": 23,
+                "with_product_id": 30,
                 "with_product_title": "Precor IGR Concentrate",
                 "potential_benefits": [
                     "None. InVade is a biological cleaner and Precor is a chemical IGR. They are not compatible."
@@ -2434,7 +2223,7 @@
                 "conclusion": "Never mix these two products. Apply them sequentially for different purposes."
             },
             {
-                "with_product_id": 20,
+                "with_product_id": 27,
                 "with_product_title": "Alpine WSG Water Soluble Granule Insecticide",
                 "potential_benefits": [
                     "None. InVade is a biological cleaner and Alpine is a chemical insecticide. They are not compatible."
@@ -2450,7 +2239,7 @@
                 "conclusion": "Never mix these two products. Apply them sequentially for different purposes."
             },
             {
-                "with_product_id": 27,
+                "with_product_id": 28,
                 "with_product_title": "PT Alpine pressurized insecticide",
                 "potential_benefits": [
                     "None. These products are for different application methods."
@@ -2467,7 +2256,7 @@
                 "conclusion": "Never mix these products. Use each for its intended purpose."
             },
             {
-                "with_product_id": 21,
+                "with_product_id": 2,
                 "with_product_title": "Suspend PolyZone",
                 "potential_benefits": [
                     "None. InVade is a biological cleaner and Suspend is a chemical insecticide. They are not compatible."
@@ -2483,7 +2272,7 @@
                 "conclusion": "Never mix these two products. Apply them sequentially for different purposes."
             },
             {
-                "with_product_id": 22,
+                "with_product_id": 11,
                 "with_product_title": "Demand CS Insecticide",
                 "potential_benefits": [
                     "None. InVade is a biological cleaner and Demand is a chemical insecticide. They are not compatible."
@@ -2499,7 +2288,7 @@
                 "conclusion": "Never mix these two products. Apply them sequentially for different purposes."
             },
             {
-                "with_product_id": 25,
+                "with_product_id": 12,
                 "with_product_title": "ExciteR",
                 "potential_benefits": [
                     "None. InVade is a biological cleaner and ExciteR is a chemical insecticide. They are not compatible."
@@ -2530,7 +2319,7 @@
                 "conclusion": "Do not mix these products. Use each for its intended application."
             },
             {
-                "with_product_id": 19,
+                "with_product_id": 18,
                 "with_product_title": "Onslaught",
                 "potential_benefits": [
                     "None. InVade is a biological cleaner and Onslaught is a chemical insecticide. They are not compatible."
@@ -2548,7 +2337,7 @@
         ]
     },
     {
-        "product_id": 19,
+        "product_id": 18,
         "product_title": "Onslaught",
         "analyses": [
             {
@@ -2623,7 +2412,7 @@
                 "conclusion": "Perform a jar test before mixing. This mixture is not recommended due to the high risk of compromising the products' unique formulations."
             },
             {
-                "with_product_id": 23,
+                "with_product_id": 30,
                 "with_product_title": "Precor IGR Concentrate",
                 "potential_benefits": [
                     "Combines Onslaught's adulticide (Esfenvalerate) and synergist (PBO) with Precor's IGR (S-methoprene) for complete flea control.",
@@ -2641,7 +2430,7 @@
                 "conclusion": "Perform a jar test before mixing. This mixture is not recommended due to the high risk of compromising the products' unique formulations."
             },
             {
-                "with_product_id": 20,
+                "with_product_id": 27,
                 "with_product_title": "Alpine WSG Water Soluble Granule Insecticide",
                 "potential_benefits": [
                     "Combines two unique formulations with different active ingredients (Esfenvalerate vs. Dinotefuran) for a broader kill spectrum and resistance management.",
@@ -2659,7 +2448,7 @@
                 "conclusion": "Avoid this mixture as it offers little benefit and may compromise the formulations. Use one or the other."
             },
             {
-                "with_product_id": 27,
+                "with_product_id": 28,
                 "with_product_title": "PT Alpine pressurized insecticide",
                 "potential_benefits": [
                     "None. These products are for different application methods."
@@ -2676,7 +2465,7 @@
                 "conclusion": "Never mix these products. Use each for its intended purpose."
             },
             {
-                "with_product_id": 21,
+                "with_product_id": 2,
                 "with_product_title": "Suspend PolyZone",
                 "potential_benefits": [
                     "Combines two different microencapsulated pyrethroids (Esfenvalerate vs. Deltamethrin) for a broader kill spectrum and resistance management.",
@@ -2694,7 +2483,7 @@
                 "conclusion": "This mixture is redundant. Use one product or the other to ensure maximum efficacy."
             },
             {
-                "with_product_id": 22,
+                "with_product_id": 11,
                 "with_product_title": "Demand CS Insecticide",
                 "potential_benefits": [
                     "Combines two different microencapsulated pyrethroids (Esfenvalerate vs. Lambda-cyhalothrin) for a broader kill spectrum and resistance management.",
@@ -2712,7 +2501,7 @@
                 "conclusion": "This mixture is redundant. Use one product or the other to ensure maximum efficacy."
             },
             {
-                "with_product_id": 25,
+                "with_product_id": 12,
                 "with_product_title": "ExciteR",
                 "potential_benefits": [
                     "Adds a fast knockdown and synergist (pyrethrins + PBO) to Onslaught's microencapsulated formula.",
