@@ -27,7 +27,7 @@ export class AboutComponent {
  private navService = inject(NavService);
   title: string = 'About this App';
   appName = 'PestProduct';
-  version = '4.2.9';
+  version = '4.9.0';
   author = 'Alejandro';
   email = 'alex295226@gmail.com';
 

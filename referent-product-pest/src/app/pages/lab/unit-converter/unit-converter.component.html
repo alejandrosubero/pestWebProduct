@@ -1,7 +1,5 @@
-<div class="converter">
-  <!-- <h2>Unit Converter</h2> -->
-
-  <!-- 1️⃣ Choose the type of conversion -->
+<!-- <div class="converter">
+ 
   <label class="field">
     <span>Type:</span>
     <select
@@ -16,7 +14,6 @@
     </select>
   </label>
 
-  <!-- 2️⃣ Enter value -->
   <label class="field">
     <span>Value:</span>
     <input
@@ -27,7 +24,7 @@
     />
   </label>
 
-  <!-- 3️⃣ Select source unit -->
+ 
   <label class="field">
     <span>From:</span>
     <select [(ngModel)]="fromUnit" name="fromUnit" required>
@@ -38,7 +35,6 @@
     </select>
   </label>
 
-  <!-- 4️⃣ Select target unit -->
   <label class="field">
     <span>To:</span>
     <select [(ngModel)]="toUnit" name="toUnit" required>
@@ -46,6 +42,54 @@
       <option *ngFor="let u of getUnitOptions()" [value]="u">
         {{ u }}
       </option>
+    </select>
+  </label>
+
+  
+  <button class="convert" (click)="convert()">Convert</button>
+
+  <div class="result" *ngIf="result">
+    <strong>Result:</strong> {{ result }}
+  </div>
+</div> -->
+
+<div class="converter">
+  <h2>Unit Converter</h2>
+
+  <!-- 1️⃣ Type selector -->
+  <label class="field">
+    <span>Convert type:</span>
+    <select [(ngModel)]="selectedType" name="type">
+      <option *ngFor="let t of unitTypes" [value]="t">{{ t }}</option>
+    </select>
+  </label>
+
+  <!-- 2️⃣ Value -->
+  <label class="field">
+    <span>Value:</span>
+    <input
+      type="number"
+      [(ngModel)]="value"
+      placeholder="Enter value"
+      step="any"
+    />
+  </label>
+
+  <!-- 3️⃣ From‑unit -->
+  <label class="field">
+    <span>From:</span>
+    <select [(ngModel)]="fromUnit" name="from">
+      <option value="" disabled selected>Select unit</option>
+      <option *ngFor="let u of getUnitOptions()" [value]="u">{{ u }}</option>
+    </select>
+  </label>
+
+  <!-- 4️⃣ To‑unit -->
+  <label class="field">
+    <span>To:</span>
+    <select [(ngModel)]="toUnit" name="to">
+      <option value="" disabled selected>Select unit</option>
+      <option *ngFor="let u of getUnitOptions()" [value]="u">{{ u }}</option>
     </select>
   </label>
 
