@@ -80,7 +80,12 @@ export const routes: Routes = [
     data: { animation: 'FormulationPage' },
     canActivate: [authGuard]
   },
-
+ {
+    path: 'lab/test/jar',
+    loadComponent: () => import('./pages/lab/test/jar-test-table/jar-test-table.component').then(c => c.JarTestTableComponent),
+    data: { animation: 'FormulationPage' },
+    canActivate: [authGuard]
+  },
   {
     path: 'storage', 
     canActivate: [authGuard],

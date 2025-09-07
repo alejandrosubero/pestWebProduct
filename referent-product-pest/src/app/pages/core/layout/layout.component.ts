@@ -102,9 +102,13 @@ export class LayoutComponent  implements OnInit {
     sidenav.toggle();
     this.navigate(routeBase);
   }
-
-  goMix(sidenav: any): void {
+ goMix(sidenav: any): void {
     const routeBase = 'app/technical/notes/mix';
+    sidenav.toggle();
+    this.navigate(routeBase);
+  }
+  goJarTest(sidenav: any): void {
+    const routeBase = 'app/lab/test/jar';
     sidenav.toggle();
     this.navigate(routeBase);
   }
