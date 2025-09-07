@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { NavService } from '../../../../services/nav.service';
+import { NavConfig } from '../../../../models/navElemet.model';
 
 interface JarTestRate {
   labelRate: number; // oz/gal
@@ -19,7 +21,7 @@ interface JarTestRate {
 })
 export class JarTestTableComponent {
 
-jarRates: JarTestRate[] = [
+  jarRates: JarTestRate[] = [
     { labelRate: 0.0625, pintOz: 0.008, pintMl: 0.23, quartOz: 0.016, quartMl: 0.46 },
     { labelRate: 0.125, pintOz: 0.016, pintMl: 0.46, quartOz: 0.031, quartMl: 0.92 },
     { labelRate: 0.2, pintOz: 0.025, pintMl: 0.74, quartOz: 0.05, quartMl: 1.48 },
@@ -40,6 +42,14 @@ jarRates: JarTestRate[] = [
   convertValue: number | null = null;
   convertUnit: string = 'fl-oz';
   conversions: { unit: string, value: number }[] = [];
+
+  private navService = inject(NavService);
+  public title: string = 'Jar Test Table';
+
+  constructor() {
+    this.setNav();
+  }
+
 
   calculate() {
     if (this.customRate !== null && this.customRate >= 0) {
@@ -104,5 +114,23 @@ jarRates: JarTestRate[] = [
       { unit: 'Gallons', value: parseFloat((flOz / 128).toFixed(3)) },
       { unit: 'Liters', value: parseFloat((flOz / 33.814).toFixed(3)) }
     ];
+  }
+
+
+  setNav(): void {
+
+    this.navService.reSetNavConfig();
+
+    let navConfig: NavConfig = new NavConfig();
+    navConfig.title = this.title;
+    navConfig.ico.menu = false;
+    navConfig.ico.back = true;
+    navConfig.ico.home = true;
+    navConfig.ico.favorite = false;
+    navConfig.ico.logut = false;
+    navConfig.ico.label = false;
+    navConfig.ico.sds = false;
+    navConfig.goto = 'app/lab/field';
+    this.navService.setNavConfig(navConfig);
   }
 }

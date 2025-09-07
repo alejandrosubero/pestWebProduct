@@ -122,8 +122,9 @@ export class MixTechnicalNotesComponent {
 
     let navConfig: NavConfig = new NavConfig();
     navConfig.title = this.title;
-    navConfig.ico.menu = true;
-    navConfig.ico.back = false;
+    navConfig.ico.menu = false;
+    navConfig.ico.back = true;
+    navConfig.ico.home = true;
     navConfig.ico.favorite = false;
     navConfig.ico.logut = false;
     navConfig.ico.label = false;
@@ -134,8 +135,7 @@ export class MixTechnicalNotesComponent {
       navConfig.sourceId = this.selectedProduct.product_id;
     }
 
-    navConfig.goto = 'app/home';
+    navConfig.goto = 'app/lab/field';
     this.navService.setNavConfig(navConfig);
   }
-
 }

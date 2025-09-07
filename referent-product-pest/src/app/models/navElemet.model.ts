@@ -49,5 +49,6 @@ export class IcoConfig {
     public source: boolean = false;
     public back: boolean = false;
     public logut: boolean = false;
+    public home: boolean = false;
 
 }

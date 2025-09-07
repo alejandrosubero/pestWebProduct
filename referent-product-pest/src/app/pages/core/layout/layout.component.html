@@ -13,15 +13,16 @@
         <div class="buto" (click)="goTecnnical(sidenav)">
           <p>Technical Notes</p>
         </div>
-        <div class="buto" (click)="goMix(sidenav)">
+        <!-- <div class="buto" (click)="goMix(sidenav)">
           <p>Technical Notes Mix</p>
-        </div>
-        <div class="buto" (click)="goCompareTecnnical(sidenav)">
+        </div> -->
+        <!-- <div class="buto" (click)="goCompareTecnnical(sidenav)">
           <p>Comparator</p>
+        </div> -->
+         <div class="buto" (click)=" goFieldLaboratory(sidenav)">
+          <p> Field Laboratory</p>
         </div>
-         <div class="buto" (click)=" goJarTest(sidenav)">
-          <p> Jar Test</p>
-        </div>
+
         <div class="buto" (click)="goAbout(sidenav)">
           <p>About Me</p>
         </div>
@@ -46,7 +47,6 @@
           <mat-icon>arrow_back</mat-icon>
         </button>
         }
-      
         <a class="toolbar-title" routerLink="/home" aria-label="Ir al inicio">
           <h1>{{navConfig().title}}</h1>
         </a>
@@ -71,6 +71,11 @@
           }
           @if (navConfig().ico.logut) {
              <a mat-icon-button (click)="logout()"> <mat-icon>exit_to_app</mat-icon></a>
+          }
+          @if (navConfig().ico.home) {
+            <button mat-icon-button (click)="home()" aria-label="Back">
+             <mat-icon aria-hidden="true">home</mat-icon>
+            </button>
           }
         </nav>
       </mat-toolbar>

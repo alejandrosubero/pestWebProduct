@@ -122,18 +122,21 @@ export class CompareProductsComponent implements OnInit {
     this.router.navigate(['/home']);
   }
 
-   setNav(): void {
-      this.navService.reSetNavConfig();
-      let navConfig: NavConfig = new NavConfig();
-      navConfig.title = this.title;
-      navConfig.ico.menu = true;
-      navConfig.ico.back = false;
-      navConfig.ico.favorite = false;
-      navConfig.ico.logut = false;
-      navConfig.ico.label = false;
-      navConfig.ico.sds = false;
-      navConfig.goto = 'app/home';
-      this.navService.setNavConfig(navConfig);
+  setNav(): void {
+    this.navService.reSetNavConfig();
+    let navConfig: NavConfig = new NavConfig();
+    navConfig.title = this.title;
+    navConfig.ico.menu = false;
+    navConfig.ico.back = true;
+    navConfig.ico.home = true;
+    navConfig.ico.favorite = false;
+    navConfig.ico.logut = false;
+    navConfig.ico.label = false;
+    navConfig.ico.sds = false;
+    navConfig.goto = 'app/lab/field';
+    this.navService.setNavConfig(navConfig);
     }
 
 }
+
+

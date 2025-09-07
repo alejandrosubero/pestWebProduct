@@ -1,0 +1,424 @@
+:host {
+  display: block;
+  width: 100%;
+  font-family: Inter, system-ui, -apple-system, "Helvetica Neue", Arial;
+  --bg:#0b2447;
+  --card:#ffffff;
+  --accent:#055D9C;
+  --muted:#6b7380;
+  --green:#0a8a5f;
+  --danger:#d9534f;
+  --glass: rgba(255,255,255,0.06);
+  --maxw:900px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #07192f 0%, #09223a 50%, #072433 100%);
+  color: #0b1220;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.wrap {
+  width: 100%;
+  max-width: var(--maxw);
+  margin: 0 auto;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    .logo {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1.4rem;
+    }
+
+    .lead {
+      margin: 0;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+  }
+
+  .actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+
+    .lang-toggle {
+      display: flex;
+      gap: 4px;
+
+      button {
+        padding: 6px 12px;
+        border: 1px solid var(--accent);
+        background: white;
+        color: var(--accent);
+        border-radius: 6px;
+        cursor: pointer;
+
+        &.active {
+          background: var(--accent);
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+.btn {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background: var(--accent);
+  color: white;
+  font-weight: 500;
+
+  &.secondary {
+    background: #f0f0f0;
+    color: #333;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.content {
+  flex: 2;
+
+  h2 {
+    margin-top: 12px;
+    font-size: 1.1rem;
+    color: var(--accent);
+  }
+
+  .checklist {
+    list-style: none;
+    padding: 0;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 4px;
+
+      input[type=checkbox] {
+        transform: scale(1.2);
+      }
+
+      label {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.aside {
+  flex: 1;
+  background: var(--glass);
+  padding: 12px;
+  border-radius: 8px;
+
+  h4 {
+    margin-top: 0;
+    font-size: 1rem;
+  }
+
+  .small {
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+
+  .pill {
+    background: var(--accent);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 16px;
+    display: inline-block;
+    margin: 4px 0;
+    font-size: 0.85rem;
+  }
+
+  .muted {
+    color: var(--muted);
+    font-size: 0.8rem;
+  }
+
+  .print-note {
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 0.8rem;
+  color: var(--muted);
+
+  small {
+    margin-top: 4px;
+  }
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+}
+
+/* 🖨 Print Styles */
+@media print {
+  header .actions {
+    display: none;
+  }
+
+  .aside {
+    display: none;
+  }
+
+  body {
+    background: white;
+  }
+
+  .card {
+    box-shadow: none;
+    border: none;
+  }
+
+
+/* 🖨 Print styles for Recommendations */
+.rec-card {
+  margin-top: 8px;
+  background: white !important;
+  box-shadow: none !important;
+  border: 1px solid #ccc !important;
+  color: black !important;
+  page-break-inside: avoid;
+}
+
+.rec-section {
+  background: white !important;
+  border: none !important;
+}
+
+.wales-list li,
+.compat-list li,
+.tech-list li {
+  color: black !important;
+}
+
+.example {
+  background: #fdfdfd !important;
+  border: 1px solid #ddd !important;
+
+  .example-title {
+    color: black !important;
+  }
+
+  .example-note,
+  .small-note {
+    color: #333 !important;
+  }
+}
+/* Print: force each recommendation section on a new page */
+.rec-section {
+  page-break-before: always; /* cada sección inicia en nueva página */
+  break-inside: avoid;       /* evita que se corte dentro de la sección */
+}
+
+
+}
+
+
+
+/////////////////////////////////////
+
+/* 📌 Recomendaciones */
+.rec-card {
+  background: var(--card);
+  border-radius: 10px;
+  padding: 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  border: 1px solid rgba(0,0,0,0.05);
+  color: #042033;
+  max-width: var(--maxw);
+  margin: 0 auto 20px auto;
+}
+
+.rec-header {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+
+  h2 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--accent);
+  }
+
+  .rec-sub {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--muted);
+  }
+}
+
+.rec-body {
+  display: grid;
+  gap: 14px;
+  padding-top: 6px;
+}
+
+.rec-section {
+  padding: 10px;
+  border-radius: 8px;
+  background: var(--glass);
+  border: 1px solid rgba(0,0,0,0.04);
+
+  h3 {
+    margin: 0 0 8px 0;
+    font-size: 1rem;
+    color: var(--accent);
+  }
+
+  p {
+    margin: 0 0 8px 0;
+    font-size: 0.92rem;
+    color: var(--muted);
+  }
+}
+
+/* WALES list */
+.wales-list {
+  margin: 0;
+  padding-left: 1.1rem;
+
+  li {
+    margin: 6px 0;
+    font-weight: 600;
+    color: #052034;
+
+    strong {
+      display: inline-block;
+      width: 28px;
+      text-align: center;
+      margin-right: 8px;
+      color: var(--accent);
+    }
+  }
+}
+
+/* Lists */
+.compat-list,
+.tech-list {
+  margin: 0;
+  padding-left: 1.1rem;
+
+  li {
+    margin: 6px 0;
+    font-size: 0.95rem;
+    color: #052034;
+  }
+}
+
+/* Examples */
+.example {
+  margin-top: 8px;
+  padding: 8px;
+  border-radius: 8px;
+  background: #f9fafb;
+  border: 1px solid rgba(0,0,0,0.05);
+
+  .example-title {
+    margin: 0 0 6px 0;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #052034;
+  }
+
+  .example-note {
+    margin: 6px 0 0 0;
+    font-size: 0.92rem;
+    color: var(--muted);
+  }
+
+  .small-note {
+    margin-top: 8px;
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+}
+
+/* Helpers */
+.muted {
+  color: var(--muted);
+}
+.small-note {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* Responsive */
+@media (max-width: 720px) {
+  .rec-card {
+    padding: 14px;
+  }
+}
+
+
+/* Footer específico del componente de recomendaciones */
+footer {
+  small {
+    color: #0062ff; /* amarillo llamativo */
+  }
+}

@@ -113,6 +113,12 @@ export class LayoutComponent  implements OnInit {
     this.navigate(routeBase);
   }
 
+  goFieldLaboratory(sidenav: any): void {
+    const routeBase = 'app/lab/field';
+    sidenav.toggle();
+    this.navigate(routeBase);
+  }
+
   goHome(sidenav: any): void {
     const routeBase = "app/home";
     sidenav.toggle();
@@ -126,7 +132,13 @@ export class LayoutComponent  implements OnInit {
 //  ============ ********** ================
 
 //  ============ logout and back================
-    logout(): void {
+   
+  home(): void {
+    const routeBase = "app/home";
+    this.navigate(routeBase);
+  }
+
+logout(): void {
     this.authService.logout();
     this.router.navigate(['/login']);
   }

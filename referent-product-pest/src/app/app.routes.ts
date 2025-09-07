@@ -21,7 +21,6 @@ export const routes: Routes = [
     data: { animation: 'pro' },
     canActivate: [authGuard]
   },
-  
    {
     path: 'technical/notes/compare',
     loadComponent: () => import('./pages/pro/comparator/compare-products/compare-products.component').then(c => c.CompareProductsComponent),
@@ -83,7 +82,19 @@ export const routes: Routes = [
  {
     path: 'lab/test/jar',
     loadComponent: () => import('./pages/lab/test/jar-test-table/jar-test-table.component').then(c => c.JarTestTableComponent),
-    data: { animation: 'FormulationPage' },
+    data: { animation: 'lab' },
+    canActivate: [authGuard]
+  },
+   {
+    path: 'lab/field',
+    loadComponent: () => import('./pages/lab/field-card/field-card.component').then(c => c.FieldCardComponent),
+    data: { animation: 'lab' },
+    canActivate: [authGuard]
+  },
+   {
+    path: 'lab/test/checklist',
+    loadComponent: () => import('./pages/lab/test/tank-mix-checklist/tank-mix-checklist.component').then(c => c.TankMixChecklistComponent),
+    data: { animation: 'lab' },
     canActivate: [authGuard]
   },
   {

@@ -1,0 +1,310 @@
+<div class="wrap">
+  <div class="card" role="document" aria-label="Pesticide tank mix checklist card">
+    <!-- Header -->
+    <header>
+
+
+      <div class="actions">
+        <div class="lang-toggle">
+          <button (click)="toggleLang('en')" [class.active]="lang==='en'" [attr.aria-pressed]="lang==='en'">English</button>
+
+          <button (click)="toggleLang('es')" [class.active]="lang==='es'" [attr.aria-pressed]="lang==='es'">Spanish</button>
+        </div>
+        <button class="btn" (click)="printPage()">Print / Save PDF</button>
+      </div>
+
+      <div class="brand">
+        <!-- <div class="logo">P’s</div> -->
+        <div>
+          <!-- <h1 *ngIf="lang==='en'">Field Card</h1> -->
+          <p class="lead" *ngIf="lang==='en'">
+            Quick field checklist to verify pesticide compatibility, safety & documentation.
+          </p>
+
+          <!-- <h1 *ngIf="lang==='es'">Laminita de Campo — Verificación de Mezclas</h1> -->
+          <p class="lead" *ngIf="lang==='es'">
+            Lista rápida para verificar compatibilidad, seguridad y documentación en campo.
+          </p>
+        </div>
+      </div>
+
+    </header>
+
+    <!-- Main -->
+    <main>
+      <!-- Content EN -->
+      <section class="content" *ngIf="lang==='en'" id="content-en">
+        <h2>1. Labels</h2>
+        <ul class="checklist">
+          <li><input type="checkbox" id="en1"><label for="en1">✔ Read each product label for mix instructions.</label>
+          </li>
+          <li><input type="checkbox" id="en2"><label for="en2">✔ Check restrictions and compatibility warnings.</label>
+          </li>
+          <li><input type="checkbox" id="en3"><label for="en3">✔ Verify application site, pest, and crop are
+              listed.</label></li>
+        </ul>
+
+        <h2>2. Jar Test</h2>
+        <ul class="checklist">
+          <li><input type="checkbox" id="en4"><label for="en4">✔ Use clean jar, 16 oz or 32 oz water.</label></li>
+          <li><input type="checkbox" id="en5">
+            <label for="en5"> ✔ Add products in WALES order: WSP → Agitate → Liquid →  Emulsifiable → Surfactants.</label>
+          </li>
+          <li><input type="checkbox" id="en6">
+            <label for="en6">✔ Shake, wait 15–30 min, check for clumps/precipitate.</label>
+          </li>
+        </ul>
+
+        <h2>3. Water</h2>
+        <ul class="checklist">
+          <li><input type="checkbox" id="en7"><label for="en7">✔ Verify pH (5.5–7.0 optimal).</label></li>
+          <li><input type="checkbox" id="en8"><label for="en8">✔ Use clean, non-chlorinated water.</label></li>
+        </ul>
+
+        <h2>4. Safety</h2>
+        <ul class="checklist">
+          <li><input type="checkbox" id="en9"><label for="en9">✔ Wear PPE as required by label.</label></li>
+          <li><input type="checkbox" id="en10"><label for="en10">✔ Mix in ventilated area, avoid spills.</label></li>
+          <li><input type="checkbox" id="en11"><label for="en11">✔ Keep SDS sheets accessible.</label></li>
+        </ul>
+
+        <h2>5. Documentation</h2>
+        <ul class="checklist">
+          <li><input type="checkbox" id="en12">
+            <label for="en12">✔ Record date, time, products, rates, tank size.</label>
+          </li>
+          <li><input type="checkbox" id="en13"><label for="en13">✔ Record field, crop, applicator name.</label></li>
+        </ul>
+
+        <h2>Rules of Thumb</h2>
+        <ul class="checklist">
+          <li><input type="checkbox" id="en14"><label for="en14">✔ When in doubt — leave it out.</label></li>
+          <li><input type="checkbox" id="en15"><label for="en15">✔ Always test new mixes before full tank.</label></li>
+          <li><input type="checkbox" id="en16"><label for="en16">✔ Follow WALES order strictly.</label></li>
+        </ul>
+      </section>
+
+      <!-- Content ES -->
+      <section class="content" *ngIf="lang==='es'" id="content-es">
+        <h2>1. Etiquetas</h2>
+        <ul class="checklist">
+          <li><input type="checkbox" id="es1"><label for="es1">✔ Leer cada etiqueta de los productos a mezclar.</label>
+          </li>
+          <li><input type="checkbox" id="es2"><label for="es2">✔ Revisar restricciones y advertencias de
+              compatibilidad.</label></li>
+          <li><input type="checkbox" id="es3"><label for="es3">✔ Confirmar que el cultivo/plaga/sitio están
+              permitidos.</label></li>
+        </ul>
+
+        <h2>2. Prueba de frasco</h2>
+        <ul class="checklist">
+          <li><input type="checkbox" id="es4"><label for="es4">✔ Usar frasco limpio con 16 oz 0 32 oz de agua.</label></li>
+          <li><input type="checkbox" id="es5"><label for="es5">✔ Agregar productos en orden WALES: Polvos solubles →
+              Agitar → Líquidos → Emulsionables → Surfactantes.</label></li>
+          <li><input type="checkbox" id="es6"><label for="es6">✔ Agitar, esperar 15–30 min, revisar
+              grumos/precipitado.</label></li>
+        </ul>
+
+        <h2>3. Agua</h2>
+        <ul class="checklist">
+          <li><input type="checkbox" id="es7"><label for="es7">✔ Revisar pH (5.5–7.0 óptimo).</label></li>
+          <li><input type="checkbox" id="es8"><label for="es8">✔ Usar agua limpia y no clorada.</label></li>
+        </ul>
+
+        <h2>4. Seguridad</h2>
+        <ul class="checklist">
+          <li><input type="checkbox" id="es9"><label for="es9">✔ Usar EPP según la etiqueta.</label></li>
+          <li><input type="checkbox" id="es10"><label for="es10">✔ Preparar en área ventilada, evitar derrames.</label>
+          </li>
+          <li><input type="checkbox" id="es11"><label for="es11">✔ Tener HDS a la mano.</label></li>
+        </ul>
+
+        <h2>5. Documentar</h2>
+        <ul class="checklist">
+          <li><input type="checkbox" id="es12"><label for="es12">✔ Registrar fecha, hora, productos, dosis,
+              volumen.</label></li>
+          <li><input type="checkbox" id="es13"><label for="es13">✔ Registrar lote, cultivo, aplicador.</label></li>
+        </ul>
+
+        <h2>Reglas de oro</h2>
+        <ul class="checklist">
+          <li><input type="checkbox" id="es14"><label for="es14">✔ Si hay duda, no lo mezcle.</label></li>
+          <li><input type="checkbox" id="es15"><label for="es15">✔ Siempre probar mezclas nuevas en frasco.</label></li>
+          <li><input type="checkbox" id="es16"><label for="es16">✔ Seguir estrictamente el orden WALES.</label></li>
+        </ul>
+      </section>
+
+      <!-- Aside -->
+      <aside class="aside">
+        <h4>Reminders</h4>
+        <!-- <p class="small">
+         
+        </p> -->
+
+        <div class="pill">Order: WALES</div>
+        <div class="pill">Jar test: 16 oz or 32 oz</div>
+        <div class="pill">Wait: 15–30 min</div>
+        <div class="pill">pH target: 5.5–7.0</div>
+        <div class="pill">Keep SDS nearby</div>
+
+
+            <div style="margin-top:14px">
+              <small class="muted">Buttons</small>
+              <div style="display:flex;gap:8px;margin-top:8px">
+                <button class="btn" (click)="copyChecklist()">Copy to clipboard</button>
+                <button class="btn secondary" (click)="resetChecks()">Reset</button>
+              </div>
+            </div>
+            
+            <div style="margin-top:14px">
+              <small class="muted">Print note</small>
+              <p class="print-note">
+                Use the Print / Save PDF button to produce a field-ready PDF. Hide headers automatically on print.
+              </p>
+            </div>
+      </aside>
+    </main>
+  </div>
+</div>
+
+<section class="rec-card" aria-labelledby="rec-title" *ngIf="lang==='en'" >
+  <header class="rec-header">
+    <h4 id="rec-title">Recommendations</h4>
+    <p class="rec-sub">Practical guidance for safe and effective tank-mixing (for pest control technicians).</p>
+  </header>
+
+  <div class="rec-body">
+    <!-- 1. WALES -->
+    <article class="rec-section" aria-labelledby="wales-title">
+      <h3 id="wales-title">1. Correct mixing order (“WALES”)</h3>
+      <p class="muted">To prevent the heavier formulation from inactivating the other, follow this order:</p>
+      <ol class="wales-list">
+        <li><strong>W</strong> — Wettable powders</li>
+        <li><strong>A</strong> — Agitate</li>
+        <li><strong>L</strong> — Liquid flowables (suspensions)</li>
+        <li><strong>E</strong> — Emulsifiable concentrates (EC)</li>
+        <li><strong>S</strong> — Surfactants, adjuvants, oils</li>
+      </ol>
+    </article>
+
+    <!-- 2. Compatibility -->
+    <article class="rec-section" aria-labelledby="compat-title">
+      <h3 id="compat-title">2. Check chemical compatibility</h3>
+      <ul class="compat-list">
+        <li>Water pH has an influence. <em>Example:</em> pyrethrins break down quickly in alkaline water.</li>
+        <li>Do not mix products with different base carriers (oil vs. water) unless the label explicitly authorizes it.</li>
+        <li>Avoid mixing two long-residual products with a fast knockdown product if they are not designed for tank mixing (may reduce effectiveness).</li>
+      </ul>
+    </article>
+
+    <!-- 3. Examples -->
+    <article class="rec-section" aria-labelledby="examples-title">
+      <h3 id="examples-title">3. Mixing examples</h3>
+
+      <div class="example">
+        <h4 class="example-title">a. Risky mix</h4>
+        <p class="muted">Combining a residual pyrethroid (e.g., bifenthrin) with a knockdown pyrethroid (e.g., permethrin or pyrethrin + PBO):</p>
+        <p class="example-note">→ Effectiveness may be reduced because both share the same mode of action and one may antagonize the other.</p>
+      </div>
+
+      <div class="example">
+        <h4 class="example-title">b. Common mix (if the label allows)</h4>
+        <p class="muted">Fipronil (residual, non-repellent, e.g., Termidor SC) with Pyrethrin + PBO (fast knockdown).</p>
+        <p class="example-note">→ Sometimes used for ant/cockroach control: pyrethrin provides immediate knockdown, while fipronil remains as residual.</p>
+        <p class="small-note"><strong>Note:</strong> only if both labels authorize tank mixing (some fipronil labels prohibit it).</p>
+      </div>
+    </article>
+
+    <!-- 4. Technician rules -->
+    <article class="rec-section" aria-labelledby="tech-title">
+      <h3 id="tech-title">4. As a Pest Control Technician</h3>
+      <ol class="tech-list">
+        <li>Never mix without reading both labels.</li>
+        <li>Always perform a jar test when combining two new products.</li>
+        <li>Consult your supervisor; FDACS may issue fines if you use unapproved mixes.</li>
+      </ol>
+    </article>
+  </div>
+      <!-- Footer -->
+    <footer>
+      <small class="muted">Checklist for technicians</small>
+      <small>
+        <mat-icon color="warn">warning</mat-icon>
+       <h4>
+          Do not mix unless labels permit.
+       </h4> 
+        <mat-icon color="warn">warning</mat-icon>
+      </small>
+    </footer>
+</section>
+
+<section class="rec-card" aria-labelledby="rec-title" *ngIf="lang==='es'" >
+  <header class="rec-header">
+    <h4 id="rec-title">Recomendaciones</h4>
+    <p class="rec-sub">Guía práctica para mezclas seguras y efectivas en tanque (para técnicos en control de plagas).</p>
+  </header>
+
+  <div class="rec-body">
+    <!-- 1. WALES -->
+    <article class="rec-section" aria-labelledby="wales-title">
+      <h3 id="wales-title">1. Orden correcto de mezcla (“WALES”)</h3>
+      <p class="muted">Para evitar que el formulado más pesado inactúe al otro, se recomienda este orden:</p>
+      <ol class="wales-list">
+        <li><strong>W</strong> — Polvos mojables</li>
+        <li><strong>A</strong> — Agitar</li>
+        <li><strong>L</strong> — Suspensiones líquidas</li>
+        <li><strong>E</strong> — Concentrados emulsionables (EC)</li>
+        <li><strong>S</strong> — Surfactantes, aditivos, aceites</li>
+      </ol>
+    </article>
+
+    <!-- 2. Compatibilidad -->
+    <article class="rec-section" aria-labelledby="compat-title">
+      <h3 id="compat-title">2. Revisar compatibilidad química</h3>
+      <ul class="compat-list">
+        <li>El pH del agua influye. <em>Ejemplo:</em> las piretrinas se degradan rápido en agua alcalina.</li>
+        <li>No mezcles productos con diferente vehículo base (aceite vs agua) salvo que la etiqueta lo autorice explícitamente.</li>
+        <li>Evita mezclar dos productos de acción residual larga con uno de acción rápida si no están diseñados para tanque mix (puede reducir eficacia).</li>
+      </ul>
+    </article>
+
+    <!-- 3. Ejemplos -->
+    <article class="rec-section" aria-labelledby="examples-title">
+      <h3 id="examples-title">3. Ejemplos de mezcla</h3>
+
+      <div class="example">
+        <h4 class="example-title">a. Mezcla riesgosa</h4>
+        <p class="muted">Combinar un piretroide residual (ej. bifentrina) con un piretroide de knockdown (ej. permetrina o piretrina + PBO):</p>
+        <p class="example-note">→ Puede reducir eficacia porque ambos comparten el mismo modo de acción y uno puede antagonizar al otro.</p>
+      </div>
+
+      <div class="example">
+        <h4 class="example-title">b. Mezcla común (si la etiqueta lo permite)</h4>
+        <p class="muted">Fipronil (residual, no repelente, como Termidor SC) con Piretrina + PBO (knockdown rápido).</p>
+        <p class="example-note">→ Se usa a veces para control de hormigas/cucarachas: la piretrina da el volteo inmediato, mientras que el fipronil queda en residual.</p>
+        <p class="small-note"><strong>Nota:</strong> solo si ambas etiquetas autorizan “tank mix” (algunas etiquetas de fipronil lo prohíben).</p>
+      </div>
+    </article>
+
+    <!-- 4. Reglas para el técnico -->
+    <article class="rec-section" aria-labelledby="tech-title">
+      <h3 id="tech-title">4. Como técnico en control de plagas</h3>
+      <ol class="tech-list">
+        <li>Nunca mezcles sin leer ambas etiquetas.</li>
+        <li>Haz jar test cada vez que combines dos productos nuevos.</li>
+        <li>Consulta a tu supervisor; FDACS puede multar si usas mezclas no aprobadas.</li>
+      </ol>
+    </article>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <small class="muted">Checklist para técnicos</small>
+
+    <small>
+      <mat-icon color="warn">warning</mat-icon>
+      <h4>No mezclar salvo que las etiquetas lo permitan.</h4>
+      <mat-icon color="warn">warning</mat-icon>
+    </small>
+  </footer>
+</section>
