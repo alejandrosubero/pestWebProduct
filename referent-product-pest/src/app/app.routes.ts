@@ -92,6 +92,12 @@ export const routes: Routes = [
     canActivate: [authGuard]
   },
    {
+    path: 'lab/unit/converter',
+    loadComponent: () => import('./pages/lab/unit-converter/unit-converter.component').then(c => c.UnitConverterComponent),
+    data: { animation: 'lab' },
+    canActivate: [authGuard]
+  },
+   {
     path: 'lab/test/checklist',
     loadComponent: () => import('./pages/lab/test/tank-mix-checklist/tank-mix-checklist.component').then(c => c.TankMixChecklistComponent),
     data: { animation: 'lab' },

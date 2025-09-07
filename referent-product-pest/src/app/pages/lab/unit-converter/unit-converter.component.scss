@@ -1,0 +1,86 @@
+/* ----------  General reset & layout ---------- */
+.converter {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 1rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  color: #222;
+}
+
+/* ----------  Header ---------- */
+h2 {
+  text-align: center;
+  margin-bottom: 1.2rem;
+  font-size: 1.4rem;
+  color: #0066cc;
+}
+
+/* ----------  Form fields ---------- */
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.9rem;
+
+  span {
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+  }
+
+  select,
+  input[type='number'] {
+    padding: 0.55rem 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    transition: border-color 0.2s;
+    &:focus {
+      outline: none;
+      border-color: #0066cc;
+    }
+  }
+}
+
+/* ----------  Button ---------- */
+.convert {
+  width: 100%;
+  padding: 0.7rem;
+  font-size: 1rem;
+  background: #0066cc;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 0.5rem;
+
+  &:hover {
+    background: #005bb5;
+  }
+}
+
+/* ----------  Result box ---------- */
+.result {
+  margin-top: 1.2rem;
+  padding: 0.8rem;
+  background: #f0f8ff;
+  border-left: 4px solid #0066cc;
+  font-family: monospace;
+  word-wrap: break-word;
+}
+
+/* ----------  Responsive tweaks ---------- */
+@media (max-width: 360px) {
+  .converter {
+    padding: 0.8rem;
+  }
+  .field input,
+  .field select {
+    font-size: 0.95rem;
+  }
+  .convert {
+    font-size: 0.95rem;
+  }
+}

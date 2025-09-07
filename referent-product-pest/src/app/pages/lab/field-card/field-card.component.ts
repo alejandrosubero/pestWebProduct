@@ -78,7 +78,13 @@ export class FieldCardComponent implements OnInit{
     const routeBase = "app/home";
     this.navigate(routeBase);
   }
+  
+ goUnitConverter(): void {
+    const routeBase = "app/lab/unit/converter";
+    this.navigate(routeBase);
+  }
 
+  
     navigate(routeBase: string) {
     this.router.navigate([routeBase]);
   }
