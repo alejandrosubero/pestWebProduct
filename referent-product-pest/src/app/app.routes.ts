@@ -103,6 +103,13 @@ export const routes: Routes = [
     data: { animation: 'lab' },
     canActivate: [authGuard]
   },
+     {
+    path: 'backup',
+    loadComponent: () => import('./pages/backup/backup.component').then(c => c.BackupComponent),
+    data: { animation: 'lab' },
+    canActivate: [authGuard]
+  },
+  
   {
     path: 'storage', 
     canActivate: [authGuard],

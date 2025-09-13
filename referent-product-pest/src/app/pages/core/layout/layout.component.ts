@@ -129,6 +129,13 @@ export class LayoutComponent  implements OnInit {
     const routeBase = "app/technical/notes";
     this.navegateService.goToDetail(routeBase, this.navConfig().sourceId, 'mix');
   }
+
+ goBackup(sidenav: any): void {
+    const routeBase = "app/backup";
+    sidenav.toggle();
+    this.navigate(routeBase);
+  }
+
 //  ============ ********** ================
 
 //  ============ logout and back================

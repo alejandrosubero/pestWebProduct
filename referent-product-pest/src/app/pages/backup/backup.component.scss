@@ -1,0 +1,53 @@
+
+.backup-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+
+  h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+  }
+
+  .ios-button {
+    width: 90%;
+    max-width: 320px;
+    padding: 14px 18px;
+    margin: 10px 0;
+    border-radius: 12px;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.3s;
+
+    &.export {
+      background: #007aff;
+      color: white;
+    }
+    &.export:hover {
+      background: #005ecb;
+    }
+
+    &.import {
+      background: #34c759;
+      color: white;
+    }
+    &.import:hover {
+      background: #2fa94c;
+    }
+
+    &.clear {
+      background: #ff3b30;
+      color: white;
+    }
+    &.clear:hover {
+      background: #d92d23;
+    }
+  }
+}
+
+
