@@ -1,0 +1,756 @@
+{
+    "pests": [
+        {
+            "name": "Acrobat Ants",
+            "imageUrl": "https://www.pestworld.org/pest-guide/ants/acrobat-ants/"
+        },
+        {
+            "name": "Alfalfa Caterpillars",
+            "imageUrl": "https://entomology.k-state.edu/extension/crop-protection/alfalfa/alfalfa-caterpillar.html"
+        },
+        {
+            "name": "Almond Moths",
+            "imageUrl": "https://www.orkin.com/pests/moths/almond-moths/"
+        },
+        {
+            "name": "Ambrosia Beetles",
+            "imageUrl": "https://www.pestworld.org/pest-guide/beetles/ambrosia-beetles/"
+        },
+        {
+            "name": "American Cockroaches",
+            "imageUrl": "https://www.orkin.com/pests/cockroaches/american-cockroach/"
+        },
+        {
+            "name": "American Plum Borers",
+            "imageUrl": "https://www.extension.purdue.edu/extmedia/ID/ID-133-W.pdf"
+        },
+        {
+            "name": "Annual Bluegrass Weevils",
+            "imageUrl": "https://www.pestworld.org/pest-guide/weevils/annual-bluegrass-weevil/"
+        },
+        {
+            "name": "Angoumois Grain Moths",
+            "imageUrl": "https://www.orkin.com/pests/moths/angoumois-grain-moth/"
+        },
+        {
+            "name": "Animal Droppings",
+            "imageUrl": "https://www.pestworld.org/pest-guide/other-pests/animal-droppings/"
+        },
+        {
+            "name": "Aphids",
+            "imageUrl": "https://www.orkin.com/pests/aphids/"
+        },
+        {
+            "name": "Apple Maggots",
+            "imageUrl": "https://www.oregon.gov/oda/shared/Documents/Publications/IPPM/AppleMaggot.pdf"
+        },
+        {
+            "name": "Argentine Ants",
+            "imageUrl": "https://www.pestworld.org/pest-guide/ants/argentine-ants/"
+        },
+        {
+            "name": "Armyworms",
+            "imageUrl": "https://www.oregon.gov/oda/shared/Documents/Publications/IPPM/Armyworm.pdf"
+        },
+        {
+            "name": "Artichoke Plum Moths",
+            "imageUrl": "https://www.oregon.gov/oda/shared/Documents/Publications/IPPM/ArtichokePlumMoth.pdf"
+        },
+        {
+            "name": "Asian Cockroaches",
+            "imageUrl": "https://www.orkin.com/pests/cockroaches/asian-cockroach/"
+        },
+        {
+            "name": "Asian Lady Beetles",
+            "imageUrl": "https://www.pestworld.org/pest-guide/other-pests/asian-lady-beetles/"
+        },
+        {
+            "name": "Australian Cockroaches",
+            "imageUrl": "https://www.orkin.com/pests/cockroaches/australian-cockroach/"
+        },
+        {
+            "name": "Azalea Caterpillars",
+            "imageUrl": "https://www.oregon.gov/oda/shared/Documents/Publications/IPPM/AzaleaCaterpillar.pdf"
+        },
+        {
+            "name": "Bagworms",
+            "imageUrl": "https://www.pestworld.org/pest-guide/other-pests/bagworms/"
+        },
+        {
+            "name": "Barn Flies",
+            "imageUrl": "https://www.orkin.com/pests/flies/barn-fly/"
+        },
+        {
+            "name": "Bed Bugs",
+            "imageUrl": "https://www.orkin.com/pests/bed-bugs/"
+        },
+        {
+            "name": "Bees",
+            "imageUrl": "https://www.orkin.com/pests/bees/"
+        },
+        {
+            "name": "Beet Armyworms",
+            "imageUrl": "https://www.oregon.gov/oda/shared/Documents/Publications/IPPM/BeetArmyworm.pdf"
+        },
+        {
+            "name": "Beetles",
+            "imageUrl": "https://www.pestworld.org/pest-guide/beetles/"
+        },
+        {
+            "name": "Big-headed Ants",
+            "imageUrl": "https://www.pestworld.org/pest-guide/ants/big-headed-ants/"
+        },
+        {
+            "name": "Billbugs",
+            "imageUrl": "https://www.pestworld.org/pest-guide/weevils/billbugs/"
+        },
+        {
+            "name": "Bird Mites",
+            "imageUrl": "https://www.orkin.com/pests/mites/bird-mite/"
+        },
+        {
+            "name": "Black Carpet Beetles",
+            "imageUrl": "https://www.pestworld.org/pest-guide/beetles/black-carpet-beetles/"
+        },
+        {
+            "name": "Black Flies",
+            "imageUrl": "https://www.orkin.com/pests/flies/black-fly/"
+        },
+        {
+            "name": "Black Turfgrass Ataenius",
+            "imageUrl": "https://www.pestworld.org/pest-guide/weevils/black-turfgrass-ataenius/"
+        },
+        {
+            "name": "Black Vine Weevils",
+            "imageUrl": "https://www.oregon.gov/oda/shared/Documents/Publications/IPPM/BlackVineWeevil.pdf"
+        },
+        {
+            "name": "Blister Beetles",
+            "imageUrl": "https://www.pestworld.org/pest-guide/beetles/blister-beetles/"
+        },
+        {
+            "name": "Blow Flies",
+            "imageUrl": "https://www.orkin.com/pests/flies/blow-fly/"
+        },
+        {
+            "name": "Blueberry Spanworms",
+            "imageUrl": "https://www.oregon.gov/oda/shared/Documents/Publications/IPPM/BlueberrySpanworm.pdf"
+        },
+        {
+            "name": "Boxelder Bugs",
+            "imageUrl": "https://www.pestworld.org/pest-guide/other-pests/boxelder-bugs/"
+        },
+        {
+            "name": "Brown Cockroaches",
+            "imageUrl": "https://www.orkin.com/pests/cockroaches/brown-cockroach/"
+        },
+        {
+            "name": "Brown Dog Ticks",
+            "imageUrl": "https://www.orkin.com/pests/ticks/brown-dog-tick/"
+        },
+        {
+            "name": "Brown Marmorated Stink Bugs",
+            "imageUrl": "https://www.oregon.gov/oda/shared/Documents/Publications/IPPM/BrownMarmoratedStinkBug.pdf"
+        },
+        {
+            "name": "Brown-banded Cockroaches",
+            "imageUrl": "https://www.orkin.com/pests/cockroaches/brown-banded-cockroach/"
+        },
+        {
+            "name": "Budworms",
+            "imageUrl": "https://www.oregon.gov/oda/shared/Documents/Publications/IPPM/Budworm.pdf"
+        },
+        {
+            "name": "Cadelles",
+            "imageUrl": "https://www.pestworld.org/pest-guide/beetles/cadelles/"
+        },
+        {
+            "name": "Carpet Beetles",
+            "imageUrl": "https://www.orkin.com/pests/beetles/carpet-beetle/"
+        },
+        {
+            "name": "Carpenter Ants",
+            "imageUrl": "https://www.orkin.com/pests/ants/carpenter-ant/"
+        },
+        {
+            "name": "Carpenter Bees",
+            "imageUrl": "https://www.orkin.com/pests/bees/carpenter-bee/"
+        },
+        {
+            "name": "Caterpillars",
+            "imageUrl": "https://www.oregon.gov/oda/shared/Documents/Publications/IPPM/Caterpillar.pdf"
+        },
+        {
+            "name": "Centipedes",
+            "imageUrl": "https://www.orkin.com/pests/centipedes/"
+        },
+        {
+            "name": "Chiggers",
+            "imageUrl": "https://www.orkin.com/pests/mites/chigger/"
+        },
+        {
+            "name": "Chinch Bugs",
+            "imageUrl": "https://www.oregon.gov/oda/shared/Documents/Publications/IPPM/ChinchBug.pdf"
+        },
+        {
+            "name": "Clothes Moths",
+            "imageUrl": "https://www.orkin.com/pests/moths/clothes-moth/"
+        },
+        {
+            "name": "Cluster Flies",
+            "imageUrl": "https://www.orkin.com/pests/flies/cluster-fly/"
+        },
+        {
+            "name": "Clover Mites",
+            "imageUrl": "https://www.orkin.com/pests/mites/clover-mite/"
+        },
+        {
+            "name": "Clover Weevils",
+            "imageUrl": "https://www.pestworld.org/pest-guide/weevils/clover-weevil/"
+        },
+        {
+            "name": "Codling Moths",
+            "imageUrl": "https://www.oregon.gov/oda/shared/Documents/Publications/IPPM/CodlingMoth.pdf"
+        },
+        {
+            "name": "Cockroaches",
+            "imageUrl": "https://www.orkin.com/pests/cockroaches/"
+        },
+        {
+            "name": "Coffee Bean Weevils",
+            "imageUrl": "https://www.orkin.com/pests/weevils/coffee-bean-weevil/"
+        },
+        {
+            "name": "Collembola",
+            "imageUrl": "https://www.pestworld.org/pest-guide/other-pests/collembola/"
+        },
+        {
+            "name": "Colorado Potato Beetles",
+            "imageUrl": "https://www.oregon.gov/oda/shared/Documents/Publications/IPPM/ColoradoPotatoBeetle.pdf"
+        },
+        {
+            "name": "Confused Flour Beetles",
+            "imageUrl": "https://www.pestworld.org/pest-guide/beetles/confused-flour-beetle/"
+        },
+        {
+            "name": "Corn Earworms",
+            "imageUrl": "https://www.oregon.gov/oda/shared/Documents/Publications/IPPM/CornEarworm.pdf"
+        },
+        {
+            "name": "Cornfield Ants",
+            "imageUrl": "https://www.pestworld.org/pest-guide/ants/cornfield-ants/"
+        },
+        {
+            "name": "Cotton Rat",
+            "imageUrl": "https://www.pestworld.org/pest-guide/rodents/cotton-rat/"
+        },
+        {
+            "name": "Crazy Ants",
+            "imageUrl": "https://www.pestworld.org/pest-guide/ants/crazy-ants/"
+        },
+        {
+            "name": "Crickets",
+            "imageUrl": "https://www.orkin.com/pests/crickets/"
+        },
+        {
+            "name": "Cucumber Beetles",
+            "imageUrl": "https://www.oregon.gov/oda/shared/Documents/Publications/IPPM/CucumberBeetle.pdf"
+        },
+        {
+            "name": "Cutworms",
+            "imageUrl": "https://www.oregon.gov/oda/shared/Documents/Publications/IPPM/Cutworm.pdf"
+        },
+        {
+            "name": "Dark Mealworms",
+            "imageUrl": "https://www.orkin.com/pests/beetles/mealworm/"
+        },
+        {
+            "name": "Darkling Beetles",
+            "imageUrl": "https://www.pestworld.org/pest-guide/beetles/darkling-beetles/"
+        },
+        {
+            "name": "Deathwatch Beetles",
+            "imageUrl": "https://www.pestworld.org/pest-guide/beetles/deathwatch-beetles/"
+        },
+        {
+            "name": "Dermestid Beetles",
+            "imageUrl": "https://www.pestworld.org/pest-guide/beetles/dermestid-beetles/"
+        },
+        {
+            "name": "Dog Ticks",
+            "imageUrl": "https://www.orkin.com/pests/ticks/dog-tick/"
+        },
+        {
+            "name": "Drugstore Beetles",
+            "imageUrl": "https://www.pestworld.org/pest-guide/beetles/drugstore-beetles/"
+        },
+        {
+            "name": "Drywood Termites",
+            "imageUrl": "https://www.pestworld.org/pest-guide/termites/drywood-termites/"
+        },
+        {
+            "name": "Earwigs",
+            "imageUrl": "https://www.orkin.com/pests/earwigs/"
+        },
+        {
+            "name": "Eastern Tent Caterpillars",
+            "imageUrl": "https://www.oregon.gov/oda/shared/Documents/Publications/IPPM/EasternTentCaterpillar.pdf"
+        },
+        {
+            "name": "Elm Leaf Beetles",
+            "imageUrl": "https://www.oregon.gov/oda/shared/Documents/Publications/IPPM/ElmLeafBeetle.pdf"
+        },
+        {
+            "name": "Elm Seed Bugs",
+            "imageUrl": "https://www.oregon.gov/oda/shared/Documents/Publications/IPPM/ElmSeedBug.pdf"
+        },
+        {
+            "name": "European Corn Borers",
+            "imageUrl": "https://www.oregon.gov/oda/shared/Documents/Publications/IPPM/EuropeanCornBorer.pdf"
+        },
+        {
+            "name": "Face Flies",
+            "imageUrl": "https://www.orkin.com/pests/flies/face-fly/"
+        },
+        {
+            "name": "Fall Webworms",
+            "imageUrl": "https://www.oregon.gov/oda/shared/Documents/Publications/IPPM/FallWebworm.pdf"
+        },
+        {
+            "name": "Field Ants",
+            "imageUrl": "https://www.pestworld.org/pest-guide/ants/field-ants/"
+        },
+        {
+            "name": "Field Crickets",
+            "imageUrl": "https://www.orkin.com/pests/crickets/field-crickets/"
+        },
+        {
+            "name": "Fire Ants",
+            "imageUrl": "https://www.pestworld.org/pest-guide/ants/fire-ants/"
+        },
+        {
+            "name": "Firebrats",
+            "imageUrl": "https://www.orkin.com/pests/thermobia/firebrat/"
+        },
+        {
+            "name": "Fleas",
+            "imageUrl": "https://www.orkin.com/pests/fleas/"
+        },
+        {
+            "name": "Flies",
+            "imageUrl": "https://www.orkin.com/pests/flies/"
+        },
+        {
+            "name": "Forest Tent Caterpillars",
+            "imageUrl": "https://www.oregon.gov/oda/shared/Documents/Publications/IPPM/ForestTentCaterpillar.pdf"
+        },
+        {
+            "name": "Formosan Termites",
+            "imageUrl": "https://www.pestworld.org/pest-guide/termites/formosan-termite/"
+        },
+        {
+            "name": "Fruit Flies",
+            "imageUrl": "https://www.orkin.com/pests/flies/fruit-fly/"
+        },
+        {
+            "name": "Fungus Gnats",
+            "imageUrl": "https://www.orkin.com/pests/mosquitoes/fungus-gnats/"
+        },
+        {
+            "name": "German Cockroaches",
+            "imageUrl": "https://www.orkin.com/pests/cockroaches/german-cockroach/"
+        },
+        {
+            "name": "Ghost Ants",
+            "imageUrl": "https://www.pestworld.org/pest-guide/ants/ghost-ants/"
+        },
+        {
+            "name": "Gnats",
+            "imageUrl": "https://www.orkin.com/pests/mosquitoes/gnats/"
+        },
+        {
+            "name": "Golden Mouse",
+            "imageUrl": "https://www.pestworld.org/pest-guide/rodents/golden-mouse/"
+        },
+        {
+            "name": "Grain Mites",
+            "imageUrl": "https://www.pestworld.org/pest-guide/mites/grain-mites/"
+        },
+        {
+            "name": "Grain Weevils",
+            "imageUrl": "https://www.pestworld.org/pest-guide/weevils/grain-weevils/"
+        },
+        {
+            "name": "Grasshoppers",
+            "imageUrl": "https://www.oregon.gov/oda/shared/Documents/Publications/IPPM/Grasshopper.pdf"
+        },
+        {
+            "name": "Green Peach Aphids",
+            "imageUrl": "https://www.oregon.gov/oda/shared/Documents/Publications/IPPM/GreenPeachAphid.pdf"
+        },
+        {
+            "name": "Greenhouse Thrips",
+            "imageUrl": "https://www.oregon.gov/oda/shared/Documents/Publications/IPPM/GreenhouseThrips.pdf"
+        },
+        {
+            "name": "Ground Beetles",
+            "imageUrl": "https://www.pestworld.org/pest-guide/beetles/ground-beetles/"
+        },
+        {
+            "name": "Gypsy Moths",
+            "imageUrl": "https://www.oregon.gov/oda/shared/Documents/Publications/IPPM/GypsyMoth.pdf"
+        },
+        {
+            "name": "Harlequin Bugs",
+            "imageUrl": "https://www.oregon.gov/oda/shared/Documents/Publications/IPPM/HarlequinBug.pdf"
+        },
+        {
+            "name": "Harvester Ants",
+            "imageUrl": "https://www.pestworld.org/pest-guide/ants/harvester-ants/"
+        },
+        {
+            "name": "Hide Beetles",
+            "imageUrl": "https://www.pestworld.org/pest-guide/beetles/hide-beetles/"
+        },
+        {
+            "name": "Honey Ants",
+            "imageUrl": "https://www.pestworld.org/pest-guide/ants/honey-ants/"
+        },
+        {
+            "name": "Horn Flies",
+            "imageUrl": "https://www.orkin.com/pests/flies/horn-fly/"
+        },
+        {
+            "name": "Hornets",
+            "imageUrl": "https://www.orkin.com/pests/wasps/hornets/"
+        },
+        {
+            "name": "House Crickets",
+            "imageUrl": "https://www.orkin.com/pests/crickets/house-crickets/"
+        },
+        {
+            "name": "House Flies",
+            "imageUrl": "https://www.orkin.com/pests/flies/house-fly/"
+        },
+        {
+            "name": "House Mice",
+            "imageUrl": "https://www.pestworld.org/pest-guide/rodents/house-mice/"
+        },
+        {
+            "name": "Indian Meal Moths",
+            "imageUrl": "https://www.orkin.com/pests/moths/indian-meal-moth/"
+        },
+        {
+            "name": "Japanese Beetles",
+            "imageUrl": "https://www.pestworld.org/pest-guide/beetles/japanese-beetles/"
+        },
+        {
+            "name": "June Beetles",
+            "imageUrl": "https://www.pestworld.org/pest-guide/beetles/june-beetles/"
+        },
+        {
+            "name": "Katydids",
+            "imageUrl": "https://www.orkin.com/pests/katydids/"
+        },
+        {
+            "name": "Khapra Beetles",
+            "imageUrl": "https://www.pestworld.org/pest-guide/beetles/khapra-beetles/"
+        },
+        {
+            "name": "Kudzu Bugs",
+            "imageUrl": "https://www.oregon.gov/oda/shared/Documents/Publications/IPPM/KudzuBug.pdf"
+        },
+        {
+            "name": "Lady Beetles",
+            "imageUrl": "https://www.orkin.com/pests/beetles/lady-beetles/"
+        },
+        {
+            "name": "Lawn Moths",
+            "imageUrl": "https://www.oregon.gov/oda/shared/Documents/Publications/IPPM/LawnMoth.pdf"
+        },
+        {
+            "name": "Leafhoppers",
+            "imageUrl": "https://www.oregon.gov/oda/shared/Documents/Publications/IPPM/Leafhopper.pdf"
+        },
+        {
+            "name": "Leafminers",
+            "imageUrl": "https://www.oregon.gov/oda/shared/Documents/Publications/IPPM/Leafminer.pdf"
+        },
+        {
+            "name": "Leafrollers",
+            "imageUrl": "https://www.oregon.gov/oda/shared/Documents/Publications/IPPM/Leafroller.pdf"
+        },
+        {
+            "name": "Lesser Grain Borers",
+            "imageUrl": "https://www.pestworld.org/pest-guide/beetles/lesser-grain-borers/"
+        },
+        {
+            "name": "Lice",
+            "imageUrl": "https://www.orkin.com/pests/lice/"
+        },
+        {
+            "name": "Little Black Ants",
+            "imageUrl": "https://www.pestworld.org/pest-guide/ants/little-black-ants/"
+        },
+        {
+            "name": "Longhorned Beetles",
+            "imageUrl": "https://www.pestworld.org/pest-guide/beetles/longhorned-beetles/"
+        },
+        {
+            "name": "Mealybugs",
+            "imageUrl": "https://www.orkin.com/pests/mealybugs/"
+        },
+        {
+            "name": "Meadow Voles",
+            "imageUrl": "https://www.pestworld.org/pest-guide/rodents/meadow-voles/"
+        },
+        {
+            "name": "Merchant Grain Beetles",
+            "imageUrl": "https://www.pestworld.org/pest-guide/beetles/merchant-grain-beetles/"
+        },
+        {
+            "name": "Millipedes",
+            "imageUrl": "https://www.orkin.com/pests/millipedes/"
+        },
+        {
+            "name": "Mosquitoes",
+            "imageUrl": "https://www.orkin.com/pests/mosquitoes/"
+        },
+        {
+            "name": "Moths",
+            "imageUrl": "https://www.orkin.com/pests/moths/"
+        },
+        {
+            "name": "Mushroom Flies",
+            "imageUrl": "https://www.orkin.com/pests/flies/mushroom-fly/"
+        },
+        {
+            "name": "Navel Orangeworms",
+            "imageUrl": "https://www.oregon.gov/oda/shared/Documents/Publications/IPPM/NavelOrangeworm.pdf"
+        },
+        {
+            "name": "Norway Rats",
+            "imageUrl": "https://www.pestworld.org/pest-guide/rodents/norway-rats/"
+        },
+        {
+            "name": "Odorous House Ants",
+            "imageUrl": "https://www.pestworld.org/pest-guide/ants/odorous-house-ants/"
+        },
+        {
+            "name": "Oleander Moth Larvae",
+            "imageUrl": "https://www.oregon.gov/oda/shared/Documents/Publications/IPPM/OleanderMothLarvae.pdf"
+        },
+        {
+            "name": "Oriental Cockroaches",
+            "imageUrl": "https://www.orkin.com/pests/cockroaches/oriental-cockroach/"
+        },
+        {
+            "name": "Paper Wasps",
+            "imageUrl": "https://www.orkin.com/pests/wasps/paper-wasp/"
+        },
+        {
+            "name": "Pavement Ants",
+            "imageUrl": "https://www.pestworld.org/pest-guide/ants/pavement-ants/"
+        },
+        {
+            "name": "Periodical Cicadas",
+            "imageUrl": "https://www.orkin.com/pests/cicadas/"
+        },
+        {
+            "name": "Pharaoh Ants",
+            "imageUrl": "https://www.pestworld.org/pest-guide/ants/pharaoh-ants/"
+        },
+        {
+            "name": "Phorid Flies",
+            "imageUrl": "https://www.orkin.com/pests/flies/phorid-fly/"
+        },
+        {
+            "name": "Pillbugs",
+            "imageUrl": "https://www.orkin.com/pests/other-pests/pillbugs/"
+        },
+        {
+            "name": "Plant Bugs",
+            "imageUrl": "https://www.oregon.gov/oda/shared/Documents/Publications/IPPM/PlantBug.pdf"
+        },
+        {
+            "name": "Polynesian Rat",
+            "imageUrl": "https://www.pestworld.org/pest-guide/rodents/polynesian-rat/"
+        },
+        {
+            "name": "Powderpost Beetles",
+            "imageUrl": "https://www.pestworld.org/pest-guide/beetles/powderpost-beetles/"
+        },
+        {
+            "name": "Psocids",
+            "imageUrl": "https://www.pestworld.org/pest-guide/other-pests/psocids/"
+        },
+        {
+            "name": "Pyramid Ants",
+            "imageUrl": "https://www.pestworld.org/pest-guide/ants/pyramid-ants/"
+        },
+        {
+            "name": "Red Flour Beetles",
+            "imageUrl": "https://www.pestworld.org/pest-guide/beetles/red-flour-beetles/"
+        },
+        {
+            "name": "Red Imported Fire Ants",
+            "imageUrl": "https://www.pestworld.org/pest-guide/ants/red-imported-fire-ants/"
+        },
+        {
+            "name": "Rice Weevils",
+            "imageUrl": "https://www.pestworld.org/pest-guide/weevils/rice-weevils/"
+        },
+        {
+            "name": "Roof Rats",
+            "imageUrl": "https://www.pestworld.org/pest-guide/rodents/roof-rats/"
+        },
+        {
+            "name": "Rover Ants",
+            "imageUrl": "https://www.pestworld.org/pest-guide/ants/rover-ants/"
+        },
+        {
+            "name": "Rusty Grain Beetles",
+            "imageUrl": "https://www.pestworld.org/pest-guide/beetles/rusty-grain-beetles/"
+        },
+        {
+            "name": "Sawtoothed Grain Beetles",
+            "imageUrl": "https://www.pestworld.org/pest-guide/beetles/sawtoothed-grain-beetles/"
+        },
+        {
+            "name": "Scales",
+            "imageUrl": "https://www.orkin.com/pests/scales/"
+        },
+        {
+            "name": "Scorpions",
+            "imageUrl": "https://www.orkin.com/pests/scorpions/"
+        },
+        {
+            "name": "Silverfish",
+            "imageUrl": "https://www.orkin.com/pests/silverfish/"
+        },
+        {
+            "name": "Smoky-Brown Cockroaches",
+            "imageUrl": "https://www.orkin.com/pests/cockroaches/smoky-brown-cockroach/"
+        },
+        {
+            "name": "Sod Webworms",
+            "imageUrl": "https://www.oregon.gov/oda/shared/Documents/Publications/IPPM/SodWebworm.pdf"
+        },
+        {
+            "name": "Southern Fire Ants",
+            "imageUrl": "https://www.pestworld.org/pest-guide/ants/southern-fire-ants/"
+        },
+        {
+            "name": "Sowbugs",
+            "imageUrl": "https://www.orkin.com/pests/other-pests/sowbugs/"
+        },
+        {
+            "name": "Spiders",
+            "imageUrl": "https://www.orkin.com/pests/spiders/"
+        },
+        {
+            "name": "Spider Beetles",
+            "imageUrl": "https://www.pestworld.org/pest-guide/beetles/spider-beetles/"
+        },
+        {
+            "name": "Spider Mites",
+            "imageUrl": "https://www.orkin.com/pests/mites/spider-mite/"
+        },
+        {
+            "name": "Spittlebugs",
+            "imageUrl": "https://www.oregon.gov/oda/shared/Documents/Publications/IPPM/Spittlebug.pdf"
+        },
+        {
+            "name": "Springtails",
+            "imageUrl": "https://www.orkin.com/pests/other-pests/springtails/"
+        },
+        {
+            "name": "Stable Flies",
+            "imageUrl": "https://www.orkin.com/pests/flies/stable-fly/"
+        },
+        {
+            "name": "Stink Bugs",
+            "imageUrl": "https://www.orkin.com/pests/stink-bugs/"
+        },
+        {
+            "name": "Stored Product Pests",
+            "imageUrl": "https://www.pestworld.org/pest-guide/beetles/stored-product-pests/"
+        },
+        {
+            "name": "Subterranean Termites",
+            "imageUrl": "https://www.pestworld.org/pest-guide/termites/subterranean-termites/"
+        },
+        {
+            "name": "Termite Swarmers",
+            "imageUrl": "https://www.pestworld.org/pest-guide/termites/termite-swarmers/"
+        },
+        {
+            "name": "Termites",
+            "imageUrl": "https://www.pestworld.org/pest-guide/termites/"
+        },
+        {
+            "name": "Thief Ants",
+            "imageUrl": "https://www.pestworld.org/pest-guide/ants/thief-ants/"
+        },
+        {
+            "name": "Thrips",
+            "imageUrl": "https://www.orkin.com/pests/thrips/"
+        },
+        {
+            "name": "Ticks",
+            "imageUrl": "https://www.orkin.com/pests/ticks/"
+        },
+        {
+            "name": "Tobacco Moths",
+            "imageUrl": "https://www.orkin.com/pests/moths/tobacco-moth/"
+        },
+        {
+            "name": "Tree Borers",
+            "imageUrl": "https://www.oregon.gov/oda/shared/Documents/Publications/IPPM/TreeBorer.pdf"
+        },
+        {
+            "name": "Voles",
+            "imageUrl": "https://www.pestworld.org/pest-guide/rodents/voles/"
+        },
+        {
+            "name": "Wasps",
+            "imageUrl": "https://www.orkin.com/pests/wasps/"
+        },
+        {
+            "name": "Warehouse Beetles",
+            "imageUrl": "https://www.pestworld.org/pest-guide/beetles/warehouse-beetles/"
+        },
+        {
+            "name": "Waterbugs",
+            "imageUrl": "https://www.orkin.com/pests/cockroaches/water-bug/"
+        },
+        {
+            "name": "Webbing Clothes Moths",
+            "imageUrl": "https://www.orkin.com/pests/moths/webbing-clothes-moth/"
+        },
+        {
+            "name": "Weevils",
+            "imageUrl": "https://www.pestworld.org/pest-guide/weevils/"
+        },
+        {
+            "name": "Western Conifer Seed Bugs",
+            "imageUrl": "https://www.oregon.gov/oda/shared/Documents/Publications/IPPM/WesternConiferSeedBug.pdf"
+        },
+        {
+            "name": "Whiteflies",
+            "imageUrl": "https://www.orkin.com/pests/whiteflies/"
+        },
+        {
+            "name": "White-footed Ants",
+            "imageUrl": "https://www.pestworld.org/pest-guide/ants/white-footed-ants/"
+        },
+        {
+            "name": "Yellow Mealworms",
+            "imageUrl": "https://www.orkin.com/pests/beetles/mealworm/"
+        },
+        {
+            "name": "Yellowjackets",
+            "imageUrl": "https://www.orkin.com/pests/wasps/yellowjackets/"
+        }
+    ]
+}

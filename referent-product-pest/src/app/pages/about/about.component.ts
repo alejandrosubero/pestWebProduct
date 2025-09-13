@@ -8,6 +8,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { Router } from '@angular/router';
 import { NavService } from '../../services/nav.service';
 import { NavConfig } from '../../models/navElemet.model';
+import { VersionCheckService } from '../../services/version-check.service';
 
 @Component({
   selector: 'app-about',
@@ -25,9 +26,11 @@ import { NavConfig } from '../../models/navElemet.model';
 })
 export class AboutComponent {
  private navService = inject(NavService);
+ private versionService = inject(VersionCheckService);
+
   title: string = 'About this App';
   appName = 'PestProduct';
-  version = '4.9.0';
+  version: string | null = '0.0.0';
   author = 'Alejandro';
   email = 'alex295226@gmail.com';
 
@@ -55,6 +58,7 @@ export class AboutComponent {
 
   constructor(private router: Router) {
     this.setNav();
+    this.version = this.versionService.getVersion();
   }
 
     back(): void {

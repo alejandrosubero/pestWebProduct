@@ -27,6 +27,7 @@ import { TechnicalProductService } from '../../services/TechnicalProductService'
 import { DomSanitizer } from '@angular/platform-browser';
 import { NavService } from '../../services/nav.service';
 import { NavConfig } from '../../models/navElemet.model';
+import { PestsService } from '../../services/pests.service';
 
 
 @Component({
@@ -64,10 +65,10 @@ export class HomeComponent implements OnInit {
   pestName: string = '';
   public isFavoriteView: boolean = false;
   private favorites: any[] = [];
-  private productStoreService = inject(ProductStoreService);
   // private technicalProductService = inject(TechnicalProductService);
+  private productStoreService = inject(ProductStoreService);
   private navService = inject(NavService);
-
+  private pestsService = inject(PestsService);
   opened = false; // cerrado por defecto
 
 
@@ -105,14 +106,17 @@ export class HomeComponent implements OnInit {
     this.allProducts = prolist;
     this.filteredProducts = prolist;
     
-    if (prolist != undefined && prolist != null && prolist.length > 0) {
-      this.getUniquePests(this.allProducts);
-    }
+    this.uniquePests =  this.pestsService.getPests()();
+
+    // if (prolist != undefined && prolist != null && prolist.length > 0) {
+    //   this.getUniquePests(this.allProducts);
+    // }
 
     this.checkFavorites();
     this.productStoreService.loadAll();
     // this.technicalProductService.technicalProducts();
     // const productsTechnical = this.technicalProductService.getAllTechnicalProducts();
+    //  console.log('this.uniquePests::: ', this.uniquePests);
   }
 
 
