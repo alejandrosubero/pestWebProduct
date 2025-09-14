@@ -7,7 +7,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { ActivatedRoute, Router } from '@angular/router';
-import { IProduct, IUsageRecord } from '../../../models/interfaces';
+import { Addition, IProduct, IUsageRecord } from '../../../models/interfaces';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core'; 
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
@@ -51,28 +51,29 @@ export class RegisterProductUsageComponent implements OnInit {
   protected myProducts: IProduct[] =[];
   protected searchQuery:string ='';
 
-  protected searchProduct : IProduct | undefined = {
-  name: '',
-  type: 'Liquid',
-  description: '',
-  safetyDataSheetUrl: '',
-  package: {
-    productId: undefined, 
-    locationId: '',
-    initialQuantity: 0,
-    currentQuantity: 0,
-    unitOfMeasure: '',
-    status: 'In Stock', 
-    batchNumber: '',
-    openedDate: '',
-    expirationDate: '',
-    location: {
-      locationName: '',
-      locationArea: '',
-      locationSeccion: '',
+  protected searchProduct: IProduct | undefined = {
+    name: '',
+    type: 'Liquid',
+    description: '',
+    safetyDataSheetUrl: '',
+    package: {
+      productId: undefined,
+      locationId: '',
+      initialQuantity: 0,
+      currentQuantity: 0,
+      unitOfMeasure: '',
+      status: 'In Stock',
+      batchNumber: '',
+      openedDate: '',
+      expirationDate: '',
+      location: {
+        locationName: '',
+        locationArea: '',
+        locationSeccion: '',
+      },
+      additions:[]
     },
-  },
-};
+  };
 usageForm!: FormGroup;
 
 // usage: IUsageRecord = {
@@ -172,7 +173,7 @@ setForm(){
                 navConfig.goto = 'storage';
                 this.navService.setNavConfig(navConfig);
               }
-              
+
 }
 
 

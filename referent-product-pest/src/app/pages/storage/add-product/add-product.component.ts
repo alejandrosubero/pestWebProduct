@@ -103,6 +103,9 @@ export class AddProductComponent {
           locationArea: formValue.locationArea,
           locationSeccion: formValue.locationSeccion,
         },
+        additions: [
+           { quantity: formValue.initialQuantity, addDate: new Date() },
+        ],
       },
     };
     this.store.save(product);
@@ -169,7 +172,7 @@ setList(){
       return; 
     }
 
-      const control = this.form.get("name");
+    const control = this.form.get("name");
     if (!control) {
       console.error(`AutocompleteInputComponent: error in '${"name"}' no find FormGroup.`);
       return;
@@ -197,7 +200,6 @@ setList(){
 
    setNav() {
             this.navService.reSetNavConfig();
-      
             let navConfig: NavConfig = new NavConfig();
             navConfig.title = "Add Product";
             navConfig.ico.menu = false;
@@ -206,7 +208,6 @@ setList(){
             navConfig.ico.logut = false;
             navConfig.ico.label = false;
             navConfig.ico.sds = false;      
-            
             navConfig.goto = 'app/storage/products';
             this.navService.setNavConfig(navConfig);
           }

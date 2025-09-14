@@ -21,7 +21,14 @@ export interface IPackage {
   openedDate?: string;
   expirationDate?: string;
   location: Location;
+  additions: Addition[];
 }
+
+export interface Addition{
+  quantity:number;
+  addDate:Date;
+} 
+
 
 export interface Location {
   locationName: string;
@@ -66,6 +73,8 @@ export interface PackageSummary {
   inStock: number;
   empty: number;
 }
+
+
 
 
 export type PackageStatus = 'In Stock' | 'In Use' | 'Empty' | 'Almost Empty';

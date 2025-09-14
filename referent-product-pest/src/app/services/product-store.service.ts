@@ -125,9 +125,9 @@ export class ProductStoreService {
 
     if (product.package.currentQuantity === 0) {
       product.package.status = 'Empty';
+    }else {
+      product.package.status = 'In Use';
     }
-
-    product.package.status = 'In Use'
     
     await this.db.updateProduct(product);
     await this.loadAll();
