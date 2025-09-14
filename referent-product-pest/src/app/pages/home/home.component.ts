@@ -14,7 +14,6 @@ import { MatListModule } from '@angular/material/list';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Product } from '../../models/product.model';
 import { ProductService } from '../../services/product.service';
-import { PestData } from '../../models/pestdata.model';
 import { ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { FavoritesService } from '../../services/favorites.service';
@@ -23,11 +22,12 @@ import { ProductStoreService } from '../../services/product-store.service';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { SearchInfoSheetComponent } from '../share/search-info-sheet/search-info-sheet.component';
 import { MatBottomSheet, MatBottomSheetModule } from '@angular/material/bottom-sheet';
-import { TechnicalProductService } from '../../services/TechnicalProductService';
 import { DomSanitizer } from '@angular/platform-browser';
 import { NavService } from '../../services/nav.service';
 import { NavConfig } from '../../models/navElemet.model';
 import { PestsService } from '../../services/pests.service';
+import { TechnicalProductService } from '../../services/TechnicalProductService';
+import { PestData } from '../../models/pestdata.model';
 
 
 @Component({
@@ -56,7 +56,13 @@ export class HomeComponent implements OnInit {
 
   allProducts: Product[] = [];
   filteredProducts: Product[] = [];
+
   uniquePests: string[] = [];
+  // lista filtrada para mostrar en pantalla
+  filteredPests: string[] = [];
+  // modelo vinculado al input
+  searchPest: string = '';
+
   searchTerm: string = '';
   version: string = 'v3.0.1';
   private configUrl: string = 'assets/config/products.json';
@@ -88,10 +94,10 @@ export class HomeComponent implements OnInit {
     this.setNav();
   }
 
-   toggleSidenav(sidenav: any) {
+  toggleSidenav(sidenav: any) {
     sidenav.toggle();
   }
-  
+
 
   ngOnInit(): void {
     this.breakpointObserver
@@ -102,39 +108,40 @@ export class HomeComponent implements OnInit {
 
     const forSortedProducts = this.productService.products();
     // Sort alphabetically by name
-    const prolist  = forSortedProducts.sort((a, b) => a.name.localeCompare(b.name));
+    const prolist = forSortedProducts.sort((a, b) => a.name.localeCompare(b.name));
     this.allProducts = prolist;
     this.filteredProducts = prolist;
-    
-    this.uniquePests =  this.pestsService.getPests()();
+
+    this.uniquePests = this.pestsService.getPests()();
+    if (this.uniquePests !== undefined && this.uniquePests !== null && this.uniquePests.length > 0) {
+      this.filteredPests = this.uniquePests;
+    }
+
+    this.checkFavorites();
+    this.productStoreService.loadAll();
 
     // if (prolist != undefined && prolist != null && prolist.length > 0) {
     //   this.getUniquePests(this.allProducts);
     // }
-
-    this.checkFavorites();
-    this.productStoreService.loadAll();
     // this.technicalProductService.technicalProducts();
     // const productsTechnical = this.technicalProductService.getAllTechnicalProducts();
     //  console.log('this.uniquePests::: ', this.uniquePests);
   }
 
 
-  setNav(){
-     this.checkFavorites();
+  setNav() {
+    this.checkFavorites();
     let navConfig: NavConfig = new NavConfig();
     navConfig.title = 'Pest products';
     navConfig.ico.menu = true;
     navConfig.ico.favorite = true;
     navConfig.ico.logut = true;
-    if(this.isFavoriteView){
+    if (this.isFavoriteView) {
       navConfig.favorite.active = this.isFavoriteView;
     }
     navConfig.favorite.url = 'favorites';
     this.navService.setNavConfig(navConfig);
   }
-
-
 
   openSearchInfo(): void {
     this.bottomSheet.open(SearchInfoSheetComponent);
@@ -157,16 +164,10 @@ export class HomeComponent implements OnInit {
     this.uniquePests = Array.from(pestSet);
   }
 
-
-
-
-
   getPestName(phrase: string): string {
     const normalize = (text: string): string =>
       text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
-
     const searchTerm = normalize(phrase);
-
     for (const product of this.filteredProducts) {
       for (const pest of product.pestsControlled) {
         if (normalize(pest).includes(searchTerm)) {
@@ -283,20 +284,15 @@ export class HomeComponent implements OnInit {
 
 
   seleccionarPest(pest: string): void {
-    // this.isWideScreen = false;
-    this.opened = false; 
-    // if (!this.isWideScreen) {
-    //   this.drawer.close();
-    // }
-
+    this.opened = false;
     this.searchTerm = pest;
     this.buscarCoincidencias();
     this.pestName = pest;
 
-    if(this.sidenav){
-this.sidenav.close();
-    } 
-       
+    if (this.sidenav) {
+      this.sidenav.close();
+    }
+
   }
 
   goToDetail(id: number): void {
@@ -309,33 +305,47 @@ this.sidenav.close();
     this.navegateService.goFavorites('favorites', 1);
   }
 
-   goTecnnical(): void {
-     const routeBase = "technical/notes";
+  goTecnnical(): void {
+    const routeBase = "technical/notes";
     this.navigate(routeBase);
   }
 
-   goCompareTecnnical(): void {
-     const routeBase = "technical/notes/compare";
+  goCompareTecnnical(): void {
+    const routeBase = "technical/notes/compare";
     this.navigate(routeBase);
   }
 
-   goAbout(): void {
-     const routeBase = 'about';
+  goAbout(): void {
+    const routeBase = 'about';
     this.navigate(routeBase);
   }
-  
-   goMix(): void {
+
+  goMix(): void {
     const routeBase = 'technical/notes/mix';
     this.navigate(routeBase);
   }
 
-  navigate(routeBase:string){
+  navigate(routeBase: string) {
     this.router.navigate([routeBase]);
   }
 
-    logout(): void {
+  logout(): void {
     this.authService.logout();
     this.router.navigate(['/login']);
+  }
+
+
+  // mpest filter
+  onSearchChange(): void {
+    if (this.searchPest.length < 2) {
+      // si tiene menos de 2 caracteres, mostrar todo
+      this.filteredPests = [...this.uniquePests];
+      return;
+    }
+    const query = this.searchPest.toLowerCase();
+    this.filteredPests = this.uniquePests.filter(pest =>
+      pest.toLowerCase().includes(query)
+    );
   }
 }
 

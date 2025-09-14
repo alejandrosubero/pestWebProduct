@@ -63,7 +63,7 @@ export class BackupService {
   // 📌 Borra toda la base de datos
   async clearAll(): Promise<void> {
     await db.delete();
-    window.location.reload();
+    // window.location.reload();
   }
 }
 

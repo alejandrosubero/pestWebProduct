@@ -27,7 +27,7 @@ import { NavConfig } from '../../models/navElemet.model';
     MatListModule,
     MatTooltipModule,
     MatCardModule
-],
+  ],
   templateUrl: './technical-notes-list.component.html',
   styleUrl: './technical-notes-list.component.scss'
 })
@@ -39,120 +39,132 @@ export class TechnicalNotesListComponent {
   title: string = 'Technical Notes'
   private navService = inject(NavService);
 
- constructor(
+  constructor(
     private technicalProductService: TechnicalProductService,
     private navegateService: NavegateService,
     private router: Router,
   ) {
     this.getAllProducts();
-     this.setNav();
+    this.setNav();
   }
 
-    getAllProducts(): void {
+  getAllProducts(): void {
     const products = this.technicalProductService.getAllTechnicalProducts();
-    if(products){
-       const sortedProducts  = products.sort((a, b) => a.title.localeCompare(b.title));
+    if (products) {
+      const sortedProducts = products.sort((a, b) => a.title.localeCompare(b.title));
       this.allProducts = sortedProducts;
-      if(this.allProducts){
+      if (this.allProducts) {
         this.filteredProducts = this.allProducts;
       }
     }
   }
 
-buscarCoincidencias2(): void {
-  const rawInput = this.searchTerm.trim().toLowerCase();
+  buscarCoincidencias2(): void {
+    const rawInput = this.searchTerm.trim().toLowerCase();
 
-  const normalize = (text: string): string =>
-    text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+    const normalize = (text: string): string =>
+      text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 
-  const getRelevantFields = (product: TechnicalProduct): string => {
-    const title = normalize(product.title);
-    const activeIngredients = normalize(product.activeIngredients);
-    const spectrumOfControl = normalize(product.spectrumOfControl);
+    const getRelevantFields = (product: TechnicalProduct): string => {
+      const title = normalize(product.title);
+      const activeIngredients = normalize(product.activeIngredients);
+      const spectrumOfControl = normalize(product.spectrumOfControl);
 
-    return `${title} ${activeIngredients} ${spectrumOfControl}`;
-  };
+      return `${title} ${activeIngredients} ${spectrumOfControl}`;
+    };
 
-  const createExactMatchRegex = (phrase: string): RegExp => {
-    const escaped = phrase.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    return new RegExp(`\\b${escaped}\\b`, 'i');
-  };
+    const createExactMatchRegex = (phrase: string): RegExp => {
+      const escaped = phrase.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      return new RegExp(`\\b${escaped}\\b`, 'i');
+    };
 
-  if (rawInput.startsWith('*')) {
-    const searchTerm = normalize(rawInput.slice(1).trim());
-    if (searchTerm.length >= 2) {
-      this.filteredProducts = this.allProducts.filter(product =>
-        normalize(product.activeIngredients).includes(searchTerm)
-      );
+    if (rawInput.startsWith('*')) {
+      const searchTerm = normalize(rawInput.slice(1).trim());
+      if (searchTerm.length >= 2) {
+        this.filteredProducts = this.allProducts.filter(product =>
+          normalize(product.activeIngredients).includes(searchTerm)
+        );
+      } else {
+        this.filteredProducts = [];
+      }
     } else {
-      this.filteredProducts = [];
+      const terms = normalize(rawInput).split(/\s+/);
+      const phrase = terms.join(' ').trim();
+      const regex = createExactMatchRegex(phrase);
+
+      this.filteredProducts = this.allProducts.filter(product =>
+        regex.test(getRelevantFields(product))
+      );
     }
-  } else {
-    const terms = normalize(rawInput).split(/\s+/);
-    const phrase = terms.join(' ').trim();
-    const regex = createExactMatchRegex(phrase);
-
-    this.filteredProducts = this.allProducts.filter(product =>
-      regex.test(getRelevantFields(product))
-    );
   }
-}
 
-buscarCoincidencias(): void {
-  const rawInput = this.searchTerm.trim().toLowerCase();
-  const normalize = (text: string): string => text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
-  
-  const getSearchableText = (product: TechnicalProduct): string => {
-    const title = normalize(product.title);
-    const activeIngredients = normalize(product.activeIngredients);
-    const spectrumOfControl = normalize(product.spectrumOfControl);
-    return `${title} ${activeIngredients} ${spectrumOfControl}`;
-  };
+  buscarCoincidencias(): void {
+    const rawInput = this.searchTerm.trim().toLowerCase();
+    const normalize = (text: string): string => text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 
+    const getSearchableText = (product: TechnicalProduct): string => {
+      const title = normalize(product.title);
+      const activeIngredients = normalize(product.activeIngredients);
+      const spectrumOfControl = normalize(product.spectrumOfControl);
+      return `${title} ${activeIngredients} ${spectrumOfControl}`;
+    };
+
+      // Caso especial: si no hay nada escrito → mostrar todo
+  if (rawInput.length === 0) {
+    this.filteredProducts = [...this.allProducts];
+    return;
+  }
+
+  // Si tiene menos de 2 caracteres → lista vacía
   if (rawInput.length < 2) {
     this.filteredProducts = [];
     return;
   }
-  
-  const normalizedSearchTerm = normalize(rawInput);
-  
-  // Lógica de búsqueda principal
-  this.filteredProducts = this.allProducts.filter(product => {
-    const searchableText = getSearchableText(product);
-    
-    // Si el término de búsqueda comienza con '*', busca por ingrediente activo
-    if (normalizedSearchTerm.startsWith('*')) {
-      const ingredientTerm = normalizedSearchTerm.slice(1).trim();
-      return normalize(product.activeIngredients).includes(ingredientTerm);
-    } 
-    return searchableText.includes(normalizedSearchTerm);
-  });
-}
 
- back(): void {
-      this.router.navigate(['app/home']);
+    if (rawInput.length < 2) {
+      this.filteredProducts = [];
+      return;
+    }
+
+    const normalizedSearchTerm = normalize(rawInput);
+
+    // Lógica de búsqueda principal
+    this.filteredProducts = this.allProducts.filter(product => {
+      const searchableText = getSearchableText(product);
+
+      // Si el término de búsqueda comienza con '*', busca por ingrediente activo
+      if (normalizedSearchTerm.startsWith('*')) {
+        const ingredientTerm = normalizedSearchTerm.slice(1).trim();
+        return normalize(product.activeIngredients).includes(ingredientTerm);
+      }
+      return searchableText.includes(normalizedSearchTerm);
+    });
   }
 
- goToDetail(id: number): void {
-  const routeBase = "app/technical/notes";
+  back(): void {
+    this.router.navigate(['app/home']);
+  }
+
+  goToDetail(id: number): void {
+    const routeBase = "app/technical/notes";
     this.navegateService.goToDetail(routeBase, id, routeBase);
   }
 
 
- setNav():void{
-                  this.navService.reSetNavConfig();
-          
-                  let navConfig: NavConfig = new NavConfig();
-                  navConfig.title = "Technical Notes";
-                  navConfig.ico.menu = true;
-                  navConfig.ico.back = false;
-                  navConfig.ico.favorite = false;
-                  navConfig.ico.logut = false;
-                  navConfig.ico.label = false;
-                  navConfig.ico.sds = false;  
-              
-                  navConfig.goto = 'app/home';
-                  this.navService.setNavConfig(navConfig);
-                }
+  setNav(): void {
+    this.navService.reSetNavConfig();
+
+    let navConfig: NavConfig = new NavConfig();
+    navConfig.title = "Technical Notes";
+    navConfig.ico.menu = true;
+    navConfig.ico.back = false;
+    navConfig.ico.favorite = false;
+    navConfig.ico.logut = false;
+    navConfig.ico.label = false;
+    navConfig.ico.sds = false;
+
+    navConfig.goto = 'app/home';
+    this.navService.setNavConfig(navConfig);
+  }
 
 }

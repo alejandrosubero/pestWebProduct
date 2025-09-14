@@ -2651,5 +2651,37 @@
     ],
     "url1":"assets/prod/paul-labels-sds-2025-06-14/InVadeBioFoam/label-InvadeBioFoamInstr1-1-20.pdf" ,
     "url2": "assets/prod/paul-labels-sds-2025-06-14/InVadeBioFoam/sds-InVadeBioFoamSDS1-6-25.pdf"
-  }
+  },
+  {
+  "id": 79,
+  "name": "LESCO® CrossCheck® EZ Granular Insecticide",
+  "activeIngredients": "Bifenthrin 0.2% (Cis isomers 97% minimum, trans isomers 3% maximum).",
+  "applicationTreatment": "Granular insecticide for use on lawns, landscaped areas, and perimeters around residential, institutional, public, commercial, and industrial buildings, parks, recreational areas, and athletic fields. Apply as a broadcast treatment using suitable equipment to ensure uniform coverage. Water treated area as directed but do not water to run-off. For residential lawns: do not exceed 0.2 lb active ingredient per acre per application. For non-residential sites: may apply up to 0.4 lb active ingredient per acre per application. Do not broadcast more than 0.4 lb A.I. (200 lbs product) per acre per year.",
+  "pestsControlled": [
+    "Armyworms",
+    "Cutworms",
+    "Sod Webworms",
+    "Annual Bluegrass Weevil (Adult)",
+    "Billbugs (Adult)",
+    "Black Turfgrass Ataenius (Adult)",
+    "Leafhoppers",
+    "Mealybugs",
+    "Ants (including Imported Fire Ants)",
+    "Centipedes",
+    "Chinch Bugs",
+    "European Crane Flies (Larvae)",
+    "Fleas (Larvae)",
+    "Fleas (Adult)",
+    "Imported Fire Ants (Mounds)",
+    "Millipedes",
+    "Mole Crickets (Adult and Nymph)",
+    "Pillbugs",
+    "Scorpions",
+    "Sowbugs",
+    "Ticks (including those transmitting Lyme Disease and Rocky Mountain Spotted Fever)"
+  ],
+  "url1": "assets/prod/paul-labels-sds-2025-06-14/EZCrosscheck/Lesco_Crosscheck_EZ_Granular_Insecticide_Label.pdf",
+  "url2": "assets/prod/paul-labels-sds-2025-06-14/EZCrosscheckEZ/CrosscheckEZ_SDS_4-10-15.pdf"
+}
+
 ]

@@ -10,10 +10,26 @@
   [style.width.px]="200"
   >
     <h3 style="margin: 16px;">Select Pests:</h3>
-    <mat-list-item *ngFor="let pest of uniquePests" (click)="seleccionarPest(pest)">
+      <!-- <mat-form-field appearance="fill" class="search-box">
+        <mat-label>Search Pest</mat-label>
+        <input matInput [(ngModel)]="searchPest" (input)="buscarCoincidencias()" />
+      </mat-form-field> -->
+    
+      <!-- <mat-list-item *ngFor="let pest of uniquePests" (click)="seleccionarPest(pest)">
       {{ pest }}
-    </mat-list-item>
+    </mat-list-item> -->
+
+<mat-form-field appearance="fill" class="search-box">
+  <mat-label>Search Pest</mat-label>
+  <input matInput [(ngModel)]="searchPest" (input)="onSearchChange()" />
+</mat-form-field>
+<mat-list-item *ngFor="let pest of filteredPests" (click)="seleccionarPest(pest)">
+  {{ pest }}
+</mat-list-item>
+
+
   </mat-sidenav>
+
 
   <!-- Contenido principal -->
   <mat-sidenav-content>

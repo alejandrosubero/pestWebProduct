@@ -108,11 +108,9 @@ export class FormulationDetailComponent implements OnInit{
     const dialogRef = this.dialog.open(ConfirmDialogComponent, {
       data: { message: 'Are you sure you want to delete this formulation?' },
     });
-
     dialogRef.afterClosed().subscribe(result => {
       if (result && this.formulation) {
         this.db.deleteFormulations(this.id);
-        // this.service.deleteFormulation(this.formulation.id);
         this.goBack();
       }
     });
@@ -125,16 +123,12 @@ export class FormulationDetailComponent implements OnInit{
       this.nameToNavegate = this.pestData.name 
   }
 
-
     goBack(): void {
       this.navegateService.goFavorites('formulations', this.id);
   }
 
-
-
     setNav() {
       this.navService.reSetNavConfig();
-
       let navConfig: NavConfig = new NavConfig();
       navConfig.title = "Formulation Detail";
       navConfig.ico.menu = false;
@@ -142,19 +136,14 @@ export class FormulationDetailComponent implements OnInit{
       navConfig.ico.favorite = false;
       navConfig.ico.logut = false;
       navConfig.ico.label = false;
-      navConfig.ico.sds = false;      
-      
+      navConfig.ico.sds = false;        
       navConfig.favorite.url = 'formulations';
-      
+
       if(this.id){
         navConfig.favorite.id = this.id;
       }
       navConfig.goto = 'formulations';
-  
-
       this.navService.setNavConfig(navConfig);
-  
- 
     }
 
     
