@@ -107,9 +107,10 @@ clearSearch(): void {
     this.navegateService.goFavorites('storage', 1);
   }
 
-
+  
+//******************************************************** */
   onAddNew(): void {
-   this.router.navigate(['app/storage/products/add']);
+   this.router.navigate(['app/storage/products/add/nemu']);
   }
 
 

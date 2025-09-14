@@ -115,10 +115,16 @@ export const routes: Routes = [
     canActivate: [authGuard],
     children: [
       { path: 'products', loadComponent: () => import('./pages/storage/product-list/product-list.component').then(c => c.ProductListComponent), data: { animation: 'StoragePage' } },
-      { path: 'products/add', loadComponent: () => import('./pages/storage/add-product/add-product.component').then(c => c.AddProductComponent), data: { animation: 'StoragePage' } },
       { path: 'products/detail/:id', loadComponent: () => import('./pages/storage/storage-product-detail/storage-product-detail.component').then(c => c.StorageProductDetailComponent), data: { animation: 'StoragePage' } },
       { path: 'products/edit/:id', loadComponent: () => import('./pages/storage/edit-product/edit-product.component').then(c => c.EditProductComponent), data: { animation: 'StoragePage' } },
       { path: 'products/register/use', loadComponent: () => import('./pages/storage/register-product-usage/register-product-usage.component').then(c => c.RegisterProductUsageComponent), data: { animation: 'StoragePage' } },
+      { path: 'products/add/new', loadComponent: () => import('./pages/storage/add-product/add-product.component').then(c => c.AddProductComponent), data: { animation: 'StoragePage' } },
+      
+      { path: 'products/add/nemu', loadComponent: () => import('./pages/storage/add-menue/add-menue.component').then(c => c.AddMenueComponent), data: { animation: 'StoragePage' } },
+      { path: 'products/add/product', loadComponent: () => import('./pages/storage/addition-produc/addition-produc.component').then(c => c.AdditionProducComponent), data: { animation: 'StoragePage' } },
+      { path: 'products/add/product/:id', loadComponent: () => import('./pages/storage/addition-produc/addition-produc.component').then(c => c.AdditionProducComponent), data: { animation: 'StoragePage' } },
+
+
     ]
   }
        ]

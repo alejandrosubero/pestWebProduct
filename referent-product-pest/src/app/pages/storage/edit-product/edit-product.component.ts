@@ -90,6 +90,7 @@ export class EditProductComponent extends AddProductComponent implements OnInit 
           locationArea: formValue.locationArea,
           locationSeccion: formValue.locationSeccion,
         },
+        additions:[],
       },
     };
 

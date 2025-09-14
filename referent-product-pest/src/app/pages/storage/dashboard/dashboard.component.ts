@@ -69,7 +69,7 @@ export class DashboardComponent implements OnInit {
 
 
   onAddNewProduct(): void {
-    this.router.navigate(['app/storage/products/add']);
+    this.router.navigate(['app/storage/products/add/new']);
   }
 
 
@@ -77,5 +77,8 @@ export class DashboardComponent implements OnInit {
     this.router.navigate(['app/storage/products']);
   }
 
+    onAdditionOfProduct(): void {
+    this.router.navigate(['app/storage/products/add/product']);
+  }
 
 }

@@ -1,0 +1,74 @@
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  background-color: #fffcfc;
+  padding: 1rem;
+}
+
+.buto {
+  margin-top: 5px;
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-bottom: 40px;
+ 
+}
+
+
+button {
+  padding: 17px 40px;
+  border-radius: 10px;
+  border: 0;
+  background-color: #3f51b5; /* Un tono azul para el color de fondo */
+  letter-spacing: 1.5px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  box-shadow: #2c3e98 0px 10px 0px 0px; /* Sombra de la caja más oscura para que coincida */
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+}
+
+button:hover {
+  box-shadow: #2c3e98 0px 7px 0px 0px;
+}
+
+button:active {
+  background-color: #3f51b5; 
+  box-shadow: #2c3e98 0px 0px 0px 0px;
+  transform: translateY(5px);
+  transition: 200ms;
+}
+
+
+
+// red
+
+// button {
+//   padding: 17px 40px;
+//   border-radius: 10px;
+//   border: 0;
+//   background-color: rgb(255, 56, 86);
+//   letter-spacing: 1.5px;
+//   font-size: 15px;
+//   transition: all 0.3s ease;
+//   box-shadow: rgb(201, 46, 70) 0px 10px 0px 0px;
+//   color: hsl(0, 0%, 100%);
+//   cursor: pointer;
+// }
+
+// button:hover {
+//   box-shadow: rgb(201, 46, 70) 0px 7px 0px 0px;
+// }
+
+// button:active {
+//   background-color: rgb(255, 56, 86);
+//   /*50, 168, 80*/
+//   box-shadow: rgb(201, 46, 70) 0px 0px 0px 0px;
+//   transform: translateY(5px);
+//   transition: 200ms;
+// }
+
+

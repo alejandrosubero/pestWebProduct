@@ -47,6 +47,8 @@ export class StorageProductDetailComponent {
   }
 
 
+
+
   get product() {
     return this.store.findById(this.id);
   }
@@ -59,6 +61,16 @@ export class StorageProductDetailComponent {
     }
   }
 
+
+  onAddProduct(): void {
+     const routeBase = "app/storage/products/add/product";
+
+    if ( this.id !== undefined) { 
+      this.navegateService.goToDetail(routeBase,  this.id, '');
+    } else {
+      this.router.navigate([routeBase]);
+    }
+  }
 
   onDelete() {
     if (this.id !== undefined) {
