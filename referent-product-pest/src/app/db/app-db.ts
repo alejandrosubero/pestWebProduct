@@ -1,6 +1,6 @@
 // src/app/db/app-db.ts
 import Dexie, { Table } from 'dexie';
-import { IProduct, IPackage, IUsageRecord, Formulation, Product, } from '../models/interfaces';
+import { IProduct, IPackage, IUsageRecord, Formulation, Product, Phrase} from '../models/interfaces';
 
 export class AppDB extends Dexie {
   products!: Table<IProduct, number>;
@@ -8,6 +8,7 @@ export class AppDB extends Dexie {
   usageRecords!: Table<IUsageRecord, number>;
   formulations!: Table<Formulation, number>;
   legacyProducts!: Table<Product, number>;
+  phrase!: Table<Phrase, number>;
 
   constructor() {
     super('PestControlDB');
@@ -18,6 +19,7 @@ export class AppDB extends Dexie {
       usageRecords: '++id, productId, usageDate',
       formulations: '++id, title',
       legacyProducts: '++id, name',
+      phrase: '++id, phrase',
     });
   }
 }

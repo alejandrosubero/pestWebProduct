@@ -74,7 +74,11 @@ export interface PackageSummary {
   empty: number;
 }
 
-
+export interface Phrase{
+  id?:number;
+  phrase:string;
+  isComplete:boolean;
+}
 
 
 export type PackageStatus = 'In Stock' | 'In Use' | 'Empty' | 'Almost Empty';

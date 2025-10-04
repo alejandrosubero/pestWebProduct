@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { db } from '../db/app-db';
-import { Formulation, IProduct } from '../models/interfaces';
+import { Formulation, IProduct, Phrase } from '../models/interfaces';
 
 @Injectable({ providedIn: 'root' })
 export class DBService {
@@ -79,6 +79,27 @@ constructor() { }
     await db.formulations.delete(id);
   }
 
+// ============================= Phrase ======================================================
+  
+  async addPhrase(phrase: Phrase): Promise<number> {
+    return await db.phrase.add(phrase);
+  }
 
+  async getAllPhrase(): Promise<Phrase[]> {
+    return await db.phrase.toArray();
+  }
+
+  async getPhraseById(id: number): Promise<Phrase | undefined> {
+    return await db.phrase.get(id);
+  }
+
+ async updatePhrase(phrase: Phrase): Promise<number> {
+  if (phrase.id === undefined) throw new Error('Product ID is required for update');
+  return await db.phrase.put(phrase);
+}
+
+  async deletePhrase(id: number): Promise<void> {
+    await db.phrase.delete(id);
+  }
 
 }
