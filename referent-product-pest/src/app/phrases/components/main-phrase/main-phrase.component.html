@@ -1,0 +1,21 @@
+<mat-toolbar color="primary">Main Phrase</mat-toolbar>
+
+<mat-card class="container">
+  <mat-form-field class="full" appearance="outline">
+    <mat-label>Editor principal</mat-label>
+    <textarea matInput [(ngModel)]="textarea" rows="8"></textarea>
+  </mat-form-field>
+
+  <div class="actions">
+    <button mat-raised-button color="primary" (click)="generateIntoTextarea()"><mat-icon>bolt</mat-icon> Generar</button>
+    <button mat-raised-button (click)="getOneComplete()"><mat-icon>shuffle</mat-icon> Cargar completa</button>
+    <button mat-raised-button color="accent" (click)="saveAsComplete()"><mat-icon>save_alt</mat-icon> Guardar como completa</button>
+  </div>
+
+  <div class="nav-links">
+    <button mat-stroked-button routerLink="/show-text-phrase">Ver frases</button>
+    <button mat-stroked-button routerLink="/work-text-phrase">Ir a workspace</button>
+    <button mat-stroked-button routerLink="/add-text-phrase">Agregar nueva</button>
+    <button mat-stroked-button routerLink="/complete-phrase">Ver completas</button>
+  </div>
+</mat-card>

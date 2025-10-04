@@ -1,0 +1,54 @@
+<mat-toolbar color="primary">Editar lista / Generar texto</mat-toolbar>
+
+<div class="container">
+  <div class="left">
+    <h3>Lista (arrastrar para reordenar)</h3>
+    <div class="list-area" *ngIf="listComputed().length; else empty">
+      <div cdkDropList (cdkDropListDropped)="drop($event)">
+        <div class="item" *ngFor="let item of listComputed(); index as i" cdkDrag>
+          <mat-card class="item-card">
+            <div class="item-body">
+              <span class="index">{{i + 1}}.</span>
+              <span class="text">{{item}}</span>
+            </div>
+            <div class="item-actions">
+              <button mat-icon-button (click)="removeAt(i)">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </div>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+
+    <ng-template #empty>
+      <div class="empty">La lista está vacía. Usa "Add" para añadir elementos.</div>
+    </ng-template>
+  </div>
+
+  <div class="right">
+    <h4>Current string</h4>
+    <mat-card>
+      <div class="current">{{ currentComputed() || '— vacío —' }}</div>
+    </mat-card>
+  </div>
+</div>
+
+<!-- FAB menu -->
+<div class="fabs">
+  <button mat-fab color="primary" aria-label="Add" (click)="openAddDialog()">
+    <mat-icon>add</mat-icon>
+  </button>
+
+  <button mat-fab color="accent" aria-label="Generate" (click)="generate()">
+    <mat-icon>bolt</mat-icon>
+  </button>
+
+  <button mat-fab color="warn" aria-label="Add new phrase view" (click)="addNewPhraseView()">
+    <mat-icon>post_add</mat-icon>
+  </button>
+
+  <button mat-fab aria-label="Cancel" (click)="cancel()">
+    <mat-icon>close</mat-icon>
+  </button>
+</div>

@@ -1,0 +1,19 @@
+<mat-card class="container">
+  <mat-toolbar color="primary">Agregar frase</mat-toolbar>
+
+  <div class="content">
+    <mat-form-field appearance="outline" class="full">
+      <mat-label>Frase</mat-label>
+      <textarea matInput [(ngModel)]="text" rows="6" cdkTextareaAutosize #autosize="cdkTextareaAutosize"></textarea>
+    </mat-form-field>
+
+    <div class="actions">
+      <button mat-raised-button color="primary" (click)="save()" [disabled]="saving">
+        <mat-icon>save</mat-icon> Agregar
+      </button>
+      <button mat-button (click)="text=''">Limpiar</button>
+    </div>
+  </div>
+
+  <mat-progress-spinner *ngIf="saving" mode="indeterminate" diameter="36"></mat-progress-spinner>
+</mat-card>

@@ -1,0 +1,18 @@
+<mat-toolbar color="primary">Frases Completas</mat-toolbar>
+
+<div class="container">
+  <mat-progress-spinner *ngIf="loading" diameter="36" mode="indeterminate"></mat-progress-spinner>
+
+  <mat-list *ngIf="!loading && phrases.length">
+    <mat-list-item *ngFor="let p of phrases">
+      <mat-card class="phrase-card">
+        <div (click)="selectPhrase(p)" class="phrase-text">{{p.phrase}}</div>
+        <div class="actions">
+          <button mat-icon-button (click)="copyPhrase(p)"><mat-icon>content_copy</mat-icon></button>
+        </div>
+      </mat-card>
+    </mat-list-item>
+  </mat-list>
+
+  <div *ngIf="!loading && phrases.length === 0" class="empty">No hay frases completas.</div>
+</div>

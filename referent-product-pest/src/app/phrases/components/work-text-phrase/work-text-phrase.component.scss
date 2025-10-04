@@ -1,0 +1,16 @@
+.container { display:flex; gap:16px; padding:12px; max-width:1100px; margin: 16px auto; }
+.left { flex: 1; }
+.right { width:320px; }
+.list-area { display:flex; flex-direction:column; gap:8px; }
+.item-card { display:flex; justify-content:space-between; align-items:center; padding:8px; }
+.item-body { display:flex; gap:8px; align-items:center; }
+.index { font-weight:600; width:28px; text-align:center; }
+.fabs {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+.empty { color: rgba(0,0,0,0.6); padding: 20px; border: 1px dashed rgba(0,0,0,0.08); border-radius: 6px; text-align:center; }

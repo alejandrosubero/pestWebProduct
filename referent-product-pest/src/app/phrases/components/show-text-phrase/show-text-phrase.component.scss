@@ -1,0 +1,5 @@
+.list-container { max-width: 900px; margin: 16px auto; padding: 8px; }
+.phrase-card { padding: 12px; margin: 8px 0; display:flex; justify-content:space-between; align-items:center; cursor:pointer; }
+.phrase-text { flex:1; white-space:pre-wrap; word-break:break-word; }
+.actions { margin-left: 12px; }
+.empty { text-align:center; padding:24px; color: rgba(0,0,0,0.6); }
