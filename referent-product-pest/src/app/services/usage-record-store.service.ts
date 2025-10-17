@@ -1,9 +1,13 @@
-import { Injectable, signal } from '@angular/core';
+import { inject, Injectable, signal } from '@angular/core';
 import { IUsageRecord } from '../models/interfaces';
-import { db } from '../db/app-db'; 
+import { DatabaseService } from '../db/database.service';
+// import { db } from '../db/app-db'; 
 
 @Injectable({ providedIn: 'root' })
 export class UsageRecordStoreService {
+
+private databaseService = inject(DatabaseService);
+
 
   private readonly _record = signal<IUsageRecord | null>(null);
   readonly record = this._record;
@@ -13,15 +17,16 @@ export class UsageRecordStoreService {
   }
 
   async load(): Promise<void> {
-    const all = await db.usageRecords.toArray();
+    const all = await this.databaseService.db.usageRecords.toArray();
+
     this._record.set(all.length ? all[0] : null);
   }
 
 
   async createIfNotExists(newRecord: IUsageRecord): Promise<void> {
-    const count = await db.usageRecords.count();
+    const count = await this.databaseService.db.usageRecords.count();
     if (count === 0) {
-      await db.usageRecords.add(newRecord);
+      await this.databaseService.db.usageRecords.add(newRecord);
       await this.load();
     } else {
       console.warn('Ya existe un registro de uso. No se creó uno nuevo.');
@@ -38,12 +43,12 @@ export class UsageRecordStoreService {
     // Si no hay ID definido
     if (!updated.id) {
       this.clear();
-      await db.usageRecords.add(updated);
+      await this.databaseService.db.usageRecords.add(updated);
       await this.load();
       return;
     }
     //Actualizar o reemplazar el registro existente
-    await db.usageRecords.put(updated);
+    await this.databaseService.db.usageRecords.put(updated);
     await this.load();
   }
 
@@ -59,10 +64,10 @@ export class UsageRecordStoreService {
 
       if (!current) {
         //Buscar directamente en la base de datos
-        const all = await db.usageRecords.toArray();
+        const all = await this.databaseService.db.usageRecords.toArray();
         if (all.length === 0) {
           // ➕ No hay registros: crear uno nuevo
-          await db.usageRecords.add(updated);
+          await this.databaseService.db.usageRecords.add(updated);
           await this.load();
           return;
         } else {
@@ -75,14 +80,14 @@ export class UsageRecordStoreService {
       }
     }
     //Actualizar o reemplazar el registro existente
-    await db.usageRecords.put(updated);
+    await this.databaseService.db.usageRecords.put(updated);
     await this.load();
   }
 
 
   // 🔁 Eliminar el registro actual (opcional)
   async clear(): Promise<void> {
-    await db.usageRecords.clear();
+    await this.databaseService.db.usageRecords.clear();
     this._record.set(null);
   }
 }
