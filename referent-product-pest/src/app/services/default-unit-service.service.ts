@@ -25,7 +25,7 @@ getUnitsByProductType(productType: string): (LiquidUnit | DryUnit | CountUnit)[]
         return ['Pound', 'Ounce', 'Gram', 'Count', 'Unit'];
       case 'Bait':
         // Baits are often counted, but can also be weighed (e.g., bulk bait)
-        return ['Pound', 'Ounce', 'Count', 'Trap', 'Bait Station', 'Unit'];
+        return ['Pound', 'Ounce', 'Count', 'Trap', 'Bait Station', 'Unit', 'tube'];
       default:
         return [];
     }

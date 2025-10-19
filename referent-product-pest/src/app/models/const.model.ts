@@ -71,5 +71,6 @@ export const COUNT_UNITS = [
   'Trap',
   'Bait Station',
   'Unit',
+  'tube'
 ] as const;
 export type CountUnit = (typeof COUNT_UNITS)[number];
