@@ -27,7 +27,7 @@ export class AppComponent implements OnInit{
   ngOnInit(): void {
     this.versionService.initVersionCheck(false);
     this.pestsService.loadPests();
-        //  this.versionService.initVersionCheck(true);
+    this.versionService.initVersionCheck(true);
   }
 
 
