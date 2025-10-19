@@ -3,3 +3,105 @@
 .actions { display:flex; gap:8px; flex-wrap:wrap;}
 .nav-links { display:flex; gap:8px; margin-top: 8px; }
 
+////////////////////////
+
+
+
+
+
+/* --- Estilos base y visuales --- */
+.buto {
+  margin-top: 5px;
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-bottom: 10px;
+  background-color: #3f51b5; /* Azul primario de Angular */
+  color: white;
+  padding: 0.8rem 1.2rem;
+  border: 1px solid #303f9f;
+  border-radius: 8px;
+  cursor: pointer;
+  
+  /* --- La Magia del 3D --- */
+  box-shadow: 0px 4px 0px 0px #303f9f; /* Sombra más oscura para el efecto 3D */
+  
+  /* --- Preparación para la animación --- */
+  transition: transform 0.07s ease-in-out, box-shadow 0.07s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+/* --- Estado Hover (cuando el mouse está encima) --- */
+.buto:hover {
+  background-color: #303f9f; /* Un azul ligeramente más oscuro */
+}
+
+/* --- Estado Active (MIENTRAS se hace clic) --- */
+.buto:active {
+  transform: translateY(4px);
+  box-shadow: 0px 0px 0px 0px #303f9f;
+  background-color: #303f9f;
+}
+
+/* No olvides quitar el margen por defecto del párrafo */
+.buto p {
+  margin: 0;
+  font-weight: bold;
+}
+
+
+
+/////////////////////////////////////////////////
+
+.fab-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  z-index: 100;
+
+  button {
+    margin-top: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .fab-action {
+    opacity: 1;
+    transform: translateY(0);
+    animation: slide-up 0.3s ease forwards;
+  }
+
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+.green-fab {
+  background-color: #217724 !important; // tono verde Material Design
+  color: white !important;
+
+  &:hover {
+    background-color: #43a047 !important; // tono más oscuro al hover
+  }
+}
+
+.red-fab {
+  background-color: #a91d13 !important; // tono verde Material Design
+  color: white !important;
+
+  &:hover {
+    background-color: #d71e11 !important; // tono más oscuro al hover
+  }
+}

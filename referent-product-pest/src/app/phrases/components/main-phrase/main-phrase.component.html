@@ -1,21 +1,32 @@
-<mat-toolbar color="primary">Main Phrase</mat-toolbar>
 
 <mat-card class="container">
+
   <mat-form-field class="full" appearance="outline">
-    <mat-label>Editor principal</mat-label>
+    <mat-label>Editor:</mat-label>
     <textarea matInput [(ngModel)]="textarea" rows="8"></textarea>
   </mat-form-field>
 
   <div class="actions">
-    <button mat-raised-button color="primary" (click)="generateIntoTextarea()"><mat-icon>bolt</mat-icon> Generar</button>
-    <button mat-raised-button (click)="getOneComplete()"><mat-icon>shuffle</mat-icon> Cargar completa</button>
-    <button mat-raised-button color="accent" (click)="saveAsComplete()"><mat-icon>save_alt</mat-icon> Guardar como completa</button>
+    <div class="nav-links">
+      <button mat-raised-button class="red-fab" (click)="reset()"><mat-icon>shuffle</mat-icon>Reset</button>
+      <button mat-raised-button color="primary" (click)=" copyClipboard()"><mat-icon>bolt</mat-icon> Copy</button>
+      <button mat-raised-button class="green-fab" (click)="saveAsComplete()"><mat-icon>save_alt</mat-icon> Save</button>
+    </div>
   </div>
 
-  <div class="nav-links">
-    <button mat-stroked-button routerLink="/show-text-phrase">Ver frases</button>
-    <button mat-stroked-button routerLink="/work-text-phrase">Ir a workspace</button>
-    <button mat-stroked-button routerLink="/add-text-phrase">Agregar nueva</button>
-    <button mat-stroked-button routerLink="/complete-phrase">Ver completas</button>
+
+  <div class="fab-container">
+    
+    <button mat-fab color="primary" (click)="toggleFab()" aria-label="Menu">
+      <mat-icon>{{ isFabOpen ? 'close' : 'menu' }}</mat-icon>
+    </button>
+
+    @if (isFabOpen) {
+      <button class="buto" routerLink="/app/phrase/complete"><mat-icon>notes</mat-icon>_Notes </button>
+      <button class="buto" routerLink="/app/phrase/work/text"><mat-icon>construction</mat-icon>_Work</button>
+      <button class="buto" routerLink="/app/phrase/show/text"><mat-icon>view_list</mat-icon>_Phrases</button>
+      <button class="buto" routerLink="/app/phrase/add/text"><mat-icon>add</mat-icon>_Phrase</button>
+    }
   </div>
+
 </mat-card>

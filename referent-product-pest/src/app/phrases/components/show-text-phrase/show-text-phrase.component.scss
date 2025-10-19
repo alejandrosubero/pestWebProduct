@@ -1,5 +1,101 @@
-.list-container { max-width: 900px; margin: 16px auto; padding: 8px; }
-.phrase-card { padding: 12px; margin: 8px 0; display:flex; justify-content:space-between; align-items:center; cursor:pointer; }
-.phrase-text { flex:1; white-space:pre-wrap; word-break:break-word; }
-.actions { margin-left: 12px; }
+// .list-container { max-width: 900px; margin: 16px auto; padding: 8px; }
+// .phrase-card { padding: 12px; margin: 8px 0; display:flex; justify-content:space-between; align-items:center; cursor:pointer; }
+// .phrase-text { flex:1; white-space:pre-wrap; word-break:break-word; }
+// .actions { margin-left: 12px; }
+// .empty { text-align:center; padding:24px; color: rgba(0,0,0,0.6); }
+
+// .formulations {
+//   padding: 1rem;
+// }
+
+// .add-btn {
+//   position: fixed;
+//   // bottom: 20px;
+//   top: 60px;
+//   right: 20px;
+// }
+
+// // .add-btn {
+// //   position: absolute;
+// //   top: 60px;
+// //   // bottom: 90px;
+// //   right: 15px;
+// //   z-index: 1000;
+// // }
+
+// .clickable-card {
+//    padding: 1rem;
+//   cursor: pointer;
+//   transition: transform 0.2s;
+// }
+
+// .clickable-card:hover {
+//   transform: scale(1.02);
+// }
+
+
+// .container { max-width: 900px; margin: 16px auto; padding: 8px; }
+.phrase-card { padding: 12px; margin: 8px 0; display:flex; justify-content:space-between; align-items:center; cursor:default; }
+.phrase-text { flex:1; white-space:pre-wrap; }
 .empty { text-align:center; padding:24px; color: rgba(0,0,0,0.6); }
+
+
+.formulations {
+  padding: 1rem;
+}
+
+.add-btn {
+  position: fixed;
+  // bottom: 20px;
+  top: 60px;
+  right: 20px;
+}
+
+
+.clickable-card {
+   padding: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.clickable-card:hover {
+  transform: scale(1.02);
+}
+
+/* Agrega estas reglas a tu CSS existente */
+.clickable-card mat-card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin: 0 !important; /* Elimina cualquier margen por defecto */
+  padding: 0 !important; /* Elimina cualquier padding por defecto */
+}
+
+.clickable-card mat-card-content div:first-child {
+  flex: 1;
+  /* Opcional: para texto muy largo */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.actions {
+  flex-shrink: 0;
+}
+
+.card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.phrase-text {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

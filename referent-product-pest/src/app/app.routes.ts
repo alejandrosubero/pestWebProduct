@@ -139,8 +139,3 @@ export const routes: Routes = [
   { path: '**', redirectTo: '/login' }
 ];
 
-// app/phrase/main
-// app/phrase/add/text
-// app/phrase/show/text
-// app/phrase/work/text
-// app/phrase/complete

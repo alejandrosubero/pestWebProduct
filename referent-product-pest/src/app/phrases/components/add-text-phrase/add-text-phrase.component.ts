@@ -1,6 +1,6 @@
 import { DBService } from '../../../services/db.service';
 import { Phrase } from '../../../models/interfaces';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
@@ -14,6 +14,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { TextFieldModule } from '@angular/cdk/text-field';
+import { NavService } from '../../../services/nav.service';
+import { NavConfig } from '../../../models/navElemet.model';
 
 @Component({
   selector: 'app-add-text-phrase',
@@ -36,12 +38,16 @@ import { TextFieldModule } from '@angular/cdk/text-field';
 export class AddTextPhraseComponent {
   text = '';
   saving = false;
-
+  private navService = inject(NavService);
+  title = "Add Phrase Text";
+  
   constructor(
     private db: DBService,
     private router: Router,
     private snack: MatSnackBar
-  ) {}
+  ) {
+     this.setNav();
+  }
 
   async save() {
     const trimmed = this.text?.trim() ?? '';
@@ -49,12 +55,14 @@ export class AddTextPhraseComponent {
       this.snack.open('La frase no puede estar vacía', 'Cerrar', { duration: 2000 });
       return;
     }
+    
     this.saving = true;
     const p: Phrase = { phrase: trimmed, isComplete: false };
+
     try {
       await this.db.addPhrase(p);
       this.snack.open('Frase guardada correctamente', 'OK', { duration: 2000 });
-      this.router.navigate(['/show-text-phrase']);
+      this.text='';
     } catch (err: any) {
       console.error(err);
       this.snack.open('Error guardando la frase: ' + (err?.message ?? err), 'Cerrar', { duration: 3000 });
@@ -62,4 +70,20 @@ export class AddTextPhraseComponent {
       this.saving = false;
     }
   }
+
+
+  setNav(): void {
+    this.navService.reSetNavConfig();
+    let navConfig: NavConfig = new NavConfig();
+    navConfig.title = this.title;
+    navConfig.ico.menu = false;
+    navConfig.ico.back = true;
+    navConfig.ico.home = false;
+    navConfig.ico.favorite = false;
+    navConfig.ico.logut = false;
+    navConfig.ico.label = false;
+    navConfig.ico.sds = false;
+    navConfig.goto = 'app/phrase/show/text';
+    this.navService.setNavConfig(navConfig);
+    }
 }

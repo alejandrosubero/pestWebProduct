@@ -25,10 +25,18 @@
           <p>About Me</p>
         </div>
 
+        @if (this.isAdmin) {
+        <div class="buto" (click)="goToPhrase(sidenav)">
+          <p>Phrase main</p>
+        </div>
+        
+
          <div class="buto" (click)="logout()">
           <mat-icon>exit_to_app</mat-icon>
           <p>logout</p>
         </div>
+      }
+        
 
       </div>
     </mat-nav-list>

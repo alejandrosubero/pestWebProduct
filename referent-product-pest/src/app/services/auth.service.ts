@@ -9,6 +9,7 @@ export class AuthService {
 private loggedIn = signal<boolean>(false);
 private rol = signal<string>("");
 
+
   login() {
     this.loggedIn.set(true);
   }
@@ -26,6 +27,10 @@ private rol = signal<string>("");
   isAuthenticated(): boolean {
     return this.loggedIn();
   }
+
+  public getRolValue(): string {
+  return this.rol();
+}
 
 }
 

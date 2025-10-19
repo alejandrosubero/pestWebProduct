@@ -37,17 +37,20 @@ export class LayoutComponent  implements OnInit {
   public navConfig = this.navService.config;
   private breakpointObserver = inject(BreakpointObserver);
 
+  public isAdmin = false;
+  private authService= inject(AuthService);
+
   constructor(
     private router: Router,
-    private navegateService: NavegateService,
-    private authService: AuthService,
+    private navegateService: NavegateService,    
     private matIconRegistry: MatIconRegistry,
     private domSanitizer: DomSanitizer
-
   ){ 
+
+    this.isAdmin = this.authService.getRolValue() === 'admin'? true:false;
+
     this.matIconRegistry.addSvgIcon( 'sds', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/sds.svg') );
     this.matIconRegistry.addSvgIcon( 'label', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/label.svg') );
-
      effect(() => {
       this.navConfig = this.navService.config;
      });
@@ -137,6 +140,15 @@ export class LayoutComponent  implements OnInit {
   }
 
 //  ============ ********** ================
+
+ goToPhrase(sidenav: any): void {
+    const routeBase = "app/phrase/main";
+    sidenav.toggle();
+    this.navigate(routeBase);
+  }
+
+
+
 
 //  ============ logout and back================
    

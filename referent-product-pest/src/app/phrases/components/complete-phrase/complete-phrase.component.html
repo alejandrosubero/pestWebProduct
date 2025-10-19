@@ -1,18 +1,21 @@
-<mat-toolbar color="primary">Frases Completas</mat-toolbar>
 
-<div class="container">
   <mat-progress-spinner *ngIf="loading" diameter="36" mode="indeterminate"></mat-progress-spinner>
 
-  <mat-list *ngIf="!loading && phrases.length">
-    <mat-list-item *ngFor="let p of phrases">
-      <mat-card class="phrase-card">
-        <div (click)="selectPhrase(p)" class="phrase-text">{{p.phrase}}</div>
-        <div class="actions">
-          <button mat-icon-button (click)="copyPhrase(p)"><mat-icon>content_copy</mat-icon></button>
-        </div>
-      </mat-card>
-    </mat-list-item>
-  </mat-list>
-
-  <div *ngIf="!loading && phrases.length === 0" class="empty">No hay frases completas.</div>
-</div>
+  @if (!loading && phrases.length) {
+        <div>
+          @for (f of phrases; track f.phrase ) {
+          <mat-card (click)="selectPhrase(f)" class="clickable-card">
+            <mat-card-content class="card-content">
+              <div class="phrase-text">{{ f.phrase }}</div>
+              <div class="actions"> 
+                <button mat-icon-button appLongPress (appLongPress)="deletePhrase(f)" aria-label="Eliminar">
+                  <mat-icon style="color: brown;">delete</mat-icon>
+                </button>
+              </div>
+            </mat-card-content>
+          </mat-card>
+          <br>
+        }
+     <div *ngIf="!loading && phrases.length === 0" class="empty">There are no complete sentences.</div>
+      </div>
+  }

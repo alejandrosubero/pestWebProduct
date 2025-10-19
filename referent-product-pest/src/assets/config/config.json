@@ -1,5 +1,5 @@
 [
   { "username": "pest", "password": "1225", "rol": "user" },
-  { "username": "admin", "password": "supercalifragilistico", "rol": "admin" }
+  { "username": "admin", "password": "1225", "rol": "admin" }
 ]
 

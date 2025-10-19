@@ -1,21 +1,30 @@
-<mat-toolbar color="primary">Frases (no completadas)</mat-toolbar>
+
 <div class="list-container">
   <mat-progress-spinner *ngIf="loading" diameter="36" mode="indeterminate"></mat-progress-spinner>
 
-  <mat-list *ngIf="!loading && phrases.length">
-    <mat-list-item *ngFor="let p of phrases">
-      <mat-card class="phrase-card" (click)="selectPhrase(p)" role="button" tabindex="0" aria-label="Seleccionar frase">
-        <div class="phrase-text">{{ p.phrase }}</div>
-        <div class="actions">
-          <button mat-icon-button (click)="deletePhrase(p); $event.stopPropagation();" aria-label="Eliminar">
-            <mat-icon>delete</mat-icon>
-          </button>
-        </div>
-      </mat-card>
-    </mat-list-item>
-  </mat-list>
+  @if (!loading && phrases.length) {
+        <div class="formulations">
+          @for (f of phrases; track f.phrase ) {
+        <mat-card (click)="selectPhrase(f)" class="clickable-card">
+            <mat-card-content class="card-content">
+              <div class="phrase-text">{{ f.phrase }}</div>
+              <div class="actions"> 
+                <button mat-icon-button appLongPress (appLongPress)="deletePhrase(f)" aria-label="Eliminar">
+                  <mat-icon style="color: brown;">delete</mat-icon>
+                </button>
+              </div>
+            </mat-card-content>
+          </mat-card>
+          <br>
+        }
 
+        <button mat-fab color="primary" class="add-btn" (click)="addNew()">
+          <mat-icon>add</mat-icon>
+        </button>
+      </div>
+  }
+  
   <div *ngIf="!loading && phrases.length === 0" class="empty">
-    No hay frases sin completar.
+   No phrases
   </div>
 </div>
