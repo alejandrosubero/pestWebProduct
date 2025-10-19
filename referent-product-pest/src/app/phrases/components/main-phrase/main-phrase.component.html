@@ -1,18 +1,18 @@
 
-<mat-card class="container">
+<div class="container">
 
   <mat-form-field class="full" appearance="outline">
     <mat-label>Editor:</mat-label>
     <textarea matInput [(ngModel)]="textarea" rows="8"></textarea>
   </mat-form-field>
 
-  <div class="actions">
+  <!-- <div>
     <div class="nav-links">
       <button mat-raised-button class="red-fab" (click)="reset()"><mat-icon>shuffle</mat-icon>Reset</button>
       <button mat-raised-button color="primary" (click)=" copyClipboard()"><mat-icon>bolt</mat-icon> Copy</button>
       <button mat-raised-button class="green-fab" (click)="saveAsComplete()"><mat-icon>save_alt</mat-icon> Save</button>
     </div>
-  </div>
+  </div> -->
 
 
   <div class="fab-container">
@@ -29,4 +29,12 @@
     }
   </div>
 
-</mat-card>
+</div>
+
+  <div>
+    <div class="nav-links">
+      <button mat-raised-button class="red-fab" (click)="reset()"><mat-icon>shuffle</mat-icon>Reset</button>
+      <button mat-raised-button color="primary" (click)=" copyClipboard()"><mat-icon>bolt</mat-icon> Copy</button>
+      <button mat-raised-button class="green-fab" (click)="saveAsComplete()"><mat-icon>save_alt</mat-icon> Save</button>
+    </div>
+  </div>

@@ -98,7 +98,7 @@ export type LiquidUnit = 'Gallon' | 'Quart' | 'Pint' | 'Fluid Ounce' | 'Millilit
 export type DryUnit = 'Pound' | 'Ounce' | 'Gram';
 
 // Bait/Solid/others (assuming 'others' implies general countable items)
-export type CountUnit = 'Count' | 'Trap' | 'Bait Station' | 'Unit'| 'tube' ;
+export type CountUnit = 'Count' | 'Trap' | 'Bait Station' | 'Unit';
 
 
 

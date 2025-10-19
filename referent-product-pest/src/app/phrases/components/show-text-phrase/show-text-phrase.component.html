@@ -3,7 +3,7 @@
   <mat-progress-spinner *ngIf="loading" diameter="36" mode="indeterminate"></mat-progress-spinner>
 
   @if (!loading && phrases.length) {
-        <div class="formulations">
+        <div >
           @for (f of phrases; track f.phrase ) {
         <mat-card (click)="selectPhrase(f)" class="clickable-card">
             <mat-card-content class="card-content">
@@ -18,7 +18,7 @@
           <br>
         }
 
-        <button mat-fab color="primary" class="add-btn" (click)="addNew()">
+        <button mat-fab color="primary" class="fab-container" (click)="addNew()">
           <mat-icon>add</mat-icon>
         </button>
       </div>

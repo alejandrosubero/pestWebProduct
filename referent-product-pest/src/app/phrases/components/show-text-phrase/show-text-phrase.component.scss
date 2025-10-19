@@ -35,67 +35,160 @@
 
 
 // .container { max-width: 900px; margin: 16px auto; padding: 8px; }
-.phrase-card { padding: 12px; margin: 8px 0; display:flex; justify-content:space-between; align-items:center; cursor:default; }
-.phrase-text { flex:1; white-space:pre-wrap; }
+// .phrase-card { padding: 12px; margin: 8px 0; display:flex; justify-content:space-between; align-items:center; cursor:default; }
+// .phrase-text { flex:1; white-space:pre-wrap; }
+// .empty { text-align:center; padding:24px; color: rgba(0,0,0,0.6); }
+
+
+// .formulations {
+//   padding: 1rem;
+// }
+
+// .add-btn {
+//   position: fixed;
+//   // bottom: 20px;
+//   top: 60px;
+//   right: 20px;
+// }
+
+
+// .clickable-card {
+//    padding: 1rem;
+//   cursor: pointer;
+//   transition: transform 0.2s;
+// }
+
+// .clickable-card:hover {
+//   transform: scale(1.02);
+// }
+
+// /* Agrega estas reglas a tu CSS existente */
+// .clickable-card mat-card-content {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   gap: 16px;
+//   margin: 0 !important; /* Elimina cualquier margen por defecto */
+//   padding: 0 !important; /* Elimina cualquier padding por defecto */
+// }
+
+// .clickable-card mat-card-content div:first-child {
+//   flex: 1;
+//   /* Opcional: para texto muy largo */
+//   white-space: nowrap;
+//   overflow: hidden;
+//   text-overflow: ellipsis;
+// }
+
+// .actions {
+//   flex-shrink: 0;
+// }
+
+// .card-content {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   gap: 16px;
+//   margin: 0;
+//   padding: 0;
+// }
+
+// .phrase-text {
+//   flex: 1;
+//   white-space: nowrap;
+//   overflow: hidden;
+//   text-overflow: ellipsis;
+// }
+
+
 .empty { text-align:center; padding:24px; color: rgba(0,0,0,0.6); }
 
-
-.formulations {
-  padding: 1rem;
-}
-
-.add-btn {
-  position: fixed;
-  // bottom: 20px;
-  top: 60px;
-  right: 20px;
-}
-
-
-.clickable-card {
-   padding: 1rem;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-
-.clickable-card:hover {
-  transform: scale(1.02);
-}
-
-/* Agrega estas reglas a tu CSS existente */
 .clickable-card mat-card-content {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start; /* Cambiado de center a flex-start para mejor alineación */
   gap: 16px;
-  margin: 0 !important; /* Elimina cualquier margen por defecto */
-  padding: 0 !important; /* Elimina cualquier padding por defecto */
-}
-
-.clickable-card mat-card-content div:first-child {
-  flex: 1;
-  /* Opcional: para texto muy largo */
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.actions {
-  flex-shrink: 0;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .card-content {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start; /* Alineación superior */
   gap: 16px;
   margin: 0;
   padding: 0;
+  width: 100%; /* Asegura uso completo del ancho */
 }
 
 .phrase-text {
   flex: 1;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  /* Elimina las propiedades de una sola línea */
+  white-space: normal; /* Cambiado de nowrap */
+  overflow: visible; /* Cambiado de hidden */
+  text-overflow: unset; /* Elimina el ellipsis */
+  /* Nuevas propiedades para control de líneas */
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Limita a 3 líneas */
+  -webkit-box-orient: vertical;
+  overflow: hidden; /* Vuelve a hidden pero para el límite de líneas */
+  line-height: 1.4; /* Mejor legibilidad */
+  max-height: 4.2em; /* 3 líneas * 1.4 line-height */
+  margin-left: 5px;
+}
+
+.actions {
+  flex-shrink: 0;
+  margin-top: 2px; /* Pequeño ajuste de alineación vertical */
+}
+
+// .add-btn {
+//   position: fixed;
+//   // bottom: 20px;
+//   top: 50px;
+//   right: 5px;
+//    display: flex;
+//   flex-direction: column-reverse;
+//   align-items: flex-end;
+//   z-index: 100;
+// }
+
+
+// .fr {
+//   padding: 1rem;
+// }
+
+
+.fab-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  display: flex;
+  // flex-direction: column-reverse;
+  // align-items: flex-end;
+  z-index: 100;
+
+  button {
+    margin-top: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .fab-action {
+    opacity: 1;
+    transform: translateY(0);
+    animation: slide-up 0.3s ease forwards;
+  }
+
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
