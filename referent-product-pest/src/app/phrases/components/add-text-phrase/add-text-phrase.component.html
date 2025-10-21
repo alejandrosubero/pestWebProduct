@@ -1,4 +1,5 @@
 <div class="container">
+ 
   <div class="content">
     <div class="sp">
    <mat-form-field appearance="outline" class="full">
@@ -6,12 +7,15 @@
       <textarea matInput [(ngModel)]="text" rows="6" cdkTextareaAutosize #autosize="cdkTextareaAutosize"></textarea>
     </mat-form-field>
     </div>
- 
+
+    <div class="meng">
+      <p>{{action}}</p>
+    </div>
 
     <div class="selectors">
-      <mat-slide-toggle class="blue-toggle" [(ngModel)]="isMensagge" (change)="onToggleChange('mensaje')">Message</mat-slide-toggle>
-      <mat-slide-toggle  class="blue-toggle" [(ngModel)]="isReport" (change)="onToggleChange('report')">Report</mat-slide-toggle>
-      <mat-slide-toggle   class="blue-toggle" [(ngModel)]="isOther" (change)="onToggleChange('other')">Other</mat-slide-toggle>
+      <mat-slide-toggle class="blue-toggle" [(ngModel)]="isMensagge" (change)="onToggleChange('mensaje')"></mat-slide-toggle>
+      <mat-slide-toggle  class="blue-toggle" [(ngModel)]="isReport" (change)="onToggleChange('report')"></mat-slide-toggle>
+      <mat-slide-toggle   class="blue-toggle" [(ngModel)]="isOther" (change)="onToggleChange('other')"></mat-slide-toggle>
     </div>
 
     <div class="actions">

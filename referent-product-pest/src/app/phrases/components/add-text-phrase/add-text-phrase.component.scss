@@ -3,6 +3,23 @@
   flex-direction: column;
 }
 
+// .meng {
+//    width: 100%;
+//    height: 40px;
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: center;
+//   flex-wrap: nowrap;
+//   align-items: center;
+//   font-size: large;
+//   font-weight: bold;
+//   background: #f8f4e9;
+//   border-radius: 12px;
+//   box-shadow:
+//     0 4px 12px rgba(0, 0, 0, 0.1),
+//     inset 0 2px 3px rgba(255, 255, 255, 0.7);
+// }
+
 .content {
   display: flex;
   flex-direction: column;
@@ -29,12 +46,12 @@
 
 .selectors {
   width: 100%;
-  height: 80px;
+  height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-  margin: 20px 0;
+  gap: 15px;
+  margin: 15px 0;
   background: #f8f4e9;
   border-radius: 12px;
   // padding: 10px;
@@ -152,4 +169,79 @@
   box-shadow:
     0 0 0 6px rgba(33, 150, 243, 0.15),
     2px 4px 8px rgba(0, 0, 0, 0.15) !important;
+}
+
+
+
+
+.meng {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  font-size: large;
+  font-weight: bold;
+  background: #f8f4e9;
+  border-radius: 12px;
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.1),
+    inset 0 2px 3px rgba(255, 255, 255, 0.7);
+  position: relative; /* Para el efecto de brillo */
+}
+
+.meng p {
+  margin: 0; /* Elimina márgenes por defecto del párrafo */
+  padding: 0; /* Elimina padding por defecto */
+  text-align: center; /* Centra el texto horizontalmente */
+  width: 100%; /* Ocupa todo el ancho disponible */
+  
+  /* Efecto de brillo/texto luminoso */
+  color: #5d4037; /* Color del texto */
+  text-shadow: 
+    0 0 5px rgba(255, 255, 255, 0.8),
+    0 0 10px rgba(255, 255, 255, 0.6),
+    0 0 15px rgba(255, 255, 255, 0.4),
+    0 0 20px rgba(33, 150, 243, 0.3); /* Brillo azul suave */
+  
+  /* Asegura que el texto esté centrado verticalmente */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* Ocupa toda la altura del contenedor */
+}
+
+/* Efecto de brillo adicional alrededor de toda la caja */
+.meng::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 14px; /* Un poco más que el contenedor principal */
+  background: linear-gradient(45deg, 
+    rgba(255,255,255,0.8) 0%, 
+    rgba(33,150,243,0.2) 50%, 
+    rgba(255,255,255,0.8) 100%);
+  z-index: -1;
+  opacity: 0.7;
+  filter: blur(3px);
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    opacity: 0.5;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.8),
+                0 0 10px rgba(33, 150, 243, 0.4);
+  }
+  to {
+    opacity: 0.8;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.9),
+                0 0 20px rgba(33, 150, 243, 0.6),
+                0 0 30px rgba(33, 150, 243, 0.4);
+  }
 }

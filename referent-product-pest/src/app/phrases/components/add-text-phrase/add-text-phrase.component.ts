@@ -47,8 +47,9 @@ export class AddTextPhraseComponent {
   title = "Add Phrase Text";
   phraseType = 3; 
   isMensagge = false;
-  isReport = false;
+  isReport = true;
   isOther = false;
+  action = 'Report';
 
   constructor(
     private db: DBService,
@@ -107,14 +108,17 @@ export class AddTextPhraseComponent {
       case 'mensaje':
           this.isMensagge = true;
           this.phraseType = 1;
+          this.action = 'Mensagge';
         break;
       case 'report':
           this.isReport = true;
           this.phraseType = 2;
+           this.action = 'Report';
         break;
       case 'other':
         this.isOther = true;
         this.phraseType = 3; 
+        this.action = 'Other'
         break;
     }
   }
