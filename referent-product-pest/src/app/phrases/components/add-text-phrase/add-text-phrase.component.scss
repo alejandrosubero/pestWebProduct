@@ -1,8 +1,155 @@
 .container {
-  max-width: 900px;
-  margin: 16px auto;
-  padding: 12px;
+  display: flex;
+  flex-direction: column;
 }
-.full { width: 100%; }
-.content { display: flex; flex-direction: column; gap: 12px; }
-.actions { display:flex; gap:12px; align-items:center;}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.full {
+  width: 100%;
+}
+
+.actions {
+  width: 100%;
+  margin-top: 2px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.sp {
+  margin-top: 8px;
+}
+
+.selectors {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+  background: #f8f4e9;
+  border-radius: 12px;
+  // padding: 10px;
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.1),
+    inset 0 2px 3px rgba(255, 255, 255, 0.7);
+}
+
+/* === Personalización para Angular Material 17 (MDC) === */
+.mat-mdc-slide-toggle {
+  --toggle-width: 56px;
+  --toggle-height: 32px;
+  --thumb-size: 24px;
+  --thumb-translate: calc(var(--toggle-width) - var(--thumb-size) - 4px);
+  font-weight: 500;
+  font-size: 14px;
+  color: #3b3b3b;
+  transition: transform 0.25s ease;
+}
+
+/* Hover leve */
+.mat-mdc-slide-toggle:hover {
+  transform: translateY(-3px);
+}
+
+/* contenedor principal del switch */
+.mat-mdc-slide-toggle .mdc-switch {
+  width: var(--toggle-width) !important;
+  height: var(--toggle-height) !important;
+}
+
+/* pista (track) */
+.mat-mdc-slide-toggle .mdc-switch__track {
+  background: #e0e0e0 !important;
+  border-radius: 9999px !important;
+  transition: background 0.3s ease;
+}
+
+/* thumb (botón circular) */
+.mat-mdc-slide-toggle .mdc-switch__handle {
+  width: var(--thumb-size) !important;
+  height: var(--thumb-size) !important;
+  background: linear-gradient(145deg, #ffffff, #f0f0f0) !important;
+  border: 1px solid #ccc !important;
+  box-shadow:
+    2px 2px 5px rgba(0, 0, 0, 0.2),
+    -2px -2px 3px rgba(255, 255, 255, 0.8) !important;
+  transition: transform 0.3s ease, background 0.3s ease;
+  position: relative;
+  border-radius: 50%;
+}
+
+/* movimiento al activar */
+.mat-mdc-slide-toggle.mdc-switch--selected .mdc-switch__handle-track {
+  transform: translateX(var(--thumb-translate)) !important;
+}
+
+/* color activo (azul) */
+.mat-mdc-slide-toggle.mdc-switch--selected .mdc-switch__track {
+  background: linear-gradient(145deg, #2b7ef3, #1b66d6) !important;
+}
+
+/* color del thumb activo */
+.mat-mdc-slide-toggle.mdc-switch--selected .mdc-switch__handle {
+  background: linear-gradient(145deg, #ffffff, #e3f2fd) !important;
+  border-color: #90caf9 !important;
+}
+
+/* check dentro del thumb */
+.mat-mdc-slide-toggle .mdc-switch__handle::after {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  font-size: 14px;
+  color: #1b5fb8;
+  transition: transform 0.25s ease;
+}
+
+/* mostrar el check cuando está activo */
+.mat-mdc-slide-toggle.mdc-switch--selected .mdc-switch__handle::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* efecto de pulso al activar */
+.mat-mdc-slide-toggle.mdc-switch--selected .mdc-switch__track {
+  animation: bluePulse 0.6s ease;
+}
+
+@keyframes bluePulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(33, 150, 243, 0.3);
+  }
+
+  70% {
+    box-shadow: 0 0 0 12px rgba(33, 150, 243, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(33, 150, 243, 0);
+  }
+}
+
+/* texto al lado del toggle */
+.mat-mdc-slide-toggle .mdc-label {
+  font-weight: 600 !important;
+  font-size: 15px !important;
+  color: #3b3b3b !important;
+  margin-left: 10px !important;
+}
+
+/* foco accesible (cuando se navega con teclado) */
+.mat-mdc-slide-toggle.mdc-switch--focused .mdc-switch__handle {
+  box-shadow:
+    0 0 0 6px rgba(33, 150, 243, 0.15),
+    2px 4px 8px rgba(0, 0, 0, 0.15) !important;
+}

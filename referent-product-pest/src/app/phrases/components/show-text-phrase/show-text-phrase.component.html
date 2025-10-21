@@ -1,30 +1,89 @@
-
-<div class="list-container">
-  <mat-progress-spinner *ngIf="loading" diameter="36" mode="indeterminate"></mat-progress-spinner>
-
-  @if (!loading && phrases.length) {
-        <div >
-          @for (f of phrases; track f.phrase ) {
+<mat-tab-group>
+  <mat-tab label="Mensagge">
+    <div class="list-container">
+      <mat-progress-spinner *ngIf="loading" diameter="36" mode="indeterminate"></mat-progress-spinner>
+      @if (!loading && phrasesMensagge.length) {
+      <div>
+        @for (f of phrasesMensagge; track f.phrase ) {
         <mat-card (click)="selectPhrase(f)" class="clickable-card">
-            <mat-card-content class="card-content">
-              <div class="phrase-text">{{ f.phrase }}</div>
-              <div class="actions"> 
-                <button mat-icon-button appLongPress (appLongPress)="deletePhrase(f)" aria-label="Eliminar">
-                  <mat-icon style="color: brown;">delete</mat-icon>
-                </button>
-              </div>
-            </mat-card-content>
-          </mat-card>
-          <br>
+          <mat-card-content class="card-content">
+            <div class="phrase-text">{{ f.phrase }}</div>
+            <div class="actions">
+              <button mat-icon-button appLongPress (appLongPress)="deletePhrase(f)" aria-label="Eliminar">
+                <mat-icon style="color: brown;">delete</mat-icon>
+              </button>
+            </div>
+          </mat-card-content>
+        </mat-card>
+        <br>
         }
-
-        <button mat-fab color="primary" class="fab-container" (click)="addNew()">
-          <mat-icon>add</mat-icon>
-        </button>
       </div>
-  }
-  
-  <div *ngIf="!loading && phrases.length === 0" class="empty">
-   No phrases
-  </div>
+      }
+      <div *ngIf="!loading && phrases.length === 0" class="empty">
+        No phrases
+      </div>
+    </div>
+  </mat-tab>
+
+  <mat-tab label="Report">
+    <div class="list-container">
+      <mat-progress-spinner *ngIf="loading" diameter="36" mode="indeterminate"></mat-progress-spinner>
+
+      @if (!loading && phrasesReport.length) {
+      <div>
+        @for (f of phrasesReport; track f.phrase ) {
+        <mat-card (click)="selectPhrase(f)" class="clickable-card">
+          <mat-card-content class="card-content">
+            <div class="phrase-text">{{ f.phrase }}</div>
+            <div class="actions">
+              <button mat-icon-button appLongPress (appLongPress)="deletePhrase(f)" aria-label="Eliminar">
+                <mat-icon style="color: brown;">delete</mat-icon>
+              </button>
+            </div>
+          </mat-card-content>
+        </mat-card>
+        <br>
+        }
+      </div>
+      }
+      <div *ngIf="!loading && phrases.length === 0" class="empty">
+        No phrases
+      </div>
+    </div>
+  </mat-tab>
+
+  <mat-tab label="Other">
+    <div class="list-container">
+      <mat-progress-spinner *ngIf="loading" diameter="36" mode="indeterminate"></mat-progress-spinner>
+
+      @if (!loading && phrasesOther.length) {
+      <div>
+        @for (f of phrasesOther; track f.phrase ) {
+        <mat-card (click)="selectPhrase(f)" class="clickable-card">
+          <mat-card-content class="card-content">
+            <div class="phrase-text">{{ f.phrase }}</div>
+            <div class="actions">
+              <button mat-icon-button appLongPress (appLongPress)="deletePhrase(f)" aria-label="Eliminar">
+                <mat-icon style="color: brown;">delete</mat-icon>
+              </button>
+            </div>
+          </mat-card-content>
+        </mat-card>
+        <br>
+        }
+      </div>
+      }
+
+      <div *ngIf="!loading && phrases.length === 0" class="empty">
+        No phrases
+      </div>
+    </div>
+  </mat-tab>
+</mat-tab-group>
+
+
+<div>
+  <button mat-fab color="primary" class="fab-container" (click)="addNew()">
+    <mat-icon>add</mat-icon>
+  </button>
 </div>

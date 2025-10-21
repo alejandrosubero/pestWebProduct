@@ -1,11 +1,11 @@
 import { DBService } from '../../../services/db.service';
 import { Phrase } from '../../../models/interfaces';
-import { Component, inject } from '@angular/core';
+import { Component, inject, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
@@ -16,6 +16,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { TextFieldModule } from '@angular/cdk/text-field';
 import { NavService } from '../../../services/nav.service';
 import { NavConfig } from '../../../models/navElemet.model';
+import {FormBuilder, FormGroup, Validators, FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { MatSlideToggleModule, _MatSlideToggleRequiredValidatorModule,} from '@angular/material/slide-toggle';
 
 @Component({
   selector: 'app-add-text-phrase',
@@ -30,17 +32,24 @@ import { NavConfig } from '../../../models/navElemet.model';
     MatCardModule,
     MatIconModule,
     MatToolbarModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatSlideToggleModule
   ],
   templateUrl: './add-text-phrase.component.html',
-  styleUrls: ['./add-text-phrase.component.scss']
+  styleUrls: ['./add-text-phrase.component.scss'],
+  // encapsulation: ViewEncapsulation.None
+
 })
 export class AddTextPhraseComponent {
   text = '';
   saving = false;
   private navService = inject(NavService);
   title = "Add Phrase Text";
-  
+  phraseType = 3; 
+  isMensagge = false;
+  isReport = false;
+  isOther = false;
+
   constructor(
     private db: DBService,
     private router: Router,
@@ -57,7 +66,7 @@ export class AddTextPhraseComponent {
     }
     
     this.saving = true;
-    const p: Phrase = { phrase: trimmed, isComplete: false };
+    const p: Phrase = { phrase: trimmed, isComplete: false, type:this.phraseType };
 
     try {
       await this.db.addPhrase(p);
@@ -86,4 +95,30 @@ export class AddTextPhraseComponent {
     navConfig.goto = 'app/phrase/show/text';
     this.navService.setNavConfig(navConfig);
     }
+
+
+  onToggleChange(activeToggle: string) {
+   
+    this.isMensagge = false;
+    this.isReport = false;
+    this.isOther = false;
+
+    switch (activeToggle) {
+      case 'mensaje':
+          this.isMensagge = true;
+          this.phraseType = 1;
+        break;
+      case 'report':
+          this.isReport = true;
+          this.phraseType = 2;
+        break;
+      case 'other':
+        this.isOther = true;
+        this.phraseType = 3; 
+        break;
+    }
+  }
+
 }
+
+

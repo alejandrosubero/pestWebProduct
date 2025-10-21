@@ -17,6 +17,7 @@ import { LongPressDirective } from '../../../directives/long-press.directive';
 import { ConfirmDialogComponent } from '../../../pages/share/confirm-dialog/confirm-dialog.component';
 import { MatDialog } from '@angular/material/dialog';
 import { firstValueFrom } from 'rxjs';
+import {MatTabsModule} from '@angular/material/tabs';
 
 @Component({
   selector: 'app-show-text-phrase',
@@ -29,13 +30,18 @@ import { firstValueFrom } from 'rxjs';
     MatButtonModule,
     MatToolbarModule,
     MatProgressSpinnerModule,
-    LongPressDirective
+    LongPressDirective,
+    MatTabsModule
   ],
   templateUrl: './show-text-phrase.component.html',
   styleUrls: ['./show-text-phrase.component.scss']
 })
 export class ShowTextPhraseComponent implements OnInit {
   phrases: Phrase[] = [];
+  phrasesMensagge : Phrase[] = [];
+  phrasesReport : Phrase[] = [];
+  phrasesOther: Phrase[] = [];
+
   loading = false;
   private navService = inject(NavService);
   title = "list of Phrase";
@@ -61,6 +67,11 @@ export class ShowTextPhraseComponent implements OnInit {
     try {
       const all = await this.db.getAllPhrase();
       this.phrases = (all ?? []).filter(p => p.isComplete === false);
+      if(this.phrases.length > 0){
+          this.phrasesMensagge =  (this.phrases ?? []).filter(p => p.type === 1);
+          this.phrasesReport =  (this.phrases ?? []).filter(p => p.type === 2);
+          this.phrasesOther =  (this.phrases ?? []).filter(p => p.type === 3);
+      }
     } catch (err) {
       console.error(err);
       this.snack.open('Error to load phrases', 'close', { duration: 2000 });
@@ -122,3 +133,5 @@ async confirmDelete(): Promise<boolean> {
         this.router.navigate(['/app/phrase/add/text']);
       }
 }
+
+

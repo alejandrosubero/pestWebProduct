@@ -51,86 +51,77 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   }
 }
 
-// /* You can add global styles to this file, and also import other style files */
+/* === Override global para mat-slide-toggle (MDC) === */
 
-// @use '@angular/material' as mat;
+/* OFF state (sin seleccionar) */
+.mat-mdc-slide-toggle:not(.mdc-switch--selected) {
+  --mdc-switch-unselected-track-color: #e0e0e0;
+  --mdc-switch-unselected-handle-color: #ffffff;
+}
 
-// // Define your custom theme
-// $my-app-primary: mat.define-palette(mat.$indigo-palette); // Or your chosen primary palette
-// $my-app-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400); // Your accent palette
-// $my-app-warn: mat.define-palette(mat.$red-palette); // Always good to define a warn palette
+/* ON state (seleccionado) */
+.mat-mdc-slide-toggle.mdc-switch--selected {
+  --mdc-switch-selected-track-color: #1b66d6; /* azul principal */
+  --mdc-switch-selected-hover-track-color: #2b7ef3;
+  --mdc-switch-selected-focus-track-color: #2b7ef3;
+  --mdc-switch-selected-pressed-track-color: #1b66d6;
 
-// // --- ADD THESE LINES TO APPLY THE ANGULAR MATERIAL THEME ---
+  --mdc-switch-selected-handle-color: #ffffff;
+  --mdc-switch-selected-hover-handle-color: #ffffff;
+  --mdc-switch-selected-focus-handle-color: #ffffff;
+  --mdc-switch-selected-pressed-handle-color: #ffffff;
+}
 
-// // 1. Include the common styles for Angular Material components.
-// //    This includes things like typography, density, and the base structural styles.
-// @include mat.core();
+/* Opcional: agrandar el tamaño para estilo iOS */
+.mat-mdc-slide-toggle {
+  --mdc-switch-track-width: 52px;
+  --mdc-switch-track-height: 30px;
+  --mdc-switch-handle-size: 22px;
+  --mdc-switch-track-shape: 9999px;
+  --mdc-switch-handle-shape: 50%;
+  transition: all 0.25s ease-in-out;
+}
 
-// // 2. Define your application's theme object.
-// //    This combines your primary, accent, and warn palettes.
-// $my-app-theme: mat.define-light-theme((
-//   color: (
-//     primary: $my-app-primary,
-//     accent: $my-app-accent,
-//     warn: $my-app-warn,
-//   ),
-//   // Optional: Define typography if you have custom fonts or sizes
-//   typography: mat.define-typography-config(),
-//   // Optional: Adjust density for a more compact or spacious UI
-//   density: 0, // Default density
-// ));
+/* === Estilos personalizados solo para .blue-toggle === */
+.blue-toggle {
+  --mdc-switch-track-width: 52px;
+  --mdc-switch-track-height: 30px;
+  --mdc-switch-handle-size: 22px;
+  --mdc-switch-track-shape: 9999px;
+  --mdc-switch-handle-shape: 50%;
+  transition: all 0.25s ease-in-out;
 
-// // 3. Apply the theme to all Angular Material components.
-// //    This is the critical step that generates the actual CSS classes
-// //    for all Material components based on your defined theme.
-// @include mat.all-component-themes($my-app-theme);
+  /* Estado apagado */
+  --mdc-switch-unselected-track-color: #e0e0e0;
+  --mdc-switch-unselected-hover-track-color: #d5d5d5;
+  --mdc-switch-unselected-focus-track-color: #d5d5d5;
+  --mdc-switch-unselected-pressed-track-color: #cfcfcf;
 
-// // --- END OF ANGULAR MATERIAL THEME INCLUSION ---
+  --mdc-switch-unselected-handle-color: #ffffff;
+  --mdc-switch-unselected-hover-handle-color: #ffffff;
+  --mdc-switch-unselected-focus-handle-color: #ffffff;
+  --mdc-switch-unselected-pressed-handle-color: #ffffff;
 
+  /* Estado encendido — tu azul personalizado */
+  --mdc-switch-selected-track-color: #1b66d6 !important;
+  --mdc-switch-selected-hover-track-color: #2b7ef3 !important;
+  --mdc-switch-selected-focus-track-color: #2b7ef3 !important;
+  --mdc-switch-selected-pressed-track-color: #1b66d6 !important;
 
-// html, body { height: 100%; }
-// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+  --mdc-switch-selected-handle-color: #ffffff !important;
+  --mdc-switch-selected-hover-handle-color: #ffffff !important;
+  --mdc-switch-selected-focus-handle-color: #ffffff !important;
+  --mdc-switch-selected-pressed-handle-color: #ffffff !important;
+}
 
-// // Keep global styles that don't belong inside a component here
-// .mobile-toolbar {
-//   height: 56px; // Standard mobile toolbar height
-//   box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14),
-//     0 1px 10px 0 rgba(0, 0, 0, 0.12); // Subtle shadow
-//   z-index: 10; // Ensure it stays above content
-//   .mat-icon {
-//     font-size: 24px;
-//     height: 24px;
-//     width: 24px;
-//   }
-// }
+/* Pequeño efecto visual tipo iOS */
+.blue-toggle.mdc-switch--selected .mdc-switch__track {
+  background: linear-gradient(145deg, #2b7ef3, #1b66d6) !important;
+}
 
-
-
-
-
-
-// /* You can add global styles to this file, and also import other style files */
-// // @use "@material/icon-button";
-// // @include icon-button.core-styles;
-
-// @use '@angular/material' as mat;
-
-// // Define your custom theme
-// $my-app-primary: mat.define-palette(mat.$indigo-palette); // Or your chosen primary palette
-// $my-app-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400); // Your accent palette
+.blue-toggle.mdc-switch--selected .mdc-switch__handle {
+  box-shadow: 0 0 4px rgba(33, 150, 243, 0.6) !important;
+  transition: all 0.3s ease;
+}
 
 
-// html, body { height: 100%; }
-// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-// .mobile-toolbar {
-//   height: 56px; // Standard mobile toolbar height
-//   box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14),
-//     0 1px 10px 0 rgba(0, 0, 0, 0.12); // Subtle shadow
-//   z-index: 10; // Ensure it stays above content
-//   .mat-icon {
-//     font-size: 24px;
-//     height: 24px;
-//     width: 24px;
-//   }
-// }

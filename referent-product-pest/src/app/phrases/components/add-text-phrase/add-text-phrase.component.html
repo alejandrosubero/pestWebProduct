@@ -1,11 +1,18 @@
-<mat-card class="container">
-  <mat-toolbar color="primary">Agregar frase</mat-toolbar>
-
+<div class="container">
   <div class="content">
-    <mat-form-field appearance="outline" class="full">
+    <div class="sp">
+   <mat-form-field appearance="outline" class="full">
       <mat-label>Frase</mat-label>
       <textarea matInput [(ngModel)]="text" rows="6" cdkTextareaAutosize #autosize="cdkTextareaAutosize"></textarea>
     </mat-form-field>
+    </div>
+ 
+
+    <div class="selectors">
+      <mat-slide-toggle class="blue-toggle" [(ngModel)]="isMensagge" (change)="onToggleChange('mensaje')">Message</mat-slide-toggle>
+      <mat-slide-toggle  class="blue-toggle" [(ngModel)]="isReport" (change)="onToggleChange('report')">Report</mat-slide-toggle>
+      <mat-slide-toggle   class="blue-toggle" [(ngModel)]="isOther" (change)="onToggleChange('other')">Other</mat-slide-toggle>
+    </div>
 
     <div class="actions">
       <button mat-raised-button color="primary" (click)="save()" [disabled]="saving">
@@ -13,7 +20,11 @@
       </button>
       <button  mat-raised-button color="primary" (click)="text=''">Limpiar</button>
     </div>
-  </div>
-
+</div>
   <mat-progress-spinner *ngIf="saving" mode="indeterminate" diameter="36"></mat-progress-spinner>
-</mat-card>
+</div>
+
+
+ 
+    
+ 

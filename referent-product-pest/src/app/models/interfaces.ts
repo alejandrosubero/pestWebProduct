@@ -78,6 +78,7 @@ export interface Phrase{
   id?:number;
   phrase:string;
   isComplete:boolean;
+  type: number;
 }
 
 

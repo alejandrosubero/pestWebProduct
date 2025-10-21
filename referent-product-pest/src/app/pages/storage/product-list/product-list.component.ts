@@ -8,7 +8,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCardModule } from '@angular/material/card';
 import { FormsModule } from '@angular/forms'; // For ngModel
 import { ProductStoreService } from '../../../services/product-store.service';
-import { PackageStatus } from '../../../models/interfaces';
+import { IProduct, PackageStatus } from '../../../models/interfaces';
 import { NavegateService } from '../../../services/navegate.service';
 import { Router } from '@angular/router';
 import { PestData } from '../../../models/pestdata.model';
@@ -46,7 +46,11 @@ export class ProductListComponent implements OnInit{
     this.setNav();
   }
 
- ngOnInit() { }
+ ngOnInit() { 
+
+  let productPrint: IProduct[] = this.products;
+  console.log('list:',productPrint);
+ }
 
   get products() {
         const produtsList = this.store.filteredProducts();
@@ -74,11 +78,11 @@ clearSearch(): void {
 }
 
 
-  async deleteProduct(id: number) {
-    if (confirm('¿Do ypu whant Delete this Product?')) {
-      await this.store.delete(id);
-    }
+async deleteProduct(id: number) {
+  if (confirm('¿Do ypu whant Delete this Product?')) {
+    await this.store.delete(id);
   }
+}
 
   statusClass(status: string): string {
     return status.replace(/\s/g, '');

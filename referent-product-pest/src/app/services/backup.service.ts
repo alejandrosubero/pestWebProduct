@@ -19,6 +19,7 @@ export class BackupService {
       usageRecords: await this.databaseService.db.usageRecords.toArray(),
       formulations: await this.databaseService.db.formulations.toArray(),
       legacyProducts: await this.databaseService.db.legacyProducts.toArray(),
+      phrases: await this.databaseService.db.phrase.toArray(),
     };
   }
 
@@ -59,6 +60,12 @@ export class BackupService {
       for (const lp of json.legacyProducts) {
         delete lp.id;
         await this.databaseService.db.legacyProducts.add(lp);
+      }
+    }
+        if (json.phrases) {
+      for (const lp of json.phrases) {
+        delete lp.id;
+        await this.databaseService.db.phrase.add(lp);
       }
     }
   }

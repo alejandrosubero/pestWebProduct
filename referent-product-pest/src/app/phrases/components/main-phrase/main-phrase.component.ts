@@ -100,7 +100,7 @@ export class MainPhraseComponent implements OnInit{
       return;
     }
     try {
-      const p: Phrase = { phrase: trimmed, isComplete: true };
+      const p: Phrase = { phrase: trimmed, isComplete: true, type: 0};
       await this.db.addPhrase(p);
       this.snack.open('Saved as a complete sentence', 'OK', { duration: 1500 });
     } catch (err) {
