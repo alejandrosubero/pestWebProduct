@@ -16,6 +16,7 @@ import { NavService } from '../../../services/nav.service';
 import { NavConfig } from '../../../models/navElemet.model';
 import { DomSanitizer } from '@angular/platform-browser';
 
+
 @Component({
   selector: 'app-layout',
   standalone: true,
@@ -26,7 +27,8 @@ import { DomSanitizer } from '@angular/platform-browser';
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    RouterOutlet
   ],
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.scss'
@@ -58,10 +60,11 @@ export class LayoutComponent  implements OnInit {
 
   ngOnInit(): void {}
 
- // ======= isHandset =============== //
-  getAnimationState(outlet: RouterOutlet) {
-    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
-  }
+//  // ======= isHandset =============== //
+//   getAnimationState(outlet: RouterOutlet) {
+//     return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
+//   }
+
   isHandset$: Observable<boolean> = this.breakpointObserver.observe([
     Breakpoints.Handset,
     Breakpoints.Small,

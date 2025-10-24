@@ -125,3 +125,38 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 
 
+// Variables (opcional, para personalizar)
+$navbar-padding-y: 0.5rem;
+$navbar-bg: #f8f9fa;
+$fixed-z-index: 1030;
+
+// Clase .navbar con anidamiento
+.navbar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: $navbar-padding-y 1rem;
+  background-color: $navbar-bg;
+
+  // Modificador .fixed-top
+  &.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: $fixed-z-index;
+  }
+
+  // Otros elementos/anidamientos comunes en navbar
+  .navbar-brand {
+    font-size: 1.25rem;
+    // ... más estilos
+  }
+
+  .navbar-nav {
+    display: flex;
+    // ... más estilos
+  }
+}

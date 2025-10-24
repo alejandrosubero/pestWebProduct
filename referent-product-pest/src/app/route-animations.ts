@@ -10,13 +10,16 @@ import {
 export const slideInAnimation = trigger('routeAnimations', [
   transition('* <=> *', [
     style({ position: 'relative' }),
-
-
     query(':enter, :leave', [
       style({
+        // position: 'absolute',
+        // width: '100%',
+        // opacity: 0,
         position: 'absolute',
+        top: 0,
+        left: 0,
         width: '100%',
-        opacity: 0,
+        height: '100%'
       }),
     ], { optional: true }),
 

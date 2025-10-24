@@ -36,7 +36,6 @@
           <p>logout</p>
         </div>
 
-        
       </div>
     </mat-nav-list>
 
@@ -46,7 +45,9 @@
   <mat-sidenav-content>
     <!-- Header -->
     <header>
-      <mat-toolbar color="primary" class="toolbar mobile-toolbar" role="banner">
+      <!-- <mat-toolbar color="primary" class="toolbar mobile-toolbar" role="banner"> -->
+     
+      <mat-toolbar color="primary"  class="navbar fixed-top"role="banner">
         @if (navConfig().ico.menu) {
         <button mat-icon-button (click)="sidenav.toggle()" aria-label="Alternar menú" aria-controls="main-menu"
           [attr.aria-expanded]="sidenav.opened">
@@ -94,8 +95,11 @@
 
     <!-- Main Content -->
     <main class="content" role="main">
+      <br>
+      <br>
     <router-outlet></router-outlet> 
     </main>
+
 
     <!-- Footer -->
     <footer class="footer" role="contentinfo">
