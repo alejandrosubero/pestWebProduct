@@ -250,6 +250,66 @@
   }
 }
 
+.list-container {
+  margin-top: 30px;
+}
+
+
+// =============== new buton ===================
+
+
+/* --- Estilos base y visuales --- */
+.buto {
+  margin-top: 5px;
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-bottom: 10px;
+  background-color: #3f51b5; /* Azul primario de Angular */
+  color: white;
+  padding: 0.8rem 1.2rem;
+  border: 1px solid #303f9f;
+  border-radius: 8px;
+  cursor: pointer;
+  
+  /* --- La Magia del 3D --- */
+  box-shadow: 0px 4px 0px 0px #303f9f; /* Sombra más oscura para el efecto 3D */
+  
+  /* --- Preparación para la animación --- */
+  transition: transform 0.07s ease-in-out, box-shadow 0.07s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+/* --- Estado Hover (cuando el mouse está encima) --- */
+.buto:hover {
+  background-color: #303f9f; /* Un azul ligeramente más oscuro */
+}
+
+/* --- Estado Active (MIENTRAS se hace clic) --- */
+.buto:active {
+  transform: translateY(4px);
+  box-shadow: 0px 0px 0px 0px #303f9f;
+  background-color: #303f9f;
+}
+
+/* No olvides quitar el margen por defecto del párrafo */
+.buto p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.boxButton {
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 10px;
+  border-radius: 0px;
+  background: linear-gradient(225deg, #42a5f5, #90caf9); /* Degradado azul de Angular */
+  box-shadow: -9px 9px 16px #303f9f, /* Sombra azul más oscura para el neomorfismo */
+              9px -9px 16px #6a82fb; /* Sombra azul más clara para el neomorfismo */
+}
 
 // =============== buton ===================
 
@@ -317,59 +377,3 @@
 // box-shadow:  -9px 9px 16px #b3b3b3,
 //              9px -9px 16px #ffffff;
 // }
-
-// =============== new buton ===================
-
-
-/* --- Estilos base y visuales --- */
-.buto {
-  margin-top: 5px;
-  margin-left: 8px;
-  margin-right: 8px;
-  margin-bottom: 10px;
-  background-color: #3f51b5; /* Azul primario de Angular */
-  color: white;
-  padding: 0.8rem 1.2rem;
-  border: 1px solid #303f9f;
-  border-radius: 8px;
-  cursor: pointer;
-  
-  /* --- La Magia del 3D --- */
-  box-shadow: 0px 4px 0px 0px #303f9f; /* Sombra más oscura para el efecto 3D */
-  
-  /* --- Preparación para la animación --- */
-  transition: transform 0.07s ease-in-out, box-shadow 0.07s ease-in-out;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  user-select: none;
-}
-
-/* --- Estado Hover (cuando el mouse está encima) --- */
-.buto:hover {
-  background-color: #303f9f; /* Un azul ligeramente más oscuro */
-}
-
-/* --- Estado Active (MIENTRAS se hace clic) --- */
-.buto:active {
-  transform: translateY(4px);
-  box-shadow: 0px 0px 0px 0px #303f9f;
-  background-color: #303f9f;
-}
-
-/* No olvides quitar el margen por defecto del párrafo */
-.buto p {
-  margin: 0;
-  font-weight: bold;
-}
-
-.boxButton {
-  padding-top: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
-  padding-bottom: 10px;
-  border-radius: 0px;
-  background: linear-gradient(225deg, #42a5f5, #90caf9); /* Degradado azul de Angular */
-  box-shadow: -9px 9px 16px #303f9f, /* Sombra azul más oscura para el neomorfismo */
-              9px -9px 16px #6a82fb; /* Sombra azul más clara para el neomorfismo */
-}

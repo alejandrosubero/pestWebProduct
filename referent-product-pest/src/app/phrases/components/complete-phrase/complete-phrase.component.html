@@ -1,4 +1,4 @@
-
+<div class="container">
   <mat-progress-spinner *ngIf="loading" diameter="36" mode="indeterminate"></mat-progress-spinner>
 
   @if (!loading && phrases.length) {
@@ -19,3 +19,4 @@
      <div *ngIf="!loading && phrases.length === 0" class="empty">There are no complete sentences.</div>
       </div>
   }
+</div>
