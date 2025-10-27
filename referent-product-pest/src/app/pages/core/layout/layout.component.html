@@ -46,7 +46,7 @@
     <header>
       <!-- <mat-toolbar color="primary" class="toolbar mobile-toolbar" role="banner"> -->
      
-      <mat-toolbar color="primary"  class="navbar fixed-top"role="banner">
+      <mat-toolbar color="primary"  class="navbar fixed-top" role="banner">
         @if (navConfig().ico.menu) {
         <button mat-icon-button (click)="sidenav.toggle()" aria-label="Alternar menú" aria-controls="main-menu"
           [attr.aria-expanded]="sidenav.opened">
@@ -61,7 +61,7 @@
         <a class="toolbar-title" routerLink="/home" aria-label="Ir al inicio">
           <h1>{{navConfig().title}}</h1>
         </a>
-        <span class="spacer" aria-hidden="true"></span>
+        <!-- <span class="spacer" aria-hidden="true"></span> -->
         <nav aria-label="Navegación principal">
           @if (navConfig().ico.sds) {
             <a mat-icon-button (click)="viewSdS()" aria-label="Download Pdf sds"> <mat-icon svgIcon="sds"></mat-icon> </a>
@@ -93,7 +93,7 @@
     </header>
 
     <!-- Main Content -->
-    <main class="content" role="main">
+    <main class="contentMain" role="main">
       <br>
       <br>
     <router-outlet></router-outlet> 

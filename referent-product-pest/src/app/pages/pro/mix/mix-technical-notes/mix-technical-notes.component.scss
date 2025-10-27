@@ -1,4 +1,4 @@
-.container {
+.containermix {
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -9,15 +9,15 @@
   width: 100%;
 }
 
-.toolbar {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
+// .toolbar {
+//   position: sticky;
+//   top: 0;
+//   z-index: 1000;
+// }
 
-.spacer {
-  flex: 1 1 auto;
-}
+// .spacer {
+//   flex: 1 1 auto;
+// }
 
 .analysis-card {
   background: #fff;

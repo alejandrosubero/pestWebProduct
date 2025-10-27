@@ -83,6 +83,7 @@ export class ProductDetailComponent implements OnInit {
         this.toggleFavorite();
       }
     });
+     this.setNav(); 
   }
 
  
@@ -152,7 +153,7 @@ export class ProductDetailComponent implements OnInit {
     }else{
     this.isFav = this.favService.isFavorite(this.id);
     }
-     this.setNav(); 
+    
   }
 
 
