@@ -10,7 +10,7 @@ $grey: mat.define-palette(mat.$grey-palette);
 :host {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  // height: 100vh;
   background-color: #f0f2f5;
   font-family: 'Inter', sans-serif;
   overflow: hidden;

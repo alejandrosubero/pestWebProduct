@@ -11,11 +11,52 @@
   --border-radius: 4px;
 }
 
+
+// mat-sidenav-container,
+// mat-sidenav-content {
+//   display: flex;
+//   flex-direction: column;
+//   height: 100dvh; // usa la altura real del viewport dinámico (iOS 15.4+)
+//   min-height: 100dvh;
+// }
+
+
 .sidenav-container {
-  height: 100vh;
   display: flex;
   flex-direction: column;
+  min-height: 100vh; // altura mínima total
 }
+
+mat-sidenav-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background-color: var(--background-light);
+}
+
+/* Compatibilidad para navegadores antiguos */
+@supports not (height: 100dvh) {
+  mat-sidenav-container,
+  mat-sidenav-content {
+    height: 100vh;
+    min-height: 100vh;
+  }
+}
+
+// .sidenav-container {
+//    display: flex;
+//   flex-direction: column;
+//   min-height: 100vh;
+// }
+
+// mat-sidenav-container {
+//   height: 100vh;
+// }
+
+header.navbar {
+  flex: 0 0 auto;
+}
+
 
 .sidenav {
   width: 280px;
@@ -27,7 +68,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 12px;
+  padding: 8px;
   color: var(--text-color);
   text-decoration: none;
   transition: all 0.3s ease;
@@ -50,11 +91,10 @@
 
 /* Toolbar Styles */
 .toolbar {
-  position: sticky;
   top: 0;
   z-index: 1000;
   box-shadow: var(--shadow);
-  padding: 0 10px;
+  // padding: 0 5px;
 }
 
 
@@ -96,15 +136,21 @@
 }
 
 /* Main Content */
-.contentMain {
-  min-height: calc(100vh - 160px);
-  padding: 24px;
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
-  box-sizing: border-box;
-    position: relative; // Importante para animaciones
-}
+// .contentMain {
+//   flex: 1 1 auto; // ocupa todo el espacio restante
+//   padding: 16px 24px;
+//   box-sizing: border-box;
+//   max-width: 1200px;
+//   margin: 0 auto;
+// }
+
+// .contentMain {
+//   flex: 1 1 auto;
+//   width: 100%;
+//   box-sizing: border-box;
+//   padding: 16px 24px;
+//   background-color: var(--background-light);
+// }
 
 // Para las animaciones de ruta
 .route-animation {
@@ -115,17 +161,34 @@
 
 
 
-
-
-
-
-
 /* Footer Styles */
+// .footer {
+//   flex: 0 0 auto; // no se estira, se pega al final
+//   background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 100%);
+//   color: white;
+//   padding: 20px 0;
+//   text-align: center;
+// }
+
+// .footer {
+//   flex: 0 0 auto;
+//   background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 100%);
+//   color: white;
+//   padding: 20px 0;
+//   text-align: center;
+//   margin-top: auto;
+// }
+
 .footer {
+  flex-shrink: 0;
+  margin-top: auto;
   background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 100%);
   color: white;
-  padding: 40px 0 20px;
-  margin-top: auto;
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative; // no fixed
 }
 
 .footer-content {
@@ -167,8 +230,6 @@
 
 .footer-bottom {
   text-align: center;
-  padding-top: 24px;
-  margin-top: 24px;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -244,6 +305,15 @@
     padding-right: env(safe-area-inset-right);
   }
 }
+
+/* Ajuste para safe area (iPhones con notch) */
+@supports (padding: env(safe-area-inset-bottom)) {
+  .footer {
+    padding-bottom: calc(20px + env(safe-area-inset-bottom));
+  }
+}
+
+
 
 /* High contrast mode support */
 @media (prefers-contrast: high) {

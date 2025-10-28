@@ -2,8 +2,16 @@
 
 <mat-sidenav-container class="sidenav-container" fullscreen>
   <!-- Sidebar -->
-  <mat-sidenav #sidenav  mode="over" [opened]="false" [fixedInViewport]="isHandset$ | async"
-              fixedTopGap="56" class="sidenav" role="navigation" aria-label="Menú principal">
+  <mat-sidenav 
+              #sidenav  
+              mode="over" 
+              [opened]="false" 
+              [fixedInViewport]="isHandset$ | async"
+              fixedTopGap="56" 
+              class="sidenav" 
+              role="navigation" 
+              aria-label="Menú principal">
+
     <mat-nav-list>
       <div>
         <div class="buto" (click)="goHome(sidenav)">
@@ -43,50 +51,55 @@
   <!-- Main Content -->
   <mat-sidenav-content>
     <!-- Header -->
-    <header>
-      <!-- <mat-toolbar color="primary" class="toolbar mobile-toolbar" role="banner"> -->
-     
+    <header>  
       <mat-toolbar color="primary"  class="navbar fixed-top" role="banner">
-        @if (navConfig().ico.menu) {
+
+      @if (navConfig().ico.menu) {
         <button mat-icon-button (click)="sidenav.toggle()" aria-label="Alternar menú" aria-controls="main-menu"
           [attr.aria-expanded]="sidenav.opened">
           <mat-icon aria-hidden="true">menu</mat-icon>
         </button>
         }
         @if (navConfig().ico.back) {
-        <button mat-icon-button (click)="back()" aria-label="Back">
-          <mat-icon>arrow_back</mat-icon>
-        </button>
+           <a mat-icon-button (click)="back()"> 
+            <mat-icon>arrow_back</mat-icon> 
+          </a>
         }
+
         <a class="toolbar-title" routerLink="/home" aria-label="Ir al inicio">
-          <h1>{{navConfig().title}}</h1>
+          <h2>{{navConfig().title}}</h2>
         </a>
-        <!-- <span class="spacer" aria-hidden="true"></span> -->
+     
         <nav aria-label="Navegación principal">
           @if (navConfig().ico.sds) {
-            <a mat-icon-button (click)="viewSdS()" aria-label="Download Pdf sds"> <mat-icon svgIcon="sds"></mat-icon> </a>
-            <!-- <span class="spacer"></span> -->
+            <a mat-icon-button (click)="viewSdS()" aria-label="Download Pdf sds">
+               <mat-icon svgIcon="sds"></mat-icon> 
+              </a>
           }
           @if (navConfig().ico.label) {
-            <a mat-icon-button (click)="viewPdf()" aria-label="View PDF"> <mat-icon svgIcon="label"></mat-icon> </a>
-            <!-- <span class="spacer"></span> -->
+            <a mat-icon-button (click)="viewPdf()" aria-label="View PDF"> 
+              <mat-icon svgIcon="label"></mat-icon> 
+            </a>
           }
           @if (navConfig().ico.favorite) {
             <a mat-icon-button (click)="goFavorites()">
               <mat-icon>{{ navConfig().favorite.active ? 'star' : 'star_border'}}</mat-icon>
             </a>
-            <!-- <span class="spacer"></span> -->
           }
           @if (navConfig().ico.source) {
-            <a mat-icon-button (click)="goToSourceDetail()"> <mat-icon>description</mat-icon></a>
+            <a mat-icon-button (click)="goToSourceDetail()"> 
+              <mat-icon>description</mat-icon>
+            </a>
           }
           @if (navConfig().ico.logut) {
-             <a mat-icon-button (click)="logout()"> <mat-icon>exit_to_app</mat-icon></a>
+             <a mat-icon-button (click)="logout()"> 
+              <mat-icon>exit_to_app</mat-icon>
+            </a>
           }
           @if (navConfig().ico.home) {
-            <button mat-icon-button (click)="home()" aria-label="Back">
-             <mat-icon aria-hidden="true">home</mat-icon>
-            </button>
+              <a mat-icon-button (click)="home()">
+                <mat-icon aria-hidden="true">home</mat-icon> 
+              </a>
           }
         </nav>
       </mat-toolbar>
@@ -94,7 +107,7 @@
 
     <!-- Main Content -->
     <main class="contentMain" role="main">
-      <br>
+      <!-- <br> -->
       <br>
     <router-outlet></router-outlet> 
     </main>
@@ -102,12 +115,12 @@
 
     <!-- Footer -->
     <footer class="footer" role="contentinfo">
+
       <div class="footer-content">
         <!-- <div class="footer-section">
                 <h3>Mi App</h3>
                 <p>La mejor solución para tus necesidades</p>
               </div> -->
-      
         <!-- <div class="footer-section">
                 <h4>Enlaces rápidos</h4>
                 <nav aria-label="Enlaces rápidos">
@@ -117,7 +130,6 @@
                   <a routerLink="/contact">Contacto</a>
                 </nav>
               </div> -->
-      
         <!-- <div class="footer-section">
                 <h4>Contacto</h4>
                 <address>
@@ -125,10 +137,11 @@
                   <p>+1 (555) 123-4567</p>
                 </address>
               </div> -->
-        <div class="footer-bottom">
+      </div>
+
+      <div class="footer-bottom">
           <p>&copy; 2025. All rights reserved.</p>
         </div>
-      </div>
     </footer>
   </mat-sidenav-content>
 </mat-sidenav-container>

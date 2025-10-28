@@ -125,38 +125,112 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 
 
-// Variables (opcional, para personalizar)
-$navbar-padding-y: 0.5rem;
-$navbar-bg: #f8f9fa;
-$fixed-z-index: 1030;
+// // Variables (opcional, para personalizar)
+// $navbar-padding-y: 0.5rem;
+// $navbar-bg: #f8f9fa;
+// $fixed-z-index: 1030;
 
-// Clase .navbar con anidamiento
+
+// .navbar {
+//   position: relative;
+//   display: flex;
+//   flex-wrap: wrap;
+//   align-items: center;
+//   justify-content: space-between;
+//   padding: $navbar-padding-y 1rem;
+//   background-color: $navbar-bg;
+
+//   &.fixed-top {
+//     position: fixed;
+//     top: 0;
+//     right: 0;
+//     left: 0;
+//     z-index: $fixed-z-index;
+//   }
+
+
+//   .navbar-brand {
+//     font-size: 1.25rem;
+//   }
+
+//   .navbar-nav {
+//     display: flex;
+//   }
+// }
+
+// .contentMain {
+//   padding-top: 64px; 
+// }
+
+
+/* Navbar fija en top */
 .navbar {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: $navbar-padding-y 1rem;
-  background-color: $navbar-bg;
+  height: 56px; // altura estándar
+  // padding: 0 1rem;
+  background-color: var(--app-color-primary);
+  color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 
-  // Modificador .fixed-top
-  &.fixed-top {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: $fixed-z-index;
-  }
-
-  // Otros elementos/anidamientos comunes en navbar
-  .navbar-brand {
-    font-size: 1.25rem;
-    // ... más estilos
-  }
-
-  .navbar-nav {
+  /* Ajuste para que los iconos no se muevan */
+  .mat-icon-button {
     display: flex;
-    // ... más estilos
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: background 0.2s ease;
+    
+    &:hover {
+      background-color: rgba(255,255,255,0.1);
+      border-radius: 2px;
+    }
+  }
+
+  .toolbar-title {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    
+    h2 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 600;
+      color: white;
+    }
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 2px;
   }
 }
+
+.navbar nav a,
+.navbar nav button.mat-icon-button {
+  margin: 0;
+  padding: 3px; 
+}
+
+
+.contentMain {
+  flex: 1 0 auto;
+  width: 100%;
+  padding-top: 56px;
+  padding-bottom: 5px; // espacio para footer
+  min-height: calc(100vh - 56px);
+  box-sizing: border-box;
+  background-color: var(--background-light);
+}
+
+
+
+
