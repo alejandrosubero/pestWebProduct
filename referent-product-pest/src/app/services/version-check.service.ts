@@ -11,7 +11,25 @@ export class VersionCheckService {
   private currentVersion: string | null = null;
   private checkIntervalMs = 5 * 60 * 1000; // cada 5 minutos
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+    this.start();
+  }
+
+
+async start(){
+  try {
+    const tempVersion = localStorage.getItem(this.VERSION_KEY);
+    if (tempVersion != undefined && tempVersion != null && tempVersion != '') {
+      this.currentVersion = tempVersion;
+    } else {
+      this.checkVersion();
+    }
+  } catch (error){
+    console.log('Error to check Version... ');
+    this.initVersionCheck();
+  }
+}
+
 
   /**
    * Inicia la verificación de versión y opcionalmente la comprobación periódica.
