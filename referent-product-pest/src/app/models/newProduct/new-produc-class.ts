@@ -199,7 +199,17 @@ export class Audit{
     user: User;
     date_in: Date;
     active: boolean;
+    section: Array<AuditSection>;
 
+    constructor(){
+        this.code = '';
+        this.type ='';
+        this.foundfindings = '';
+        this.user = new User();
+        this.date_in = new Date();
+        this.active = true;
+        this.section = new Array<AuditSection>();
+    }
 
 }
 

@@ -2,10 +2,10 @@ import { Component, inject, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { slideInAnimation } from './route-animations';
-import { ProductService } from './services/product.service';
 import { LayoutComponent } from './pages/core/layout/layout.component';
 import { VersionCheckService } from './services/version-check.service';
 import { PestsService } from './services/pests.service';
+import { ProductService } from './services/product.service';
 
 
 @Component({

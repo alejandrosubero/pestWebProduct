@@ -66,11 +66,11 @@ export class ProductDetailComponent implements OnInit {
    
   constructor(
     private route: ActivatedRoute,
-    private router: Router,
+    private navegateService: NavegateService,
     private http: HttpClient,
+    private router: Router,
     private favService: FavoritesService,
     private productService: ProductService,
-    private navegateService: NavegateService,
     private matIconRegistry: MatIconRegistry,
     private domSanitizer: DomSanitizer
   ) { 
@@ -83,7 +83,7 @@ export class ProductDetailComponent implements OnInit {
         this.toggleFavorite();
       }
     });
-     this.setNav(); 
+    
   }
 
  
@@ -91,24 +91,26 @@ export class ProductDetailComponent implements OnInit {
     const nav = this.router.getCurrentNavigation();
     this.pestData = nav?.extras?.state?.['data'] ||
       history.state.data || null;
-    
+  
       if (!this.pestData) {
       console.warn('No pestData passed, fetching by ID or redirecting...');
     }else{
       this.id = this.pestData.id;
       this.nameToNavegate = this.pestData.name != undefined && this.pestData.name != null? this.pestData.name : '';
+      this.productFunTion();
     }
   }
 
   ngOnInit(): void {
-    const prolist = this.productService.products();
-    if (prolist != undefined && prolist != null && prolist.length > 0) {
-      this.checkProduct(prolist, this.id);
-
-    }
+  this.setNav(); 
   }
 
-
+  productFunTion(){
+  const prolist = this.productService.products();
+    if (prolist != undefined && prolist != null && prolist.length > 0) {
+      this.checkProduct(prolist, this.id);
+    }
+  }
 
   setNav() {
     let navConfig: NavConfig = new NavConfig();
