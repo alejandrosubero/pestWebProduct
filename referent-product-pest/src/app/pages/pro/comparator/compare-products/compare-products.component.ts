@@ -43,7 +43,7 @@ export class CompareProductsComponent implements OnInit {
   allProducts: TechnicalProduct[] = [];
   quickCompare = false;
   selectedProducts: (TechnicalProduct | null)[] = [null, null];
-  title: string = 'Comparator Technical Notes'
+  title: string = 'Comparator'
 
   fields: ComparableKeys[] = [
     'productOverview',

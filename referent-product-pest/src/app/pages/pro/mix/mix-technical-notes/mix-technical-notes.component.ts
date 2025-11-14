@@ -42,7 +42,7 @@ export class MixTechnicalNotesComponent {
 
   private mixProductTechNoteService = inject(MixProductTechNoteService); 
   private navService = inject(NavService);
-  public title: string = 'Mix Product Analysis';
+  public title: string = 'Mix Product';
   public elementFather: string | null | undefined= '';
   
   mixNotes: MixProducTechNote[] = [];
