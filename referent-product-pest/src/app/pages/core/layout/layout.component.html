@@ -87,19 +87,19 @@
             <!-- </a> -->
           }
           @if (navConfig().ico.source) {
-            <a mat-icon-button (click)="goToSourceDetail()"> 
-              <mat-icon>description</mat-icon>
-            </a>
+            <!-- <a mat-icon-button (click)="goToSourceDetail()">  -->
+              <mat-icon (click)="goToSourceDetail()">description</mat-icon>
+            <!-- </a> -->
           }
           @if (navConfig().ico.logut) {
-             <a mat-icon-button (click)="logout()"> 
-              <mat-icon>exit_to_app</mat-icon>
-            </a>
+             <!-- <a mat-icon-button (click)="logout()">  -->
+              <mat-icon (click)="logout()">exit_to_app</mat-icon>
+            <!-- </a> -->
           }
           @if (navConfig().ico.home) {
-              <a mat-icon-button (click)="home()">
-                <mat-icon aria-hidden="true">home</mat-icon> 
-              </a>
+              <!-- <a mat-icon-button (click)="home()"> -->
+                <mat-icon aria-hidden="true" (click)="home()">home</mat-icon> 
+              <!-- </a> -->
           }
         </nav>
       </mat-toolbar>
